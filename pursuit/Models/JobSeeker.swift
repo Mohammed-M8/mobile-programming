@@ -13,12 +13,12 @@ class JobSeeker : User {
         var JobSeekerCv: [CV]
         
         // Constructor
-        override init(Firstname: String, Lastname: String, Skills: [String] = [], ApplicationList: [JobApplication] = [], JobSeekerCv: [CV] = []) {
+    override init(username: String, Skills: [String] = [], ApplicationList: [JobApplication] = [], JobSeekerCv: [CV] = []) {
             self.Skills = Skills
             self.ApplicationList = ApplicationList
             self.JobSeekerCv = JobSeekerCv
+        super.init(Username: username)
             
-            super.init(Firstname: Firstname, Lastname: Lastname)
         }
     }
 
