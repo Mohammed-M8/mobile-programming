@@ -13,7 +13,7 @@ class Employer : User {
     //yap here
     var Role: String;
     var Address: String;
-    var JobsArray:
+    var JobsArray:[Job];
     
     
     

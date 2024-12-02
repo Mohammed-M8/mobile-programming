@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+class Video:Article{
+    
+    override init() {
+        <#code#>
+    }
+}
