@@ -17,7 +17,7 @@ class JobSeeker : User {
             self.Skills = Skills
             self.ApplicationList = ApplicationList
             self.JobSeekerCv = JobSeekerCv
-            super.init(Username:username,email: email, password: password, phoneNumber: phoneNumber,governorate: governorate,description: description)
+            super.init(Username:Username,email: email, password: password, phoneNumber: phoneNumber,governorate: governorate,description: description)
             
         }
     }
