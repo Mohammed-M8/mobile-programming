@@ -10,8 +10,8 @@
 		575B2D1E2CFDE10D00840818 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1D2CFDE10D00840818 /* Job.swift */; };
 		575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1F2CFDE1BA00840818 /* JobApplication.swift */; };
 		575B2D222CFDE61400840818 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D212CFDE61400840818 /* CV.swift */; };
-		575B2D242CFDED5700840818 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D232CFDED5700840818 /* Video.swift */; };
-		575B2D262CFDED6000840818 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D252CFDED6000840818 /* Article.swift */; };
+		575B2D282CFDF09D00840818 /* JobEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D272CFDF09D00840818 /* JobEntry.swift */; };
+		575B2D2A2CFDF10200840818 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D292CFDF10200840818 /* Degree.swift */; };
 		D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A52CF85B2500F5DC5D /* AppDelegate.swift */; };
 		D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */; };
 		D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A92CF85B2500F5DC5D /* ViewController.swift */; };
@@ -51,8 +51,8 @@
 		575B2D1D2CFDE10D00840818 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		575B2D1F2CFDE1BA00840818 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		575B2D212CFDE61400840818 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
-		575B2D232CFDED5700840818 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		575B2D252CFDED6000840818 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		575B2D272CFDF09D00840818 /* JobEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobEntry.swift; sourceTree = "<group>"; };
+		575B2D292CFDF10200840818 /* Degree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		D01FF9A22CF85B2500F5DC5D /* pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pursuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01FF9A52CF85B2500F5DC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 				575B2D1D2CFDE10D00840818 /* Job.swift */,
 				575B2D1F2CFDE1BA00840818 /* JobApplication.swift */,
 				575B2D212CFDE61400840818 /* CV.swift */,
-				575B2D232CFDED5700840818 /* Video.swift */,
-				575B2D252CFDED6000840818 /* Article.swift */,
+				575B2D272CFDF09D00840818 /* JobEntry.swift */,
+				575B2D292CFDF10200840818 /* Degree.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,8 +319,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575B2D262CFDED6000840818 /* Article.swift in Sources */,
+				575B2D282CFDF09D00840818 /* JobEntry.swift in Sources */,
 				D06390552CF85BDB0006CC8B /* Users.swift in Sources */,
+				575B2D2A2CFDF10200840818 /* Degree.swift in Sources */,
 				D063905F2CF8608E0006CC8B /* Employer.swift in Sources */,
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
@@ -329,7 +330,6 @@
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
 				575B2D1E2CFDE10D00840818 /* Job.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
-				575B2D242CFDED5700840818 /* Video.swift in Sources */,
 				D06390572CF85C350006CC8B /* LoginViewController.swift in Sources */,
 				D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */,
 				D06390612CF8619D0006CC8B /* Admin.swift in Sources */,
