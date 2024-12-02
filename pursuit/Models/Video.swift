@@ -8,9 +8,6 @@
 import Foundation
 
 
-class Video:Article{
+class Video:Resources{
     
-    override init() {
-        <#code#>
-    }
 }

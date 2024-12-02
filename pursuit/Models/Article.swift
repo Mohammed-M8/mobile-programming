@@ -8,8 +8,6 @@
 import Foundation
 
 
-class Article{
+class Article: Resources{
     
-    override init(){
-        
-    }
+}
