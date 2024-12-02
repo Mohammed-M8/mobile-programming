@@ -10,6 +10,7 @@ import Foundation
 class User {
     //Superclass to generalize all the Users of the App
     //all variables
+    var Username: String;
     var Email:String;
     var Password:String;
     var phoneNumber:String;
@@ -18,12 +19,13 @@ class User {
     
     
     //constructor - this is what creates the object
-    init(email: String, password: String, phoneNumber: String, governorate: String, description:String){
+    init(Username: String,email: String, password: String, phoneNumber: String, governorate: String, description:String){
         self.Email = email
         self.Password = password
         self.phoneNumber = phoneNumber
         self.Governorate=governorate
         self.Description = description
+        self.Username=Username
         
     }
     

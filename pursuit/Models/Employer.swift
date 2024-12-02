@@ -18,7 +18,7 @@ class Employer : User {
     
     
     //constructor - this is what creates the object
-    override init(UserName: String,email: String, password: String, phoneNumber: String, governorate: String, description:String){
+    init(Username: String,email: String, password: String, phoneNumber: String, governorate: String, description:String,role: String,address: String){
         
     }
 }
