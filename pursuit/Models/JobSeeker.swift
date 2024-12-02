@@ -8,11 +8,17 @@
 import Foundation
 
 class JobSeeker : User {
-    //yap here
-    //all variables
-    
-    //constructor - this is what creates the object
-    override init(){
+        var Skills: [String]
+        var ApplicationList: [JobApplication]
+        var JobSeekerCv: [CV]
         
+        // Constructor
+    override init(username: String, Skills: [String] = [], ApplicationList: [JobApplication] = [], JobSeekerCv: [CV] = []) {
+            self.Skills = Skills
+            self.ApplicationList = ApplicationList
+            self.JobSeekerCv = JobSeekerCv
+        super.init(Username: username)
+            
+        }
     }
-}
+
