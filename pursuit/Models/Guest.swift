@@ -14,7 +14,7 @@ class  Guest : User {
     
     //constructor - this is what creates the object
     override init(Username: String, email: String, password: String, phoneNumber: String, governorate: String, description: String) {
-        super.init(Username: <#T##String#>, email: <#T##String#>, password: <#T##String#>, phoneNumber: <#T##String#>, governorate: <#T##String#>, description: <#T##String#>)
+        super.init(Username:Username,email: email, password: password, phoneNumber: phoneNumber,governorate: governorate,description: description)
     }
         
     }
