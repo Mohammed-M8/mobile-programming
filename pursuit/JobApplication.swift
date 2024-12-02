@@ -6,3 +6,13 @@
 //
 
 import Foundation
+class JobApplication {
+    //yap here
+    //all variables
+    
+    init(){
+        
+    }
+
+    }
+

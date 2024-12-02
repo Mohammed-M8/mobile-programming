@@ -8,11 +8,5 @@
 import Foundation
 
 class User {
-    //yap here
-    //all variables
     
-    //constructor - this is what creates the object
-    init(){
-        
-    }
 }

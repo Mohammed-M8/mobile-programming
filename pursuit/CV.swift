@@ -6,3 +6,12 @@
 //
 
 import Foundation
+class CV{
+    //yap here
+    //all variables
+    init(){
+        
+    }
+        
+    }
+
