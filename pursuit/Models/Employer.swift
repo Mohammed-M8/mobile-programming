@@ -11,10 +11,14 @@ import Foundation
 
 class Employer : User {
     //yap here
-    //all variables
+    var Role: String;
+    var Address: String;
+    var JobsArray:
+    
+    
     
     //constructor - this is what creates the object
-    override init(){
+    override init(UserName: String,email: String, password: String, phoneNumber: String, governorate: String, description:String){
         
     }
 }
