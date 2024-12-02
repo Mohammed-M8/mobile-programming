@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class CV{
+    var firstName:String;
+    var lastName:String;
+    var CPR:Int;
+    var DOB:String;
+    var Location: String;
+    var phoneNumber: String
+}
