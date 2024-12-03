@@ -18,3 +18,4 @@ class Article: Resources {
     }
     
 }
+
