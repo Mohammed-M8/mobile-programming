@@ -13,12 +13,15 @@ class Employer : User {
     //yap here
     var Role: String;
     var Address: String;
-    var JobsArray:
+    var JobsArray:[Job];
     
     
     
     //constructor - this is what creates the object
     init(Username: String,email: String, password: String, phoneNumber: String, governorate: String, description:String,role: String,address: String){
-        
+        self.Role=role;
+        self.Address=address;
+        self.JobsArray = [];
+        super.init(Username:Username,email: email, password: password, phoneNumber: phoneNumber,governorate: governorate,description: description)
     }
 }
