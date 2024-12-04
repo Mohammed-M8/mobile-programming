@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View CV-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CVCreationJobSeekerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6P-NP-Eo3">
+                                <rect key="frame" x="16" y="111" width="175" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="178" id="9tr-Ce-2Fe"/>
+                                    <constraint firstAttribute="width" secondItem="E6P-NP-Eo3" secondAttribute="height" multiplier="175:57" id="CSD-Sk-SVf"/>
+                                    <constraint firstAttribute="height" constant="57" id="Uqe-d5-Dbw"/>
+                                    <constraint firstAttribute="width" constant="178" id="yl2-KO-Cut"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="gray" title="Create CV" cornerStyle="large" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwf-uk-3ta">
+                                <rect key="frame" x="199" y="110" width="178" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jwf-uk-3ta" secondAttribute="height" multiplier="178:57" id="bTo-xZ-xZS"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="gray" title="Modify CV" cornerStyle="large" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jwf-uk-3ta" firstAttribute="width" secondItem="E6P-NP-Eo3" secondAttribute="width" id="9GC-M5-IKa"/>
+                            <constraint firstItem="E6P-NP-Eo3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Gkw-IN-D5h"/>
+                            <constraint firstItem="E6P-NP-Eo3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="HzS-JP-PLx"/>
+                            <constraint firstItem="Jwf-uk-3ta" firstAttribute="height" secondItem="E6P-NP-Eo3" secondAttribute="height" id="KBQ-cI-OBq"/>
+                            <constraint firstItem="E6P-NP-Eo3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="200" id="bFK-nz-5Wg"/>
+                            <constraint firstItem="E6P-NP-Eo3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="mlE-yR-27t"/>
+                            <constraint firstItem="E6P-NP-Eo3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="v2R-BU-TnM"/>
+                            <constraint firstItem="E6P-NP-Eo3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="vkc-MU-3i8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="View CV" id="AYr-ah-gcI">
+                        <barButtonItem key="backBarButtonItem" title="Back" style="plain" id="x3Q-eg-QRx">
+                            <color key="tintColor" name="AccentColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363" y="3"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vfn-G0-HTf">
+            <objects>
+                <navigationController id="5Fz-gk-nz7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e1f-Be-z6o">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <nil key="backIndicatorImage"/>
+                        </variation>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="xQW-bI-VlM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Y8-fD-3oK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-420" y="10"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
