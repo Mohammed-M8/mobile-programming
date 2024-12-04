@@ -15,6 +15,11 @@
 		575B2D2C2CFDF21400840818 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D2B2CFDF21400840818 /* Video.swift */; };
 		575B2D2E2CFDF21E00840818 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D2D2CFDF21E00840818 /* Article.swift */; };
 		575B2D302CFDF2CB00840818 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D2F2CFDF2CB00840818 /* Resources.swift */; };
+		57C71DF72D006FC300F317AA /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DF62D006FC300F317AA /* Base.storyboard */; };
+		57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DF82D00700B00F317AA /* HomeJobSeeker.storyboard */; };
+		57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */; };
+		57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */; };
+		57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */; };
 		D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A52CF85B2500F5DC5D /* AppDelegate.swift */; };
 		D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */; };
 		D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A92CF85B2500F5DC5D /* ViewController.swift */; };
@@ -59,6 +64,11 @@
 		575B2D2B2CFDF21400840818 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		575B2D2D2CFDF21E00840818 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		575B2D2F2CFDF2CB00840818 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		57C71DF62D006FC300F317AA /* Base.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Base.storyboard; sourceTree = "<group>"; };
+		57C71DF82D00700B00F317AA /* HomeJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeJobSeeker.storyboard; sourceTree = "<group>"; };
+		57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsJobSeeker.storyboard; sourceTree = "<group>"; };
+		57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileJobSeeker.storyboard; sourceTree = "<group>"; };
+		57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResourcesJobSeeker.storyboard; sourceTree = "<group>"; };
 		D01FF9A22CF85B2500F5DC5D /* pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pursuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01FF9A52CF85B2500F5DC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +194,11 @@
 			isa = PBXGroup;
 			children = (
 				D06390582CF85C510006CC8B /* Login.storyboard */,
+				57C71DF62D006FC300F317AA /* Base.storyboard */,
+				57C71DF82D00700B00F317AA /* HomeJobSeeker.storyboard */,
+				57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */,
+				57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */,
+				57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,7 +317,12 @@
 			files = (
 				D06390592CF85C510006CC8B /* Login.storyboard in Resources */,
 				D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */,
+				57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */,
+				57C71DF72D006FC300F317AA /* Base.storyboard in Resources */,
 				D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */,
+				57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */,
+				57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */,
+				57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */,
 				D01FF9AD2CF85B2500F5DC5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
