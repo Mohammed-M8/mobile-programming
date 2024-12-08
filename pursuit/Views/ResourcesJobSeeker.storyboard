@@ -11,7 +11,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hLw-pf-2Ol">
             <objects>
-                <navigationController id="AP1-zn-I1U" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ResourcesJobS" id="AP1-zn-I1U" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ouy-Tg-i5d">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -28,7 +28,7 @@
         <!--Resources-->
         <scene sceneID="PX9-Uy-UiC">
             <objects>
-                <viewController storyboardIdentifier="ResourcesJobS" id="1ZJ-nd-6GL" sceneMemberID="viewController">
+                <viewController id="1ZJ-nd-6GL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iOE-5T-PMQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

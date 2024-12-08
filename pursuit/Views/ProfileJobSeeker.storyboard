@@ -11,7 +11,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3co-5T-3O1">
             <objects>
-                <navigationController id="JmK-ta-tyb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileJobS" id="JmK-ta-tyb" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9zF-UR-PpW">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -28,7 +28,7 @@
         <!--Profile-->
         <scene sceneID="nFe-Gz-pMn">
             <objects>
-                <viewController storyboardIdentifier="ProfileJobS" id="V92-lm-XSu" sceneMemberID="viewController">
+                <viewController id="V92-lm-XSu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZLJ-eb-i0J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
