@@ -15,6 +15,15 @@ class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate,
     @IBOutlet weak var DeleteButton: UIButton!
     @IBOutlet weak var Percentage: UILabel!
     @IBOutlet weak var Slider: UISlider!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    
+    @IBOutlet var editProfileView: UIView!
+    @IBOutlet var viewProfileView: UIView!
+    @IBOutlet weak var showFirstname: UILabel!
+    @IBOutlet weak var InputName: UITextField!
+    
+    //variable to hold name
+    var savedName: String?
     // Array to store skills
         private var skills: [(name: String, percentage: Int)] = []
     @IBOutlet weak var dropdownButton: UIButton!
@@ -32,7 +41,11 @@ class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate,
                 optionsTableView.delegate = self
                 optionsTableView.dataSource = self
                 optionsTableView.isHidden = true // Initially hide the dropdown options
-
+        if let checkname = savedName {
+               showFirstname.text = checkname
+            viewProfileView.isHidden = true
+        }
+        
             
     }
     
@@ -150,7 +163,29 @@ class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate,
                 skillView.removeFromSuperview()
             }
         }
+    
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+        
     }
+    
+    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
+        // Check if the input name is valid
+               if let name = InputName.text, !name.isEmpty {
+                   // Update the label with the new name
+                   showFirstname.text = name
+                   
+               } else {
+                   // Handle empty name case
+                   let alert = UIAlertController(title: "Error", message: "Please enter a name.", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "OK", style: .default))
+                   present(alert, animated: true)
+               }
+           }
+    
+    
+    }
+
    
    
     
