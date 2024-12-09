@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationBarDelegate{
     @IBOutlet weak var AddSkills: UIButton!
     @IBOutlet weak var SkillsStackView: UIStackView!
     @IBOutlet weak var mainstackview: UIStackView!
@@ -21,6 +21,11 @@ class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate,
     @IBOutlet weak var optionsTableView: UITableView!
     let options = ["The Capital", "Northern", "Southern", "Muharraq"]
         var isDropdownVisible = false
+    
+
+    @IBAction func action(_ sender: UIBarButtonItem) {
+//        sender
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
