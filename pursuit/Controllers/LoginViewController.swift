@@ -9,13 +9,34 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    @IBOutlet weak var segmentOutlet: UISegmentedControl!
+    
+    @IBOutlet weak var loginSegmentedView: UIView!
+    
+    
+    @IBOutlet weak var registerSegmentedView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.view.bringSubviewToFront(registerSegmentedView)
     }
     
-
+    
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.view.bringSubviewToFront(registerSegmentedView)
+        case 1:
+            self.view.bringSubviewToFront(loginSegmentedView)
+        default:
+            break
+    }
+}
+    
     /*
     // MARK: - Navigation
 
@@ -25,5 +46,5 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
