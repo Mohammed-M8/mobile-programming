@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="utc-KP-8BV">
+            <objects>
+                <navigationController storyboardIdentifier="JobsJobS" id="GMP-ub-dKm" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="67y-oa-Wm9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="erw-aY-WsL" kind="relationship" relationship="rootViewController" id="Hdb-Ju-I71"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhU-Eo-zjQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-955" y="3"/>
+        </scene>
+        <!--Jobs-->
+        <scene sceneID="agi-Z5-ZLu">
+            <objects>
+                <viewController id="erw-aY-WsL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ME7-fw-s5t">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Olz-iZ-WiQ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ADu-4q-eCZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="OiT-rX-Cyu"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="YyN-0D-vr8"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CuX-4H-mUn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Olz-iZ-WiQ" firstAttribute="trailing" secondItem="CuX-4H-mUn" secondAttribute="trailing" id="SuF-T0-YS2"/>
+                            <constraint firstItem="Olz-iZ-WiQ" firstAttribute="top" secondItem="CuX-4H-mUn" secondAttribute="top" id="WKW-7e-ceh"/>
+                            <constraint firstItem="Olz-iZ-WiQ" firstAttribute="leading" secondItem="CuX-4H-mUn" secondAttribute="leading" id="WYM-Jf-5UP"/>
+                            <constraint firstItem="Olz-iZ-WiQ" firstAttribute="bottom" secondItem="CuX-4H-mUn" secondAttribute="bottom" id="caO-CI-fiD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Jobs" id="Yev-bb-vHe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sw0-Yz-fzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-179.38931297709922" y="2.8169014084507045"/>
+        </scene>
+        <!--JobDetailsJobS-->
+        <scene sceneID="g2R-ve-2j5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="JobDetails" referencedIdentifier="JobDetailsJobS" id="ktI-2L-sXR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yvK-Tp-C3G"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iq-EW-g8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="-39"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
