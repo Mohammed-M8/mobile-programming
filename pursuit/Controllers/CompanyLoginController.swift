@@ -1,14 +1,14 @@
 //
-//  LoginViewController.swift
+//  CompanyLoginController.swift
 //  pursuit
 //
-//  Created by BP-36-201-17 on 28/11/2024.
+//  Created by BP-36-201-10 on 10/12/2024.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
+class CompanyLoginController: UIViewController {
+    
     
     @IBOutlet weak var segmentOutlet: UISegmentedControl!
     
@@ -19,10 +19,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-        //self.view.bringSubviewToFront(registerSegmentedView)
+        self.view.bringSubviewToFront(registerSegmentedView)
     }
     
     
@@ -34,17 +34,6 @@ class LoginViewController: UIViewController {
             self.view.bringSubviewToFront(loginSegmentedView)
         default:
             break
+        }
     }
-}
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC6C65572D080F070062F691 /* CompanyLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6C65562D080F070062F691 /* CompanyLogin.storyboard */; };
+		AC6C65592D0813E10062F691 /* CompanyLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C65582D0813E10062F691 /* CompanyLoginController.swift */; };
 		ACC00A3B2CFDD4FC002BC001 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC00A3A2CFDD4FC002BC001 /* Welcome.storyboard */; };
 		D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A52CF85B2500F5DC5D /* AppDelegate.swift */; };
 		D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC6C65562D080F070062F691 /* CompanyLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyLogin.storyboard; sourceTree = "<group>"; };
+		AC6C65582D0813E10062F691 /* CompanyLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyLoginController.swift; sourceTree = "<group>"; };
 		ACC00A3A2CFDD4FC002BC001 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		D01FF9A22CF85B2500F5DC5D /* pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pursuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01FF9A52CF85B2500F5DC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			children = (
 				ACC00A3A2CFDD4FC002BC001 /* Welcome.storyboard */,
 				D06390582CF85C510006CC8B /* Login.storyboard */,
+				AC6C65562D080F070062F691 /* CompanyLogin.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				D06390562CF85C350006CC8B /* LoginViewController.swift */,
+				AC6C65582D0813E10062F691 /* CompanyLoginController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 			files = (
 				ACC00A3B2CFDD4FC002BC001 /* Welcome.storyboard in Resources */,
 				D06390592CF85C510006CC8B /* Login.storyboard in Resources */,
+				AC6C65572D080F070062F691 /* CompanyLogin.storyboard in Resources */,
 				D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */,
 				D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */,
 				D01FF9AD2CF85B2500F5DC5D /* Main.storyboard in Resources */,
@@ -313,6 +320,7 @@
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
+				AC6C65592D0813E10062F691 /* CompanyLoginController.swift in Sources */,
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
 				D06390572CF85C350006CC8B /* LoginViewController.swift in Sources */,
 				D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */,
