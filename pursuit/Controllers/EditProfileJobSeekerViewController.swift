@@ -19,12 +19,13 @@ class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate,
     
     @IBOutlet var editProfileView: UIView!
     @IBOutlet var viewProfileView: UIView!
-    @IBOutlet weak var showFirstname: UILabel!
     @IBOutlet weak var InputName: UITextField!
-    
+    @IBOutlet weak var Skills: UIView!
     //variable to hold name
-    var savedName: String?
-    // Array to store skills
+   var savedName: String?
+    var checkuser: String = "Empolyer"
+    var login: String = ""
+    //Array to store skills
         private var skills: [(name: String, percentage: Int)] = []
     @IBOutlet weak var dropdownButton: UIButton!
     @IBOutlet weak var optionsTableView: UITableView!
@@ -32,18 +33,18 @@ class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate,
         var isDropdownVisible = false
     
 
-    @IBAction func action(_ sender: UIBarButtonItem) {
-//        sender
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
                 optionsTableView.delegate = self
                 optionsTableView.dataSource = self
                 optionsTableView.isHidden = true // Initially hide the dropdown options
-        if let checkname = savedName {
-               showFirstname.text = checkname
-            viewProfileView.isHidden = true
+        
+        if login == checkuser{
+          Skills.isHidden = true
+        }else{
+           Skills.isHidden = false
         }
         
             
@@ -163,25 +164,6 @@ class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate,
                 skillView.removeFromSuperview()
             }
         }
-    
-    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
-        
-    }
-    
-    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        // Check if the input name is valid
-               if let name = InputName.text, !name.isEmpty {
-                   // Update the label with the new name
-                   showFirstname.text = name
-                   
-               } else {
-                   // Handle empty name case
-                   let alert = UIAlertController(title: "Error", message: "Please enter a name.", preferredStyle: .alert)
-                   alert.addAction(UIAlertAction(title: "OK", style: .default))
-                   present(alert, animated: true)
-               }
-           }
     
     
     }

@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="-951" y="-206"/>
         </scene>
-        <!--ProfileJobS-->
+        <!--ProfileJobSeeker-->
         <scene sceneID="rcG-XF-Roo">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfileJobSeeker" referencedIdentifier="ProfileJobS" id="aUS-jl-yja" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="ProfileJobSeeker" storyboardName="ProfileJobSeeker" referencedIdentifier="ProfileJobSeeker" id="aUS-jl-yja" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Yp6-bf-7Ve"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PN-YT-6eK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
