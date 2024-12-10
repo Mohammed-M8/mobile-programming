@@ -1,14 +1,17 @@
 //
-//  CVCreationJobSeekerController.swift
+//  CVCreationViewController.swift
 //  pursuit
 //
-//  Created by BP-36-201-06 on 04/12/2024.
+//  Created by BP-36-201-09 on 10/12/2024.
 //
 
 import UIKit
 
-class CVCreationJobSeekerController: UIViewController {
-
+class CVCreationViewController: UIViewController {
+    @IBOutlet weak var CVView: UIView!
+    
+    @IBOutlet weak var modifyCV: UIButton!
+    @IBOutlet weak var createbtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
