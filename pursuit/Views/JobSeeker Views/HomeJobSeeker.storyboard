@@ -36,7 +36,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="Home" image="house" catalog="system" id="P8W-Cc-piN"/>
-                    <navigationItem key="navigationItem" id="Iph-qd-zj3"/>
+                    <navigationItem key="navigationItem" title="Home" id="Iph-qd-zj3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
