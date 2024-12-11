@@ -23,6 +23,9 @@
 		57C71E032D0088BD00F317AA /* CvCreationJobseeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71E022D0088BD00F317AA /* CvCreationJobseeker.storyboard */; };
 		57C71E052D008BC700F317AA /* CVCreationJobSeekerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C71E042D008BC700F317AA /* CVCreationJobSeekerController.swift */; };
 		C3F76A112D07436100EE12A3 /* EditProfileJobSeekerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F76A102D07436100EE12A3 /* EditProfileJobSeekerViewController.swift */; };
+		C3FE49D02D09E03E00D53320 /* ApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FE49CE2D09E03E00D53320 /* ApplicationTableViewCell.swift */; };
+		C3FE49D12D09E03E00D53320 /* ApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FE49CF2D09E03E00D53320 /* ApplicationTableViewCell.xib */; };
+		C3FE49D32D09E37A00D53320 /* ApplicationTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FE49D22D09E37A00D53320 /* ApplicationTrackerViewController.swift */; };
 		D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A52CF85B2500F5DC5D /* AppDelegate.swift */; };
 		D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */; };
 		D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A92CF85B2500F5DC5D /* ViewController.swift */; };
@@ -75,6 +78,9 @@
 		57C71E022D0088BD00F317AA /* CvCreationJobseeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CvCreationJobseeker.storyboard; sourceTree = "<group>"; };
 		57C71E042D008BC700F317AA /* CVCreationJobSeekerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreationJobSeekerController.swift; sourceTree = "<group>"; };
 		C3F76A102D07436100EE12A3 /* EditProfileJobSeekerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileJobSeekerViewController.swift; sourceTree = "<group>"; };
+		C3FE49CE2D09E03E00D53320 /* ApplicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTableViewCell.swift; sourceTree = "<group>"; };
+		C3FE49CF2D09E03E00D53320 /* ApplicationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplicationTableViewCell.xib; sourceTree = "<group>"; };
+		C3FE49D22D09E37A00D53320 /* ApplicationTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTrackerViewController.swift; sourceTree = "<group>"; };
 		D01FF9A22CF85B2500F5DC5D /* pursuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pursuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01FF9A52CF85B2500F5DC5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 				57C71DF82D00700B00F317AA /* HomeJobSeeker.storyboard */,
 				57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */,
 				57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */,
+				C3FE49CF2D09E03E00D53320 /* ApplicationTableViewCell.xib */,
 				57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */,
 				57C71E022D0088BD00F317AA /* CvCreationJobseeker.storyboard */,
 			);
@@ -216,6 +223,8 @@
 				C3F76A102D07436100EE12A3 /* EditProfileJobSeekerViewController.swift */,
 				D06390562CF85C350006CC8B /* LoginViewController.swift */,
 				57C71E042D008BC700F317AA /* CVCreationJobSeekerController.swift */,
+				C3FE49CE2D09E03E00D53320 /* ApplicationTableViewCell.swift */,
+				C3FE49D22D09E37A00D53320 /* ApplicationTrackerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -324,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FE49D12D09E03E00D53320 /* ApplicationTableViewCell.xib in Resources */,
 				D06390592CF85C510006CC8B /* Login.storyboard in Resources */,
 				D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */,
 				57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */,
@@ -358,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FE49D02D09E03E00D53320 /* ApplicationTableViewCell.swift in Sources */,
 				575B2D282CFDF09D00840818 /* JobEntry.swift in Sources */,
 				D06390552CF85BDB0006CC8B /* Users.swift in Sources */,
 				575B2D2A2CFDF10200840818 /* Degree.swift in Sources */,
@@ -370,6 +381,7 @@
 				575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */,
 				575B2D302CFDF2CB00840818 /* Resources.swift in Sources */,
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
+				C3FE49D32D09E37A00D53320 /* ApplicationTrackerViewController.swift in Sources */,
 				575B2D1E2CFDE10D00840818 /* Job.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
 				575B2D2E2CFDF21E00840818 /* Article.swift in Sources */,
