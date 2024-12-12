@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FC9CC9C2D0ACDE700EE729D /* ProfileEmployer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9CC9B2D0ACDE700EE729D /* ProfileEmployer.storyboard */; };
 		575B2D1E2CFDE10D00840818 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1D2CFDE10D00840818 /* Job.swift */; };
 		575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1F2CFDE1BA00840818 /* JobApplication.swift */; };
 		575B2D222CFDE61400840818 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D212CFDE61400840818 /* CV.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FC9CC9B2D0ACDE700EE729D /* ProfileEmployer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileEmployer.storyboard; sourceTree = "<group>"; };
 		575B2D1D2CFDE10D00840818 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		575B2D1F2CFDE1BA00840818 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		575B2D212CFDE61400840818 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				57C71DF82D00700B00F317AA /* HomeJobSeeker.storyboard */,
 				57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */,
 				57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */,
+				3FC9CC9B2D0ACDE700EE729D /* ProfileEmployer.storyboard */,
 				C3FE49CF2D09E03E00D53320 /* ApplicationTableViewCell.xib */,
 				57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */,
 				57C71E022D0088BD00F317AA /* CvCreationJobseeker.storyboard */,
@@ -340,6 +343,7 @@
 				57C71DF72D006FC300F317AA /* Base.storyboard in Resources */,
 				D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */,
 				57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */,
+				3FC9CC9C2D0ACDE700EE729D /* ProfileEmployer.storyboard in Resources */,
 				57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */,
 				57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */,
 				D01FF9AD2CF85B2500F5DC5D /* Main.storyboard in Resources */,
