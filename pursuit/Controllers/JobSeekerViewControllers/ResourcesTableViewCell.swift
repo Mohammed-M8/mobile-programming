@@ -9,6 +9,12 @@ import UIKit
 
 class ResourcesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var btnApply: UIButton!
+    @IBOutlet weak var lbltime: UILabel!
+    @IBOutlet weak var lblfeature: UILabel!
+    @IBOutlet weak var lblCompany: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var imgCompany: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

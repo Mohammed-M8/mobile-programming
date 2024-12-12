@@ -25,8 +25,8 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func setupCollectionView(){
-        
-        jobCollectionView.register(promotedCollectionViewCell.self, forCellWithReuseIdentifier:"promotedCollectionCell")
+        let nib = UINib(nibName:"promotedCollectionViewCell", bundle: nil)
+        jobCollectionView.register(nib, forCellWithReuseIdentifier:"promotedCollectionCell")
         jobCollectionView.delegate=self
         jobCollectionView.dataSource=self
     
@@ -53,7 +53,7 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath)-> CGSize {
         
-        return CGSize(width: jobCollectionView.frame.width/2.2, height: 100)
+        return CGSize(width: jobCollectionView.frame.width/3, height: 100)
     }
     
     

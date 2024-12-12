@@ -20,7 +20,8 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        resourcesTableView.register(ResourcesTableViewCell.self, forCellReuseIdentifier: "resourcesTableCell")
+        let nib = UINib(nibName: "ResourcesTableViewCell", bundle: nil)
+        resourcesTableView.register(nib, forCellReuseIdentifier: "resourcesTableCell")
         
         resourcesTableView.dataSource=self
         resourcesTableView.delegate=self
@@ -55,7 +56,7 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath)-> CGSize {
         
-        return CGSize(width: resourcesCollectionView.frame.width/2.2, height: 100)
+        return CGSize(width: resourcesCollectionView.frame.width/3, height: 100)
     }
     
     
