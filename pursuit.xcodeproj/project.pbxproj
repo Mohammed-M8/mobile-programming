@@ -44,6 +44,8 @@
 		D063905F2CF8608E0006CC8B /* Employer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D063905E2CF8608E0006CC8B /* Employer.swift */; };
 		D06390612CF8619D0006CC8B /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390602CF8619D0006CC8B /* Admin.swift */; };
 		D06390632CF861BB0006CC8B /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390622CF861BB0006CC8B /* Guest.swift */; };
+		D079B15A2D0C793400C69814 /* JobFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079B1592D0C793400C69814 /* JobFilterViewController.swift */; };
+		D079B15E2D0C7F3F00C69814 /* companyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079B15D2D0C7F3F00C69814 /* companyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		D063905E2CF8608E0006CC8B /* Employer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employer.swift; sourceTree = "<group>"; };
 		D06390602CF8619D0006CC8B /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		D06390622CF861BB0006CC8B /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		D079B1592D0C793400C69814 /* JobFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobFilterViewController.swift; sourceTree = "<group>"; };
+		D079B15D2D0C7F3F00C69814 /* companyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = companyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 				C3E28B022D09D6A900B15151 /* ResourcesViewController.swift */,
 				C3E28B062D09D93200B15151 /* ResourcesTableViewCell.swift */,
 				C3E28B0A2D09D9DB00B15151 /* ResourcesCollectionViewCell.swift */,
+				D079B1592D0C793400C69814 /* JobFilterViewController.swift */,
+				D079B15D2D0C7F3F00C69814 /* companyCollectionViewCell.swift */,
 			);
 			path = JobSeekerViewControllers;
 			sourceTree = "<group>";
@@ -404,8 +410,10 @@
 				575B2D302CFDF2CB00840818 /* Resources.swift in Sources */,
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
 				575B2D1E2CFDE10D00840818 /* Job.swift in Sources */,
+				D079B15A2D0C793400C69814 /* JobFilterViewController.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
 				C3E28B002D09C93300B15151 /* promotedCollectionViewCell.swift in Sources */,
+				D079B15E2D0C7F3F00C69814 /* companyCollectionViewCell.swift in Sources */,
 				575B2D2E2CFDF21E00840818 /* Article.swift in Sources */,
 				C3E28B0C2D09D9DB00B15151 /* ResourcesCollectionViewCell.swift in Sources */,
 				D06390572CF85C350006CC8B /* LoginViewController.swift in Sources */,

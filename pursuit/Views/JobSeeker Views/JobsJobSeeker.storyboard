@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GMP-ub-dKm">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -53,18 +54,29 @@
                                                             <outlet property="delegate" destination="PcO-lS-Pua" id="QU9-fa-5bi"/>
                                                         </connections>
                                                     </searchBar>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Uwl-50-RpU">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Uwl-50-RpU">
                                                         <rect key="frame" x="0.0" y="50" width="377" height="40"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdz-ke-jOq">
                                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="40"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="Filter" cornerStyle="medium"/>
+                                                                <connections>
+                                                                    <segue destination="YDL-xu-Rqr" kind="push" id="49e-xo-oNr"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J23-f4-Bi8">
+                                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDW-uN-B8c">
                                                                 <rect key="frame" x="192" y="0.0" width="185" height="40"/>
+                                                                <menu key="menu" id="xFi-dr-LMl">
+                                                                    <children>
+                                                                        <command title="Date (Latest)" id="8qq-KR-4XX"/>
+                                                                        <command title="Date (Oldest)" id="8G5-4N-zce"/>
+                                                                        <command title="Job Name(A-Z)" discoverabilityTitle="" id="EFi-zy-tAE"/>
+                                                                        <command title="Job Name (Z-A)" id="dXG-0p-pAH"/>
+                                                                    </children>
+                                                                </menu>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="gray" title="Sort By" cornerStyle="medium"/>
+                                                                <buttonConfiguration key="configuration" style="gray" title="Sort By"/>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -233,7 +245,6 @@
                     <connections>
                         <outlet property="JobtblView" destination="qOW-tN-wDs" id="SJe-hu-75W"/>
                         <outlet property="btnFilter" destination="Mdz-ke-jOq" id="pTL-5C-jEd"/>
-                        <outlet property="btnSortBy" destination="J23-f4-Bi8" id="r99-Sa-VnP"/>
                         <outlet property="jobCollectionView" destination="hVg-Fg-WYN" id="V3A-PE-me9"/>
                         <outlet property="searchBarJobs" destination="VOH-mP-z6v" id="RrR-7c-rGP"/>
                     </connections>
@@ -241,6 +252,262 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JoC-st-aB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-185.49618320610685" y="2.8169014084507045"/>
+        </scene>
+        <!--Job Filter View Controller-->
+        <scene sceneID="gWx-nh-lL4">
+            <objects>
+                <viewController id="YDL-xu-Rqr" customClass="JobFilterViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kwv-W7-cLR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Mt0-7g-RfM">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-ur-jj9">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="127.33333333333333"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1p-LB-A34">
+                                                <rect key="frame" x="29" y="8" width="40.333333333333329" height="20.333333333333332"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kz-mA-A1b">
+                                                <rect key="frame" x="18" y="37" width="108" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Managerial" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6X-z2-rxG">
+                                                <rect key="frame" x="150" y="37" width="108" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Assistant" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MK9-R9-2YG">
+                                                <rect key="frame" x="13" y="79.333333333333329" width="108" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Entry" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1g-wY-nbO">
+                                                <rect key="frame" x="279" y="37" width="108" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Remote" cornerStyle="capsule"/>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAl-Kw-8RQ">
+                                        <rect key="frame" x="0.0" y="127.33333333333334" width="393" height="126.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8R-W2-W7O">
+                                                <rect key="frame" x="18" y="36" width="115" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Networking" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFh-SC-Yna">
+                                                <rect key="frame" x="150" y="36" width="92" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Software" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVv-tH-Jv1">
+                                                <rect key="frame" x="254" y="36" width="130.66666666666666" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Cybersecurity" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgy-6p-Vkc">
+                                                <rect key="frame" x="18" y="81" width="102" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Web" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpN-Ht-lZn">
+                                                <rect key="frame" x="150" y="81" width="92.333333333333329" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Cloud" cornerStyle="capsule"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IU2-eT-XIQ">
+                                                <rect key="frame" x="29" y="8" width="91" height="20.333333333333329"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gip-NS-cGC">
+                                        <rect key="frame" x="0.0" y="253.99999999999997" width="393" height="127.66666666666666"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Governorate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlp-KC-sio">
+                                                <rect key="frame" x="29" y="8" width="102" height="20.333333333333332"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-Am-JIC">
+                                                <rect key="frame" x="18" y="36" width="111" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Capital" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xG0-wk-e2S">
+                                                <rect key="frame" x="150" y="36" width="102" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Southern" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4te-ju-FiR">
+                                                <rect key="frame" x="21" y="81" width="97.666666666666657" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Muharraq" cornerStyle="capsule"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuQ-K6-Jv9">
+                                                <rect key="frame" x="267" y="36" width="103" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Northern" cornerStyle="capsule"/>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxw-oI-HCo">
+                                        <rect key="frame" x="0.0" y="381.66666666666669" width="393" height="127"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="yRL-uY-EZj">
+                                                <rect key="frame" x="53.333333333333343" y="49.666666666666686" width="286.33333333333326" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llr-pQ-B4C">
+                                                <rect key="frame" x="15.333333333333336" y="54.666666666666693" width="10" height="20.333333333333336"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbU-wg-2cu">
+                                                <rect key="frame" x="353.66666666666669" y="54.666666666666693" width="20.333333333333314" height="20.333333333333336"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Experience Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAE-ie-Z1v">
+                                                <rect key="frame" x="29" y="8" width="137" height="20.333333333333332"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vy2-Z9-PVU">
+                                        <rect key="frame" x="0.0" y="508.66666666666663" width="393" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7T-Eq-1VX">
+                                                <rect key="frame" x="29" y="15" width="77.666666666666657" height="20.333333333333332"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xRv-Uu-IWL">
+                                        <rect key="frame" x="0.0" y="558.66666666666663" width="393" height="107.33333333333337"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0F8-g8-X8B">
+                                            <size key="itemSize" width="100" height="40"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="30" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="companyCell" id="z7A-06-yEL" customClass="companyCollectionViewCell" customModule="pursuit" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="48.666666666666664" width="100" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QFK-Gr-eQP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V1-Co-ksO">
+                                                            <rect key="frame" x="13" y="2" width="75" height="35"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                        </button>
+                                                    </subviews>
+                                                </collectionViewCellContentView>
+                                                <connections>
+                                                    <outlet property="btnCompany" destination="5V1-Co-ksO" id="Qhu-sq-eHh"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gip-NS-cGC" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="width" id="1sy-rK-S5t"/>
+                                    <constraint firstItem="bxw-oI-HCo" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="width" id="Mty-AS-877"/>
+                                    <constraint firstItem="Vy2-Z9-PVU" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="width" id="j9r-1F-De7"/>
+                                    <constraint firstItem="zAl-Kw-8RQ" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="width" id="li1-ba-jFk"/>
+                                    <constraint firstItem="GHl-ur-jj9" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="width" id="pAV-SA-bIP"/>
+                                    <constraint firstItem="GHl-ur-jj9" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="height" multiplier="131:222" id="yZh-YA-PO6"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Buw-t1-9Hl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mt0-7g-RfM" firstAttribute="top" secondItem="Buw-t1-9Hl" secondAttribute="top" id="4Up-Jk-bPG"/>
+                            <constraint firstItem="Buw-t1-9Hl" firstAttribute="trailing" secondItem="Mt0-7g-RfM" secondAttribute="trailing" id="Gct-Mt-wjv"/>
+                            <constraint firstItem="Mt0-7g-RfM" firstAttribute="width" secondItem="Buw-t1-9Hl" secondAttribute="width" id="HXm-va-XKm"/>
+                            <constraint firstItem="Mt0-7g-RfM" firstAttribute="height" secondItem="Buw-t1-9Hl" secondAttribute="height" id="XH2-NP-DVw"/>
+                            <constraint firstItem="Buw-t1-9Hl" firstAttribute="bottom" secondItem="Mt0-7g-RfM" secondAttribute="bottom" id="h31-hd-PpJ"/>
+                            <constraint firstItem="Mt0-7g-RfM" firstAttribute="leading" secondItem="Buw-t1-9Hl" secondAttribute="leading" id="jiU-hT-Apv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="839-ne-u3i"/>
+                    <connections>
+                        <outlet property="btnAssistant" destination="B6X-z2-rxG" id="sW2-Ii-1nG"/>
+                        <outlet property="btnCapital" destination="rbX-Am-JIC" id="JaK-be-4ds"/>
+                        <outlet property="btnCloud" destination="mpN-Ht-lZn" id="Dz0-1y-4Wc"/>
+                        <outlet property="btnCyberSecurity" destination="RVv-tH-Jv1" id="jtM-h5-rRs"/>
+                        <outlet property="btnEntry" destination="MK9-R9-2YG" id="YGp-Bv-R37"/>
+                        <outlet property="btnManagerial" destination="3Kz-mA-A1b" id="Tsf-PR-uQs"/>
+                        <outlet property="btnMuharraq" destination="4te-ju-FiR" id="e7W-oy-JPe"/>
+                        <outlet property="btnNetworking" destination="K8R-W2-W7O" id="WFG-0T-goo"/>
+                        <outlet property="btnNortther" destination="HuQ-K6-Jv9" id="Ndx-IW-wwe"/>
+                        <outlet property="btnRemote" destination="w1g-wY-nbO" id="Ilf-sP-zmd"/>
+                        <outlet property="btnSoftware" destination="sFh-SC-Yna" id="RYd-Ho-6N7"/>
+                        <outlet property="btnSouthern" destination="xG0-wk-e2S" id="Cao-wM-1aM"/>
+                        <outlet property="btnWeb" destination="Kgy-6p-Vkc" id="01Z-fj-s2q"/>
+                        <outlet property="collectionViewCompany" destination="xRv-Uu-IWL" id="eft-vW-Dtq"/>
+                        <outlet property="sldrExperience" destination="yRL-uY-EZj" id="P0t-Ka-ChS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gg1-R7-dmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530.53435114503816" y="2.8169014084507045"/>
         </scene>
         <!--JobDetailsJobS-->
         <scene sceneID="g2R-ve-2j5">
@@ -250,7 +517,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iq-EW-g8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937" y="-39"/>
+            <point key="canvasLocation" x="1190" y="-58"/>
         </scene>
     </scenes>
     <resources>
