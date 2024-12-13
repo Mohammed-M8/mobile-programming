@@ -40,6 +40,7 @@
 		D06390632CF861BB0006CC8B /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390622CF861BB0006CC8B /* Guest.swift */; };
 		D5175D682D080BD100515407 /* CVCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5175D672D080BD100515407 /* CVCreationViewController.swift */; };
 		D57A4DCF2D0AC9FE00FE91FF /* CVCReationInputTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A4DCE2D0AC9FD00FE91FF /* CVCReationInputTableViewController.swift */; };
+		D5B915002D0C818A00435C6E /* HomeJobSeekerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B914FF2D0C818A00435C6E /* HomeJobSeekerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		D06390622CF861BB0006CC8B /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		D5175D672D080BD100515407 /* CVCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreationViewController.swift; sourceTree = "<group>"; };
 		D57A4DCE2D0AC9FD00FE91FF /* CVCReationInputTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCReationInputTableViewController.swift; sourceTree = "<group>"; };
+		D5B914FF2D0C818A00435C6E /* HomeJobSeekerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeJobSeekerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				D06390562CF85C350006CC8B /* LoginViewController.swift */,
 				D57A4DCE2D0AC9FD00FE91FF /* CVCReationInputTableViewController.swift */,
 				D5175D672D080BD100515407 /* CVCreationViewController.swift */,
+				D5B914FF2D0C818A00435C6E /* HomeJobSeekerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				D063905F2CF8608E0006CC8B /* Employer.swift in Sources */,
 				575B2D2C2CFDF21400840818 /* Video.swift in Sources */,
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
+				D5B915002D0C818A00435C6E /* HomeJobSeekerViewController.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
 				575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */,
