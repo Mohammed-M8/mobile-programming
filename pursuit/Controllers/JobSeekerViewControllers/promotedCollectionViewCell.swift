@@ -9,8 +9,8 @@ import UIKit
 
 class promotedCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var lblPromotedJob: UILabel!
-    @IBOutlet weak var imgPromotedJob: UIImageView!
+    @IBOutlet weak var lblJob: UILabel!
+    @IBOutlet weak var imgJob: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -18,15 +18,11 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        let nib = UINib(nibName: "JobTableViewCell", bundle: nil)
-        JobtblView.register(nib, forCellReuseIdentifier: "jobTblCell")
         JobtblView.dataSource=self
         JobtblView.delegate=self
     }
     
     func setupCollectionView(){
-        let nib = UINib(nibName:"promotedCollectionViewCell", bundle: nil)
-        jobCollectionView.register(nib, forCellWithReuseIdentifier:"promotedCollectionCell")
         jobCollectionView.delegate=self
         jobCollectionView.dataSource=self
     
@@ -40,6 +36,7 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
         let cell = JobtblView.dequeueReusableCell(withIdentifier: "jobTblCell") as! JobTableViewCell
         cell.lblCompany.text="Batelco"
         cell.lblLocation.text="hello"
+        
         return cell
     }
     
@@ -49,11 +46,14 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=jobCollectionView.dequeueReusableCell(withReuseIdentifier: "promotedCollectionCell" , for: indexPath) as! promotedCollectionViewCell
+        let colors: [UIColor] = [.red, .green, .blue]
+        cell.contentView.backgroundColor = colors[indexPath.row % colors.count]
+        
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath)-> CGSize {
         
-        return CGSize(width: jobCollectionView.frame.width/3, height: 100)
+        return CGSize(width: jobCollectionView.frame.width/3.3, height: 100)
     }
     
     
