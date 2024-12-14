@@ -440,23 +440,29 @@
                                             <size key="itemSize" width="100" height="40"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="10" minY="30" maxX="0.0" maxY="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="companyCell" id="z7A-06-yEL" customClass="companyCollectionViewCell" customModule="pursuit" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="48.666666666666664" width="100" height="40"/>
+                                                <rect key="frame" x="10" y="0.0" width="75" height="34.333333333333343"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QFK-Gr-eQP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333343"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V1-Co-ksO">
-                                                            <rect key="frame" x="13" y="2" width="75" height="35"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V1-Co-ksO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
+                                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="gray" title="Button"/>
                                                         </button>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="5V1-Co-ksO" secondAttribute="bottom" id="1rK-qH-FcR"/>
+                                                        <constraint firstItem="5V1-Co-ksO" firstAttribute="leading" secondItem="QFK-Gr-eQP" secondAttribute="leading" id="3NI-2H-CgB"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5V1-Co-ksO" secondAttribute="trailing" id="fLL-AR-eTl"/>
+                                                        <constraint firstItem="5V1-Co-ksO" firstAttribute="top" secondItem="QFK-Gr-eQP" secondAttribute="top" id="hbx-Hy-8I6"/>
+                                                    </constraints>
                                                 </collectionViewCellContentView>
                                                 <connections>
                                                     <outlet property="btnCompany" destination="5V1-Co-ksO" id="Qhu-sq-eHh"/>
@@ -471,7 +477,6 @@
                                     <constraint firstItem="Vy2-Z9-PVU" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="width" id="j9r-1F-De7"/>
                                     <constraint firstItem="zAl-Kw-8RQ" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="width" id="li1-ba-jFk"/>
                                     <constraint firstItem="GHl-ur-jj9" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="width" id="pAV-SA-bIP"/>
-                                    <constraint firstItem="GHl-ur-jj9" firstAttribute="width" secondItem="Mt0-7g-RfM" secondAttribute="height" multiplier="131:222" id="yZh-YA-PO6"/>
                                 </constraints>
                             </stackView>
                         </subviews>
