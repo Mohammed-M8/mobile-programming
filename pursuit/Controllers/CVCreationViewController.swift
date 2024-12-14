@@ -8,14 +8,10 @@
 import UIKit
 
 class CVCreationViewController: UIViewController {
-    @IBOutlet weak var CVView: UIView!
     
-    @IBOutlet weak var lblStatusCV: UILabel!
-    @IBOutlet weak var modifyCV: UIButton!
-    @IBOutlet weak var createbtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblStatusCV.isHidden=true
+
         // Do any additional setup after loading the view.
     }
     
