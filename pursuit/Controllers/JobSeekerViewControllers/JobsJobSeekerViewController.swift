@@ -36,7 +36,6 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
         let cell = JobtblView.dequeueReusableCell(withIdentifier: "jobTblCell") as! JobTableViewCell
         cell.lblCompany.text="Batelco"
         cell.lblLocation.text="hello"
-        
         return cell
     }
     
