@@ -67,7 +67,7 @@ class TaskViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let viewController = navigationController?.viewControllers.first as? ViewController {
+        if let viewController = navigationController?.viewControllers.first as? TasksUpdating {
             viewController.updateTasks()
         }
     }
@@ -123,7 +123,7 @@ class TaskViewController: UIViewController {
                 navigationController?.popViewController(animated: true)
                 
                 // Update the main view controller's table
-                if let viewController = navigationController?.viewControllers.first as? ViewController {
+                if let viewController = navigationController?.viewControllers.first as? TasksUpdating {
                     viewController.updateTasks()
                 }
             }

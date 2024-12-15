@@ -180,7 +180,7 @@ class EntryViewController: UIViewController, UIImagePickerControllerDelegate, UI
         UserDefaults().synchronize()
     }
     
-        if let viewController = navigationController?.viewControllers.first as? ViewController {
+        if let viewController = navigationController?.viewControllers.first as? TasksUpdating {
             DispatchQueue.main.async {
                 viewController.updateTasks()
             }

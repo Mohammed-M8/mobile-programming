@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController, TasksUpdating {
     @IBOutlet var tableView: UITableView!
     
     var tasks = [String]()
@@ -17,8 +17,8 @@ class ViewController: UIViewController {
         
         self.title = "Tasks"
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.delegate = self as UITableViewDelegate
+        tableView.dataSource = self as UITableViewDataSource
         
         //Setup
         
