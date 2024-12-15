@@ -5,7 +5,7 @@
 //  Created by BP-36-201-16N on 10/12/2024.
 //
 
-import Foundation
+/*import Foundation
 import SwiftUI
 
 class ViewModel: ObservableObject {
@@ -17,4 +17,4 @@ class ViewModel: ObservableObject {
             
         }
     }
-}
+} */

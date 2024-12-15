@@ -42,6 +42,10 @@
 		D063905F2CF8608E0006CC8B /* Employer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D063905E2CF8608E0006CC8B /* Employer.swift */; };
 		D06390612CF8619D0006CC8B /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390602CF8619D0006CC8B /* Admin.swift */; };
 		D06390632CF861BB0006CC8B /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390622CF861BB0006CC8B /* Guest.swift */; };
+		D5493D092D0F0F3B0097EEBF /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5493D082D0F0F3B0097EEBF /* EntryViewController.swift */; };
+		D5493D0B2D0F0F4F0097EEBF /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5493D0A2D0F0F4F0097EEBF /* TaskViewController.swift */; };
+		D5493D0D2D0F0F590097EEBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5493D0C2D0F0F590097EEBF /* ViewController.swift */; };
+		D5493D0F2D0F0F890097EEBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5493D0E2D0F0F890097EEBF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +105,10 @@
 		D063905E2CF8608E0006CC8B /* Employer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employer.swift; sourceTree = "<group>"; };
 		D06390602CF8619D0006CC8B /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		D06390622CF861BB0006CC8B /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		D5493D082D0F0F3B0097EEBF /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		D5493D0A2D0F0F4F0097EEBF /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		D5493D0C2D0F0F590097EEBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5493D0E2D0F0F890097EEBF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +223,7 @@
 				57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */,
 				D05D11522D055B6600AF8A4D /* JobDetails.storyboard */,
 				83CD9D102D080A2800B3BF0F /* Storyboard.storyboard */,
+				D5493D0E2D0F0F890097EEBF /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +234,9 @@
 				D06390562CF85C350006CC8B /* LoginViewController.swift */,
 				D05D11502D055B2E00AF8A4D /* JobsJobSeekerViewController.swift */,
 				C3DC0F192D0733F80071BCED /* JobDetailViewController.swift */,
+				D5493D0C2D0F0F590097EEBF /* ViewController.swift */,
+				D5493D082D0F0F3B0097EEBF /* EntryViewController.swift */,
+				D5493D0A2D0F0F4F0097EEBF /* TaskViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +348,7 @@
 				D06390592CF85C510006CC8B /* Login.storyboard in Resources */,
 				83CD9D112D080A2800B3BF0F /* Storyboard.storyboard in Resources */,
 				D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */,
+				D5493D0F2D0F0F890097EEBF /* Main.storyboard in Resources */,
 				57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */,
 				57C71DF72D006FC300F317AA /* Base.storyboard in Resources */,
 				D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */,
@@ -374,6 +387,7 @@
 				D063905F2CF8608E0006CC8B /* Employer.swift in Sources */,
 				575B2D2C2CFDF21400840818 /* Video.swift in Sources */,
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
+				D5493D0D2D0F0F590097EEBF /* ViewController.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
 				D05D11512D055B2E00AF8A4D /* JobsJobSeekerViewController.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
@@ -385,7 +399,9 @@
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
 				575B2D2E2CFDF21E00840818 /* Article.swift in Sources */,
 				D06390572CF85C350006CC8B /* LoginViewController.swift in Sources */,
+				D5493D092D0F0F3B0097EEBF /* EntryViewController.swift in Sources */,
 				C3DC0F1A2D0733F80071BCED /* JobDetailViewController.swift in Sources */,
+				D5493D0B2D0F0F4F0097EEBF /* TaskViewController.swift in Sources */,
 				D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */,
 				D06390612CF8619D0006CC8B /* Admin.swift in Sources */,
 				8376653C2D081A5100F58F1D /* Post.swift in Sources */,

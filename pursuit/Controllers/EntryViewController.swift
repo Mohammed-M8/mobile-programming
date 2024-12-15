@@ -1,89 +1,202 @@
 //
 //  EntryViewController.swift
-//  pursuit
+//  JobPost1
 //
-//  Created by BP-36-201-09 on 15/12/2024.
+//  Created by Abbas  on 12/13/24.
 //
 
 import UIKit
 
-class EntryViewController: UITableViewController {
+class EntryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet var field: UITextField!
+    @IBOutlet var extraCommentField: UITextField!
+    @IBOutlet var salaryField: UITextField!
+    @IBOutlet var typeField: UITextField!
+    @IBOutlet var locationField: UITextField!
+    @IBOutlet var detailsField: UITextField!
+    @IBOutlet var requirementsField: UITextField!
+    @IBOutlet weak var imageButton: UIButton!
+    
+    var update: (() -> Void)?
+    private var selectedImage: UIImage?
+    
+    var isModifying = false
+    var existingTask: String?
+    var existingTaskIndex: Int?
+    var existingEC: String?
+    var existingSalary: String?
+    var existingType: String?
+    var existingLocation: String?
+    var existingDetails: String?
+    var existingRequirements: String?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        field.delegate = self
+        extraCommentField.delegate = self
+        
+        if isModifying {
+            field.text = existingTask
+            extraCommentField.text = existingEC
+            salaryField.text = existingSalary
+            typeField.text = existingType
+            locationField.text = existingLocation
+            detailsField.text = existingDetails
+            requirementsField.text = existingRequirements
+            
+            if let index = existingTaskIndex,
+                let imageData = UserDefaults().data(forKey: "logo_\(index)"),
+                let image = UIImage(data: imageData) {
+                imageButton.setImage(image, for: .normal)
+                selectedImage = image
+            }
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveTask))
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    @IBAction func didTapImageButton(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true)
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.editedImage] as? UIImage else {
+            return
+        }
+        selectedImage = image
+        
+        let size = CGSize(width: 40, height: 40)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        image.draw(in: CGRect(origin: .zero, size: size))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        imageButton.setImage(image, for: .normal)
+        imageButton.imageView?.contentMode = .scaleAspectFit
+        imageButton.clipsToBounds = true
+        imageButton.backgroundColor = .clear
+        imageButton.tintColor = .clear
+        imageButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        imageButton.contentMode = .scaleAspectFit
+        
+        picker.dismiss(animated: true)
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    
+    @objc func saveTask() {
+        
+        guard let text = field.text, !text.isEmpty else {
+            return
+        }
+        
+        
+        if isModifying {
+            if let taskIndex = existingTaskIndex {
+                UserDefaults().set(text, forKey: "task_\(taskIndex)")
+            
+            if let extraComment = extraCommentField.text {
+                UserDefaults().set(extraComment, forKey: "ec_\(taskIndex)")
+            }
+                    
+            if let salary = salaryField.text {
+                UserDefaults().set(salary, forKey: "salary_\(taskIndex)")
+            }
+                    
+            if let type = typeField.text {
+                UserDefaults().set(type, forKey: "type_\(taskIndex)")
+            }
+                    
+            if let location = locationField.text {
+                UserDefaults().set(location, forKey: "location_\(taskIndex)")
+            }
+                    
+            if let details = detailsField.text {
+                UserDefaults().set(details, forKey: "details_\(taskIndex)")
+            }
+                    
+            if let requirements = requirementsField.text {
+                UserDefaults().set(requirements, forKey: "requirements_\(taskIndex)")
+            }
+                    
+            if let image = selectedImage {
+                if let imageData = image.jpegData(compressionQuality: 0.8) {
+                    UserDefaults().set(imageData, forKey: "logo_\(taskIndex)")
+                }
+            }
+                
+                UserDefaults().synchronize()
+        }
+    } else {
+            
+        guard let count = UserDefaults().value(forKey: "count") as? Int else {
+            return
+        }
+        
+        let newCount = count + 1
+        
+        UserDefaults().set(newCount, forKey: "count")
+        UserDefaults().set(text, forKey: "task_\(newCount)")
+        
+        
+        if let extraComment = extraCommentField.text {
+            UserDefaults().set(extraComment, forKey: "ec_\(newCount)")
+        }
+        
+        if let salary = salaryField.text {
+            UserDefaults().set(salary, forKey: "salary_\(newCount)")
+        }
+        
+        if let type = typeField.text {
+            UserDefaults().set(type, forKey: "type_\(newCount)")
+        }
+        if let location = locationField.text {
+            UserDefaults().set(location, forKey: "location_\(newCount)")
+        }
+        
+        if let details = detailsField.text {
+            UserDefaults().set(details, forKey: "details_\(newCount)")
+        }
+        
+        if let requirements = requirementsField.text {
+            UserDefaults().set(requirements, forKey: "requirements_\(newCount)")
+        }
+        if let image = selectedImage {
+            if let imageData = image.jpegData(compressionQuality: 0.8) {
+                UserDefaults().set(imageData, forKey: "logo_\(newCount)")
+            }
+        }
+        UserDefaults().synchronize()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+        if let viewController = navigationController?.viewControllers.first as? ViewController {
+            DispatchQueue.main.async {
+                viewController.updateTasks()
+            }
+        }
+        
+        update?()
+        navigationController?.popToRootViewController(animated: true)
+    
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension EntryViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+
