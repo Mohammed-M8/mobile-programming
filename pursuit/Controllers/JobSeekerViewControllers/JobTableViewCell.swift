@@ -10,11 +10,11 @@ import UIKit
 class JobTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var lblView: UIButton!
+ 
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var lblLocation: UILabel!
     @IBOutlet weak var lblCompany: UILabel!
-    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblJob: UILabel!
     @IBOutlet weak var imgJob: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

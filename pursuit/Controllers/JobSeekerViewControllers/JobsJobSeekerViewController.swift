@@ -10,9 +10,7 @@ import UIKit
 class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     
-    @IBOutlet weak var btnSortBy: UIButton!
-    @IBOutlet weak var btnFilter: UIButton!
-    @IBOutlet weak var searchBarJobs: UISearchBar!
+   
     @IBOutlet weak var jobCollectionView: UICollectionView!
     @IBOutlet weak var JobtblView: UITableView!
     override func viewDidLoad() {
