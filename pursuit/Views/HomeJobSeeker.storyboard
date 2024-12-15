@@ -100,7 +100,6 @@
                         <constraints>
                             <constraint firstItem="NeL-Cy-q9k" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="1wh-qW-vLy"/>
                             <constraint firstAttribute="trailing" secondItem="NeL-Cy-q9k" secondAttribute="trailing" id="J28-ij-DyQ"/>
-                            <constraint firstItem="BmZ-tB-g9p" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="1.76056" id="YXz-Fs-jOo"/>
                             <constraint firstItem="NeL-Cy-q9k" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="bks-li-JSN"/>
                             <constraint firstItem="NeL-Cy-q9k" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="o30-5u-L2l"/>
                         </constraints>

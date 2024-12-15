@@ -225,17 +225,17 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uvy-Is-w2U">
-                                        <rect key="frame" x="0.0" y="328.66666793823242" width="430" height="117.66666412353516"/>
+                                        <rect key="frame" x="0.0" y="328.66666793823242" width="430" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uvy-Is-w2U" id="WWl-jy-co2">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="117.66666412353516"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="121"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="O1k-ab-UXw">
-                                                    <rect key="frame" x="15" y="30.000000000000007" width="400" height="87.666666666666686"/>
+                                                    <rect key="frame" x="15" y="30" width="400" height="91"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkp-uA-a8r">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="87.666666666666671"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="91"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="3zS-nW-EXa"/>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="a9N-xa-4gH"/>
@@ -245,7 +245,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="gwj-1M-zxR">
-                                                            <rect key="frame" x="111" y="0.0" width="289" height="87.666666666666671"/>
+                                                            <rect key="frame" x="111" y="0.0" width="289" height="91"/>
                                                         </datePicker>
                                                     </subviews>
                                                 </stackView>
@@ -259,7 +259,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ISW-ho-7hS">
-                                        <rect key="frame" x="0.0" y="446.33333206176758" width="430" height="80.333335876464844"/>
+                                        <rect key="frame" x="0.0" y="449.66666793823242" width="430" height="80.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ISW-ho-7hS" id="J3m-UX-Sjg">
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="80.333335876464844"/>
@@ -301,7 +301,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="V2H-K5-3j6">
-                                        <rect key="frame" x="0.0" y="526.66666793823242" width="430" height="72.333335876464844"/>
+                                        <rect key="frame" x="0.0" y="530.00000381469727" width="430" height="72.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V2H-K5-3j6" id="xkX-ZK-Elc">
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="72.333335876464844"/>
@@ -336,7 +336,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TOl-FM-wxM">
-                                        <rect key="frame" x="0.0" y="599.00000381469727" width="430" height="72.333335876464844"/>
+                                        <rect key="frame" x="0.0" y="602.33333969116211" width="430" height="72.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TOl-FM-wxM" id="CGq-EM-xab">
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="72.333335876464844"/>
@@ -379,7 +379,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="CV Creation" id="Xku-PS-hBX">
-                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="Rgq-8O-hG1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="Rgq-8O-hG1">
+                            <connections>
+                                <segue destination="jox-AY-doR" kind="show" id="nsA-1o-tA8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipd-go-SYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -404,6 +408,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Y8-fD-3oK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-420" y="10"/>
+        </scene>
+        <!--CV Creation-->
+        <scene sceneID="noS-PC-Okh">
+            <objects>
+                <viewController id="jox-AY-doR" customClass="CVCreationViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dNr-Ej-2Di">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ORv-1Q-Nes">
+                                <rect key="frame" x="0.0" y="103" width="430" height="795"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Provide your Professional Summery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLf-Vx-LFP">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="kTO-dD-tgt">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" red="0.066666666669999999" green="0.43921568630000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max No. (150 words)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEd-s5-r8r">
+                                        <rect key="frame" x="0.0" y="100" width="430" height="695"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H2j-xy-Cyg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H2j-xy-Cyg" firstAttribute="trailing" secondItem="ORv-1Q-Nes" secondAttribute="trailing" id="B9Q-2f-S9Z"/>
+                            <constraint firstItem="H2j-xy-Cyg" firstAttribute="bottom" secondItem="ORv-1Q-Nes" secondAttribute="bottom" id="Uih-Gz-che"/>
+                            <constraint firstItem="ORv-1Q-Nes" firstAttribute="top" secondItem="H2j-xy-Cyg" secondAttribute="top" id="WLl-JM-jjT"/>
+                            <constraint firstItem="ORv-1Q-Nes" firstAttribute="leading" secondItem="H2j-xy-Cyg" secondAttribute="leading" id="pkf-gP-6UN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CV Creation" id="9N0-1h-UD9">
+                        <barButtonItem key="backBarButtonItem" title=" " id="5Rt-PS-EPc">
+                            <color key="tintColor" name="AccentColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRz-FB-day" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151.6279069767443" y="2.5751072961373391"/>
         </scene>
     </scenes>
     <resources>
