@@ -11,8 +11,9 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
     
     
    
-    @IBOutlet weak var jobCollectionView: UICollectionView!
+   
     @IBOutlet weak var JobtblView: UITableView!
+    @IBOutlet weak var jobCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()

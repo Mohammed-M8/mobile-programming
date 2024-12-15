@@ -10,10 +10,8 @@ import UIKit
 class ResourcesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     
-    @IBOutlet weak var searchBarResources: UISearchBar!
+   
     
-    @IBOutlet weak var btnSortBy: UIButton!
-    @IBOutlet weak var btnFilter: UIButton!
     
     @IBOutlet weak var resourcesCollectionView: UICollectionView!
     @IBOutlet weak var resourcesTableView: UITableView!

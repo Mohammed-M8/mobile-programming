@@ -10,7 +10,8 @@ import UIKit
 class ResourcesTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var btnApply: UIButton!
+   
+    @IBOutlet weak var btnView: UIButton!
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var lblFeature: UILabel!
     @IBOutlet weak var lblCompany: UILabel!

@@ -38,10 +38,10 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT2-Aw-bJt">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="710"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ObA-kS-un8">
-                                                <rect key="frame" x="8" y="0.0" width="377" height="666"/>
+                                                <rect key="frame" x="8" y="0.0" width="377" height="710"/>
                                                 <subviews>
                                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Bh9-Av-nTK">
                                                         <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
@@ -138,8 +138,8 @@
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <connections>
-                                                                    <outlet property="imgJob" destination="B8r-Uy-Fqh" id="Te9-m7-fRg"/>
-                                                                    <outlet property="lblJob" destination="WTM-9M-ugA" id="JRi-un-I19"/>
+                                                                    <outlet property="imgJob" destination="B8r-Uy-Fqh" id="pEB-Ww-ip7"/>
+                                                                    <outlet property="lblJob" destination="WTM-9M-ugA" id="jt6-Rg-8Yo"/>
                                                                 </connections>
                                                             </collectionViewCell>
                                                         </cells>
@@ -159,7 +159,7 @@
                                                         </variation>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gI9-PJ-AjH">
-                                                        <rect key="frame" x="0.0" y="337" width="377" height="329"/>
+                                                        <rect key="frame" x="0.0" y="337" width="377" height="373"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="373" id="BGA-Vd-DhT">
@@ -316,13 +316,13 @@
                     <navigationItem key="navigationItem" title="Jobs" id="psN-XF-pwb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="JobtblView" destination="gI9-PJ-AjH" id="RbA-Mf-JEP"/>
-                        <outlet property="jobCollectionView" destination="xuO-zO-5Cs" id="fmO-NG-ffq"/>
+                        <outlet property="JobtblView" destination="gI9-PJ-AjH" id="8xQ-qv-lbf"/>
+                        <outlet property="jobCollectionView" destination="xuO-zO-5Cs" id="Cfp-JN-3aF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JoC-st-aB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145.3125" y="2.6354319180087846"/>
+            <point key="canvasLocation" x="-318" y="1"/>
         </scene>
         <!--Job Filter View Controller-->
         <scene sceneID="gWx-nh-lL4">
@@ -583,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg1-R7-dmt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="3"/>
+            <point key="canvasLocation" x="915" y="2"/>
         </scene>
         <!--JobDetailsJobS-->
         <scene sceneID="g2R-ve-2j5">
@@ -593,7 +593,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iq-EW-g8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="-58"/>
+            <point key="canvasLocation" x="1434" y="-66"/>
         </scene>
     </scenes>
     <resources>

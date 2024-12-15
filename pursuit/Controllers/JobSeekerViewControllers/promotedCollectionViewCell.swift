@@ -10,6 +10,8 @@ import UIKit
 class promotedCollectionViewCell: UICollectionViewCell {
 
     
+    
+ 
     @IBOutlet weak var lblJob: UILabel!
     @IBOutlet weak var imgJob: UIImageView!
     override func awakeFromNib() {
