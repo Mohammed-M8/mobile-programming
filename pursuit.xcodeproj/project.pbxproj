@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573953FC2D0EDDB800BA1260 /* ApplicationPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573953FB2D0EDDB800BA1260 /* ApplicationPostViewController.swift */; };
 		575B2D1E2CFDE10D00840818 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1D2CFDE10D00840818 /* Job.swift */; };
 		575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1F2CFDE1BA00840818 /* JobApplication.swift */; };
 		575B2D222CFDE61400840818 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D212CFDE61400840818 /* CV.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		573953FB2D0EDDB800BA1260 /* ApplicationPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationPostViewController.swift; sourceTree = "<group>"; };
 		575B2D1D2CFDE10D00840818 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		575B2D1F2CFDE1BA00840818 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		575B2D212CFDE61400840818 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
@@ -226,9 +228,9 @@
 				57C71DF62D006FC300F317AA /* JobSeekerBase.storyboard */,
 				57C71DF82D00700B00F317AA /* HomeJobSeeker.storyboard */,
 				57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */,
+				57C71E022D0088BD00F317AA /* CvCreationJobseeker.storyboard */,
 				57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */,
 				57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */,
-				57C71E022D0088BD00F317AA /* CvCreationJobseeker.storyboard */,
 				C3F76A0E2D07422B00EE12A3 /* EditProfileJobSeeker.storyboard */,
 			);
 			path = Views;
@@ -239,6 +241,7 @@
 			children = (
 				D06390562CF85C350006CC8B /* LoginViewController.swift */,
 				57C71E042D008BC700F317AA /* CVCreationJobSeekerController.swift */,
+				573953FB2D0EDDB800BA1260 /* ApplicationPostViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				575B2D1E2CFDE10D00840818 /* Job.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
 				575B2D2E2CFDF21E00840818 /* Article.swift in Sources */,
+				573953FC2D0EDDB800BA1260 /* ApplicationPostViewController.swift in Sources */,
 				D06390572CF85C350006CC8B /* LoginViewController.swift in Sources */,
 				D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */,
 				D06390612CF8619D0006CC8B /* Admin.swift in Sources */,
