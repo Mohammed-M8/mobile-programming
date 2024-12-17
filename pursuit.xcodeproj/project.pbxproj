@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		573953FC2D0EDDB800BA1260 /* ApplicationPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573953FB2D0EDDB800BA1260 /* ApplicationPostViewController.swift */; };
+		5759F4E92D10726300AF9D92 /* ApplicantPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5759F4E82D10726300AF9D92 /* ApplicantPostTableViewCell.swift */; };
 		575B2D1E2CFDE10D00840818 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1D2CFDE10D00840818 /* Job.swift */; };
 		575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1F2CFDE1BA00840818 /* JobApplication.swift */; };
 		575B2D222CFDE61400840818 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D212CFDE61400840818 /* CV.swift */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		573953FB2D0EDDB800BA1260 /* ApplicationPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationPostViewController.swift; sourceTree = "<group>"; };
+		5759F4E82D10726300AF9D92 /* ApplicantPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantPostTableViewCell.swift; sourceTree = "<group>"; };
 		575B2D1D2CFDE10D00840818 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		575B2D1F2CFDE1BA00840818 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		575B2D212CFDE61400840818 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				D06390562CF85C350006CC8B /* LoginViewController.swift */,
 				57C71E042D008BC700F317AA /* CVCreationJobSeekerController.swift */,
 				573953FB2D0EDDB800BA1260 /* ApplicationPostViewController.swift */,
+				5759F4E82D10726300AF9D92 /* ApplicantPostTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
 				57C71E052D008BC700F317AA /* CVCreationJobSeekerController.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
+				5759F4E92D10726300AF9D92 /* ApplicantPostTableViewCell.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
 				575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */,
 				575B2D302CFDF2CB00840818 /* Resources.swift in Sources */,
