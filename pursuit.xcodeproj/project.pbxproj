@@ -178,8 +178,8 @@
 				D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */,
 				D01FF9A92CF85B2500F5DC5D /* ViewController.swift */,
 				D01FF9AB2CF85B2500F5DC5D /* Main.storyboard */,
-				D01FF9AE2CF85B2700F5DC5D /* Assets.xcassets */,
 				D01FF9B02CF85B2700F5DC5D /* LaunchScreen.storyboard */,
+				D01FF9AE2CF85B2700F5DC5D /* Assets.xcassets */,
 				D01FF9B32CF85B2700F5DC5D /* Info.plist */,
 			);
 			path = pursuit;

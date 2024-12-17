@@ -192,12 +192,12 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="107.33333333333333" height="136"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-F1-zmc">
-                                                                                    <rect key="frame" x="16" y="19" width="83" height="79"/>
+                                                                                    <rect key="frame" x="16" y="19.666666666666664" width="83" height="77.666666666666686"/>
                                                                                     <color key="tintColor" systemColor="separatorColor"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" secondItem="jAf-F1-zmc" secondAttribute="height" multiplier="55:58" id="EvP-6d-LvK"/>
                                                                                     </constraints>
-                                                                                    <variation key="heightClass=regular-widthClass=compact" image="file-JCL0UvSX8DaIGL3ua3qaRtYd"/>
+                                                                                    <variation key="heightClass=regular-widthClass=compact" image="person.crop.circle.fill" catalog="system"/>
                                                                                     <variation key="heightClass=regular-widthClass=regular" image="person.crop.square.fill" catalog="system"/>
                                                                                 </imageView>
                                                                             </subviews>
@@ -386,7 +386,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="file-JCL0UvSX8DaIGL3ua3qaRtYd" width="1024" height="1024"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
         <image name="person.text.rectangle" catalog="system" width="128" height="93"/>
