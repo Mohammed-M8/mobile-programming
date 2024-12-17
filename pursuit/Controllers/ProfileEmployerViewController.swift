@@ -6,12 +6,6 @@
 //
 
 import UIKit
-struct Applications {
-    let title: String
-    let description: String
-    let date: String
-    let image: String
-}
 
 class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var PostApplicationTable: UITableView!

