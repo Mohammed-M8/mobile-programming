@@ -9,13 +9,16 @@ import UIKit
 
 class EditProfileEmployerTableViewController: UITableViewController {
 
+    var profilePicture: String = ""
+    var bgPicture: String = ""
     var firstName: String = ""
     var lastName: String = ""
     var email: String = ""
-    var phone: String = ""
+    var phoneNumber: String = ""
     var selectedGovernate: String = ""
     var profileDescription: String = ""
-    
+    private var isComingForBG = false
+    var callBack: ((_ profilePicture: String, _ bgPicture: String, _ firstName: String, _ lastName: String, _ email: String, _ phoneNumber: String, _ selectedGovernate: String, _ profileDescription: String) -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,8 +28,8 @@ class EditProfileEmployerTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        let nib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "ProfileTableViewCell")
+        let profileNib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
+        tableView.register(profileNib, forCellReuseIdentifier: "ProfileTableViewCell")
         let nameNib = UINib(nibName: "NameTableViewCell", bundle: nil)
         tableView.register(nameNib, forCellReuseIdentifier: "NameTableViewCell")
         let emailNib = UINib(nibName: "EmailTableViewCell", bundle: nil)
@@ -38,17 +41,40 @@ class EditProfileEmployerTableViewController: UITableViewController {
         let descriptionNib = UINib(nibName: "DescriptionTableViewCell", bundle: nil)
         tableView.register(descriptionNib, forCellReuseIdentifier: "DescriptionTableViewCell")
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let choosePictureViewController = segue.destination as? ChoosePictureViewController else { return }
+        choosePictureViewController.isComingForBG = isComingForBG
+        choosePictureViewController.callBack = { [weak self] picture in
+            if let isComingForBG = self?.isComingForBG {
+                if isComingForBG {
+                    self?.bgPicture = picture
+                } else {
+                    self?.profilePicture = picture
+                }
+                self?.tableView.reloadData()
+            }
+        }
+    }
 
     @IBAction func cancelBtnTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func saveBtnTapped(_ sender: Any) {
-        
+        if firstName.isEmpty || lastName.isEmpty || email.isEmpty || phoneNumber.isEmpty || selectedGovernate.isEmpty || profileDescription.isEmpty {
+            let alert = UIAlertController(title: "Error", message: "Please enter full profile details.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
+        if let callBack {
+            callBack(profilePicture, bgPicture, firstName, lastName, email, phoneNumber, selectedGovernate, profileDescription)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -61,21 +87,26 @@ class EditProfileEmployerTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell, indexPath.section == 0 && indexPath.row == 0 {
-//            cell.bgImg.backgroundColor = .blue
-//            cell.profileImg.backgroundColor = .white
+            cell.bgImg.image = UIImage(named: self.bgPicture)
+            cell.profileImg.image = UIImage(named: self.profilePicture)
+            cell.bgImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlebgImgTap)))
+            cell.profileImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleProfileImgTap)))
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                cell.profileImg.layer.cornerRadius = cell.profileImg.frame.size.height / 2
+            })
             return cell
         } else if let cell = tableView.dequeueReusableCell(withIdentifier: "NameTableViewCell", for: indexPath) as? NameTableViewCell, indexPath.section == 0 && indexPath.row == 1 {
-            cell.firstNameField.text = "Ahmed"
-            cell.lastNameField.text = "Elshabab"
+            cell.firstNameField.text = firstName
+            cell.lastNameField.text = lastName
             cell.firstNameField.delegate = self
             cell.lastNameField.delegate = self
             return cell
         } else if let cell = tableView.dequeueReusableCell(withIdentifier: "EmailTableViewCell", for: indexPath) as? EmailTableViewCell, indexPath.section == 0 && indexPath.row == 2 {
-            cell.emailField.text = "ahmed@gmail.com"
+            cell.emailField.text = email
             cell.emailField.delegate = self
             return cell
         } else if let cell = tableView.dequeueReusableCell(withIdentifier: "PhoneTableViewCell", for: indexPath) as? PhoneTableViewCell, indexPath.section == 0 && indexPath.row == 3 {
-            cell.phoneField.text = "0123456789"
+            cell.phoneField.text = phoneNumber
             cell.phoneField.delegate = self
             cell.phoneField.addDoneCancelToolbar()
             return cell
@@ -101,7 +132,7 @@ class EditProfileEmployerTableViewController: UITableViewController {
             cell.parentView.layer.borderWidth = 1
             cell.parentView.clipsToBounds = true
             
-            cell.descriptionField.text = "Description"
+            cell.descriptionField.text = profileDescription
             cell.descriptionField.delegate = self
             return cell
         }
@@ -110,6 +141,18 @@ class EditProfileEmployerTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
+    }
+    
+    @objc func handleProfileImgTap(_ sender: Any) {
+        print("handleProfileImgTap")
+        self.isComingForBG = false
+        self.performSegue(withIdentifier: "choosePicture", sender: self)
+    }
+    
+    @objc func handlebgImgTap(_ sender: Any) {
+        print("handlebgImgTap")
+        self.isComingForBG = true
+        self.performSegue(withIdentifier: "choosePicture", sender: self)
     }
     
     @objc func doneButtonTappedForMyNumericTextField(_ sender: Any) {
@@ -144,7 +187,7 @@ extension EditProfileEmployerTableViewController: UITextFieldDelegate {
         } else if textField.placeholder == "Email Address" {
             self.email = textField.text ?? ""
         } else if textField.placeholder == "Phone Number" {
-            self.phone = textField.text ?? ""
+            self.phoneNumber = textField.text ?? ""
         } else if textField.placeholder == "Please enter your description" {
             self.profileDescription = textField.text ?? ""
         }

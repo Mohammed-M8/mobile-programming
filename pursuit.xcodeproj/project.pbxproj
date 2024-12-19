@@ -22,6 +22,7 @@
 		0A7FB63E2D1358F200070967 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FB63D2D1358F200070967 /* NameTableViewCell.xib */; };
 		0A7FB63F2D1358F200070967 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FB63C2D1358F200070967 /* NameTableViewCell.swift */; };
 		0A8A9A3D2D11E9E30051B7C1 /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */; };
+		0AE6A5B72D149EB800ABB99F /* ChoosePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE6A5B62D149EB800ABB99F /* ChoosePictureViewController.swift */; };
 		3F1A878E2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A878D2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift */; };
 		3F1A87912D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A878F2D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift */; };
 		3F1A87922D0B1DC2008A1B42 /* PostApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1A87902D0B1DC2008A1B42 /* PostApplicationTableViewCell.xib */; };
@@ -96,6 +97,7 @@
 		0A7FB63C2D1358F200070967 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 		0A7FB63D2D1358F200070967 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
 		0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
+		0AE6A5B62D149EB800ABB99F /* ChoosePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePictureViewController.swift; sourceTree = "<group>"; };
 		3F1A878D2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEmployerViewController.swift; sourceTree = "<group>"; };
 		3F1A878F2D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApplicationTableViewCell.swift; sourceTree = "<group>"; };
 		3F1A87902D0B1DC2008A1B42 /* PostApplicationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostApplicationTableViewCell.xib; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				C3FE49CE2D09E03E00D53320 /* ApplicationTableViewCell.swift */,
 				C3FE49D22D09E37A00D53320 /* ApplicationTrackerViewController.swift */,
 				0A562BBB2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift */,
+				0AE6A5B62D149EB800ABB99F /* ChoosePictureViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				0A6EE27C2D135A9A00F132FF /* EmailTableViewCell.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
 				0A6EE2802D135B7800F132FF /* PhoneTableViewCell.swift in Sources */,
+				0AE6A5B72D149EB800ABB99F /* ChoosePictureViewController.swift in Sources */,
 				575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */,
 				575B2D302CFDF2CB00840818 /* Resources.swift in Sources */,
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
