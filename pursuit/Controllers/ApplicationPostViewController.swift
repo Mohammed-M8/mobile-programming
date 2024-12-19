@@ -10,13 +10,20 @@ import UIKit
 class ApplicationPostViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var btnFilter: UIButton!
+    
+    
+    //sort button outlet and its menu buttons
     @IBOutlet weak var btnSort: UIButton!
+    @IBOutlet var sortButtons: [UIButton]!
+    
+    
     
     @IBOutlet weak var imgProfile: UIImageView!
     
     @IBOutlet weak var ApplicantPostTableView: UITableView!
     
     
+    @IBOutlet weak var sortMenuContainer: UIStackView!
     
     
     override func viewDidLoad() {
@@ -26,10 +33,43 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         // Do any additional setup after loading the view.
     }
     
+    //animation for the drop sort menu
+    func showSortMenu() {
+        let isCurrentlyHidden = sortMenuContainer.isHidden
+
+        if isCurrentlyHidden {
+            
+            sortMenuContainer.alpha = 0
+            sortMenuContainer.isHidden = false
+            UIView.animate(withDuration: 0.3) {
+                self.sortMenuContainer.alpha = 1
+            }
+        } else {
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.sortMenuContainer.alpha = 0
+            }) { _ in
+                self.sortMenuContainer.isHidden = true
+            }
+        }
+    }
+    
+    
+    @IBAction func selectSortAction(_ sender: Any) {
+        showSortMenu()
+    }
+    
+    @IBAction func sortButtonAction(_ sender: UIButton) {
+        showSortMenu()
+    }
+    
+    
+    //Rounded Corners
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         btnFilter.layer.cornerRadius = 5
         btnSort.layer.cornerRadius = 5
+        sortMenuContainer.layer.cornerRadius = 10
         
     }
     

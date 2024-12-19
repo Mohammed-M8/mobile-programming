@@ -158,6 +158,9 @@
                                                                 <buttonConfiguration key="configuration" style="plain" title="Sort by">
                                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="selectSortAction:" destination="opm-N7-lDd" eventType="touchUpInside" id="WOW-hY-0fc"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -322,21 +325,78 @@
                                                 </prototypes>
                                                 <sections/>
                                             </tableView>
+                                            <stackView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kzV-oI-fnb">
+                                                <rect key="frame" x="10" y="93" width="420" height="304"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBn-7C-O4t">
+                                                        <rect key="frame" x="0.0" y="0.0" width="420" height="75.666666666666671"/>
+                                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Date (Latest)"/>
+                                                        <connections>
+                                                            <action selector="sortButtonAction:" destination="opm-N7-lDd" eventType="touchUpInside" id="dh4-Hx-xEO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bl-Yz-Akf">
+                                                        <rect key="frame" x="0.0" y="76.333333333333314" width="420" height="75.333333333333314"/>
+                                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Date (Oldest)"/>
+                                                        <connections>
+                                                            <action selector="sortButtonAction:" destination="opm-N7-lDd" eventType="touchUpInside" id="UnD-g8-Sw9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVv-5H-OWc">
+                                                        <rect key="frame" x="0.0" y="152.33333333333331" width="420" height="75.666666666666686"/>
+                                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Name (A-Z)"/>
+                                                        <connections>
+                                                            <action selector="sortButtonAction:" destination="opm-N7-lDd" eventType="touchUpInside" id="GOA-ql-FT1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2u-5e-KCI">
+                                                        <rect key="frame" x="0.0" y="228.66666666666666" width="420" height="75.333333333333343"/>
+                                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Name (Z-A)"/>
+                                                        <connections>
+                                                            <action selector="sortButtonAction:" destination="opm-N7-lDd" eventType="touchUpInside" id="5e6-vG-JXB"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="kzV-oI-fnb" secondAttribute="trailing" constant="10" id="3yY-Vn-Gjl">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                                            </constraint>
                                             <constraint firstAttribute="trailing" secondItem="LUK-a9-tRh" secondAttribute="trailing" id="6oN-wR-pCk"/>
                                             <constraint firstItem="bAM-PU-sMu" firstAttribute="top" secondItem="wgM-oD-Jfh" secondAttribute="top" id="GEp-eM-gH6"/>
                                             <constraint firstItem="bAM-PU-sMu" firstAttribute="leading" secondItem="wgM-oD-Jfh" secondAttribute="leading" id="RNB-sX-uhH"/>
+                                            <constraint firstAttribute="bottom" secondItem="kzV-oI-fnb" secondAttribute="bottom" constant="408.67000000000002" id="WiV-wi-uEt">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="255"/>
+                                            </constraint>
                                             <constraint firstItem="LUK-a9-tRh" firstAttribute="top" secondItem="Es5-uj-Gpk" secondAttribute="bottom" id="Yl2-a3-HoQ">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                             </constraint>
                                             <constraint firstAttribute="trailing" secondItem="bAM-PU-sMu" secondAttribute="trailing" id="ZiF-be-rjZ"/>
+                                            <constraint firstItem="kzV-oI-fnb" firstAttribute="leading" secondItem="wgM-oD-Jfh" secondAttribute="leading" constant="227" id="b95-70-6f9">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="522"/>
+                                            </constraint>
                                             <constraint firstItem="LUK-a9-tRh" firstAttribute="leading" secondItem="wgM-oD-Jfh" secondAttribute="leading" id="f0J-GW-Mfw"/>
                                             <constraint firstAttribute="bottom" secondItem="LUK-a9-tRh" secondAttribute="bottom" id="hKg-6i-Ay8"/>
                                             <constraint firstItem="Es5-uj-Gpk" firstAttribute="top" secondItem="bAM-PU-sMu" secondAttribute="bottom" id="ibl-qJ-Vd4"/>
                                             <constraint firstAttribute="trailing" secondItem="Es5-uj-Gpk" secondAttribute="trailing" id="ksv-uv-jR1"/>
                                             <constraint firstItem="Es5-uj-Gpk" firstAttribute="leading" secondItem="wgM-oD-Jfh" secondAttribute="leading" id="mnp-v6-CXi"/>
+                                            <constraint firstItem="kzV-oI-fnb" firstAttribute="top" secondItem="bAM-PU-sMu" secondAttribute="bottom" constant="57" id="tdX-QP-XJ2">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                                <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -360,6 +420,11 @@
                         <outlet property="btnFilter" destination="oDl-kC-0fx" id="DwZ-bG-lCV"/>
                         <outlet property="btnSort" destination="4qz-VL-2nj" id="bpO-z9-MZ9"/>
                         <outlet property="imgProfile" destination="nzb-Rp-czt" id="KWg-1Q-h61"/>
+                        <outlet property="sortMenuContainer" destination="kzV-oI-fnb" id="Gir-0c-Zmw"/>
+                        <outletCollection property="sortButtons" destination="eBn-7C-O4t" collectionClass="NSMutableArray" id="WdY-0h-J4E"/>
+                        <outletCollection property="sortButtons" destination="9Bl-Yz-Akf" collectionClass="NSMutableArray" id="Phv-4H-n1L"/>
+                        <outletCollection property="sortButtons" destination="kVv-5H-OWc" collectionClass="NSMutableArray" id="wF7-1A-sJn"/>
+                        <outletCollection property="sortButtons" destination="T2u-5e-KCI" collectionClass="NSMutableArray" id="Xc9-sT-7rv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5I-12-KV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -395,6 +460,9 @@
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -403,6 +471,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
