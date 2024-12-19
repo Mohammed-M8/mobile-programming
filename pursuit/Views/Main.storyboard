@@ -227,7 +227,7 @@
                                     <constraint firstAttribute="width" constant="40" id="rDk-Vp-N8z"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="photo.fill" catalog="system">
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.circle.fill" catalog="system">
                                     <color key="baseForegroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -429,7 +429,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="modifyButtonTapped:" destination="gAK-dm-0Ja" eventType="touchUpInside" id="7wo-AS-GuV"/>
+                                    <action selector="modifyButtonTapped:" destination="gAK-dm-0Ja" eventType="touchUpInside" id="u54-yg-mci"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -507,8 +507,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
