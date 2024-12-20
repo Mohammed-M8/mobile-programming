@@ -18,6 +18,7 @@ class EditProfileEmployerTableViewController: UITableViewController {
     var selectedGovernate: String = ""
     var profileDescription: String = ""
     private var isComingForBG = false
+    private var governate: [String] = ["The Capital", "Northern", "Southern", "Muharraq"]
     var callBack: ((_ profilePicture: String, _ bgPicture: String, _ firstName: String, _ lastName: String, _ email: String, _ phoneNumber: String, _ selectedGovernate: String, _ profileDescription: String) -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,11 @@ class EditProfileEmployerTableViewController: UITableViewController {
     @IBAction func saveBtnTapped(_ sender: Any) {
         if firstName.isEmpty || lastName.isEmpty || email.isEmpty || phoneNumber.isEmpty || selectedGovernate.isEmpty || profileDescription.isEmpty {
             let alert = UIAlertController(title: "Error", message: "Please enter full profile details.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        } else if !self.isValidEmail(text: email) {
+            let alert = UIAlertController(title: "Error", message: "Please enter valid email.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             present(alert, animated: true)
             return
@@ -164,7 +170,15 @@ class EditProfileEmployerTableViewController: UITableViewController {
         for index in 0..<cell.dropDownImages.count {
             cell.dropDownImages[index].image = UIImage(systemName: "\(tag == index ? "circle.fill" : "circle")")
         }
+        self.selectedGovernate = self.governate[tag]
         self.tableView.reloadData()
+    }
+    
+    private func isValidEmail(text: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        return emailTest.evaluate(with: trimmedText)
     }
 
 }
@@ -179,7 +193,7 @@ extension EditProfileEmployerTableViewController: UITextFieldDelegate {
         return false
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField.placeholder == "First Name" {
             self.firstName = textField.text ?? ""
         } else if textField.placeholder == "Last Name" {
