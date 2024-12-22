@@ -47,7 +47,7 @@ class EditProfileJobSeekerViewController: UIViewController, UITableViewDelegate,
            Skills.isHidden = false
         }
         
-            
+//        ProfileJobSeeker
     }
     
     @IBAction func dropdownTapped(_ sender: Any) {
