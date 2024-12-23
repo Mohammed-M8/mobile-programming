@@ -2,7 +2,7 @@
 //  ChoosePictureViewController.swift
 //  pursuit
 //
-//  Created by Taroob Ahmed on 19/12/2024.
+//  Created by BP-36-201-05 on 19/12/2024.
 //
 
 import UIKit

@@ -64,7 +64,7 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     @IBAction func editProfileTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "editProfileSegue", sender: self)
+        self.performSegue(withIdentifier: "editEmployerProfileSegue", sender: self)
     }
     @objc func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
@@ -78,4 +78,13 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
         cell.DatePosted.text = data.date
         return cell
     }
+    
+    @objc func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
 }
