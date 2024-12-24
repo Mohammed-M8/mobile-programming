@@ -20,6 +20,10 @@
 		57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */; };
 		57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */; };
 		57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */; };
+		57D9EAB02D1B428800AAD9E8 /* ArticlePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D9EAAF2D1B428800AAD9E8 /* ArticlePageViewController.swift */; };
+		57E466792D1B00050029C2E3 /* ResourcesDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E466782D1B00050029C2E3 /* ResourcesDetail.storyboard */; };
+		57E4667B2D1B0E220029C2E3 /* VideoResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4667A2D1B0E220029C2E3 /* VideoResourceViewController.swift */; };
+		57E4667F2D1B13590029C2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E4667E2D1B13590029C2E3 /* Assets.xcassets */; };
 		57F930C82D1ADB71000820E4 /* ApplyJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F930C72D1ADB71000820E4 /* ApplyJobViewController.swift */; };
 		C3DC0F1A2D0733F80071BCED /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DC0F192D0733F80071BCED /* JobDetailViewController.swift */; };
 		C3E28AFC2D09C28400B15151 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E28AFA2D09C28400B15151 /* JobTableViewCell.swift */; };
@@ -31,7 +35,6 @@
 		D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */; };
 		D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A92CF85B2500F5DC5D /* ViewController.swift */; };
 		D01FF9AD2CF85B2500F5DC5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01FF9AB2CF85B2500F5DC5D /* Main.storyboard */; };
-		D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01FF9AE2CF85B2700F5DC5D /* Assets.xcassets */; };
 		D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01FF9B02CF85B2700F5DC5D /* LaunchScreen.storyboard */; };
 		D01FF9BD2CF85B2700F5DC5D /* pursuitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9BC2CF85B2700F5DC5D /* pursuitTests.swift */; };
 		D01FF9C72CF85B2700F5DC5D /* pursuitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9C62CF85B2700F5DC5D /* pursuitUITests.swift */; };
@@ -80,6 +83,10 @@
 		57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsJobSeeker.storyboard; sourceTree = "<group>"; };
 		57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileJobSeeker.storyboard; sourceTree = "<group>"; };
 		57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResourcesJobSeeker.storyboard; sourceTree = "<group>"; };
+		57D9EAAF2D1B428800AAD9E8 /* ArticlePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageViewController.swift; sourceTree = SOURCE_ROOT; };
+		57E466782D1B00050029C2E3 /* ResourcesDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResourcesDetail.storyboard; sourceTree = "<group>"; };
+		57E4667A2D1B0E220029C2E3 /* VideoResourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoResourceViewController.swift; path = "pursuit/Views/JobSeeker Views/VideoResourceViewController.swift"; sourceTree = SOURCE_ROOT; };
+		57E4667E2D1B13590029C2E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57F930C72D1ADB71000820E4 /* ApplyJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyJobViewController.swift; sourceTree = SOURCE_ROOT; };
 		C3DC0F192D0733F80071BCED /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		C3E28AFA2D09C28400B15151 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
@@ -92,7 +99,6 @@
 		D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D01FF9A92CF85B2500F5DC5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D01FF9AC2CF85B2500F5DC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D01FF9AE2CF85B2700F5DC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D01FF9B12CF85B2700F5DC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01FF9B32CF85B2700F5DC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D01FF9B82CF85B2700F5DC5D /* pursuitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pursuitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +147,8 @@
 		C3E28B0E2D09DC6300B15151 /* JobSeekerViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				57D9EAAF2D1B428800AAD9E8 /* ArticlePageViewController.swift */,
+				57E4667A2D1B0E220029C2E3 /* VideoResourceViewController.swift */,
 				57F930C72D1ADB71000820E4 /* ApplyJobViewController.swift */,
 				D06390562CF85C350006CC8B /* LoginViewController.swift */,
 				D05D11502D055B2E00AF8A4D /* JobsJobSeekerViewController.swift */,
@@ -166,6 +174,7 @@
 				57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */,
 				57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */,
 				D05D11522D055B6600AF8A4D /* JobDetails.storyboard */,
+				57E466782D1B00050029C2E3 /* ResourcesDetail.storyboard */,
 			);
 			path = "JobSeeker Views";
 			sourceTree = "<group>";
@@ -200,8 +209,8 @@
 				D01FF9A72CF85B2500F5DC5D /* SceneDelegate.swift */,
 				D01FF9A92CF85B2500F5DC5D /* ViewController.swift */,
 				D01FF9AB2CF85B2500F5DC5D /* Main.storyboard */,
-				D01FF9AE2CF85B2700F5DC5D /* Assets.xcassets */,
 				D01FF9B02CF85B2700F5DC5D /* LaunchScreen.storyboard */,
+				57E4667E2D1B13590029C2E3 /* Assets.xcassets */,
 				D01FF9B32CF85B2700F5DC5D /* Info.plist */,
 			);
 			path = pursuit;
@@ -366,10 +375,11 @@
 			files = (
 				D06390592CF85C510006CC8B /* Login.storyboard in Resources */,
 				D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */,
+				57E4667F2D1B13590029C2E3 /* Assets.xcassets in Resources */,
 				57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */,
 				57C71DF72D006FC300F317AA /* Base.storyboard in Resources */,
-				D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */,
 				57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */,
+				57E466792D1B00050029C2E3 /* ResourcesDetail.storyboard in Resources */,
 				57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */,
 				57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */,
 				D01FF9AD2CF85B2500F5DC5D /* Main.storyboard in Resources */,
@@ -399,11 +409,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E28B082D09D93200B15151 /* ResourcesTableViewCell.swift in Sources */,
+				57D9EAB02D1B428800AAD9E8 /* ArticlePageViewController.swift in Sources */,
 				C3E28B032D09D6A900B15151 /* ResourcesViewController.swift in Sources */,
 				575B2D282CFDF09D00840818 /* JobEntry.swift in Sources */,
 				D06390552CF85BDB0006CC8B /* Users.swift in Sources */,
 				575B2D2A2CFDF10200840818 /* Degree.swift in Sources */,
 				D063905F2CF8608E0006CC8B /* Employer.swift in Sources */,
+				57E4667B2D1B0E220029C2E3 /* VideoResourceViewController.swift in Sources */,
 				575B2D2C2CFDF21400840818 /* Video.swift in Sources */,
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
