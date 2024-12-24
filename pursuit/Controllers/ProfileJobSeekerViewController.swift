@@ -49,34 +49,43 @@ class ProfileJobSeekerViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let editProfileJobSeekerTableViewController = segue.destination as? EditProfileJobSeekerTableViewController else { return }
-        editProfileJobSeekerTableViewController.profilePicture = profileImage
-        editProfileJobSeekerTableViewController.bgPicture = bgImage
-        editProfileJobSeekerTableViewController.firstName = firstNameLbl.text ?? ""
-        editProfileJobSeekerTableViewController.lastName = lastNameLbl.text ?? ""
-        editProfileJobSeekerTableViewController.profileDescription = profileDescriptionLbl.text ?? ""
-        editProfileJobSeekerTableViewController.email = emailLbl.text ?? ""
-        editProfileJobSeekerTableViewController.phoneNumber = phoneNmberLbl.text ?? ""
-        editProfileJobSeekerTableViewController.selectedGovernate = (governateLbl.text ?? "").components(separatedBy: ",").first ?? ""
-        editProfileJobSeekerTableViewController.skills = skills
-        editProfileJobSeekerTableViewController.callBack = { [weak self] (profilePicture, bgPicture, firstName, lastName, email, phoneNumber, selectedGovernate, profileDescription, skills) in
-            self?.profileImage = profilePicture
-            self?.profileImg.image = UIImage(named: profilePicture)
-            self?.bgImage = bgPicture
-            self?.bgImg.image = UIImage(named: bgPicture)
-            self?.firstNameLbl.text = firstName
-            self?.lastNameLbl.text = lastName
-            self?.profileDescriptionLbl.text = profileDescription
-            self?.emailLbl.text = email
-            self?.phoneNmberLbl.text = phoneNumber
-            self?.governateLbl.text = "\(selectedGovernate), Bahrain"
-            self?.skills = skills
-            self?.populateSkills()
+        if let editProfileJobSeekerTableViewController = segue.destination as? EditProfileJobSeekerTableViewController {
+            editProfileJobSeekerTableViewController.profilePicture = profileImage
+            editProfileJobSeekerTableViewController.bgPicture = bgImage
+            editProfileJobSeekerTableViewController.firstName = firstNameLbl.text ?? ""
+            editProfileJobSeekerTableViewController.lastName = lastNameLbl.text ?? ""
+            editProfileJobSeekerTableViewController.profileDescription = profileDescriptionLbl.text ?? ""
+            editProfileJobSeekerTableViewController.email = emailLbl.text ?? ""
+            editProfileJobSeekerTableViewController.phoneNumber = phoneNmberLbl.text ?? ""
+            editProfileJobSeekerTableViewController.selectedGovernate = (governateLbl.text ?? "").components(separatedBy: ",").first ?? ""
+            editProfileJobSeekerTableViewController.skills = skills
+            editProfileJobSeekerTableViewController.callBack = { [weak self] (profilePicture, bgPicture, firstName, lastName, email, phoneNumber, selectedGovernate, profileDescription, skills) in
+                self?.profileImage = profilePicture
+                self?.profileImg.image = UIImage(named: profilePicture)
+                self?.bgImage = bgPicture
+                self?.bgImg.image = UIImage(named: bgPicture)
+                self?.firstNameLbl.text = firstName
+                self?.lastNameLbl.text = lastName
+                self?.profileDescriptionLbl.text = profileDescription
+                self?.emailLbl.text = email
+                self?.phoneNmberLbl.text = phoneNumber
+                self?.governateLbl.text = "\(selectedGovernate), Bahrain"
+                self?.skills = skills
+                self?.populateSkills()
+            }
+        } else if let applicationTrackerViewController = segue.destination as? ApplicationTrackerViewController {
+            applicationTrackerViewController.firstName = firstNameLbl.text ?? ""
+            applicationTrackerViewController.lastName = lastNameLbl.text ?? ""
+            applicationTrackerViewController.profileImage = profileImage
         }
     }
     
     @IBAction func editProfileTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "editProfileSegue", sender: self)
+    }
+    
+    @IBAction func applicationTrackerTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "applicationTracker", sender: self)
     }
 
 }

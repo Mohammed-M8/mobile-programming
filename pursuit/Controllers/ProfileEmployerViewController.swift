@@ -26,8 +26,6 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profileImg.layer.cornerRadius = profileImg.frame.size.height / 2
-        
         tableData = [Applications(title: "Software Engineer", description: "Develop and maintain software applications, focusing on enhancing user experience and functionality.", date: "posted 12 hours ago", image: ""),
                      Applications(title: "Network Engineer", description: "Optimize network performance and troubleshoot connectivity issues to ensure seamless service delivery.", date: "posted 16 hours ago", image: ""),
                      Applications(title: "Sales Executive", description: "Promote Zain’s products and services to customers and achieve sales targets.", date: "posted 1 day ago", image: ""),
@@ -37,6 +35,10 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
         PostApplicationTable.estimatedRowHeight = UITableView.automaticDimension
         PostApplicationTable.dataSource = self
         PostApplicationTable.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        profileImg.layer.cornerRadius = profileImg.frame.size.height / 2
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

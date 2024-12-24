@@ -24,8 +24,16 @@ enum applicationSortType: CaseIterable {
 }
 
 class ApplicationTrackerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-   
+    
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var userNameLbl: UILabel!
+    
     @IBOutlet weak var TableViewApplication: UITableView!
+    
+    var profileImage = ""
+    var firstName = ""
+    var lastName = ""
+    
     var jobSeekerApplications: [JobSeekerApplication] = [JobSeekerApplication(companyName: "Batelco |", jobName: "Software Developer", date: "March 24, 2023", image: "betelco", status: .pending),
                                                          JobSeekerApplication(companyName: "GBM |", jobName: "IT Support Specialist", date: "April 15,2024", image: "gbm", status: .rejected),
                                                          JobSeekerApplication(companyName: "NBB |", jobName: "Data Analyst", date: "May 12, 2024", image: "nbb", status: .accepted),
@@ -43,10 +51,16 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
         super.viewDidLoad()
         
         filteredJobSeekerApplications = jobSeekerApplications
+        self.profileImg.image = UIImage(named: profileImage)
+        self.userNameLbl.text = "Hello,\n\(firstName) \(lastName)"
         let nib = UINib(nibName: "ApplicationTableViewCell", bundle: nil)
         TableViewApplication.register(nib, forCellReuseIdentifier: "Application")
         TableViewApplication.dataSource = self
         TableViewApplication.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        profileImg.layer.cornerRadius = profileImg.frame.size.height / 2
     }
     
     @IBAction func deleteTapped(_ sender: UIButton) {
@@ -110,6 +124,13 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
             self.filteredJobSeekerApplications = self.jobSeekerApplications
             self.TableViewApplication.reloadData()
         }))
+        // For iPad: Configure popoverPresentationController
+        if let popoverController = alert.popoverPresentationController {
+            // Provide source view and source rect
+            popoverController.sourceView = self.view // Replace `self.view` with the relevant view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = [] // Use .any or specify directions (optional)
+        }
         present(alert, animated: true)
     }
     
@@ -139,7 +160,14 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
             self.filteredJobSeekerApplications = self.jobSeekerApplications
             self.TableViewApplication.reloadData()
         }))
-            present(alert, animated: true)
+        // For iPad: Configure popoverPresentationController
+        if let popoverController = alert.popoverPresentationController {
+            // Provide source view and source rect
+            popoverController.sourceView = self.view // Replace `self.view` with the relevant view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = [] // Use .any or specify directions (optional)
+        }
+        present(alert, animated: true)
     }
     
     func filterActionTapped(applicationFilterType: ApplicationStatus) {

