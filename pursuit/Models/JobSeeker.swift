@@ -11,6 +11,8 @@ class JobSeeker : User {
     var Skills: [String];
     var ApplicationList: [JobApplication];
     var JobSeekerCv: [CV];
+    
+   
         
         // Constructor
     init(Username: String,email: String, password: String, phoneNumber: String, governorate: String, description:String, Skills: [String] = [], ApplicationList: [JobApplication] = [], JobSeekerCv: [CV] = []) {
@@ -21,4 +23,3 @@ class JobSeeker : User {
             
         }
     }
-

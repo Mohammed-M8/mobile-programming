@@ -10,12 +10,12 @@ import UIKit
 class TaskViewController: UIViewController {
 
     @IBOutlet var label: UILabel!
-    @IBOutlet var ecLabel: UILabel!
+    @IBOutlet var ecLabel: UITextView!
     @IBOutlet var salaryLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
-    @IBOutlet var detailsLabel: UILabel!
-    @IBOutlet var requirementsLabel: UILabel!
+    @IBOutlet var detailsLabel: UITextView!
+    @IBOutlet var requirementsLabel: UITextView!
     @IBOutlet var logoImageView: UIImageView!
     
     
