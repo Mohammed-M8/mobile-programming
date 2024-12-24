@@ -41,6 +41,10 @@
                                     <segue destination="waJ-aO-dW6" kind="embed" id="zVs-HR-CRO"/>
                                 </connections>
                             </containerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="e8b-hJ-Hzj">
+                                <rect key="frame" x="76" y="137" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,6 +87,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="t3J-XK-7qC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -136,6 +141,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="RXt-4c-Jrk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -145,6 +151,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="779" height="325"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
