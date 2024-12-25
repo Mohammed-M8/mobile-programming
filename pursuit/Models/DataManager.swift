@@ -27,6 +27,7 @@ class DataManager{
         users.append(userToAdd)
     }
     
+    
     func addJobSeekers(_ jobSeekerToAdd: JobSeeker){
         jobSeekers.append(jobSeekerToAdd)
     }
