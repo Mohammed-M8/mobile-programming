@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Company Login Controller-->
         <scene sceneID="Q1N-NX-hhd">
             <objects>
-                <viewController id="Xrl-pI-aBi" sceneMemberID="viewController">
+                <viewController id="Xrl-pI-aBi" customClass="CompanyLoginController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yuG-x5-qzH">
                         <rect key="frame" x="0.0" y="0.0" width="293" height="313"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,28 +77,37 @@
                                 <rect key="frame" x="0.0" y="59" width="293" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOQ-ee-D5g">
                                 <rect key="frame" x="0.0" y="143" width="293" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign In"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign In">
+                                    <color key="baseBackgroundColor" red="0.201282084" green="0.466334939" blue="0.70550304649999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="Xrl-pI-aBi" eventType="touchUpInside" id="Dky-83-hqr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t3J-XK-7qC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="pec-Re-yly" id="Pes-Tg-lZo"/>
+                        <outlet property="passwordTextField" destination="z9l-hi-02N" id="Yfy-Qv-M52"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2X-HN-Qu8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="864.8854961832061" y="177.46478873239437"/>
         </scene>
-        <!--View Controller-->
+        <!--Co Register View Controller-->
         <scene sceneID="ovx-BW-Wzi">
             <objects>
-                <viewController id="waJ-aO-dW6" sceneMemberID="viewController">
+                <viewController id="waJ-aO-dW6" customClass="CoRegisterViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vve-k9-5Hf">
                         <rect key="frame" x="0.0" y="0.0" width="293" height="313"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,12 +147,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Up">
+                                    <color key="baseBackgroundColor" red="0.201282084" green="0.466334939" blue="0.70550304649999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="waJ-aO-dW6" eventType="touchUpInside" id="jUI-13-kqU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RXt-4c-Jrk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="xyL-fi-7Yd" id="0EH-Kg-rWw"/>
+                        <outlet property="companyNameTextField" destination="S2W-qI-Slu" id="7nG-L7-yIx"/>
+                        <outlet property="emailTextField" destination="kkd-gN-h9j" id="7nx-JK-Ucu"/>
+                        <outlet property="passwordTextField" destination="7Fj-yu-tdc" id="OlJ-e7-yXm"/>
+                        <outlet property="roleTextField" destination="TDD-yF-m79" id="WBJ-iN-CYT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e20-3E-jY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
