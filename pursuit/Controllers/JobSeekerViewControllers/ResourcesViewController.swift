@@ -12,9 +12,9 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
     
    
     
-    @IBOutlet weak var resourcesCollectionView: UICollectionView!
-    
+ 
     @IBOutlet weak var resourcesTableView: UITableView!
+    @IBOutlet weak var resourcesCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
