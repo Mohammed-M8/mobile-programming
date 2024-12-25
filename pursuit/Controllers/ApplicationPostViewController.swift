@@ -271,7 +271,7 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
     
     //this allows you to set the number of cells that are displayed
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return jobApplications.count
     }
     
     //in here we will display the prototype cell and we can specify what to include in it
@@ -304,7 +304,27 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         
         return cell
         }
-
+    
+    @IBAction func unwindToApplicantsPage(_ unwindSegue: UIStoryboardSegue){
+        if let filterVC = unwindSegue.source as? FilterPageViewController {
+            applyFilters(filterVC)
+        }
+    }
+    
+    func applyFilters(_ filterVC: FilterPageViewController) {
+        let filteredResults = jobApplications.filter { application in
+            let matchesJobRole = filterVC.selectedJobRole == nil || application.ApplicationJobSeeker.JobSeekerCv.JobEntryArray.contains { $0.JobTitle == filterVC.selectedJobRole }
+            let matchesExperience = filterVC.selectedExperienceLevel == nil || application.previousExperience == filterVC.selectedExperienceLevel
+            let matchesEducation = filterVC.selectedEducationLevel == nil || application.ApplicationJobSeeker.JobSeekerCv.DegreeArray.contains { $0.DegreeName == filterVC.selectedEducationLevel }
+            let matchesCertification = filterVC.selectedCertifications.isEmpty || filterVC.selectedCertifications.allSatisfy { certification in
+                application.Qualifications.contains(certification)
+            }
+            return matchesJobRole && matchesExperience && matchesEducation && matchesCertification
+        }
+        jobApplications = filteredResults
+        ApplicantPostTableView.reloadData()
+    }
+    
     /*
     // MARK: - Navigation
 
