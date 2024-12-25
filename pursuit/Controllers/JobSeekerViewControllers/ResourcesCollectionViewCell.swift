@@ -9,8 +9,9 @@ import UIKit
 
 class ResourcesCollectionViewCell: UICollectionViewCell {
 
+
+    @IBOutlet weak var lblResources: UILabel!
     @IBOutlet weak var imgResource: UIImageView!
-    @IBOutlet weak var lblResource: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

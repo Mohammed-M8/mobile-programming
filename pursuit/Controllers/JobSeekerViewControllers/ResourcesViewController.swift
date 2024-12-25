@@ -12,8 +12,8 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
     
    
     
-    
     @IBOutlet weak var resourcesCollectionView: UICollectionView!
+    
     @IBOutlet weak var resourcesTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,11 +11,12 @@ class ResourcesTableViewCell: UITableViewCell {
 
     
    
+    
     @IBOutlet weak var btnView: UIButton!
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var lblFeature: UILabel!
+    @IBOutlet weak var lblResources: UILabel!
     @IBOutlet weak var lblCompany: UILabel!
-    @IBOutlet weak var lblResource: UILabel!
     @IBOutlet weak var imgResource: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
