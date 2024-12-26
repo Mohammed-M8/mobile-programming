@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		571C8DA82D1DA36A00F5392A /* HomeJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571C8DA72D1DA36A00F5392A /* HomeJobSeeker.storyboard */; };
+		571C8DAB2D1DA39100F5392A /* AdminHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571C8DA92D1DA39100F5392A /* AdminHomePage.storyboard */; };
+		571C8DAE2D1DA3C000F5392A /* EmployerHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571C8DAD2D1DA3C000F5392A /* EmployerHomePage.storyboard */; };
 		575B2D1E2CFDE10D00840818 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1D2CFDE10D00840818 /* Job.swift */; };
 		575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1F2CFDE1BA00840818 /* JobApplication.swift */; };
 		575B2D222CFDE61400840818 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D212CFDE61400840818 /* CV.swift */; };
@@ -16,7 +19,6 @@
 		575B2D2E2CFDF21E00840818 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D2D2CFDF21E00840818 /* Article.swift */; };
 		575B2D302CFDF2CB00840818 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D2F2CFDF2CB00840818 /* Resources.swift */; };
 		57C71DF72D006FC300F317AA /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DF62D006FC300F317AA /* Base.storyboard */; };
-		57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DF82D00700B00F317AA /* HomeJobSeeker.storyboard */; };
 		57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */; };
 		57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */; };
 		57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */; };
@@ -61,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		571C8DA72D1DA36A00F5392A /* HomeJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeJobSeeker.storyboard; sourceTree = "<group>"; };
+		571C8DA92D1DA39100F5392A /* AdminHomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminHomePage.storyboard; sourceTree = "<group>"; };
+		571C8DAD2D1DA3C000F5392A /* EmployerHomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployerHomePage.storyboard; sourceTree = "<group>"; };
 		575B2D1D2CFDE10D00840818 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		575B2D1F2CFDE1BA00840818 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		575B2D212CFDE61400840818 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
@@ -70,7 +75,6 @@
 		575B2D2D2CFDF21E00840818 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		575B2D2F2CFDF2CB00840818 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		57C71DF62D006FC300F317AA /* Base.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Base.storyboard; sourceTree = "<group>"; };
-		57C71DF82D00700B00F317AA /* HomeJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeJobSeeker.storyboard; sourceTree = "<group>"; };
 		57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsJobSeeker.storyboard; sourceTree = "<group>"; };
 		57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileJobSeeker.storyboard; sourceTree = "<group>"; };
 		57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResourcesJobSeeker.storyboard; sourceTree = "<group>"; };
@@ -126,6 +130,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		571C8DAA2D1DA39100F5392A /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				571C8DA92D1DA39100F5392A /* AdminHomePage.storyboard */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		571C8DAC2D1DA3B300F5392A /* Employer */ = {
+			isa = PBXGroup;
+			children = (
+				571C8DAD2D1DA3C000F5392A /* EmployerHomePage.storyboard */,
+			);
+			path = Employer;
+			sourceTree = "<group>";
+		};
 		D01FF9992CF85B2500F5DC5D = {
 			isa = PBXGroup;
 			children = (
@@ -203,9 +223,11 @@
 		D06390522CF85BAF0006CC8B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				571C8DAC2D1DA3B300F5392A /* Employer */,
+				571C8DAA2D1DA39100F5392A /* Admin */,
 				D06390582CF85C510006CC8B /* Login.storyboard */,
 				57C71DF62D006FC300F317AA /* Base.storyboard */,
-				57C71DF82D00700B00F317AA /* HomeJobSeeker.storyboard */,
+				571C8DA72D1DA36A00F5392A /* HomeJobSeeker.storyboard */,
 				57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */,
 				57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */,
 				57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */,
@@ -332,10 +354,12 @@
 			files = (
 				D06390592CF85C510006CC8B /* Login.storyboard in Resources */,
 				D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */,
-				57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */,
+				571C8DA82D1DA36A00F5392A /* HomeJobSeeker.storyboard in Resources */,
 				57C71DF72D006FC300F317AA /* Base.storyboard in Resources */,
 				D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */,
 				C3F76A0F2D07422B00EE12A3 /* EditProfileJobSeeker.storyboard in Resources */,
+				571C8DAB2D1DA39100F5392A /* AdminHomePage.storyboard in Resources */,
+				571C8DAE2D1DA3C000F5392A /* EmployerHomePage.storyboard in Resources */,
 				57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */,
 				57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */,
 				57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */,
