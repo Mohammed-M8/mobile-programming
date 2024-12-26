@@ -53,7 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AC44D43F2D1C2CE50095F314 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC44D43F2D1C2CE50095F314 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC44D4412D1C31520095F314 /* CoRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoRegisterViewController.swift; sourceTree = "<group>"; };
 		AC44D4452D1C42AE0095F314 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		AC6C65562D080F070062F691 /* CompanyLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyLogin.storyboard; sourceTree = "<group>"; };
