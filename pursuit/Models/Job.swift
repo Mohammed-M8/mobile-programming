@@ -16,9 +16,10 @@ class Job{
     var Location:String;
     var Details:String;
     var Requirements:String;
-    var JobApplicationsArray:[JobApplication];
+//    var JobApplicationsArray:[JobApplication];
+    var dateCreated: Date
     
-    init(jobTitle: String, companyName: String, extraComment: String, Salary: Double, type: String, Location: String, Details: String, Requirements: String, JobApplicationsArray: [JobApplication]) {
+    init(jobTitle: String, companyName: String, extraComment: String, Salary: Double, type: String, Location: String, Details: String, Requirements: String /*,JobApplicationsArray: [JobApplication]*/,dateCreated: Date) {
         self.jobTitle = jobTitle
         self.companyName = companyName
         self.extraComment = extraComment
@@ -27,6 +28,7 @@ class Job{
         self.Location = Location
         self.Details = Details
         self.Requirements = Requirements
-        self.JobApplicationsArray = JobApplicationsArray
+//        self.JobApplicationsArray = JobApplicationsArray
+        self.dateCreated = dateCreated
     }
 }

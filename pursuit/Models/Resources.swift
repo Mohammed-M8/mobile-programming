@@ -17,9 +17,10 @@ class Resources{
     var Industry:String;
     var Details:String;
     var Summary:String;
+    var dateCreated: Date
     
     
-    init(ResourceTitle: String, CompanyName: String, ExtraComment: String, Hours: Int, ResourceType: String, Industry: String, Details: String, Summary: String) {
+    init(ResourceTitle: String, CompanyName: String, ExtraComment: String, Hours: Int, ResourceType: String, Industry: String, Details: String, Summary: String, dateCreated: Date) {
         self.ResourceTitle = ResourceTitle
         self.CompanyName = CompanyName
         self.ExtraComment = ExtraComment
@@ -28,5 +29,6 @@ class Resources{
         self.Industry = Industry
         self.Details = Details
         self.Summary = Summary
+        self.dateCreated = dateCreated
     }
 }
