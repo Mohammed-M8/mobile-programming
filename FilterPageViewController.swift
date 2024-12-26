@@ -41,6 +41,7 @@ class FilterPageViewController: UIViewController {
         }
     }
     */
+    
     @IBAction func filterButtonTapped(_ sender: UIButton) {
         let customColor = UIColor(red: 24/255.0, green: 116/255.0, blue: 148/255.0, alpha: 1.0)
         let allButtons = JobRoles + ExperienceLvl + Education + Certification
@@ -98,9 +99,6 @@ class FilterPageViewController: UIViewController {
 //        
 //        filterBarBtn.isEnabled = isAnyBtnSelected
         updateSelectedFilters()
-        
-        
-        
     }
     
     func updateSelectedFilters(){
