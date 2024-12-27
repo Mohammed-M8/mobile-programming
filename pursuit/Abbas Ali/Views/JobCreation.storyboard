@@ -12,13 +12,13 @@
         <!--Jobs-->
         <scene sceneID="DIP-RJ-kQa">
             <objects>
-                <viewController id="PuW-db-ZlV" customClass="ViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PuW-db-ZlV" customClass="JobViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0uc-lA-Re3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-y9-Xfj">
-                                <rect key="frame" x="0.0" y="103" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="724-hR-Z3u">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
@@ -188,10 +188,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ev8-lc-syy">
-                                        <rect key="frame" x="0.0" y="210" width="393" height="500"/>
+                                        <rect key="frame" x="0.0" y="210" width="393" height="456"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MO3-Q0-v4E">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="500"/>
+                                                <rect key="frame" x="0.0" y="-22" width="393" height="500"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TL2-xk-2TV">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="500"/>

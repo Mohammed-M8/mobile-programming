@@ -34,7 +34,6 @@
 		AC718ECF2D1ED7EB00F3CF09 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = AC718ECE2D1ED7EB00F3CF09 /* FirebaseCore */; };
 		AC718ED12D1ED7EB00F3CF09 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AC718ED02D1ED7EB00F3CF09 /* FirebaseFirestore */; };
 		AC718ED72D1ED96F00F3CF09 /* BaseJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC718ED42D1ED96F00F3CF09 /* BaseJobSeeker.storyboard */; };
-		AC718F002D1EF94D00F3CF09 /* JobsEmployer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC718EFB2D1EF94D00F3CF09 /* JobsEmployer.storyboard */; };
 		AC718F012D1EF94D00F3CF09 /* ProfileEmployer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC718EFC2D1EF94D00F3CF09 /* ProfileEmployer.storyboard */; };
 		AC718F022D1EF94D00F3CF09 /* BaseEmployer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC718EFD2D1EF94D00F3CF09 /* BaseEmployer.storyboard */; };
 		AC718F032D1EF94D00F3CF09 /* HomeEmployer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC718EFE2D1EF94D00F3CF09 /* HomeEmployer.storyboard */; };
@@ -65,6 +64,12 @@
 		D06390612CF8619D0006CC8B /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390602CF8619D0006CC8B /* Admin.swift */; };
 		D06390632CF861BB0006CC8B /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390622CF861BB0006CC8B /* Guest.swift */; };
 		D5175D682D080BD100515407 /* CVCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5175D672D080BD100515407 /* CVCreationViewController.swift */; };
+		D5AA62F22D1F371800F18017 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62EC2D1F371800F18017 /* JobViewController.swift */; };
+		D5AA62F32D1F371800F18017 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62ED2D1F371800F18017 /* EntryViewController.swift */; };
+		D5AA62F42D1F371800F18017 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62EE2D1F371800F18017 /* TaskViewController.swift */; };
+		D5AA62F52D1F371800F18017 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62EF2D1F371800F18017 /* JobTableViewCell.swift */; };
+		D5AA62F62D1F371800F18017 /* JobCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AA62F12D1F371800F18017 /* JobCreation.storyboard */; };
+		D5AA62F82D1F372100F18017 /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62F72D1F372100F18017 /* JobData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +114,6 @@
 		AC718EBE2D1ED75100F3CF09 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AC718EBF2D1ED75100F3CF09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC718ED42D1ED96F00F3CF09 /* BaseJobSeeker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseJobSeeker.storyboard; sourceTree = "<group>"; };
-		AC718EFB2D1EF94D00F3CF09 /* JobsEmployer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JobsEmployer.storyboard; sourceTree = "<group>"; };
 		AC718EFC2D1EF94D00F3CF09 /* ProfileEmployer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileEmployer.storyboard; sourceTree = "<group>"; };
 		AC718EFD2D1EF94D00F3CF09 /* BaseEmployer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BaseEmployer.storyboard; sourceTree = "<group>"; };
 		AC718EFE2D1EF94D00F3CF09 /* HomeEmployer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeEmployer.storyboard; sourceTree = "<group>"; };
@@ -144,6 +148,12 @@
 		D06390602CF8619D0006CC8B /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		D06390622CF861BB0006CC8B /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		D5175D672D080BD100515407 /* CVCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCreationViewController.swift; sourceTree = "<group>"; };
+		D5AA62EC2D1F371800F18017 /* JobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
+		D5AA62ED2D1F371800F18017 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		D5AA62EE2D1F371800F18017 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		D5AA62EF2D1F371800F18017 /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		D5AA62F12D1F371800F18017 /* JobCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JobCreation.storyboard; sourceTree = "<group>"; };
+		D5AA62F72D1F372100F18017 /* JobData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +231,6 @@
 		AC718EFA2D1EF94D00F3CF09 /* EmployerBase */ = {
 			isa = PBXGroup;
 			children = (
-				AC718EFB2D1EF94D00F3CF09 /* JobsEmployer.storyboard */,
 				AC718EFC2D1EF94D00F3CF09 /* ProfileEmployer.storyboard */,
 				AC718EFD2D1EF94D00F3CF09 /* BaseEmployer.storyboard */,
 				AC718EFE2D1EF94D00F3CF09 /* HomeEmployer.storyboard */,
@@ -278,6 +287,7 @@
 		D01FF9A42CF85B2500F5DC5D /* pursuit */ = {
 			isa = PBXGroup;
 			children = (
+				D5AA62EA2D1F371800F18017 /* Abbas Ali */,
 				AC718EB22D1ED73B00F3CF09 /* ali ebrahim */,
 				D06390532CF85BBA0006CC8B /* Controllers */,
 				D06390522CF85BAF0006CC8B /* Views */,
@@ -314,6 +324,7 @@
 		D06390502CF85B9F0006CC8B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D5AA62F72D1F372100F18017 /* JobData.swift */,
 				D06390542CF85BDB0006CC8B /* Users.swift */,
 				D063905C2CF85E4D0006CC8B /* JobSeeker.swift */,
 				D063905E2CF8608E0006CC8B /* Employer.swift */,
@@ -349,6 +360,34 @@
 				D5175D672D080BD100515407 /* CVCreationViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D5AA62EA2D1F371800F18017 /* Abbas Ali */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA62EB2D1F371800F18017 /* Controllers */,
+				D5AA62F02D1F371800F18017 /* Views */,
+			);
+			path = "Abbas Ali";
+			sourceTree = "<group>";
+		};
+		D5AA62EB2D1F371800F18017 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA62EC2D1F371800F18017 /* JobViewController.swift */,
+				D5AA62ED2D1F371800F18017 /* EntryViewController.swift */,
+				D5AA62EE2D1F371800F18017 /* TaskViewController.swift */,
+				D5AA62EF2D1F371800F18017 /* JobTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D5AA62F02D1F371800F18017 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA62F12D1F371800F18017 /* JobCreation.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,7 +512,6 @@
 				AC718F0E2D1F120A00F3CF09 /* ResourcesGuest.storyboard in Resources */,
 				AC718EC42D1ED75100F3CF09 /* Login.storyboard in Resources */,
 				AC718ED72D1ED96F00F3CF09 /* BaseJobSeeker.storyboard in Resources */,
-				AC718F002D1EF94D00F3CF09 /* JobsEmployer.storyboard in Resources */,
 				AC718F172D1F15B400F3CF09 /* BaseAdmin.storyboard in Resources */,
 				AC718ECA2D1ED75100F3CF09 /* GoogleService-Info.plist in Resources */,
 				AC718F1E2D1F174900F3CF09 /* ProfileAdmin.storyboard in Resources */,
@@ -492,6 +530,7 @@
 				AC718EC32D1ED75100F3CF09 /* Welcome.storyboard in Resources */,
 				AC718F012D1EF94D00F3CF09 /* ProfileEmployer.storyboard in Resources */,
 				AC718F0F2D1F120A00F3CF09 /* ProfileGuest.storyboard in Resources */,
+				D5AA62F62D1F371800F18017 /* JobCreation.storyboard in Resources */,
 				AC718F182D1F15B400F3CF09 /* HomeAdmin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,11 +558,16 @@
 			files = (
 				AC718EC62D1ED75100F3CF09 /* CoRegisterViewController.swift in Sources */,
 				575B2D282CFDF09D00840818 /* JobEntry.swift in Sources */,
+				D5AA62F42D1F371800F18017 /* TaskViewController.swift in Sources */,
+				D5AA62F82D1F372100F18017 /* JobData.swift in Sources */,
 				D06390552CF85BDB0006CC8B /* Users.swift in Sources */,
 				AC718EC92D1ED75100F3CF09 /* RegisterViewController.swift in Sources */,
 				AC718EC82D1ED75100F3CF09 /* LoginViewController.swift in Sources */,
+				D5AA62F32D1F371800F18017 /* EntryViewController.swift in Sources */,
+				D5AA62F52D1F371800F18017 /* JobTableViewCell.swift in Sources */,
 				575B2D2A2CFDF10200840818 /* Degree.swift in Sources */,
 				D063905F2CF8608E0006CC8B /* Employer.swift in Sources */,
+				D5AA62F22D1F371800F18017 /* JobViewController.swift in Sources */,
 				575B2D2C2CFDF21400840818 /* Video.swift in Sources */,
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
@@ -732,7 +776,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Mohammed.pursuit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pursuitteam.pursuit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -759,7 +803,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Mohammed.pursuit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pursuitteam.pursuit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

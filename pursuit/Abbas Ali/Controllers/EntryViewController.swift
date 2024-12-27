@@ -316,9 +316,9 @@ class EntryViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 
                 showAlert(title: "Success", message: "Job Post Added!") { [weak self] in
                             
-                    if let viewController = self?.navigationController?.viewControllers.first as? ViewController {
+                    if let JobViewController = self?.navigationController?.viewControllers.first as? JobViewController {
                     DispatchQueue.main.async {
-                        viewController.updateTasks()
+                        JobViewController.updateTasks()
                     }
                 }
                             

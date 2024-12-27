@@ -79,13 +79,13 @@ class TaskViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let viewController = navigationController?.viewControllers.first as? ViewController {
-            viewController.updateTasks()
+        if let JobViewController = navigationController?.viewControllers.first as? JobViewController {
+            JobViewController.updateTasks()
         }
     }
     
     @IBAction func modifyButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "JobCreation", bundle: nil)
         if let entryVC = storyboard.instantiateViewController(withIdentifier: "entry") as? EntryViewController {
             entryVC.isModifying = true
             entryVC.existingTask = task
@@ -139,8 +139,8 @@ class TaskViewController: UIViewController {
                 navigationController?.popViewController(animated: true)
                 
                 // Update the main view controller's table
-                if let viewController = navigationController?.viewControllers.first as? ViewController {
-                    viewController.updateTasks()
+                if let JobViewController = navigationController?.viewControllers.first as? JobViewController {
+                    JobViewController.updateTasks()
                 }
             }
     }
