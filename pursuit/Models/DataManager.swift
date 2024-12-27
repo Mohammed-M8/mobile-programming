@@ -18,6 +18,7 @@ class DataManager{
     var jobSeekers=[JobSeeker]()
     var employers=[Employer]()
     var jobs=[Job]()
+    var latestJobs = [Job]()
     var resources=[Resources]()
     var SignedInUser:User?
         
@@ -65,11 +66,11 @@ class DataManager{
     }
     
     func addData(){
-        let job1 = Job(jobTitle: "Junior Developer", companyName: "Batelco", extraComment: "oiahfoihwaifoabfw", Salary: 20.00, type: "front end", Location: "muharraq", Details: "ijahiuahduia", Requirements: "aniownfinawfo", dateCreated: Date(),imgJob: UIImage(named: "download")!)
+        let job1 = Job(jobTitle: "Junior Developer", companyName: "Batelco", extraComment: "oiahfoihwaifoabfw", Salary: 20.00, type: "front end", Location: "muharraq", Details: "ijahiuahduia", Requirements: "aniownfinawfo", dateCreated: Date(),imgJob: UIImage(named: "download")!, industry: "Networking")
         
-        let job2 = Job(jobTitle: "Senior Developer", companyName: "Viva", extraComment: "iohafih", Salary: 30.00, type: "back end", Location: "muharraq", Details: "ijahiuahduia", Requirements: "aniownfinawfo", dateCreated: Date(),imgJob:UIImage(named: "images")!)
+        let job2 = Job(jobTitle: "Senior Developer", companyName: "Viva", extraComment: "iohafih", Salary: 30.00, type: "back end", Location: "muharraq", Details: "ijahiuahduia", Requirements: "aniownfinawfo", dateCreated: Date(),imgJob:UIImage(named: "images")!, industry: "Software")
         
-        let job3 = Job(jobTitle: "Developer", companyName: "Pursuit", extraComment: "oiahfoihwaifoabfw", Salary: 20.00, type: "front end", Location: "muharraq", Details: "ijahiuahduia", Requirements: "aniownfinawfo", dateCreated: Date(),imgJob:UIImage(named: "images")!)
+        let job3 = Job(jobTitle: "Developer", companyName: "Pursuit", extraComment: "oiahfoihwaifoabfw", Salary: 20.00, type: "front end", Location: "muharraq", Details: "ijahiuahduia", Requirements: "aniownfinawfo", dateCreated: Date(),imgJob:UIImage(named: "images")!, industry: "Web")
         
         DataManager.Instance.addJobs(job1)
         DataManager.Instance.addJobs(job2)

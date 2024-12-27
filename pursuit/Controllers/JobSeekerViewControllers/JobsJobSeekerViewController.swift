@@ -19,7 +19,17 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
     
     
     var currentJobs:Job?
+    
     var jobs: [Job] = DataManager.Instance.getAllJobs()
+    
+    var allJobs: [Job] = []
+    
+    var latestJobs: [Job] = DataManager.Instance.getAllJobs() // for the table
+    
+    @IBOutlet weak var btnReset: UIButton!
+    
+//    var recommendedJobs: [Job] = DataManager.Instance.getRecommendedJobs() // for the collection
+    
     //VIEW DID LOOOOOOOOOOOADDDDDDDDDDDD
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +37,52 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
         JobtblView.dataSource=self
         JobtblView.delegate=self
         
+        allJobs = DataManager.Instance.getAllJobs()
         
-
+        jobs = allJobs
+        
+        btnReset.isHidden = true
         
         JobtblView.reloadData()
+    }
+    
+    @IBAction func filterButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "showFilterPage", sender: self)
+    }
+    
+    @IBAction func unwindToJobsJobSeeker(_ unwindSegue: UIStoryboardSegue) {
+        if let filterVC = unwindSegue.source as? FilterPageViewController {
+            applyLatestJobsFilter(from: filterVC)
+            btnReset.isHidden = false
+        }
+    }
+    
+    func applyLatestJobsFilter(from filterVC: FilterPageViewController) {
+
+            var filtered = allJobs
+
+            if let selectedType = filterVC.selectedType {
+                filtered = filtered.filter { $0.type == selectedType }
+            }
+
+            if let selectedIndustry = filterVC.selectedIndustry {
+                filtered = filtered.filter { $0.industry == selectedIndustry }
+            }
+
+            if let selectedCompany = filterVC.selectedCompany {
+                filtered = filtered.filter { $0.companyName == selectedCompany }
+            }
+
+            jobs = filtered
+        
+            JobtblView.reloadData()
+    }
+    
+    @IBAction func resetFiltersButtonTapped(_ sender: UIButton) {
+        // Just restore the full list (unfiltered)
+        jobs = allJobs
+        JobtblView.reloadData()
+        btnReset.isHidden = true
     }
     
     

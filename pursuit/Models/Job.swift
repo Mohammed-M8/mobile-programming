@@ -20,8 +20,9 @@ class Job{
     var Requirements:String
 //    var JobApplicationsArray:[JobApplication];
     var dateCreated: Date
+    var industry: String
     
-    init(jobTitle: String, companyName: String, extraComment: String, Salary: Double, type: String, Location: String, Details: String, Requirements: String /*,JobApplicationsArray: [JobApplication]*/,dateCreated: Date,imgJob: UIImage) {
+    init(jobTitle: String, companyName: String, extraComment: String, Salary: Double, type: String, Location: String, Details: String, Requirements: String /*,JobApplicationsArray: [JobApplication]*/,dateCreated: Date,imgJob: UIImage, industry: String) {
         self.jobTitle = jobTitle
         self.companyName = companyName
         self.extraComment = extraComment
@@ -33,5 +34,7 @@ class Job{
 //        self.JobApplicationsArray = JobApplicationsArray
         self.dateCreated = dateCreated
         self.imgJob=imgJob
+        self.industry = industry
+        
     }
 }
