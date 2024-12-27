@@ -283,6 +283,7 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         let application = jobApplications[indexPath.row]
         let seeker = application.ApplicationJobSeeker
         let cv = seeker.JobSeekerCv
+        let applicantDate = jobApplications[indexPath.row].dateApplied
         
         let fullName = "\(cv.firstName) \(cv.lastName)"
         cell.applicantName.text = fullName
@@ -294,7 +295,7 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         }
         
         cell.applicantLocation.text = cv.Location
-        cell.applicantHours.text = "0h ago"
+        cell.applicantHours.text = timeAgoSinceDate(applicantDate)
         
         if let image = UIImage(named: seeker.pfpName), seeker.pfpName != "" {
             cell.applicantImg.image = image
@@ -302,8 +303,38 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
             cell.applicantImg.image = UIImage(systemName: "person.crop.circle.fill")
         }
         
+        cell.applicantViewBtn.tag = indexPath.row
+        cell.applicantViewBtn.addTarget(self, action: #selector(viewButtonTapped(_:)), for: .touchUpInside)
+        
+        
         return cell
         }
+    
+    @objc func viewButtonTapped(_ sender: UIButton) {
+        let selectedRow = sender.tag
+        let selectedApplicant = jobApplications[selectedRow]
+        
+        // Save the selected applicant to pass it during the segue
+        self.selectedApplicant = selectedApplicant
+        
+        // Perform the segue using its storyboard identifier
+        performSegue(withIdentifier: "viewProfileApplicantSegue", sender: nil)
+    }
+    
+    
+    func timeAgoSinceDate(_ date: Date, numericDates: Bool = true) -> String {
+        let calendar = Calendar.current
+        let now = Date()
+        let components = calendar.dateComponents([.hour, .minute], from: date, to: now)
+
+        if let hour = components.hour, hour >= 1 {
+            return "\(hour)h ago"
+        } else if let minute = components.minute, minute >= 1 {
+            return "\(minute)m ago"
+        } else {
+            return "Just now"
+        }
+    }
     
     @IBAction func unwindToApplicantsPage(_ unwindSegue: UIStoryboardSegue){
         if let filterVC = unwindSegue.source as? FilterPageViewController {
@@ -325,13 +356,20 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         ApplicantPostTableView.reloadData()
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    var selectedApplicant: JobApplication?
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "viewProfileApplicantSegue" {
+                if let destinationVC = segue.destination as? ViewProfileApplicantViewController {
+                    // Pass the selected applicant to the destination view controller
+                    destinationVC.applicant = selectedApplicant
+                }
+            }
     }
-    */
+    
 }

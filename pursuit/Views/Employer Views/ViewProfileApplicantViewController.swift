@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewProfileApplicantViewController: UIViewController {
-    
+    var applicant: JobApplication?
     
     @IBOutlet weak var bgImg: UIImageView!
     @IBOutlet weak var profileImg: UIImageView!
@@ -32,6 +32,15 @@ class ViewProfileApplicantViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let applicant = applicant {
+            fName.text = applicant.ApplicationJobSeeker.JobSeekerCv.firstName
+            lName.text = applicant.ApplicationJobSeeker.JobSeekerCv.lastName
+            applicantEmail.text = applicant.ApplicationJobSeeker.JobSeekerCv.Email
+            applicantPhone.text = applicant.ApplicationJobSeeker.JobSeekerCv.phoneNumber
+            applicantGovernate.text = applicant.ApplicationJobSeeker.JobSeekerCv.Location
+            applicantDescription.text = applicant.ApplicationJobSeeker.JobSeekerCv.summary
+            profileImg.image = UIImage(named: applicant.ApplicationJobSeeker.pfpName)
+        }
     }
     
 
