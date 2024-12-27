@@ -7,8 +7,8 @@
 
 import UIKit
 
-class JobTableViewCell: UITableViewCell {
-    static let identifier = "JobViewController"
+class Job2TableViewCell: UITableViewCell {
+    static let identifier = "Job2TableViewCell"
     
     var editButtonTapped: (() -> Void)?
     

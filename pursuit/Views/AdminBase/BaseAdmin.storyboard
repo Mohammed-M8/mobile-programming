@@ -51,7 +51,7 @@
         <!--ResourcesAdmin-->
         <scene sceneID="Sh9-tc-Anx">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ResourcesJobS" storyboardName="ResourcesAdmin" referencedIdentifier="ResourcesAdmin" id="Pha-Gh-V8l" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="ResourcesJobS" storyboardName="ResourceCreation" referencedIdentifier="ResourcesAdmin" id="Pha-Gh-V8l" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="4ND-5c-DqU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfw-fO-clu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

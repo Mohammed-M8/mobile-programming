@@ -70,6 +70,11 @@
 		D5AA62F52D1F371800F18017 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62EF2D1F371800F18017 /* JobTableViewCell.swift */; };
 		D5AA62F62D1F371800F18017 /* JobCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AA62F12D1F371800F18017 /* JobCreation.storyboard */; };
 		D5AA62F82D1F372100F18017 /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62F72D1F372100F18017 /* JobData.swift */; };
+		D5AA63012D1F47C900F18017 /* Entry2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62FB2D1F47C900F18017 /* Entry2ViewController.swift */; };
+		D5AA63022D1F47C900F18017 /* Task2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62FC2D1F47C900F18017 /* Task2ViewController.swift */; };
+		D5AA63032D1F47C900F18017 /* Job2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62FD2D1F47C900F18017 /* Job2TableViewCell.swift */; };
+		D5AA63042D1F47C900F18017 /* ResourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AA62FE2D1F47C900F18017 /* ResourceTableViewCell.swift */; };
+		D5AA63052D1F47C900F18017 /* ResourceCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AA63002D1F47C900F18017 /* ResourceCreation.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +159,11 @@
 		D5AA62EF2D1F371800F18017 /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		D5AA62F12D1F371800F18017 /* JobCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JobCreation.storyboard; sourceTree = "<group>"; };
 		D5AA62F72D1F372100F18017 /* JobData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
+		D5AA62FB2D1F47C900F18017 /* Entry2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry2ViewController.swift; sourceTree = "<group>"; };
+		D5AA62FC2D1F47C900F18017 /* Task2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task2ViewController.swift; sourceTree = "<group>"; };
+		D5AA62FD2D1F47C900F18017 /* Job2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job2TableViewCell.swift; sourceTree = "<group>"; };
+		D5AA62FE2D1F47C900F18017 /* ResourceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceTableViewCell.swift; sourceTree = "<group>"; };
+		D5AA63002D1F47C900F18017 /* ResourceCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResourceCreation.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +375,7 @@
 		D5AA62EA2D1F371800F18017 /* Abbas Ali */ = {
 			isa = PBXGroup;
 			children = (
+				D5AA62F92D1F47C900F18017 /* Resource */,
 				D5AA62EB2D1F371800F18017 /* Controllers */,
 				D5AA62F02D1F371800F18017 /* Views */,
 			);
@@ -386,6 +397,34 @@
 			isa = PBXGroup;
 			children = (
 				D5AA62F12D1F371800F18017 /* JobCreation.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D5AA62F92D1F47C900F18017 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA62FA2D1F47C900F18017 /* Controllers */,
+				D5AA62FF2D1F47C900F18017 /* Views */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D5AA62FA2D1F47C900F18017 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA62FB2D1F47C900F18017 /* Entry2ViewController.swift */,
+				D5AA62FC2D1F47C900F18017 /* Task2ViewController.swift */,
+				D5AA62FD2D1F47C900F18017 /* Job2TableViewCell.swift */,
+				D5AA62FE2D1F47C900F18017 /* ResourceTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D5AA62FF2D1F47C900F18017 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5AA63002D1F47C900F18017 /* ResourceCreation.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -509,6 +548,7 @@
 				D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */,
 				57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */,
 				AC718F0D2D1F120A00F3CF09 /* HomeGuest.storyboard in Resources */,
+				D5AA63052D1F47C900F18017 /* ResourceCreation.storyboard in Resources */,
 				AC718F0E2D1F120A00F3CF09 /* ResourcesGuest.storyboard in Resources */,
 				AC718EC42D1ED75100F3CF09 /* Login.storyboard in Resources */,
 				AC718ED72D1ED96F00F3CF09 /* BaseJobSeeker.storyboard in Resources */,
@@ -565,6 +605,7 @@
 				AC718EC82D1ED75100F3CF09 /* LoginViewController.swift in Sources */,
 				D5AA62F32D1F371800F18017 /* EntryViewController.swift in Sources */,
 				D5AA62F52D1F371800F18017 /* JobTableViewCell.swift in Sources */,
+				D5AA63032D1F47C900F18017 /* Job2TableViewCell.swift in Sources */,
 				575B2D2A2CFDF10200840818 /* Degree.swift in Sources */,
 				D063905F2CF8608E0006CC8B /* Employer.swift in Sources */,
 				D5AA62F22D1F371800F18017 /* JobViewController.swift in Sources */,
@@ -573,11 +614,14 @@
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
 				575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */,
+				D5AA63012D1F47C900F18017 /* Entry2ViewController.swift in Sources */,
 				575B2D302CFDF2CB00840818 /* Resources.swift in Sources */,
 				AC718EC72D1ED75100F3CF09 /* AdminLoginViewController.swift in Sources */,
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
 				575B2D1E2CFDE10D00840818 /* Job.swift in Sources */,
+				D5AA63022D1F47C900F18017 /* Task2ViewController.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
+				D5AA63042D1F47C900F18017 /* ResourceTableViewCell.swift in Sources */,
 				D5175D682D080BD100515407 /* CVCreationViewController.swift in Sources */,
 				AC718EC52D1ED75100F3CF09 /* CompanyLoginController.swift in Sources */,
 				575B2D2E2CFDF21E00840818 /* Article.swift in Sources */,
