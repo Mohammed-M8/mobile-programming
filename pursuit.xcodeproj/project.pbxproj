@@ -21,7 +21,6 @@
 		57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */; };
 		57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */; };
 		57D9EAB02D1B428800AAD9E8 /* ArticlePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D9EAAF2D1B428800AAD9E8 /* ArticlePageViewController.swift */; };
-		57E466792D1B00050029C2E3 /* ResourcesDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E466782D1B00050029C2E3 /* ResourcesDetail.storyboard */; };
 		57E4667B2D1B0E220029C2E3 /* VideoResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4667A2D1B0E220029C2E3 /* VideoResourceViewController.swift */; };
 		57E4667F2D1B13590029C2E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E4667E2D1B13590029C2E3 /* Assets.xcassets */; };
 		57F930C82D1ADB71000820E4 /* ApplyJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F930C72D1ADB71000820E4 /* ApplyJobViewController.swift */; };
@@ -40,7 +39,6 @@
 		D01FF9C72CF85B2700F5DC5D /* pursuitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9C62CF85B2700F5DC5D /* pursuitUITests.swift */; };
 		D01FF9C92CF85B2700F5DC5D /* pursuitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9C82CF85B2700F5DC5D /* pursuitUITestsLaunchTests.swift */; };
 		D05D11512D055B2E00AF8A4D /* JobsJobSeekerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D11502D055B2E00AF8A4D /* JobsJobSeekerViewController.swift */; };
-		D05D11532D055B6600AF8A4D /* JobDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05D11522D055B6600AF8A4D /* JobDetails.storyboard */; };
 		D06390552CF85BDB0006CC8B /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390542CF85BDB0006CC8B /* Users.swift */; };
 		D06390572CF85C350006CC8B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06390562CF85C350006CC8B /* LoginViewController.swift */; };
 		D06390592CF85C510006CC8B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06390582CF85C510006CC8B /* Login.storyboard */; };
@@ -88,7 +86,6 @@
 		57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileJobSeeker.storyboard; sourceTree = "<group>"; };
 		57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResourcesJobSeeker.storyboard; sourceTree = "<group>"; };
 		57D9EAAF2D1B428800AAD9E8 /* ArticlePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePageViewController.swift; sourceTree = SOURCE_ROOT; };
-		57E466782D1B00050029C2E3 /* ResourcesDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResourcesDetail.storyboard; sourceTree = "<group>"; };
 		57E4667A2D1B0E220029C2E3 /* VideoResourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VideoResourceViewController.swift; path = "pursuit/Views/JobSeeker Views/VideoResourceViewController.swift"; sourceTree = SOURCE_ROOT; };
 		57E4667E2D1B13590029C2E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57F930C72D1ADB71000820E4 /* ApplyJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyJobViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -111,7 +108,6 @@
 		D01FF9C62CF85B2700F5DC5D /* pursuitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pursuitUITests.swift; sourceTree = "<group>"; };
 		D01FF9C82CF85B2700F5DC5D /* pursuitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pursuitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D05D11502D055B2E00AF8A4D /* JobsJobSeekerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsJobSeekerViewController.swift; sourceTree = "<group>"; };
-		D05D11522D055B6600AF8A4D /* JobDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobDetails.storyboard; sourceTree = "<group>"; };
 		D06390542CF85BDB0006CC8B /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		D06390562CF85C350006CC8B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D06390582CF85C510006CC8B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -183,8 +179,6 @@
 				57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */,
 				57C71DFE2D00793900F317AA /* ProfileJobSeeker.storyboard */,
 				57C71E002D00795F00F317AA /* ResourcesJobSeeker.storyboard */,
-				D05D11522D055B6600AF8A4D /* JobDetails.storyboard */,
-				57E466782D1B00050029C2E3 /* ResourcesDetail.storyboard */,
 			);
 			path = "JobSeeker Views";
 			sourceTree = "<group>";
@@ -399,11 +393,9 @@
 				57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */,
 				57C71DF72D006FC300F317AA /* Base.storyboard in Resources */,
 				57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */,
-				57E466792D1B00050029C2E3 /* ResourcesDetail.storyboard in Resources */,
 				57C71E012D00795F00F317AA /* ResourcesJobSeeker.storyboard in Resources */,
 				57C71DFF2D00793900F317AA /* ProfileJobSeeker.storyboard in Resources */,
 				D01FF9AD2CF85B2500F5DC5D /* Main.storyboard in Resources */,
-				D05D11532D055B6600AF8A4D /* JobDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
