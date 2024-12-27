@@ -1584,11 +1584,14 @@
                                                                                                 <rect key="frame" x="30" y="5" width="380" height="52.333333333333336"/>
                                                                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <state key="normal" title="Button"/>
-                                                                                                <buttonConfiguration key="configuration" style="plain" title="Pending" cornerStyle="capsule">
+                                                                                                <buttonConfiguration key="configuration" style="plain" title="Pending">
                                                                                                     <backgroundConfiguration key="background">
                                                                                                         <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                                                                                     </backgroundConfiguration>
                                                                                                 </buttonConfiguration>
+                                                                                                <connections>
+                                                                                                    <action selector="pendingButtonTapped:" destination="fEY-D3-BER" eventType="touchUpInside" id="F6X-bq-pGM"/>
+                                                                                                </connections>
                                                                                             </button>
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1610,11 +1613,14 @@
                                                                                                 <rect key="frame" x="30" y="5" width="380" height="52.333333333333336"/>
                                                                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <state key="normal" title="Button"/>
-                                                                                                <buttonConfiguration key="configuration" style="plain" title="Accepted" cornerStyle="capsule">
+                                                                                                <buttonConfiguration key="configuration" style="plain" title="Accepted">
                                                                                                     <backgroundConfiguration key="background">
                                                                                                         <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                                                                                     </backgroundConfiguration>
                                                                                                 </buttonConfiguration>
+                                                                                                <connections>
+                                                                                                    <action selector="acceptedButtonTapped:" destination="fEY-D3-BER" eventType="touchUpInside" id="FQe-4b-WJK"/>
+                                                                                                </connections>
                                                                                             </button>
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1636,7 +1642,7 @@
                                                                                                 <rect key="frame" x="30" y="5" width="380" height="52.333333333333336"/>
                                                                                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 <state key="normal" title="Button"/>
-                                                                                                <buttonConfiguration key="configuration" style="plain" title="Rejected" cornerStyle="capsule">
+                                                                                                <buttonConfiguration key="configuration" style="plain" title="Rejected">
                                                                                                     <backgroundConfiguration key="background">
                                                                                                         <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                                                                                     </backgroundConfiguration>
@@ -1646,6 +1652,9 @@
                                                                                                         <integer key="value" value="20"/>
                                                                                                     </userDefinedRuntimeAttribute>
                                                                                                 </userDefinedRuntimeAttributes>
+                                                                                                <connections>
+                                                                                                    <action selector="rejectedButtonTapped:" destination="fEY-D3-BER" eventType="touchUpInside" id="Gck-4J-4GF"/>
+                                                                                                </connections>
                                                                                             </button>
                                                                                         </subviews>
                                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1756,7 +1765,9 @@
                             <constraint firstAttribute="trailing" secondItem="zGt-yM-mgM" secondAttribute="trailing" id="wQg-ly-bV4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vau-te-XFn"/>
+                    <navigationItem key="navigationItem" id="vau-te-XFn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ufR-7O-C3i"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Accepted" destination="okF-Ir-N0A" id="dyF-JS-ocK"/>
@@ -1770,6 +1781,7 @@
                         <outlet property="lName" destination="OaB-NP-epC" id="65e-YT-CfF"/>
                         <outlet property="pending" destination="dxr-lr-5or" id="XtT-8O-WDi"/>
                         <outlet property="profileImg" destination="wi7-b2-WLY" id="WKs-T6-Kf6"/>
+                        <outlet property="saveBarButton" destination="ufR-7O-C3i" id="whf-OX-Nds"/>
                         <outlet property="viewCV" destination="oRE-eB-6T4" id="bQd-6r-yYI"/>
                         <outletCollection property="skillsStackView" destination="zid-Pi-vpq" collectionClass="NSMutableArray" id="1a6-xR-aGJ"/>
                         <outletCollection property="skillsStackView" destination="Khk-SP-2Zt" collectionClass="NSMutableArray" id="jHs-P4-MRG"/>

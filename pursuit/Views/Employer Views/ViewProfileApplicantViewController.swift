@@ -23,6 +23,8 @@ class ViewProfileApplicantViewController: UIViewController {
     @IBOutlet var skillsLbl: [UILabel]!
     @IBOutlet var percentageLbl: [UILabel]!
     
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
+    
     
     @IBOutlet weak var pending: UIButton!
     @IBOutlet weak var Accepted: UIButton!
@@ -30,6 +32,16 @@ class ViewProfileApplicantViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveBarButton.isEnabled = false
+        
+        let allButtons = [pending, Accepted, Rejected]
+            allButtons.forEach { button in
+                button?.layer.cornerRadius = 10 // Adjust corner radius as needed
+                button?.layer.masksToBounds = true
+            }
+        
+        selectButton(pending)
 
         // Do any additional setup after loading the view.
         
@@ -48,6 +60,37 @@ class ViewProfileApplicantViewController: UIViewController {
             profileImg.layer.masksToBounds = true
             profileImg.clipsToBounds = true
         
+    }
+    
+    func selectButton(_ selectedButton: UIButton) {
+        let customColor = UIColor(red: 24/255.0, green: 116/255.0, blue: 148/255.0, alpha: 1.0)
+        // Reset styles for all buttons
+        let allButtons = [pending, Accepted, Rejected]
+        allButtons.forEach { button in
+            button?.backgroundColor = .systemGray5
+            button?.setTitleColor(.black, for: .normal)
+            button?.isSelected = false
+        }
+
+        // Apply selected styles
+        selectedButton.backgroundColor = customColor
+        selectedButton.setTitleColor(.white, for: .normal)
+        selectedButton.isSelected = true
+
+        // Enable Save button only if the selected button is NOT Pending
+        saveBarButton.isEnabled = selectedButton != pending
+    }
+    
+    @IBAction func pendingButtonTapped(_ sender: UIButton) {
+        selectButton(sender)
+    }
+
+    @IBAction func acceptedButtonTapped(_ sender: UIButton) {
+        selectButton(sender)
+    }
+
+    @IBAction func rejectedButtonTapped(_ sender: UIButton) {
+        selectButton(sender)
     }
     
 
