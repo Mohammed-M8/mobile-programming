@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aK7-c3-D1U">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jUK-k0-kCR">
+            <objects>
+                <tabBarController storyboardIdentifier="BaseJobSeeker" id="aK7-c3-D1U" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jS9-hF-Gab">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="N6x-RT-0Iq" kind="relationship" relationship="viewControllers" id="ZRv-mR-aRb"/>
+                        <segue destination="sq9-AN-clp" kind="relationship" relationship="viewControllers" id="xB1-1n-RYp"/>
+                        <segue destination="Pha-Gh-V8l" kind="relationship" relationship="viewControllers" id="e8B-dt-YZy"/>
+                        <segue destination="aUS-jl-yja" kind="relationship" relationship="viewControllers" id="GXd-aj-hEs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7L-ks-aeA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1666" y="-395"/>
+        </scene>
+        <!--HomeJobS-->
+        <scene sceneID="7jB-y4-q0u">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeJobSeeker" referencedIdentifier="HomeJobS" id="N6x-RT-0Iq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="laY-HT-RuF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62X-o2-qpw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="-583"/>
+        </scene>
+        <!--JobsJobS-->
+        <scene sceneID="bNt-oj-Rh9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="JobsJobSeeker" referencedIdentifier="JobsJobS" id="sq9-AN-clp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Kve-vc-E8I"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o73-bh-MbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-950" y="-305"/>
+        </scene>
+        <!--ResourcesJobS-->
+        <scene sceneID="Sh9-tc-Anx">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ResourcesJobS" storyboardName="ResourcesJobSeeker" referencedIdentifier="ResourcesJobS" id="Pha-Gh-V8l" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="4ND-5c-DqU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfw-fO-clu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-951" y="-206"/>
+        </scene>
+        <!--ProfileJobS-->
+        <scene sceneID="rcG-XF-Roo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileJobSeeker" referencedIdentifier="ProfileJobS" id="aUS-jl-yja" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Yp6-bf-7Ve"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5PN-YT-6eK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="-144"/>
+        </scene>
+    </scenes>
+</document>
