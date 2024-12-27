@@ -6,20 +6,22 @@
 //
 
 import Foundation
-
+import UIKit
 class Job{
-    var jobTitle: String;
-    var companyName: String;
-    var extraComment: String;
-    var Salary:Double;
-    var type:String;
-    var Location:String;
-    var Details:String;
-    var Requirements:String;
+    
+    var imgJob: UIImage?
+    var jobTitle: String
+    var companyName: String
+    var extraComment: String
+    var Salary:Double
+    var type:String
+    var Location:String
+    var Details:String
+    var Requirements:String
 //    var JobApplicationsArray:[JobApplication];
     var dateCreated: Date
     
-    init(jobTitle: String, companyName: String, extraComment: String, Salary: Double, type: String, Location: String, Details: String, Requirements: String /*,JobApplicationsArray: [JobApplication]*/,dateCreated: Date) {
+    init(jobTitle: String, companyName: String, extraComment: String, Salary: Double, type: String, Location: String, Details: String, Requirements: String /*,JobApplicationsArray: [JobApplication]*/,dateCreated: Date,imgJob: UIImage) {
         self.jobTitle = jobTitle
         self.companyName = companyName
         self.extraComment = extraComment
@@ -30,5 +32,6 @@ class Job{
         self.Requirements = Requirements
 //        self.JobApplicationsArray = JobApplicationsArray
         self.dateCreated = dateCreated
+        self.imgJob=imgJob
     }
 }

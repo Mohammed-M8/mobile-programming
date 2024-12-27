@@ -16,6 +16,12 @@ class JobTableViewCell: UITableViewCell {
     @IBOutlet weak var lblCompany: UILabel!
     @IBOutlet weak var lblJob: UILabel!
     @IBOutlet weak var imgJob: UIImageView!
+    
+    var buttonTap: (()-> Void)?
+    
+    @IBAction func btnA(_ sender:UIButton) {
+buttonTap?()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
