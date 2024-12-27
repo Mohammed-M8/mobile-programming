@@ -671,7 +671,7 @@
                                 <rect key="frame" x="0.0" y="133" width="393" height="636"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fName" id="pLr-6M-KeB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fName" id="pLr-6M-KeB" customClass="ValueTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="40.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pLr-6M-KeB" id="bbT-cA-J4H">
@@ -736,8 +736,11 @@
                                                 <constraint firstItem="2uL-yD-UBV" firstAttribute="top" secondItem="bbT-cA-J4H" secondAttribute="top" id="sx7-NE-IOt"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fNameValue" destination="9At-Un-jQK" id="DHF-hv-yU0"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lName" id="QX0-f1-t0n">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lName" id="QX0-f1-t0n" customClass="ValueTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90.333332061767578" width="393" height="40.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QX0-f1-t0n" id="6Qo-sj-C45">
@@ -800,8 +803,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="L6d-Xr-gt9" secondAttribute="trailing" id="pxG-RD-Igf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LName" destination="Amd-UY-HvZ" id="2ZE-rF-bKz"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="age" id="rbt-Hj-e9g">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="age" id="rbt-Hj-e9g" customClass="ValueTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130.66666412353516" width="393" height="40.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rbt-Hj-e9g" id="hxN-hc-Pow">
@@ -864,8 +870,11 @@
                                                 <constraint firstItem="XUn-CB-eXD" firstAttribute="top" secondItem="hxN-hc-Pow" secondAttribute="top" id="jqB-EA-Znx"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="AgeValue" destination="wuH-oK-br4" id="god-v1-S0e"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrentOC" id="dwE-1Q-bfC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrentOC" id="dwE-1Q-bfC" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="170.99999618530273" width="393" height="185.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dwE-1Q-bfC" id="TSg-JO-H5Z">
@@ -946,8 +955,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="ZxQ-lP-sRx" secondAttribute="bottom" id="yTT-fi-svu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="CurrentOC" destination="0LZ-CI-9PV" id="gYd-i6-QRf"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreviousXP" id="xBo-re-Rzy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreviousXP" id="xBo-re-Rzy" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="356.33332443237305" width="393" height="185.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xBo-re-Rzy" id="wG1-Q1-78f">
@@ -1030,8 +1042,11 @@
                                                 <constraint firstItem="Mn3-KX-yeC" firstAttribute="leading" secondItem="wG1-Q1-78f" secondAttribute="leading" id="QaB-wr-Zoa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Experience" destination="pYm-3R-mMG" id="PlL-Bt-BnG"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Qualification" id="hmc-TU-iJC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Qualification" id="hmc-TU-iJC" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="541.66665267944336" width="393" height="185.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hmc-TU-iJC" id="dp9-DJ-NWq">
@@ -1112,8 +1127,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="dmV-i6-Qw4" secondAttribute="bottom" id="pKy-Bq-XW3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="qualification" destination="E7K-Be-mL2" id="Ylz-Zl-6b4"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoverLetter" id="sNs-4M-gU8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoverLetter" id="sNs-4M-gU8" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="726.99998092651367" width="393" height="185.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sNs-4M-gU8" id="V7e-sv-cQR">
@@ -1121,7 +1139,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="22v-k8-xI4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="185.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2w6-h8-8jN">
                                                             <rect key="frame" x="0.0" y="0.0" width="393" height="39.666666666666664"/>
@@ -1142,10 +1160,10 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJN-Cp-nEm">
-                                                            <rect key="frame" x="0.0" y="39.666666666666664" width="393" height="4.3333333333333357"/>
+                                                            <rect key="frame" x="0.0" y="39.666666666666671" width="393" height="145.66666666666663"/>
                                                             <subviews>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yhc-QD-UzA">
-                                                                    <rect key="frame" x="40" y="5" width="333" height="0.0"/>
+                                                                    <rect key="frame" x="40" y="5" width="333" height="130.66666666666666"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="130" id="wnY-Ux-j2Q"/>
@@ -1194,8 +1212,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="22v-k8-xI4" secondAttribute="trailing" id="lyO-Kk-tBV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coverLetter" destination="Yhc-QD-UzA" id="uZ5-c4-cdU"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Apply" id="71K-MC-40u">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Apply" id="71K-MC-40u" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="912.33330917358398" width="393" height="44.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="71K-MC-40u" id="9W9-Jw-FEz">
@@ -1206,6 +1227,11 @@
                                                     <rect key="frame" x="130" y="5" width="133" height="34.666666666666664"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="tinted" title="Apply" cornerStyle="medium"/>
+                                                    <connections>
+                                                        <action selector="btnApplyTapped:" destination="71K-MC-40u" eventType="touchUpInside" id="gdD-iq-5Sb"/>
+                                                        <action selector="buttonTapped:" destination="bxD-PL-hss" eventType="touchUpInside" id="9kY-K0-7qV"/>
+                                                        <segue destination="uu6-eT-jIC" kind="show" identifier="returnSegue" id="FyG-WD-b3e"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1217,6 +1243,9 @@
                                                 </constraint>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnApply" destination="V4s-i3-DxE" id="Avm-NA-HsH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1634,7 +1663,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Apply" cornerStyle="medium"/>
                                                 <connections>
-                                                    <segue destination="bxD-PL-hss" kind="show" id="Ozm-QN-5Yd"/>
+                                                    <segue destination="bxD-PL-hss" kind="show" identifier="FormSegue" id="Ozm-QN-5Yd"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1673,6 +1702,9 @@
             <point key="canvasLocation" x="676" y="163"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ume-6o-sk2"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="suitcase" catalog="system" width="128" height="100"/>
         <systemColor name="groupTableViewBackgroundColor">

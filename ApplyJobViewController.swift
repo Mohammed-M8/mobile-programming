@@ -13,7 +13,13 @@ class ApplyJobViewController: UIViewController, UITableViewDataSource, UITableVi
 
     
     @IBOutlet weak var ApplyTableView: UITableView!
-    
+    var first:String=""
+    var last:String=""
+    var age:Int=0
+    var occupation:String=""
+    var Experiencetext:String=""
+    var qual:String=""
+    var CL:String=""
     override func viewDidLoad() {
         super.viewDidLoad()
         ApplyTableView.dataSource = self
@@ -30,35 +36,82 @@ class ApplyJobViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-            let identifier: String
-        
+            
             switch indexPath.row {
             case 0:
-                identifier = "fName"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "fName", for: indexPath) as! ValueTableViewCell
+                return cell
             case 1:
-                identifier = "lName"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "lName", for: indexPath) as! ValueTableViewCell
+                
+                return cell
+
             case 2:
-                identifier = "age"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "age", for: indexPath) as! ValueTableViewCell
+                
+                return cell
+
             case 3:
-                identifier = "CurrentOC"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentOC", for: indexPath) as! TextViewTableViewCell
+                
+                return cell
+
             case 4:
-                identifier = "PreviousXP"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousXP", for: indexPath) as! TextViewTableViewCell
+                
+                return cell
+
             case 5:
-                identifier = "Qualification"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Qualification", for: indexPath) as! TextViewTableViewCell
+                
+                return cell
+
             case 6:
-                identifier = "CoverLetter"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CoverLetter", for: indexPath) as! TextViewTableViewCell
+                
+                return cell
+
             case 7:
-                identifier = "Apply"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Apply", for: indexPath) as! TextViewTableViewCell
+                
+                return cell
+
             default:
                 fatalError("Unexpected index \(indexPath.row)")
             }
             
-            
-        guard let cell = ApplyTableView.dequeueReusableCell(withIdentifier: identifier) else {
-                fatalError("Could not dequeue a cell with identifier: \(identifier)")
+}
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        
+            if let firstNameCell = ApplyTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? ValueTableViewCell {
+                first = firstNameCell.textField.text ?? ""
+                }
+                if let lastNameCell = ApplyTableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? ValueTableViewCell {
+                    last = lastNameCell.textField.text ?? ""
+                }
+                if let ageCell = ApplyTableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? ValueTableViewCell {
+                    age = Int(ageCell.textField.text ?? "") ?? 0
+                }
+                if let occupationCell = ApplyTableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? TextViewTableViewCell {
+                    occupation = occupationCell.textView.text ?? ""
+                }
+                if let experienceCell = ApplyTableView.cellForRow(at: IndexPath(row: 4, section: 0)) as? TextViewTableViewCell {
+                    Experiencetext = experienceCell.textView.text ?? ""
+                }
+                if let qualificationCell = ApplyTableView.cellForRow(at: IndexPath(row: 5, section: 0)) as? TextViewTableViewCell {
+                    qual = qualificationCell.textView.text ?? ""
+                }
+                if let coverLetterCell = ApplyTableView.cellForRow(at: IndexPath(row: 6, section: 0)) as? TextViewTableViewCell {
+                    CL = coverLetterCell.textView.text ?? ""
+                }
+                
+                
             }
-        return cell
-    }
+
+
+
+    
     
 
     /*
