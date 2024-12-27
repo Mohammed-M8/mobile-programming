@@ -18,6 +18,12 @@ class CVCReationInputTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    var firstname: String = ""
+    var lastnme: String = ""
+    var CPR: String = ""
+    var age: String = ""
+    var phoneNumber: String = ""
+    var email: String = ""
 
     // MARK: - Table view data source
 
@@ -28,7 +34,7 @@ class CVCReationInputTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 8
+        return 7
     }
 
     /*

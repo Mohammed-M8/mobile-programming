@@ -9,6 +9,16 @@ import UIKit
 
 class CVCreationViewController: UIViewController {
     
+    @IBOutlet weak var LName: UILabel!
+    @IBOutlet weak var FName: UILabel!
+    
+    @IBOutlet weak var ProfSumTxtView: UITextView!
+    
+    @IBOutlet weak var EduBckTxtView: UITextView!
+    @IBOutlet weak var WorkexpTxtView: UITextView!
+    @IBOutlet weak var Email: UILabel!
+    @IBOutlet weak var PhoneNumber: UILabel!
+    @IBOutlet weak var Location: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

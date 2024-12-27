@@ -1,13 +1,13 @@
 //
-//  CVProfSummeryViewController.swift
+//  CVCreationOrgViewController.swift
 //  pursuit
 //
-//  Created by BP-36-201-09 on 19/12/2024.
+//  Created by BP-36-201-09 on 27/12/2024.
 //
 
 import UIKit
 
-class CVProfSummeryViewController: UIViewController {
+class CVCreationOrgViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,8 +15,7 @@ class CVProfSummeryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var ProfSumTxtView: UITextView!
-    
+
     /*
     // MARK: - Navigation
 
