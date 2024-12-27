@@ -100,7 +100,7 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
         cell.lblCompany.text = resource.CompanyName
         cell.lblFeature.text = resource.ResourceType
         cell.lblTime.text = resource.dateCreated.formatted(date: .numeric, time: .shortened)
-        
+        cell.imgResource.image=resource.resourceImg
         cell.buttonTap={[weak self] in
             guard self == self else { return }
             self?.currentResource = self?.resources[indexPath.row]
@@ -132,11 +132,21 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
         let cell=resourcesCollectionView.dequeueReusableCell(withReuseIdentifier: "resourcesCollectionCell" , for: indexPath) as! ResourcesCollectionViewCell
         let colors: [UIColor] = [.red, .green, .blue]
         cell.contentView.backgroundColor = colors[indexPath.row % colors.count]
+        
+        let resource = resources[indexPath.row]
+        
+        cell.imgResource.image=resource.resourceImg
+        cell.lblResources.text=resource.ResourceTitle
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath)-> CGSize {
         
         return CGSize(width: resourcesCollectionView.frame.width/3.3, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentResource = resources[indexPath.row]
+               performSegue(withIdentifier: "DetailsSegue", sender: nil)
     }
     
     

@@ -131,6 +131,10 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
             let cell=jobCollectionView.dequeueReusableCell(withReuseIdentifier: "promotedCollectionCell" , for: indexPath) as! promotedCollectionViewCell
             let colors: [UIColor] = [.red, .green, .blue]
             cell.contentView.backgroundColor = colors[indexPath.row % colors.count]
+            let job = jobs[indexPath.row]
+            cell.imgJob.image=job.imgJob
+            cell.lblJob.text=job.jobTitle
+            
             
             return cell
         }
@@ -139,7 +143,10 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
             return CGSize(width: jobCollectionView.frame.width/3.3, height: 100)
         }
         
-        
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentJobs = jobs[indexPath.row]
+               performSegue(withIdentifier: "DetailsSegue", sender: nil)
+    }
         
         
         
