@@ -35,6 +35,10 @@ class ApplicantPostTableViewCell: UITableViewCell {
         applicantViewBtn.layer.cornerRadius = 20
         applicantViewBtn.layer.masksToBounds = true
     }
+    
+    @IBAction func viewButtonTapped(_ sender: UIButton) {
+        NotificationCenter.default.post(name: Notification.Name("ViewButtonTapped"), object: self)
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

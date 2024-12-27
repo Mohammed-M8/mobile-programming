@@ -37,6 +37,7 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         ApplicantPostTableView.dataSource = self
         ApplicantPostTableView.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleViewButtonTapped(_:)), name: Notification.Name("ViewButtonTapped"), object: nil)
         
         // First Dummy Data
         let dummyJobEntry = JobEntry(
@@ -201,6 +202,15 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         ApplicantPostTableView.reloadData()
     }
     
+    @objc func handleViewButtonTapped(_ notification: Notification) {
+        if let cell = notification.object as? ApplicantPostTableViewCell,
+           let indexPath = ApplicantPostTableView.indexPath(for: cell) {
+            let selectedApplication = jobApplications[indexPath.row]
+            performSegue(withIdentifier: "viewProfileSegue", sender: selectedApplication)
+        }
+    }
+    
+    
     //animation for the drop sort menu
     func showSortMenu() {
         let isCurrentlyHidden = sortMenuContainer.isHidden
@@ -303,24 +313,10 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
             cell.applicantImg.image = UIImage(systemName: "person.crop.circle.fill")
         }
         
-        cell.applicantViewBtn.tag = indexPath.row
-        cell.applicantViewBtn.addTarget(self, action: #selector(viewButtonTapped(_:)), for: .touchUpInside)
-        
-        
         return cell
         }
     
-    @objc func viewButtonTapped(_ sender: UIButton) {
-        let selectedRow = sender.tag
-        let selectedApplicant = jobApplications[selectedRow]
-        
-        // Save the selected applicant to pass it during the segue
-        self.selectedApplicant = selectedApplicant
-        
-        // Perform the segue using its storyboard identifier
-        performSegue(withIdentifier: "viewProfileApplicantSegue", sender: nil)
-    }
-    
+
     
     func timeAgoSinceDate(_ date: Date, numericDates: Bool = true) -> String {
         let calendar = Calendar.current
@@ -361,14 +357,11 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
-    var selectedApplicant: JobApplication?
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "viewProfileApplicantSegue" {
-                if let destinationVC = segue.destination as? ViewProfileApplicantViewController {
-                    // Pass the selected applicant to the destination view controller
-                    destinationVC.applicant = selectedApplicant
-                }
+        if segue.identifier == "viewProfileSegue",
+               let destinationVC = segue.destination as? ViewProfileApplicantViewController,
+               let application = sender as? JobApplication {
+                destinationVC.applicantData = application
             }
     }
     

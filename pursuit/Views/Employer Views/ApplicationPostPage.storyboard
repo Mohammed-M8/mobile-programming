@@ -295,7 +295,7 @@
                                                                                     <state key="normal" title="Button"/>
                                                                                     <buttonConfiguration key="configuration" style="plain" title="View"/>
                                                                                     <connections>
-                                                                                        <segue destination="fEY-D3-BER" kind="show" identifier="viewProfileApplicantSegue" id="Uag-BC-7bT"/>
+                                                                                        <action selector="viewButtonTapped:" destination="jc8-11-fMX" eventType="touchUpInside" id="8Vm-ih-cqK"/>
                                                                                     </connections>
                                                                                 </button>
                                                                             </subviews>
@@ -325,7 +325,7 @@
                                                             <outlet property="applicantJobRole" destination="wbV-vb-2ct" id="IoX-6d-9KO"/>
                                                             <outlet property="applicantLocation" destination="sMI-fC-6AX" id="tcQ-I4-0SU"/>
                                                             <outlet property="applicantName" destination="HbD-jf-YRb" id="TGZ-7c-VxW"/>
-                                                            <outlet property="applicantViewBtn" destination="i0D-51-v9I" id="T5S-cP-l2y"/>
+                                                            <outlet property="applicantViewBtn" destination="i0D-51-v9I" id="Nl2-EL-Reg"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -431,6 +431,7 @@
                         <outletCollection property="sortButtons" destination="9Bl-Yz-Akf" collectionClass="NSMutableArray" id="Phv-4H-n1L"/>
                         <outletCollection property="sortButtons" destination="kVv-5H-OWc" collectionClass="NSMutableArray" id="wF7-1A-sJn"/>
                         <outletCollection property="sortButtons" destination="T2u-5e-KCI" collectionClass="NSMutableArray" id="Xc9-sT-7rv"/>
+                        <segue destination="fEY-D3-BER" kind="show" identifier="viewProfileSegue" id="nAa-Pe-bd9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5I-12-KV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1337,7 +1338,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTk-0f-i1b">
                                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DuK-Is-0IV">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-elina-araja-1743227-3377405" translatesAutoresizingMaskIntoConstraints="NO" id="DuK-Is-0IV">
                                                 <rect key="frame" x="0.0" y="0.0" width="440" height="220"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DuK-Is-0IV" secondAttribute="height" multiplier="1:0.5" id="vQX-bg-pgG"/>
@@ -1795,6 +1796,7 @@
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
         <image name="person.text.rectangle" catalog="system" width="128" height="93"/>
+        <image name="pexels-elina-araja-1743227-3377405" width="3673" height="2066"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

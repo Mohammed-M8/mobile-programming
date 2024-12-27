@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewProfileApplicantViewController: UIViewController {
-    var applicant: JobApplication?
+    var applicantData: JobApplication?
     
     @IBOutlet weak var bgImg: UIImageView!
     @IBOutlet weak var profileImg: UIImageView!
@@ -32,15 +32,22 @@ class ViewProfileApplicantViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if let applicant = applicant {
-            fName.text = applicant.ApplicationJobSeeker.JobSeekerCv.firstName
-            lName.text = applicant.ApplicationJobSeeker.JobSeekerCv.lastName
-            applicantEmail.text = applicant.ApplicationJobSeeker.JobSeekerCv.Email
-            applicantPhone.text = applicant.ApplicationJobSeeker.JobSeekerCv.phoneNumber
-            applicantGovernate.text = applicant.ApplicationJobSeeker.JobSeekerCv.Location
-            applicantDescription.text = applicant.ApplicationJobSeeker.JobSeekerCv.summary
-            profileImg.image = UIImage(named: applicant.ApplicationJobSeeker.pfpName)
-        }
+        
+        guard let data = applicantData else { return }
+            
+            fName.text = data.firstName
+            lName.text = data.lastName
+        applicantEmail.text = data.ApplicationJobSeeker.Email
+        applicantPhone.text = data.ApplicationJobSeeker.JobSeekerCv.phoneNumber
+        applicantGovernate.text = data.ApplicationJobSeeker.JobSeekerCv.Location
+        applicantDescription.text = data.ApplicationJobSeeker.Description
+        profileImg.image = UIImage(named: data.ApplicationJobSeeker.pfpName) ?? UIImage(systemName: "person.crop.circle.fill")
+        
+        // Make the profile image circular
+            profileImg.layer.cornerRadius = 69
+            profileImg.layer.masksToBounds = true
+            profileImg.clipsToBounds = true
+        
     }
     
 
