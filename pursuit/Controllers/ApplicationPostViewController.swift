@@ -26,9 +26,12 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
     //the container for the pop up menu (the sort menu)
     @IBOutlet weak var sortMenuContainer: UIStackView!
     
-    //Cell Info
+    //reset button
+    @IBOutlet weak var btnReset: UIButton!
     
-        //this array will be used to populate the table view
+    //this array will be used to populate the table view
+    var allJobApplications: [JobApplication] = []
+    
     var jobApplications: [JobApplication] = []
     
     
@@ -198,7 +201,9 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         )
 
 
-        jobApplications = [dummyJobApplication, dummyJobApplication2, dummyJobApplication3]
+        allJobApplications = [dummyJobApplication, dummyJobApplication2, dummyJobApplication3]
+        jobApplications = allJobApplications
+        btnReset.isHidden = true
         ApplicantPostTableView.reloadData()
     }
     
@@ -335,6 +340,7 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
     @IBAction func unwindToApplicantsPage(_ unwindSegue: UIStoryboardSegue){
         if let filterVC = unwindSegue.source as? FilterPageViewController {
             applyFilters(filterVC)
+            btnReset.isHidden = false
         }
     }
     
@@ -351,6 +357,13 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         jobApplications = filteredResults
         ApplicantPostTableView.reloadData()
     }
+    
+    @IBAction func resetFiltersButtonTapped(_ sender: UIButton) {
+            jobApplications = allJobApplications
+            ApplicantPostTableView.reloadData()
+            btnReset.isHidden = true
+    }
+    
     
     
     // MARK: - Navigation
