@@ -338,10 +338,19 @@
                     <navigationItem key="navigationItem" title="CV Creation" id="Xku-PS-hBX">
                         <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="Rgq-8O-hG1">
                             <connections>
-                                <segue destination="jox-AY-doR" kind="show" id="3TS-MM-JC8"/>
+                                <action selector="nextButtonTapped:" destination="ifm-4G-Fh9" id="LsB-lp-eiD"/>
+                                <segue destination="jox-AY-doR" kind="show" id="aw4-KU-ph0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageTextField" destination="dFH-YH-BD4" id="Bca-8y-drT"/>
+                        <outlet property="cprTextField" destination="8nY-Wq-Ifu" id="dIB-I2-sVp"/>
+                        <outlet property="emailTextField" destination="Ahz-Gb-gyT" id="i4K-32-xhk"/>
+                        <outlet property="firstNameTextField" destination="I2K-6g-C4N" id="rSV-Gd-Y38"/>
+                        <outlet property="lastNameTextField" destination="w6s-96-7fJ" id="Als-gO-9c8"/>
+                        <outlet property="phoneTextField" destination="kW0-KF-7Pq" id="pWF-o1-JcN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ipd-go-SYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,7 +447,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ProfSumTxtView" destination="OiT-QL-40D" id="EXj-4o-swA"/>
+                        <outlet property="ProfSumTxtView" destination="OiT-QL-40D" id="gry-Tv-AxN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRz-FB-day" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -922,7 +931,7 @@
         <!--CV Modification Cred-->
         <scene sceneID="8q2-2z-e5S">
             <objects>
-                <tableViewController title="CV Modification Cred" id="0HG-pE-QHL" customClass="CVCReationInputTableViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="CV Modification Cred" id="0HG-pE-QHL" customClass="CVModInputTableViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="UWh-NI-HxK">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1176,6 +1185,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ageTextField" destination="nYy-cu-fzb" id="Fac-Ba-Nlz"/>
+                        <outlet property="cprTextField" destination="TaK-jd-tCX" id="nBD-cT-f16"/>
+                        <outlet property="emailTextField" destination="keo-hJ-5Qi" id="zvW-Sl-paF"/>
+                        <outlet property="firstNameTextField" destination="eHL-zk-Tjl" id="nhO-6S-UUB"/>
+                        <outlet property="lastNameTextField" destination="dD8-Tm-Zuf" id="qf4-ro-8ch"/>
+                        <outlet property="phoneTextField" destination="24B-1b-G9t" id="DJA-mo-FXJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnL-BY-XRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1184,7 +1201,7 @@
         <!--CV Modification ProfSum-->
         <scene sceneID="D6v-5S-jak">
             <objects>
-                <viewController title="CV Modification ProfSum" id="ILQ-oV-aG0" customClass="CVProfSummeryViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CV Modification ProfSum" id="ILQ-oV-aG0" customClass="CVModProfSummeryViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7XL-IV-XKs">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1260,7 +1277,7 @@
         <!--CV Creation One-->
         <scene sceneID="GtC-gb-8Gr">
             <objects>
-                <tableViewController title="CV Modification JobExp" id="Zba-R0-TOl" userLabel="CV Creation One" customClass="CVCreationWorkEXPPageTableViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="CV Modification JobExp" id="Zba-R0-TOl" userLabel="CV Creation One" customClass="CVModWorkEXPPageTableViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pX7-7q-S26">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1513,7 +1530,7 @@
         <!--CV Creation One-->
         <scene sceneID="ksi-HP-4JH">
             <objects>
-                <tableViewController id="PM2-DA-kRW" userLabel="CV Creation One" customClass="CVCreationDegreePageTableViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="PM2-DA-kRW" userLabel="CV Creation One" customClass="CVModDegreePageTableViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="14t-cd-ybp">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1726,6 +1743,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFK-7R-3U8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3844" y="725"/>
+        </scene>
+        <!--Base-->
+        <scene sceneID="3jn-za-ldh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Base" id="SoX-Wt-sw8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3vm-GX-RiP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCL-fo-jDZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-147" y="507"/>
         </scene>
         <!--View Comp CV-->
         <scene sceneID="uaU-98-lRb">
@@ -1969,6 +1996,11 @@
                     <navigationItem key="navigationItem" title="View CV" id="Hzc-Uk-M0k">
                         <barButtonItem key="backBarButtonItem" title="Back" id="R9g-Fa-2Yy">
                             <color key="tintColor" name="AccentColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="B4Z-mF-9Mv">
+                            <connections>
+                                <segue destination="SoX-Wt-sw8" kind="presentation" modalPresentationStyle="fullScreen" id="0ch-EH-r4z"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

@@ -1,13 +1,13 @@
 //
-//  CVCReationInputTableViewController.swift
+//  CVModDegreePageTableViewController.swift
 //  pursuit
 //
-//  Created by BP-36-201-25 on 11/12/2024.
+//  Created by BP-36-201-09 on 27/12/2024.
 //
 
 import UIKit
 
-class CVCReationInputTableViewController: UITableViewController {
+class CVModDegreePageTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +18,6 @@ class CVCReationInputTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    var firstname: String = ""
-    var lastnme: String = ""
-    var CPR: String = ""
-    var age: String = ""
-    var phoneNumber: String = ""
-    var email: String = ""
 
     // MARK: - Table view data source
 
@@ -34,7 +28,7 @@ class CVCReationInputTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 7
+        return 6
     }
 
     /*

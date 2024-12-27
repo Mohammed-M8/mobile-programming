@@ -2,7 +2,7 @@
 //  CVCreationDegreePageTableViewController.swift
 //  pursuit
 //
-//  Created by Ali Alqassab on 25/12/2024.
+//  
 //
 
 import UIKit

@@ -1,13 +1,13 @@
 //
-//  CVCreationWorkEXPPageTableViewController.swift
+//  CVModWorkEXPPageTableViewController.swift
 //  pursuit
 //
-//  Created by Ali Alqassab on 25/12/2024.
+//  Created by BP-36-201-09 on 27/12/2024.
 //
 
 import UIKit
 
-class CVCreationWorkEXPPageTableViewController: UITableViewController {
+class CVModWorkEXPPageTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
