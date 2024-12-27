@@ -77,6 +77,30 @@ class LoginViewController: UIViewController {
 }
     
     
+    // Action for the Guest Login Button
+        @IBAction func guestLoginButtonTapped(_ sender: UIButton) {
+            // Step 1: Create the alert
+            let alert = UIAlertController(
+                title: "Guest Login",
+                message: "Guest login provides limited access to the content. Are you sure you want to continue as a guest.",
+                preferredStyle: .alert
+            )
+
+            // Step 2: Add "Register" button
+            alert.addAction(UIAlertAction(title: "Register", style: .default, handler: { _ in
+                // Go back or dismiss the alert (stay on the current screen)
+                print("Register button tapped")
+            }))
+
+            // Step 3: Add "Continue" button
+            alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+                // Navigate to the guest home page
+                self.performSegue(withIdentifier: "goToGuestHomePage", sender: nil)
+            }))
+
+            // Step 4: Present the alert
+            self.present(alert, animated: true, completion: nil)
+        }
     
     /*
     // MARK: - Navigation

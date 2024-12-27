@@ -264,6 +264,9 @@ faster here</string>
                                             </attributedString>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="guestLoginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6hU-HC-JFY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
