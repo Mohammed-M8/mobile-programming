@@ -2,7 +2,7 @@
 //  ArticlePageViewController.swift
 //  pursuit
 //
-//  Created by Ali Alqassab on 24/12/2024.
+//  Created by BP-36-201-17 on 24/12/2024.
 //
 
 import UIKit
@@ -11,7 +11,8 @@ class ArticlePageViewController: UIViewController, UITableViewDataSource, UITabl
 
     
     @IBOutlet weak var ArticalParagraph: UITableView!
-    
+    var Resource1 :Resources?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ArticalParagraph.dataSource = self

@@ -11,7 +11,7 @@ class ApplyJobViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
 
-    
+    var job1:Job?
     @IBOutlet weak var ApplyTableView: UITableView!
     var first:String=""
     var last:String=""

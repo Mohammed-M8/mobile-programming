@@ -38,10 +38,10 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT2-Aw-bJt">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="686"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="709"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ObA-kS-un8">
-                                                <rect key="frame" x="8" y="0.0" width="377" height="686"/>
+                                                <rect key="frame" x="8" y="0.0" width="377" height="709"/>
                                                 <subviews>
                                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Bh9-Av-nTK">
                                                         <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
@@ -165,7 +165,7 @@
                                                         </variation>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gI9-PJ-AjH">
-                                                        <rect key="frame" x="0.0" y="337" width="377" height="349"/>
+                                                        <rect key="frame" x="0.0" y="337" width="377" height="372"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="373" id="BGA-Vd-DhT">
@@ -305,10 +305,10 @@
                                         </constraints>
                                     </view>
                                     <stackView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yXQ-pw-OeK">
-                                        <rect key="frame" x="10" y="100" width="373" height="331"/>
+                                        <rect key="frame" x="10" y="100" width="373" height="354"/>
                                         <subviews>
                                             <button opaque="NO" alpha="0.94999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg0-Of-rTs">
-                                                <rect key="frame" x="0.0" y="0.0" width="373" height="82.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="373" height="88"/>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Date (Latest)"/>
@@ -317,7 +317,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.94999998807907104" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTr-Dv-hKv">
-                                                <rect key="frame" x="0.0" y="83" width="373" height="82.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="88.666666666666686" width="373" height="88"/>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Date (Oldest)"/>
@@ -326,7 +326,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.94999998807907104" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHc-GR-ilW">
-                                                <rect key="frame" x="0.0" y="166" width="373" height="82"/>
+                                                <rect key="frame" x="0.0" y="177.33333333333331" width="373" height="88"/>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Name (A-Z)"/>
@@ -335,7 +335,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" alpha="0.94999998807907104" tag="3" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIj-dx-Sob">
-                                                <rect key="frame" x="0.0" y="248.66666666666671" width="373" height="82.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="266" width="373" height="88"/>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Name (Z-A)"/>
@@ -664,11 +664,11 @@
             <objects>
                 <viewController title="Apply" id="bxD-PL-hss" customClass="ApplyJobViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mez-QV-Zk8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qjA-Dl-PgP">
-                                <rect key="frame" x="0.0" y="133" width="393" height="636"/>
+                                <rect key="frame" x="0.0" y="30" width="393" height="812"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fName" id="pLr-6M-KeB" customClass="ValueTableViewCell" customModule="pursuit" customModuleProvider="target">
@@ -736,9 +736,6 @@
                                                 <constraint firstItem="2uL-yD-UBV" firstAttribute="top" secondItem="bbT-cA-J4H" secondAttribute="top" id="sx7-NE-IOt"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="fNameValue" destination="9At-Un-jQK" id="DHF-hv-yU0"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lName" id="QX0-f1-t0n" customClass="ValueTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90.333332061767578" width="393" height="40.333332061767578"/>
@@ -803,9 +800,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="L6d-Xr-gt9" secondAttribute="trailing" id="pxG-RD-Igf"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="LName" destination="Amd-UY-HvZ" id="2ZE-rF-bKz"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="age" id="rbt-Hj-e9g" customClass="ValueTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130.66666412353516" width="393" height="40.333332061767578"/>
@@ -870,9 +864,6 @@
                                                 <constraint firstItem="XUn-CB-eXD" firstAttribute="top" secondItem="hxN-hc-Pow" secondAttribute="top" id="jqB-EA-Znx"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="AgeValue" destination="wuH-oK-br4" id="god-v1-S0e"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CurrentOC" id="dwE-1Q-bfC" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="170.99999618530273" width="393" height="185.33332824707031"/>
@@ -955,9 +946,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="ZxQ-lP-sRx" secondAttribute="bottom" id="yTT-fi-svu"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="CurrentOC" destination="0LZ-CI-9PV" id="gYd-i6-QRf"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PreviousXP" id="xBo-re-Rzy" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="356.33332443237305" width="393" height="185.33332824707031"/>
@@ -1042,9 +1030,6 @@
                                                 <constraint firstItem="Mn3-KX-yeC" firstAttribute="leading" secondItem="wG1-Q1-78f" secondAttribute="leading" id="QaB-wr-Zoa"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="Experience" destination="pYm-3R-mMG" id="PlL-Bt-BnG"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Qualification" id="hmc-TU-iJC" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="541.66665267944336" width="393" height="185.33332824707031"/>
@@ -1127,9 +1112,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="dmV-i6-Qw4" secondAttribute="bottom" id="pKy-Bq-XW3"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="qualification" destination="E7K-Be-mL2" id="Ylz-Zl-6b4"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoverLetter" id="sNs-4M-gU8" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="726.99998092651367" width="393" height="185.33332824707031"/>
@@ -1212,9 +1194,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="22v-k8-xI4" secondAttribute="trailing" id="lyO-Kk-tBV"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="coverLetter" destination="Yhc-QD-UzA" id="uZ5-c4-cdU"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Apply" id="71K-MC-40u" customClass="TextViewTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="912.33330917358398" width="393" height="44.666667938232422"/>
@@ -1228,7 +1207,6 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="tinted" title="Apply" cornerStyle="medium"/>
                                                     <connections>
-                                                        <action selector="btnApplyTapped:" destination="71K-MC-40u" eventType="touchUpInside" id="gdD-iq-5Sb"/>
                                                         <action selector="buttonTapped:" destination="bxD-PL-hss" eventType="touchUpInside" id="9kY-K0-7qV"/>
                                                         <segue destination="uu6-eT-jIC" kind="show" identifier="returnSegue" id="FyG-WD-b3e"/>
                                                     </connections>
@@ -1243,9 +1221,6 @@
                                                 </constraint>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="btnApply" destination="V4s-i3-DxE" id="Avm-NA-HsH"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1275,11 +1250,11 @@
             <objects>
                 <viewController id="uu6-eT-jIC" customClass="JobDetailViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bS0-kk-n0Q">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6jl-hG-zfG">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMs-PJ-HWW">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="188"/>
@@ -1316,7 +1291,7 @@
                                                                         </variation>
                                                                     </label>
                                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="efr" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rze-eX-zwI">
-                                                                        <rect key="frame" x="0.0" y="29.33333333333335" width="179" height="104.66666666666669"/>
+                                                                        <rect key="frame" x="0.0" y="29.333333333333336" width="179" height="104.66666666666666"/>
                                                                         <color key="textColor" systemColor="labelColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1646,10 +1621,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f87-7O-5Sq">
-                                        <rect key="frame" x="0.0" y="628" width="393" height="38"/>
+                                        <rect key="frame" x="0.0" y="628" width="393" height="214"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ky2-rF-3jf">
-                                                <rect key="frame" x="135.66666666666666" y="2" width="121.66666666666666" height="34.333333333333336"/>
+                                                <rect key="frame" x="135.66666666666666" y="90" width="121.66666666666666" height="34.333333333333343"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="121.66999816894531" id="Nch-vB-bDQ">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="121.66999816894531"/>
@@ -1663,6 +1638,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Apply" cornerStyle="medium"/>
                                                 <connections>
+                                                    <action selector="btnApply:" destination="uu6-eT-jIC" eventType="touchUpInside" id="A9f-hH-r5E"/>
                                                     <segue destination="bxD-PL-hss" kind="show" identifier="FormSegue" id="Ozm-QN-5Yd"/>
                                                 </connections>
                                             </button>
@@ -1703,7 +1679,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ume-6o-sk2"/>
+        <segue reference="FyG-WD-b3e"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="suitcase" catalog="system" width="128" height="100"/>

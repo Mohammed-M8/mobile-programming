@@ -778,6 +778,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Register" cornerStyle="medium"/>
+                                                <connections>
+                                                    <action selector="btnTap:" destination="K18-sq-PBJ" eventType="touchUpInside" id="Pj1-O8-2gK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -807,11 +810,161 @@
                         <outlet property="txtDetails" destination="iY0-pV-gh2" id="Cap-LR-IuB"/>
                         <outlet property="txtShort" destination="sDn-82-6aH" id="2Nt-HA-ALA"/>
                         <outlet property="txtSummary" destination="yEP-kK-0Ea" id="rxl-4q-tY0"/>
+                        <segue destination="QGd-Cf-DZ4" kind="show" identifier="DetailsSegue" id="hDl-bc-i6m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xzh-88-7uT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="523" y="1"/>
+        </scene>
+        <!--Article Page View Controller-->
+        <scene sceneID="Ngi-9h-DvE">
+            <objects>
+                <viewController id="QGd-Cf-DZ4" customClass="ArticlePageViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mCS-Et-CdI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TAl-Nw-wPL">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header" id="0Qo-Cg-ZVn">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100.33333587646484"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Qo-Cg-ZVn" id="DtE-c1-GeV">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100.33333587646484"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXE-71-JfR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100.33333333333333"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Design" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJ5-hA-1ea">
+                                                            <rect key="frame" x="40" y="64" width="313" height="36.333333333333343"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="zJ5-hA-1ea" secondAttribute="trailing" constant="40" id="5ak-4D-EHv"/>
+                                                        <constraint firstItem="zJ5-hA-1ea" firstAttribute="top" secondItem="EXE-71-JfR" secondAttribute="top" constant="64" id="OjY-Pp-7Jd"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zJ5-hA-1ea" secondAttribute="bottom" id="n9r-0w-nVP"/>
+                                                        <constraint firstAttribute="height" constant="50" id="pSn-ZI-E13">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                        </constraint>
+                                                        <constraint firstItem="zJ5-hA-1ea" firstAttribute="leading" secondItem="EXE-71-JfR" secondAttribute="leading" constant="40" id="uGa-p9-nPK"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="EXE-71-JfR" secondAttribute="trailing" id="Ff3-BB-L80"/>
+                                                <constraint firstItem="EXE-71-JfR" firstAttribute="leading" secondItem="DtE-c1-GeV" secondAttribute="leading" id="G7U-FY-wRI"/>
+                                                <constraint firstItem="EXE-71-JfR" firstAttribute="top" secondItem="DtE-c1-GeV" secondAttribute="top" id="Nec-ib-cj9"/>
+                                                <constraint firstAttribute="bottom" secondItem="EXE-71-JfR" secondAttribute="bottom" id="ngJ-iz-Sf4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Title" id="WVf-GL-gLJ">
+                                        <rect key="frame" x="0.0" y="150.33333587646484" width="393" height="100.33333587646484"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WVf-GL-gLJ" id="GwL-Gk-iVy">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100.33333587646484"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-N0-5Ny">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100.33333333333333"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0q-K0-7RE">
+                                                            <rect key="frame" x="40" y="30.000000000000004" width="313" height="40.333333333333343"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Jbs-gE-ZHf">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                                        </constraint>
+                                                        <constraint firstAttribute="bottom" secondItem="p0q-K0-7RE" secondAttribute="bottom" constant="30" id="bk9-V2-Dtt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="p0q-K0-7RE" secondAttribute="trailing" constant="40" id="dnh-ft-5sv"/>
+                                                        <constraint firstItem="p0q-K0-7RE" firstAttribute="leading" secondItem="9Gq-N0-5Ny" secondAttribute="leading" constant="40" id="uTN-8t-LmX"/>
+                                                        <constraint firstItem="p0q-K0-7RE" firstAttribute="top" secondItem="9Gq-N0-5Ny" secondAttribute="top" constant="30" id="zMZ-fY-naQ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9Gq-N0-5Ny" firstAttribute="leading" secondItem="GwL-Gk-iVy" secondAttribute="leading" id="BDJ-5H-KD8"/>
+                                                <constraint firstItem="9Gq-N0-5Ny" firstAttribute="top" secondItem="GwL-Gk-iVy" secondAttribute="top" id="CbG-br-hkT"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Gq-N0-5Ny" secondAttribute="bottom" id="oxv-yb-SYm"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Gq-N0-5Ny" secondAttribute="trailing" id="tKz-0s-vkf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Body" id="L9F-ut-vgp">
+                                        <rect key="frame" x="0.0" y="250.66667175292969" width="393" height="500.33334350585938"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L9F-ut-vgp" id="bVY-rP-zMK">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="500.33334350585938"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AY9-0c-CAE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="500.33333333333331"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-M7-SGj">
+                                                            <rect key="frame" x="40" y="0.0" width="313" height="500.33333333333331"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo coipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatuad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <color key="textColor" systemColor="labelColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="ayd-M7-SGj" firstAttribute="top" secondItem="AY9-0c-CAE" secondAttribute="top" id="3iY-eb-XY2"/>
+                                                        <constraint firstItem="ayd-M7-SGj" firstAttribute="leading" secondItem="AY9-0c-CAE" secondAttribute="leading" constant="40" id="PVV-Kx-DDj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ayd-M7-SGj" secondAttribute="trailing" constant="40" id="TB8-aI-IVV"/>
+                                                        <constraint firstAttribute="height" constant="50" id="ZbY-hx-DM6">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="500"/>
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="900"/>
+                                                        </constraint>
+                                                        <constraint firstAttribute="bottom" secondItem="ayd-M7-SGj" secondAttribute="bottom" id="w4h-Ou-iNc"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="AY9-0c-CAE" secondAttribute="bottom" id="3sg-zm-kFk"/>
+                                                <constraint firstAttribute="trailing" secondItem="AY9-0c-CAE" secondAttribute="trailing" id="IZc-GT-gdh"/>
+                                                <constraint firstItem="AY9-0c-CAE" firstAttribute="top" secondItem="bVY-rP-zMK" secondAttribute="top" id="bNs-Cp-YS7"/>
+                                                <constraint firstItem="AY9-0c-CAE" firstAttribute="leading" secondItem="bVY-rP-zMK" secondAttribute="leading" id="fot-OV-5Wc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J3g-iN-flj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J3g-iN-flj" firstAttribute="bottom" secondItem="TAl-Nw-wPL" secondAttribute="bottom" id="OPn-3B-tbW"/>
+                            <constraint firstItem="J3g-iN-flj" firstAttribute="trailing" secondItem="TAl-Nw-wPL" secondAttribute="trailing" id="rNc-a0-CR2"/>
+                            <constraint firstItem="TAl-Nw-wPL" firstAttribute="top" secondItem="J3g-iN-flj" secondAttribute="top" id="rXy-7Q-9zh"/>
+                            <constraint firstItem="TAl-Nw-wPL" firstAttribute="leading" secondItem="J3g-iN-flj" secondAttribute="leading" id="vya-dh-ue5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3g1-z3-o6b"/>
+                    <connections>
+                        <outlet property="ArticalParagraph" destination="TAl-Nw-wPL" id="njr-uB-wiU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJd-Ue-avq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408" y="13"/>
         </scene>
     </scenes>
     <resources>

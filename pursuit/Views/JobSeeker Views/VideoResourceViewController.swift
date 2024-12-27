@@ -2,7 +2,7 @@
 //  VideoResourceViewController.swift
 //  pursuit
 //
-//  Created by Ali Alqassab on 24/12/2024.
+//  Created by BP-36-201-17on 24/12/2024.
 //
 
 import UIKit

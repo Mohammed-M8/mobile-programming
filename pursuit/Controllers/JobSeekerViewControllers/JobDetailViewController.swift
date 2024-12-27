@@ -33,6 +33,17 @@ class JobDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btnApply(_ sender: Any) {
+        performSegue(withIdentifier: "FormSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FormSegue"{
+           let detailsVC = segue.destination as? ApplyJobViewController
+            
+            detailsVC?.job1=Job
+        }
+    }
     
     /*
     // MARK: - Navigation

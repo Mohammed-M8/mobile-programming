@@ -29,10 +29,25 @@ class ResourceDetailViewController: UIViewController {
         txtDetails.text=Resource?.Details
         lblHours.text=String(Resource!.Hours)
         txtShort.text=Resource?.ExtraComment
+        imgJobResource.image=Resource?.resourceImg
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func btnTap(_ sender: Any) {
+        performSegue(withIdentifier:"DetailsSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailsSegue" {
+            let detailsVC = segue.destination as? ArticlePageViewController
+            
+          
+//             detailsVC.index = index
+            detailsVC?.Resource1 = Resource
+             
+        }
+           
+        }
     /*
     // MARK: - Navigation
 
