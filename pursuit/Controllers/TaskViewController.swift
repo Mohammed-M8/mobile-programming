@@ -11,6 +11,7 @@ class TaskViewController: UIViewController {
 
     @IBOutlet var label: UILabel!
     @IBOutlet var ecLabel: UITextView!
+   // @IBOutlet var companyLabel: UILabel!
     @IBOutlet var salaryLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
@@ -18,14 +19,18 @@ class TaskViewController: UIViewController {
     @IBOutlet var requirementsLabel: UITextView!
     @IBOutlet var logoImageView: UIImageView!
     
-    
+      
     var task: String?
     var taskIndex: Int?
+    var existingCompany: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         label.text = task
+        
+        // Set up promote button instead of delete
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Promote", style: .done, target: self, action: #selector(promoteTask))
         
         if let task = task {
             guard let count = UserDefaults().value(forKey: "count") as? Int else {
@@ -35,13 +40,17 @@ class TaskViewController: UIViewController {
                 if let storedTask = UserDefaults().value(forKey: "task_\(i+1)") as? String, storedTask == task {
                     taskIndex = i + 1
                     
+                   /* if let company = UserDefaults().string(forKey: "company_\(i+1)") {
+                        companyLabel.text = company
+                    } */
                     if let imageData = UserDefaults().data(forKey: "logo_\(i+1)") {
                         logoImageView.image = UIImage(data: imageData)
-                    }
-                    
+                    } else {
+                        logoImageView.image = nil
+                    } //Adding else to clear image if null
                     if let ec = UserDefaults().string(forKey: "ec_\(i+1)") {
-                                                      ecLabel.text = ec
-                }
+                        ecLabel.text = ec
+                    }
                     if let salary = UserDefaults().string(forKey: "salary_\(i+1)") {
                         salaryLabel.text = salary
                     }
@@ -57,17 +66,20 @@ class TaskViewController: UIViewController {
                     if let requirements = UserDefaults().string(forKey: "requirements_\(i+1)") {
                         requirementsLabel.text = requirements
                     }
-                                                      break
+                    break
             }
         }
     }
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .done, target: self, action: #selector(deleteTask))
 }
+    
+    @objc func promoteTask() {
+            // Add your promote functionality here
+            print("Promote button tapped - Feature coming soon!")
+        }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let viewController = navigationController?.viewControllers.first as? TasksUpdating {
+        if let viewController = navigationController?.viewControllers.first as? ViewController {
             viewController.updateTasks()
         }
     }
@@ -78,6 +90,10 @@ class TaskViewController: UIViewController {
             entryVC.isModifying = true
             entryVC.existingTask = task
             entryVC.existingTaskIndex = taskIndex
+            
+            if let index = taskIndex {
+                entryVC.existingCompany = UserDefaults().string(forKey: "company_\(index)")
+            }
             
             entryVC.existingEC = ecLabel.text
             entryVC.existingSalary = salaryLabel.text
@@ -123,7 +139,7 @@ class TaskViewController: UIViewController {
                 navigationController?.popViewController(animated: true)
                 
                 // Update the main view controller's table
-                if let viewController = navigationController?.viewControllers.first as? TasksUpdating {
+                if let viewController = navigationController?.viewControllers.first as? ViewController {
                     viewController.updateTasks()
                 }
             }

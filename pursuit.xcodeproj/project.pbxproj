@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE17C432D1EE6B700016FD4 /* JobData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE17C422D1EE6B700016FD4 /* JobData.swift */; };
+		3FE17C452D1EE6F200016FD4 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE17C442D1EE6F200016FD4 /* JobTableViewCell.swift */; };
 		575B2D1E2CFDE10D00840818 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1D2CFDE10D00840818 /* Job.swift */; };
 		575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1F2CFDE1BA00840818 /* JobApplication.swift */; };
 		575B2D222CFDE61400840818 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D212CFDE61400840818 /* CV.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FE17C422D1EE6B700016FD4 /* JobData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobData.swift; sourceTree = "<group>"; };
+		3FE17C442D1EE6F200016FD4 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		575B2D1D2CFDE10D00840818 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		575B2D1F2CFDE1BA00840818 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		575B2D212CFDE61400840818 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 				8376653B2D081A5100F58F1D /* Post.swift */,
 				8376653D2D081B2200F58F1D /* ViewPost.swift */,
 				D579A5642D0F16A400286B7E /* TasksUpdating.swift */,
+				3FE17C422D1EE6B700016FD4 /* JobData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				D5493D0C2D0F0F590097EEBF /* ViewController.swift */,
 				D5493D082D0F0F3B0097EEBF /* EntryViewController.swift */,
 				D5493D0A2D0F0F4F0097EEBF /* TaskViewController.swift */,
+				3FE17C442D1EE6F200016FD4 /* JobTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -381,12 +387,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE17C432D1EE6B700016FD4 /* JobData.swift in Sources */,
 				575B2D282CFDF09D00840818 /* JobEntry.swift in Sources */,
 				D06390552CF85BDB0006CC8B /* Users.swift in Sources */,
 				575B2D2A2CFDF10200840818 /* Degree.swift in Sources */,
 				D063905F2CF8608E0006CC8B /* Employer.swift in Sources */,
 				575B2D2C2CFDF21400840818 /* Video.swift in Sources */,
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
+				3FE17C452D1EE6F200016FD4 /* JobTableViewCell.swift in Sources */,
 				D5493D0D2D0F0F590097EEBF /* ViewController.swift in Sources */,
 				D05D11512D055B2E00AF8A4D /* JobsJobSeekerViewController.swift in Sources */,
 				D063905D2CF85E4D0006CC8B /* JobSeeker.swift in Sources */,
