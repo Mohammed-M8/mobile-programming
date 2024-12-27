@@ -829,7 +829,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header" id="0Qo-Cg-ZVn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header" id="0Qo-Cg-ZVn" customClass="HeaderTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="100.33333587646484"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Qo-Cg-ZVn" id="DtE-c1-GeV">
@@ -866,8 +866,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="EXE-71-JfR" secondAttribute="bottom" id="ngJ-iz-Sf4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblHeader" destination="zJ5-hA-1ea" id="y9B-oL-YIb"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Title" id="WVf-GL-gLJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Title" id="WVf-GL-gLJ" customClass="TitleTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="150.33333587646484" width="393" height="100.33333587646484"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WVf-GL-gLJ" id="GwL-Gk-iVy">
@@ -904,8 +907,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="9Gq-N0-5Ny" secondAttribute="trailing" id="tKz-0s-vkf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="p0q-K0-7RE" id="axp-xh-CZO"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Body" id="L9F-ut-vgp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Body" id="L9F-ut-vgp" customClass="BodyTableViewCell" customModule="pursuit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="250.66667175292969" width="393" height="500.33334350585938"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L9F-ut-vgp" id="bVY-rP-zMK">
@@ -944,6 +950,9 @@
                                                 <constraint firstItem="AY9-0c-CAE" firstAttribute="leading" secondItem="bVY-rP-zMK" secondAttribute="leading" id="fot-OV-5Wc"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="txtBody" destination="ayd-M7-SGj" id="afA-u0-ox7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

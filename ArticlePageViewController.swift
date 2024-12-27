@@ -30,25 +30,31 @@ class ArticlePageViewController: UIViewController, UITableViewDataSource, UITabl
     //displaying cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-            let identifier: String
-        
-            switch indexPath.row {
+        switch indexPath.row {
             case 0:
-                identifier = "Header"
+                // First cell type
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Header", for: indexPath) as! HeaderTableViewCell
+            cell.lblHeader.text=Resource1?.ResourceTitle
+                return cell
+
             case 1:
-                identifier = "Title"
+                // Second cell type
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath) as! TitleTableViewCell
+            cell.lblTitle.text=Resource1?.ResourceType
+                
+                return cell
+
             case 2:
-                identifier = "Body"
+                // Third cell type
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Body", for: indexPath) as! BodyTableViewCell
+            cell.txtBody.text=Resource1?.content
+
+            
+                return cell
+
             default:
-                fatalError("Unexpected index \(indexPath.row)")
+                fatalError("Unexpected row \(indexPath.row)")
             }
-            
-            
-        guard let cell = ArticalParagraph.dequeueReusableCell(withIdentifier: identifier) else {
-                fatalError("Could not dequeue a cell with identifier: \(identifier)")
-            }
-        return cell
     }
 
     /*

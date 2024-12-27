@@ -52,6 +52,9 @@
 		D08B15282D1EA9B200108DD0 /* ResourceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B15272D1EA9B200108DD0 /* ResourceDetailViewController.swift */; };
 		D08B153B2D1EE8D800108DD0 /* ValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B153A2D1EE8D800108DD0 /* ValueTableViewCell.swift */; };
 		D08B153D2D1EE9B400108DD0 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B153C2D1EE9B400108DD0 /* TextViewTableViewCell.swift */; };
+		D08B15402D1F002400108DD0 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B153F2D1F002400108DD0 /* TitleTableViewCell.swift */; };
+		D08B15422D1F005000108DD0 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B15412D1F005000108DD0 /* HeaderTableViewCell.swift */; };
+		D08B15442D1F009700108DD0 /* BodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B15432D1F009700108DD0 /* BodyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +124,9 @@
 		D08B15272D1EA9B200108DD0 /* ResourceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailViewController.swift; sourceTree = "<group>"; };
 		D08B153A2D1EE8D800108DD0 /* ValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTableViewCell.swift; sourceTree = "<group>"; };
 		D08B153C2D1EE9B400108DD0 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
+		D08B153F2D1F002400108DD0 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		D08B15412D1F005000108DD0 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		D08B15432D1F009700108DD0 /* BodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,7 @@
 		C3E28B0E2D09DC6300B15151 /* JobSeekerViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D08B153E2D1EFFF600108DD0 /* Article Table Views */,
 				D08B15292D1EBE5C00108DD0 /* Apply Form */,
 				57D9EAAF2D1B428800AAD9E8 /* ArticlePageViewController.swift */,
 				57E4667A2D1B0E220029C2E3 /* VideoResourceViewController.swift */,
@@ -281,6 +288,16 @@
 				D08B153C2D1EE9B400108DD0 /* TextViewTableViewCell.swift */,
 			);
 			path = "Apply Form";
+			sourceTree = "<group>";
+		};
+		D08B153E2D1EFFF600108DD0 /* Article Table Views */ = {
+			isa = PBXGroup;
+			children = (
+				D08B153F2D1F002400108DD0 /* TitleTableViewCell.swift */,
+				D08B15412D1F005000108DD0 /* HeaderTableViewCell.swift */,
+				D08B15432D1F009700108DD0 /* BodyTableViewCell.swift */,
+			);
+			path = "Article Table Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +459,7 @@
 				D08B15282D1EA9B200108DD0 /* ResourceDetailViewController.swift in Sources */,
 				D079B15A2D0C793400C69814 /* JobFilterViewController.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
+				D08B15402D1F002400108DD0 /* TitleTableViewCell.swift in Sources */,
 				C3E28B002D09C93300B15151 /* promotedCollectionViewCell.swift in Sources */,
 				D079B15E2D0C7F3F00C69814 /* companyCollectionViewCell.swift in Sources */,
 				575B2D2E2CFDF21E00840818 /* Article.swift in Sources */,
@@ -450,9 +468,11 @@
 				C3DC0F1A2D0733F80071BCED /* JobDetailViewController.swift in Sources */,
 				57F930C82D1ADB71000820E4 /* ApplyJobViewController.swift in Sources */,
 				D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */,
+				D08B15422D1F005000108DD0 /* HeaderTableViewCell.swift in Sources */,
 				D06390612CF8619D0006CC8B /* Admin.swift in Sources */,
 				C3E28AFC2D09C28400B15151 /* JobTableViewCell.swift in Sources */,
 				D08B153D2D1EE9B400108DD0 /* TextViewTableViewCell.swift in Sources */,
+				D08B15442D1F009700108DD0 /* BodyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

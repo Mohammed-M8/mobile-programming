@@ -20,9 +20,10 @@ class Resources{
     var Details:String;
     var Summary:String;
     var dateCreated: Date
+    var content: String
     
     
-    init(ResourceTitle: String, CompanyName: String, ExtraComment: String, Hours: Int, ResourceType: String, Industry: String, Details: String, Summary: String, dateCreated: Date,imgResource: UIImage) {
+    init(ResourceTitle: String, CompanyName: String, ExtraComment: String, Hours: Int, ResourceType: String, Industry: String, Details: String, Summary: String, dateCreated: Date,imgResource: UIImage,content: String) {
         self.ResourceTitle = ResourceTitle
         self.CompanyName = CompanyName
         self.ExtraComment = ExtraComment
@@ -33,5 +34,6 @@ class Resources{
         self.Summary = Summary
         self.dateCreated = dateCreated
         self.resourceImg=imgResource
+        self.content=content
     }
 }
