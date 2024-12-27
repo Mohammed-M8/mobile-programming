@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var bgImg: UIImageView!
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var firstNameLbl: UILabel!
@@ -16,12 +18,12 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var phoneNmberLbl: UILabel!
     @IBOutlet weak var governateLbl: UILabel!
-    
     @IBOutlet weak var PostApplicationTable: UITableView!
     
     var profileImage = "profile1"
     var bgImage = "background1"
     var tableData = [Applications]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
