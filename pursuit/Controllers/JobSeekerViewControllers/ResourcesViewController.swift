@@ -15,8 +15,8 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
  
     @IBOutlet weak var resourcesTableView: UITableView!
     @IBOutlet weak var resourcesCollectionView: UICollectionView!
-    
-    var resources: [Resources] = []
+    var currentResource : Resources?
+    var resources: [Resources] = DataManager.Instance.getAllResources()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +24,8 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
         resourcesTableView.dataSource=self
         resourcesTableView.delegate=self
         
-        let resource1 = Resources(ResourceTitle: "Xcode For Noobs lol", CompanyName: "Xcode", ExtraComment: "you will learn here", Hours: 20, ResourceType: "Easy", Industry: "Software", Details: "aknfioanfpanfaofnapofnapofnaopf", Summary: "ianfioabwfi;bafobwfbafiobiwbfiawbf", dateCreated: Date())
         
-        let resource2 = Resources(ResourceTitle: "Learn Java", CompanyName: "Java", ExtraComment: "you will learn here", Hours: 10, ResourceType: "Easy", Industry: "Software", Details: "aknfioanfpanfaofnapofnapofnaopf", Summary: "ianfioabwfi;bafobwfbafiobiwbfiawbf", dateCreated: Date())
         
-        let resource3 = Resources(ResourceTitle: "Learn CSS", CompanyName: "Microsoft", ExtraComment: "you will learn here", Hours: 10, ResourceType: "Easy", Industry: "Software", Details: "aknfioanfpanfaofnapofnapofnaopf", Summary: "ianfioabwfi;bafobwfbafiobiwbfiawbf", dateCreated: Date())
-        
-        resources = [resource1, resource2, resource3]
         resourcesTableView.reloadData()
     }
     
@@ -105,11 +100,32 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
         cell.lblCompany.text = resource.CompanyName
         cell.lblFeature.text = resource.ResourceType
         cell.lblTime.text = resource.dateCreated.formatted(date: .numeric, time: .shortened)
+        
+        cell.buttonTap={[weak self] in
+            guard self == self else { return }
+            self?.currentResource = self?.resources[indexPath.row]
+         
+            self?.performSegue(withIdentifier:"DetailsSegue", sender: nil )
+        }
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailsSegue" {
+            let detailsVC = segue.destination as? ResourceDetailViewController
+            
+          
+//             detailsVC.index = index
+            detailsVC?.Resource = currentResource
+             
+        }
+           
+        }
+    
+
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return DataManager.Instance.getAllResources().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

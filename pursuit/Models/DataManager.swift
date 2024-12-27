@@ -74,6 +74,17 @@ class DataManager{
         DataManager.Instance.addJobs(job1)
         DataManager.Instance.addJobs(job2)
         DataManager.Instance.addJobs(job3)
+        
+        let resource1 = Resources(ResourceTitle: "Xcode For Noobs lol", CompanyName: "Xcode", ExtraComment: "you will learn here", Hours: 20, ResourceType: "Easy", Industry: "Software", Details: "aknfioanfpanfaofnapofnapofnaopf", Summary: "ianfioabwfi;bafobwfbafiobiwbfiawbf", dateCreated: Date())
+        
+        let resource2 = Resources(ResourceTitle: "Learn Java", CompanyName: "Java", ExtraComment: "you will learn here", Hours: 10, ResourceType: "Easy", Industry: "Software", Details: "aknfioanfpanfaofnapofnapofnaopf", Summary: "ianfioabwfi;bafobwfbafiobiwbfiawbf", dateCreated: Date())
+        
+        let resource3 = Resources(ResourceTitle: "Learn CSS", CompanyName: "Microsoft", ExtraComment: "you will learn here", Hours: 10, ResourceType: "Easy", Industry: "Software", Details: "aknfioanfpanfaofnapofnapofnaopf", Summary: "ianfioabwfi;bafobwfbafiobiwbfiawbf", dateCreated: Date())
+        
+        DataManager.Instance.addResources(resource1)
+        DataManager.Instance.addResources(resource2)
+        DataManager.Instance.addResources(resource3)
+
 
     }
     

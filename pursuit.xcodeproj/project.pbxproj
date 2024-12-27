@@ -52,6 +52,7 @@
 		D079B15E2D0C7F3F00C69814 /* companyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D079B15D2D0C7F3F00C69814 /* companyCollectionViewCell.swift */; };
 		D08B15242D1E78B300108DD0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B15232D1E78B300108DD0 /* DataManager.swift */; };
 		D08B15262D1E844600108DD0 /* JobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B15252D1E844600108DD0 /* JobManager.swift */; };
+		D08B15282D1EA9B200108DD0 /* ResourceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B15272D1EA9B200108DD0 /* ResourceDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		D079B15D2D0C7F3F00C69814 /* companyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = companyCollectionViewCell.swift; sourceTree = "<group>"; };
 		D08B15232D1E78B300108DD0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D08B15252D1E844600108DD0 /* JobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobManager.swift; sourceTree = "<group>"; };
+		D08B15272D1EA9B200108DD0 /* ResourceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				C3E28B0A2D09D9DB00B15151 /* ResourcesCollectionViewCell.swift */,
 				D079B1592D0C793400C69814 /* JobFilterViewController.swift */,
 				D079B15D2D0C7F3F00C69814 /* companyCollectionViewCell.swift */,
+				D08B15272D1EA9B200108DD0 /* ResourceDetailViewController.swift */,
 			);
 			path = JobSeekerViewControllers;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				575B2D302CFDF2CB00840818 /* Resources.swift in Sources */,
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
 				575B2D1E2CFDE10D00840818 /* Job.swift in Sources */,
+				D08B15282D1EA9B200108DD0 /* ResourceDetailViewController.swift in Sources */,
 				D079B15A2D0C793400C69814 /* JobFilterViewController.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
 				C3E28B002D09C93300B15151 /* promotedCollectionViewCell.swift in Sources */,

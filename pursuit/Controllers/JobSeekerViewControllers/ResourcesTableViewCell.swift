@@ -18,6 +18,12 @@ class ResourcesTableViewCell: UITableViewCell {
     @IBOutlet weak var lblResources: UILabel!
     @IBOutlet weak var lblCompany: UILabel!
     @IBOutlet weak var imgResource: UIImageView!
+    
+    var buttonTap: (()-> Void)?
+    
+    @IBAction func btnA(_ sender:UIButton) {
+            buttonTap?()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

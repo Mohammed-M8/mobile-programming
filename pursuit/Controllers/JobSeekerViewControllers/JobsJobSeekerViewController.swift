@@ -18,7 +18,7 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var jobCollectionView: UICollectionView!
     
     
-    
+    var currentJobs:Job?
     var jobs: [Job] = DataManager.Instance.getAllJobs()
     //VIEW DID LOOOOOOOOOOOADDDDDDDDDDDD
     override func viewDidLoad() {
@@ -28,11 +28,7 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
         JobtblView.delegate=self
         
         
-       /* let job1 = Job(jobTitle: "Junior Developer", companyName: "Batelco", extraComment: "oiahfoihwaifoabfw", Salary: 20.00, type: "front end", Location: "muharraq", Details: "ijahiuahduia", Requirements: "aniownfinawfo", dateCreated: Date())
-        
-        let job2 = Job(jobTitle: "Senior Developer", companyName: "Viva", extraComment: "iohafih", Salary: 30.00, type: "back end", Location: "muharraq", Details: "ijahiuahduia", Requirements: "aniownfinawfo", dateCreated: Date())
-        
-        let job3 = Job(jobTitle: "Developer", companyName: "Pursuit", extraComment: "oiahfoihwaifoabfw", Salary: 20.00, type: "front end", Location: "muharraq", Details: "ijahiuahduia", Requirements: "aniownfinawfo", dateCreated: Date())*/
+
         
         JobtblView.reloadData()
     }
@@ -111,22 +107,24 @@ class JobsJobSeekerViewController: UIViewController, UITableViewDataSource, UITa
         
         cell.imgJob.image=job.imgJob
         cell.buttonTap={[weak self] in
-            self?.performSegue(withIdentifier:"DetailsSegue", sender: indexPath.row )}
+            guard self == self else {return}
+            self?.currentJobs = self?.jobs[indexPath.row]
+            self?.performSegue(withIdentifier:"DetailsSegue", sender: nil )}
         
         return cell
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetails",
-           let detailsVC = segue.destination as? JobDetailViewController,
-           let index = sender as? Int {
-            detailsVC.index = index
+        if segue.identifier == "DetailsSegue"{
+           let detailsVC = segue.destination as? JobDetailViewController
+            
+            detailsVC?.Job = currentJobs
         }
     }
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 3
+            return DataManager.Instance.getAllJobs().count
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

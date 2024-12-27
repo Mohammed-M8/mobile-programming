@@ -11,11 +11,10 @@ class JobDetailViewController: UIViewController {
 
 
     @IBOutlet weak var btnApply: UIButton!
-    var index:Int = 0
     @IBOutlet weak var lblSalary: UILabel!
     @IBOutlet weak var lblType: UILabel!
     @IBOutlet weak var imgJobCompany: UIImageView!
-    
+    var Job :Job?
     @IBOutlet weak var txtShortDesc: UITextView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var txtRequirements: UITextView!
@@ -23,15 +22,14 @@ class JobDetailViewController: UIViewController {
     @IBOutlet weak var lblLocation: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let job=DataManager.Instance.getAllJobs()[index]
-        lblSalary.text = String(job.Salary)
-        lblType.text = job.type
-        lblLocation.text = job.Location
-        lblTitle.text=job.jobTitle
-        txtShortDesc.text=job.extraComment
-        txtRequirements.text = job.Requirements
-        txtDetails.text = job.Details
-        imgJobCompany.image=job.imgJob
+        lblSalary.text = String(Job!.Salary)
+        lblType.text = Job?.type
+        lblLocation.text = Job?.Location
+        lblTitle.text=Job?.jobTitle
+        txtShortDesc.text=Job?.extraComment
+        txtRequirements.text = Job?.Requirements
+        txtDetails.text = Job?.Details
+        imgJobCompany.image=Job?.imgJob
         // Do any additional setup after loading the view.
     }
     
