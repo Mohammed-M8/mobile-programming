@@ -46,6 +46,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+    
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession...) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let window = UIWindow(windowScene: windowScene)
+        
+        // Initialize the guest tab bar controller from storyboard
+        let storyboard = UIStoryboard(name: "GuestBase", bundle: nil)
+        if let guestTabBarController = storyboard.instantiateInitialViewController() as? GuestTabBarViewController {
+            window.rootViewController = guestTabBarController
+        }
+        
+        self.window = window
+        window.makeKeyAndVisible()
+    }
 
 
 }

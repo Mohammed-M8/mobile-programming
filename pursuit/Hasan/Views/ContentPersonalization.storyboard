@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dw8-T2-IqM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dw8-T2-IqM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--Navigation Controller-->
         <scene sceneID="1Ko-1o-CEz">
             <objects>
-                <navigationController storyboardIdentifier="ContentPrsn" id="Dw8-T2-IqM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ContentPersonalization" id="Dw8-T2-IqM" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wz7-NK-AoT">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -621,7 +621,13 @@
                             <constraint firstItem="fDV-0g-X4d" firstAttribute="leading" secondItem="aFY-AH-EhC" secondAttribute="leading" id="udA-sa-cpu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JBh-QU-hdK"/>
+                    <navigationItem key="navigationItem" id="JBh-QU-hdK">
+                        <barButtonItem key="leftBarButtonItem" title="apply" id="J1A-MZ-Br4">
+                            <connections>
+                                <segue destination="5fg-B8-Dzo" kind="show" id="p1s-jz-xg0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outletCollection property="Intrested" destination="8Ja-D4-phP" collectionClass="NSMutableArray" id="T1y-Ba-8Yw"/>
                         <outletCollection property="Intrested" destination="Zmf-6C-eoQ" collectionClass="NSMutableArray" id="pCb-Oe-WJh"/>
@@ -642,6 +648,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvd-bU-Gl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="509" y="-208"/>
+        </scene>
+        <!--BaseJobSeeker-->
+        <scene sceneID="Dea-AV-dUb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BaseJobSeeker" id="5fg-B8-Dzo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Ot-MI-hoi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1p-fj-c1U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="-250"/>
         </scene>
     </scenes>
     <resources>

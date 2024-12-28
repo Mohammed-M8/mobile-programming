@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Guest Tab Bar View Controller-->
         <scene sceneID="jUK-k0-kCR">
             <objects>
-                <tabBarController storyboardIdentifier="BaseGuest" id="aK7-c3-D1U" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="BaseGuest" id="aK7-c3-D1U" customClass="GuestTabBarViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jS9-hF-Gab">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -27,15 +27,15 @@
             </objects>
             <point key="canvasLocation" x="-1666" y="-395"/>
         </scene>
-        <!--HomeGuest-->
+        <!--HomeJobS-->
         <scene sceneID="7jB-y4-q0u">
             <objects>
-                <viewControllerPlaceholder storyboardName="HomeGuest" referencedIdentifier="HomeGuest" id="N6x-RT-0Iq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HomeJobSeeker" referencedIdentifier="HomeJobS" id="N6x-RT-0Iq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="laY-HT-RuF"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62X-o2-qpw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-954" y="-583"/>
+            <point key="canvasLocation" x="-973" y="-574"/>
         </scene>
         <!--JobsGuest-->
         <scene sceneID="bNt-oj-Rh9">
