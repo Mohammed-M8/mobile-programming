@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 
 class Resources{
+    var resourceImg:UIImage
     var ResourceTitle:String;
     var CompanyName:String;
     var ExtraComment:String;
@@ -17,9 +19,11 @@ class Resources{
     var Industry:String;
     var Details:String;
     var Summary:String;
+    var dateCreated: Date
+    var content: String
     
     
-    init(ResourceTitle: String, CompanyName: String, ExtraComment: String, Hours: Int, ResourceType: String, Industry: String, Details: String, Summary: String) {
+    init(ResourceTitle: String, CompanyName: String, ExtraComment: String, Hours: Int, ResourceType: String, Industry: String, Details: String, Summary: String, dateCreated: Date,imgResource: UIImage,content: String) {
         self.ResourceTitle = ResourceTitle
         self.CompanyName = CompanyName
         self.ExtraComment = ExtraComment
@@ -28,5 +32,8 @@ class Resources{
         self.Industry = Industry
         self.Details = Details
         self.Summary = Summary
+        self.dateCreated = dateCreated
+        self.resourceImg=imgResource
+        self.content=content
     }
 }
