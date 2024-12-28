@@ -91,4 +91,30 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
         UITableView.automaticDimension
     }
     
+    @IBAction func LogoutTapped(_ sender: Any) {
+        // Create the alert controller
+            let alertController = UIAlertController(title: "Logout",
+                                                  message: "Are you sure you want to logout?",
+                                                  preferredStyle: .alert)
+            
+            // Create Cancel action
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+                // Do nothing, just dismiss the alert
+            }
+            
+            // Create Logout action
+            let logoutAction = UIAlertAction(title: "Yes", style: .destructive) { _ in
+                // Perform the segue to Login screen
+                self.performSegue(withIdentifier: "LogoutSegue", sender: nil)
+            }
+            
+            // Add both actions to alert controller
+            alertController.addAction(cancelAction)
+            alertController.addAction(logoutAction)
+            
+            // Present the alert
+            present(alertController, animated: true)
+        
+    }
+    
 }

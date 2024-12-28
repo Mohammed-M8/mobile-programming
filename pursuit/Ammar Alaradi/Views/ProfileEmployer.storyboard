@@ -193,7 +193,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="sAg-48-TOJ" kind="presentation" modalPresentationStyle="fullScreen" id="bBl-vO-Lax"/>
+                                                    <action selector="LogoutTapped:" destination="TCd-Z7-jM2" eventType="touchUpInside" id="ph7-s0-xz8"/>
+                                                    <segue destination="sAg-48-TOJ" kind="presentation" identifier="LogoutSegue" modalPresentationStyle="fullScreen" id="bBl-vO-Lax"/>
                                                 </connections>
                                             </button>
                                         </subviews>

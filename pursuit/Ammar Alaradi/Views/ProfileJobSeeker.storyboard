@@ -262,7 +262,8 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Logout" cornerStyle="capsule"/>
                                                 <connections>
-                                                    <segue destination="JUD-qy-djJ" kind="presentation" modalPresentationStyle="fullScreen" id="N7n-F7-TF1"/>
+                                                    <action selector="LogoutTapped:" destination="V92-lm-XSu" eventType="touchUpInside" id="8qy-EF-6oS"/>
+                                                    <segue destination="JUD-qy-djJ" kind="presentation" identifier="LogoutJobSeeker" modalPresentationStyle="fullScreen" id="N7n-F7-TF1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
