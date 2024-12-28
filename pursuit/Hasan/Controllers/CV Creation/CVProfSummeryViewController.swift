@@ -7,66 +7,29 @@
 
 import UIKit
 
-class CVProfSummeryViewController: UIViewController, UITextViewDelegate{
+class CVProfSummeryViewController: UIViewController {
+    @IBOutlet weak var summaryTextView: UITextView!
     
-   
-       
-    @IBOutlet weak var ProfSumTxtView: UITextView!
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            ProfSumTxtView.delegate = self
-        }
-        
-        private func showAlert(message: String) {
-            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            present(alert, animated: true)
-        }
-        
-        private func validateWordCount() -> Bool {
-            let text = ProfSumTxtView.text ?? ""
-            let words = text.components(separatedBy: .whitespacesAndNewlines)
-                .filter { !$0.isEmpty }
+    // Properties from previous screen
+    var firstName: String = ""
+    var lastName: String = ""
+    var cpr: String = ""
+    var age: String = ""
+    var phoneNumber: String = ""
+    var email: String = ""
+    
+    @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "CvCreationJobseeker", bundle: nil)
+        if let workExpVC = storyboard.instantiateViewController(withIdentifier: "CVCreationWorkEXPPageTableViewController") as? CVCreationWorkEXPPageTableViewController {
+            workExpVC.firstName = firstName
+            workExpVC.lastName = lastName
+            workExpVC.cpr = cpr
+            workExpVC.age = age
+            workExpVC.phoneNumber = phoneNumber
+            workExpVC.email = email
+            workExpVC.professionalSummary = summaryTextView.text ?? ""
             
-            if words.count > 150 {
-                showAlert(message: "Word limit exceeded!")
-                return false
-            }
-            return true
+            navigationController?.pushViewController(workExpVC, animated: true)
         }
-        
-        // Override prepare for segue
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if !validateWordCount() {
-                // Cancel the segue
-                segue.destination.dismiss(animated: true)
-                // Show alert
-                showAlert(message: "Word limit exceeded!")
-            }
-        }
-        
-        // Optional: Real-time validation as user types
-        func textViewDidChange(_ textView: UITextView) {
-            let words = textView.text.components(separatedBy: .whitespacesAndNewlines)
-                .filter { !$0.isEmpty }
-            
-            if words.count > 150 {
-                showAlert(message: "Word limit exceeded!")
-                // Remove words until we're back under the limit
-                let validWords = Array(words.prefix(150))
-                textView.text = validWords.joined(separator: " ")
-            }
-        }
-        }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
-
+}
