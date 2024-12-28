@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		575B2D1E2CFDE10D00840818 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1D2CFDE10D00840818 /* Job.swift */; };
-		575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D1F2CFDE1BA00840818 /* JobApplication.swift */; };
 		575B2D222CFDE61400840818 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D212CFDE61400840818 /* CV.swift */; };
 		575B2D282CFDF09D00840818 /* JobEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D272CFDF09D00840818 /* JobEntry.swift */; };
 		575B2D2A2CFDF10200840818 /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575B2D292CFDF10200840818 /* Degree.swift */; };
@@ -25,7 +24,6 @@
 		5B2601102D1F61EF00E0BD96 /* ProfileJobSeekerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2600DC2D1F61EF00E0BD96 /* ProfileJobSeekerViewController.swift */; };
 		5B2601112D1F61EF00E0BD96 /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2600DF2D1F61EF00E0BD96 /* Applications.swift */; };
 		5B2601122D1F61EF00E0BD96 /* ApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2600F02D1F61EF00E0BD96 /* ApplicationTableViewCell.swift */; };
-		5B2601132D1F61EF00E0BD96 /* JobSeeker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2600E92D1F61EF00E0BD96 /* JobSeeker.swift */; };
 		5B2601152D1F61EF00E0BD96 /* ChoosePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2600D42D1F61EF00E0BD96 /* ChoosePictureViewController.swift */; };
 		5B2601162D1F61EF00E0BD96 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2600F72D1F61EF00E0BD96 /* ProfileTableViewCell.swift */; };
 		5B2601172D1F61EF00E0BD96 /* EditProfileJobSeekerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2600D82D1F61EF00E0BD96 /* EditProfileJobSeekerTableViewController.swift */; };
@@ -55,6 +53,13 @@
 		5B2601412D1F61EF00E0BD96 /* ApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2600FA2D1F61EF00E0BD96 /* ApplicationTableViewCell.xib */; };
 		5B2601B72D1F82DD00E0BD96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B2601B62D1F82DD00E0BD96 /* Assets.xcassets */; };
 		5B2601B92D1F82E900E0BD96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2601B82D1F82E900E0BD96 /* LaunchScreen.storyboard */; };
+		5B2601C52D1F840300E0BD96 /* ApplicationPostPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2601BB2D1F840300E0BD96 /* ApplicationPostPage.storyboard */; };
+		5B2601C82D1F840300E0BD96 /* ApplicantPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2601BA2D1F840300E0BD96 /* ApplicantPostTableViewCell.swift */; };
+		5B2601C92D1F840300E0BD96 /* ApplicationPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2601BC2D1F840300E0BD96 /* ApplicationPostViewController.swift */; };
+		5B2601CA2D1F840300E0BD96 /* ViewProfileApplicantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2601C32D1F840300E0BD96 /* ViewProfileApplicantViewController.swift */; };
+		5B2601CB2D1F840300E0BD96 /* JobApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2601C12D1F840300E0BD96 /* JobApplication.swift */; };
+		5B2601CC2D1F840300E0BD96 /* FilterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2601C02D1F840300E0BD96 /* FilterPageViewController.swift */; };
+		5B2601CD2D1F840300E0BD96 /* JobSeeker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2601C22D1F840300E0BD96 /* JobSeeker.swift */; };
 		AC718EC02D1ED75100F3CF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC718EB32D1ED75100F3CF09 /* Assets.xcassets */; };
 		AC718EC22D1ED75100F3CF09 /* CompanyLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC718EB62D1ED75100F3CF09 /* CompanyLogin.storyboard */; };
 		AC718EC32D1ED75100F3CF09 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC718EB72D1ED75100F3CF09 /* Welcome.storyboard */; };
@@ -128,7 +133,6 @@
 
 /* Begin PBXFileReference section */
 		575B2D1D2CFDE10D00840818 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
-		575B2D1F2CFDE1BA00840818 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
 		575B2D212CFDE61400840818 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
 		575B2D272CFDF09D00840818 /* JobEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobEntry.swift; sourceTree = "<group>"; };
 		575B2D292CFDF10200840818 /* Degree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
@@ -150,7 +154,6 @@
 		5B2600DC2D1F61EF00E0BD96 /* ProfileJobSeekerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileJobSeekerViewController.swift; sourceTree = "<group>"; };
 		5B2600DF2D1F61EF00E0BD96 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
 		5B2600E22D1F61EF00E0BD96 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		5B2600E92D1F61EF00E0BD96 /* JobSeeker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSeeker.swift; sourceTree = "<group>"; };
 		5B2600EA2D1F61EF00E0BD96 /* JobSeekerApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSeekerApplication.swift; sourceTree = "<group>"; };
 		5B2600EC2D1F61EF00E0BD96 /* Skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
 		5B2600F02D1F61EF00E0BD96 /* ApplicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTableViewCell.swift; sourceTree = "<group>"; };
@@ -175,6 +178,13 @@
 		5B26010A2D1F61EF00E0BD96 /* SkillsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillsTableViewCell.xib; sourceTree = "<group>"; };
 		5B2601B62D1F82DD00E0BD96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B2601B82D1F82E900E0BD96 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B2601BA2D1F840300E0BD96 /* ApplicantPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantPostTableViewCell.swift; sourceTree = "<group>"; };
+		5B2601BB2D1F840300E0BD96 /* ApplicationPostPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApplicationPostPage.storyboard; sourceTree = "<group>"; };
+		5B2601BC2D1F840300E0BD96 /* ApplicationPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationPostViewController.swift; sourceTree = "<group>"; };
+		5B2601C02D1F840300E0BD96 /* FilterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPageViewController.swift; sourceTree = "<group>"; };
+		5B2601C12D1F840300E0BD96 /* JobApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplication.swift; sourceTree = "<group>"; };
+		5B2601C22D1F840300E0BD96 /* JobSeeker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSeeker.swift; sourceTree = "<group>"; };
+		5B2601C32D1F840300E0BD96 /* ViewProfileApplicantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileApplicantViewController.swift; sourceTree = "<group>"; };
 		AC718EB32D1ED75100F3CF09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC718EB62D1ED75100F3CF09 /* CompanyLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompanyLogin.storyboard; sourceTree = "<group>"; };
 		AC718EB72D1ED75100F3CF09 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
@@ -321,9 +331,22 @@
 		5B2601B52D1F82CA00E0BD96 /* Ali Alqaasab */ = {
 			isa = PBXGroup;
 			children = (
+				5B2601CE2D1F841900E0BD96 /* Controller */,
+				5B2601BB2D1F840300E0BD96 /* ApplicationPostPage.storyboard */,
 				5B2601B62D1F82DD00E0BD96 /* Assets.xcassets */,
 			);
 			path = "Ali Alqaasab";
+			sourceTree = "<group>";
+		};
+		5B2601CE2D1F841900E0BD96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B2601BA2D1F840300E0BD96 /* ApplicantPostTableViewCell.swift */,
+				5B2601BC2D1F840300E0BD96 /* ApplicationPostViewController.swift */,
+				5B2601C02D1F840300E0BD96 /* FilterPageViewController.swift */,
+				5B2601C32D1F840300E0BD96 /* ViewProfileApplicantViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		AC718EB22D1ED73B00F3CF09 /* ali ebrahim */ = {
@@ -466,9 +489,10 @@
 		D06390502CF85B9F0006CC8B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5B2601C22D1F840300E0BD96 /* JobSeeker.swift */,
+				5B2601C12D1F840300E0BD96 /* JobApplication.swift */,
 				5B2600EC2D1F61EF00E0BD96 /* Skills.swift */,
 				5B2600EA2D1F61EF00E0BD96 /* JobSeekerApplication.swift */,
-				5B2600E92D1F61EF00E0BD96 /* JobSeeker.swift */,
 				5B2600E22D1F61EF00E0BD96 /* DataManager.swift */,
 				5B2600DF2D1F61EF00E0BD96 /* Applications.swift */,
 				D5AA62F72D1F372100F18017 /* JobData.swift */,
@@ -477,7 +501,6 @@
 				D06390602CF8619D0006CC8B /* Admin.swift */,
 				D06390622CF861BB0006CC8B /* Guest.swift */,
 				575B2D1D2CFDE10D00840818 /* Job.swift */,
-				575B2D1F2CFDE1BA00840818 /* JobApplication.swift */,
 				575B2D212CFDE61400840818 /* CV.swift */,
 				575B2D272CFDF09D00840818 /* JobEntry.swift */,
 				575B2D292CFDF10200840818 /* Degree.swift */,
@@ -700,6 +723,7 @@
 				D5AA63052D1F47C900F18017 /* ResourceCreation.storyboard in Resources */,
 				AC718F0E2D1F120A00F3CF09 /* ResourcesGuest.storyboard in Resources */,
 				AC718EC42D1ED75100F3CF09 /* Login.storyboard in Resources */,
+				5B2601C52D1F840300E0BD96 /* ApplicationPostPage.storyboard in Resources */,
 				AC718ED72D1ED96F00F3CF09 /* BaseJobSeeker.storyboard in Resources */,
 				AC718F172D1F15B400F3CF09 /* BaseAdmin.storyboard in Resources */,
 				AC718ECA2D1ED75100F3CF09 /* GoogleService-Info.plist in Resources */,
@@ -750,7 +774,6 @@
 				5B2601102D1F61EF00E0BD96 /* ProfileJobSeekerViewController.swift in Sources */,
 				5B2601112D1F61EF00E0BD96 /* Applications.swift in Sources */,
 				5B2601122D1F61EF00E0BD96 /* ApplicationTableViewCell.swift in Sources */,
-				5B2601132D1F61EF00E0BD96 /* JobSeeker.swift in Sources */,
 				5B2601152D1F61EF00E0BD96 /* ChoosePictureViewController.swift in Sources */,
 				5B2601162D1F61EF00E0BD96 /* ProfileTableViewCell.swift in Sources */,
 				5B2601172D1F61EF00E0BD96 /* EditProfileJobSeekerTableViewController.swift in Sources */,
@@ -781,11 +804,16 @@
 				575B2D2C2CFDF21400840818 /* Video.swift in Sources */,
 				D06390632CF861BB0006CC8B /* Guest.swift in Sources */,
 				D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */,
-				575B2D202CFDE1BA00840818 /* JobApplication.swift in Sources */,
 				D5AA63012D1F47C900F18017 /* Entry2ViewController.swift in Sources */,
 				575B2D302CFDF2CB00840818 /* Resources.swift in Sources */,
 				AC718EC72D1ED75100F3CF09 /* AdminLoginViewController.swift in Sources */,
 				D01FF9A62CF85B2500F5DC5D /* AppDelegate.swift in Sources */,
+				5B2601C82D1F840300E0BD96 /* ApplicantPostTableViewCell.swift in Sources */,
+				5B2601C92D1F840300E0BD96 /* ApplicationPostViewController.swift in Sources */,
+				5B2601CA2D1F840300E0BD96 /* ViewProfileApplicantViewController.swift in Sources */,
+				5B2601CB2D1F840300E0BD96 /* JobApplication.swift in Sources */,
+				5B2601CC2D1F840300E0BD96 /* FilterPageViewController.swift in Sources */,
+				5B2601CD2D1F840300E0BD96 /* JobSeeker.swift in Sources */,
 				575B2D1E2CFDE10D00840818 /* Job.swift in Sources */,
 				D5AA63022D1F47C900F18017 /* Task2ViewController.swift in Sources */,
 				575B2D222CFDE61400840818 /* CV.swift in Sources */,
