@@ -53,6 +53,8 @@
 		5B26013F2D1F61EF00E0BD96 /* ProfileJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2601072D1F61EF00E0BD96 /* ProfileJobSeeker.storyboard */; };
 		5B2601402D1F61EF00E0BD96 /* PhoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2601042D1F61EF00E0BD96 /* PhoneTableViewCell.xib */; };
 		5B2601412D1F61EF00E0BD96 /* ApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B2600FA2D1F61EF00E0BD96 /* ApplicationTableViewCell.xib */; };
+		5B2601B72D1F82DD00E0BD96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B2601B62D1F82DD00E0BD96 /* Assets.xcassets */; };
+		5B2601B92D1F82E900E0BD96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2601B82D1F82E900E0BD96 /* LaunchScreen.storyboard */; };
 		AC718EC02D1ED75100F3CF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC718EB32D1ED75100F3CF09 /* Assets.xcassets */; };
 		AC718EC22D1ED75100F3CF09 /* CompanyLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC718EB62D1ED75100F3CF09 /* CompanyLogin.storyboard */; };
 		AC718EC32D1ED75100F3CF09 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC718EB72D1ED75100F3CF09 /* Welcome.storyboard */; };
@@ -86,7 +88,6 @@
 		D01FF9AA2CF85B2500F5DC5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9A92CF85B2500F5DC5D /* ViewController.swift */; };
 		D01FF9AD2CF85B2500F5DC5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01FF9AB2CF85B2500F5DC5D /* Main.storyboard */; };
 		D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01FF9AE2CF85B2700F5DC5D /* Assets.xcassets */; };
-		D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01FF9B02CF85B2700F5DC5D /* LaunchScreen.storyboard */; };
 		D01FF9BD2CF85B2700F5DC5D /* pursuitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9BC2CF85B2700F5DC5D /* pursuitTests.swift */; };
 		D01FF9C72CF85B2700F5DC5D /* pursuitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9C62CF85B2700F5DC5D /* pursuitUITests.swift */; };
 		D01FF9C92CF85B2700F5DC5D /* pursuitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FF9C82CF85B2700F5DC5D /* pursuitUITestsLaunchTests.swift */; };
@@ -172,6 +173,8 @@
 		5B2601072D1F61EF00E0BD96 /* ProfileJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileJobSeeker.storyboard; sourceTree = "<group>"; };
 		5B2601082D1F61EF00E0BD96 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		5B26010A2D1F61EF00E0BD96 /* SkillsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillsTableViewCell.xib; sourceTree = "<group>"; };
+		5B2601B62D1F82DD00E0BD96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B2601B82D1F82E900E0BD96 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC718EB32D1ED75100F3CF09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC718EB62D1ED75100F3CF09 /* CompanyLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompanyLogin.storyboard; sourceTree = "<group>"; };
 		AC718EB72D1ED75100F3CF09 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
@@ -203,7 +206,6 @@
 		D01FF9A92CF85B2500F5DC5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D01FF9AC2CF85B2500F5DC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D01FF9AE2CF85B2700F5DC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D01FF9B12CF85B2700F5DC5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D01FF9B32CF85B2700F5DC5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D01FF9B82CF85B2700F5DC5D /* pursuitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pursuitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01FF9BC2CF85B2700F5DC5D /* pursuitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pursuitTests.swift; sourceTree = "<group>"; };
@@ -316,6 +318,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5B2601B52D1F82CA00E0BD96 /* Ali Alqaasab */ = {
+			isa = PBXGroup;
+			children = (
+				5B2601B62D1F82DD00E0BD96 /* Assets.xcassets */,
+			);
+			path = "Ali Alqaasab";
+			sourceTree = "<group>";
+		};
 		AC718EB22D1ED73B00F3CF09 /* ali ebrahim */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +427,7 @@
 		D01FF9A42CF85B2500F5DC5D /* pursuit */ = {
 			isa = PBXGroup;
 			children = (
+				5B2601B52D1F82CA00E0BD96 /* Ali Alqaasab */,
 				AC718EB22D1ED73B00F3CF09 /* ali ebrahim */,
 				5B2600D12D1F61B700E0BD96 /* Ammar Alaradi */,
 				D5AA62EA2D1F371800F18017 /* Abbas Ali */,
@@ -428,7 +439,7 @@
 				D01FF9A92CF85B2500F5DC5D /* ViewController.swift */,
 				D01FF9AB2CF85B2500F5DC5D /* Main.storyboard */,
 				D01FF9AE2CF85B2700F5DC5D /* Assets.xcassets */,
-				D01FF9B02CF85B2700F5DC5D /* LaunchScreen.storyboard */,
+				5B2601B82D1F82E900E0BD96 /* LaunchScreen.storyboard */,
 				D01FF9B32CF85B2700F5DC5D /* Info.plist */,
 				AC718EBF2D1ED75100F3CF09 /* GoogleService-Info.plist */,
 			);
@@ -670,6 +681,7 @@
 				5B2601312D1F61EF00E0BD96 /* PostApplicationTableViewCell.xib in Resources */,
 				5B2601332D1F61EF00E0BD96 /* Assets.xcassets in Resources */,
 				5B2601352D1F61EF00E0BD96 /* NameTableViewCell.xib in Resources */,
+				5B2601B72D1F82DD00E0BD96 /* Assets.xcassets in Resources */,
 				5B2601392D1F61EF00E0BD96 /* GovernateTableViewCell.xib in Resources */,
 				5B26013A2D1F61EF00E0BD96 /* DescriptionTableViewCell.xib in Resources */,
 				5B26013B2D1F61EF00E0BD96 /* ProfileEmployer.storyboard in Resources */,
@@ -679,8 +691,8 @@
 				5B26013F2D1F61EF00E0BD96 /* ProfileJobSeeker.storyboard in Resources */,
 				5B2601402D1F61EF00E0BD96 /* PhoneTableViewCell.xib in Resources */,
 				5B2601412D1F61EF00E0BD96 /* ApplicationTableViewCell.xib in Resources */,
-				D01FF9B22CF85B2700F5DC5D /* LaunchScreen.storyboard in Resources */,
 				57C71DF92D00700B00F317AA /* HomeJobSeeker.storyboard in Resources */,
+				5B2601B92D1F82E900E0BD96 /* LaunchScreen.storyboard in Resources */,
 				AC718EC22D1ED75100F3CF09 /* CompanyLogin.storyboard in Resources */,
 				D01FF9AF2CF85B2700F5DC5D /* Assets.xcassets in Resources */,
 				57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */,
@@ -825,14 +837,6 @@
 				D01FF9AC2CF85B2500F5DC5D /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D01FF9B02CF85B2700F5DC5D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D01FF9B12CF85B2700F5DC5D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
