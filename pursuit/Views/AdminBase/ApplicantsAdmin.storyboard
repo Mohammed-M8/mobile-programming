@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-955" y="3"/>
         </scene>
-        <!--Resources-->
+        <!--Applicants-->
         <scene sceneID="PX9-Uy-UiC">
             <objects>
                 <viewController id="1ZJ-nd-6GL" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         <viewLayoutGuide key="safeArea" id="EiF-Me-iIp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="3" title="Resources" image="text.book.closed" catalog="system" id="un7-Em-g4R"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Applicants" image="person.3.fill" catalog="system" id="un7-Em-g4R"/>
                     <navigationItem key="navigationItem" id="G9o-vE-hnx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -45,7 +45,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="text.book.closed" catalog="system" width="115" height="128"/>
+        <image name="person.3.fill" catalog="system" width="128" height="66"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

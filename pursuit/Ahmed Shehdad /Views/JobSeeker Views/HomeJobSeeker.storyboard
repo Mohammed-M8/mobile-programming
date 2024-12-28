@@ -8,11 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="7ig-vR-FWl">
             <objects>
                 <navigationController storyboardIdentifier="HomeJobS" id="qdD-V1-JsQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MyP-ku-OFI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DPa-sq-bXk">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -24,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Am-Cl-uhR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.564885496183201" y="10.563380281690142"/>
+            <point key="canvasLocation" x="-879" y="11"/>
         </scene>
         <!--Home-->
         <scene sceneID="Ftg-Bp-jeB">
@@ -47,7 +46,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="100"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GVy-ld-2mb">
-                                                                <rect key="frame" x="8" y="32.000000000000007" width="66.333333333333329" height="61.66666666666665"/>
+                                                                <rect key="frame" x="8" y="32" width="66.333333333333329" height="61.666666666666671"/>
                                                                 <color key="tintColor" systemColor="separatorColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -167,16 +166,6 @@
                                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lbt-7C-4MW">
                                                                         <rect key="frame" x="10" y="5" width="353" height="427"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        <prototypes>
-                                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rXT-OS-yXr">
-                                                                                <rect key="frame" x="0.0" y="50" width="353" height="43.666667938232422"/>
-                                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rXT-OS-yXr" id="jlx-C8-EiV">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
-                                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                                </tableViewCellContentView>
-                                                                            </tableViewCell>
-                                                                        </prototypes>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                                 <integer key="value" value="10"/>
@@ -251,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5K-zy-NFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083.206106870229" y="10.563380281690142"/>
+            <point key="canvasLocation" x="156.4885496183206" y="10.563380281690142"/>
         </scene>
     </scenes>
     <resources>
@@ -259,13 +248,13 @@
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

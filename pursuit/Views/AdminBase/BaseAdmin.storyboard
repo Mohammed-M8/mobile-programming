@@ -20,8 +20,8 @@
                         <segue destination="N6x-RT-0Iq" kind="relationship" relationship="viewControllers" id="ZRv-mR-aRb"/>
                         <segue destination="sq9-AN-clp" kind="relationship" relationship="viewControllers" id="xB1-1n-RYp"/>
                         <segue destination="Pha-Gh-V8l" kind="relationship" relationship="viewControllers" id="e8B-dt-YZy"/>
-                        <segue destination="aUS-jl-yja" kind="relationship" relationship="viewControllers" id="GXd-aj-hEs"/>
                         <segue destination="mGZ-Au-B3L" kind="relationship" relationship="viewControllers" id="SXr-VH-L2P"/>
+                        <segue destination="aUS-jl-yja" kind="relationship" relationship="viewControllers" id="Yef-rl-lCI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7L-ks-aeA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -38,35 +38,25 @@
             </objects>
             <point key="canvasLocation" x="-954" y="-583"/>
         </scene>
-        <!--JobsAdmin-->
+        <!--JobCreation-->
         <scene sceneID="bNt-oj-Rh9">
             <objects>
-                <viewControllerPlaceholder storyboardName="JobsAdmin" referencedIdentifier="JobsAdmin" id="sq9-AN-clp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="JobCreation" referencedIdentifier="JobCreation" id="sq9-AN-clp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Kve-vc-E8I"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o73-bh-MbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-950" y="-305"/>
+            <point key="canvasLocation" x="-855" y="-411"/>
         </scene>
         <!--ResourcesAdmin-->
         <scene sceneID="Sh9-tc-Anx">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ResourcesJobS" storyboardName="ResourceCreation" referencedIdentifier="ResourcesAdmin" id="Pha-Gh-V8l" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="ResourcesAdmin" storyboardName="ResourceCreation" referencedIdentifier="ResourcesAdmin" id="Pha-Gh-V8l" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="4ND-5c-DqU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfw-fO-clu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-951" y="-206"/>
-        </scene>
-        <!--ProfileAdmin-->
-        <scene sceneID="rcG-XF-Roo">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ProfileAdmin" referencedIdentifier="ProfileAdmin" id="aUS-jl-yja" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Yp6-bf-7Ve"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5PN-YT-6eK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-980" y="-144"/>
+            <point key="canvasLocation" x="-834" y="-287"/>
         </scene>
         <!--ApplicantsAdmin-->
         <scene sceneID="DvK-bR-yTM">
@@ -76,7 +66,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bX1-GE-Wsn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1047" y="-56"/>
+            <point key="canvasLocation" x="-847" y="-218"/>
+        </scene>
+        <!--ProfileAdmin-->
+        <scene sceneID="rcG-XF-Roo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileAdmin" referencedIdentifier="ProfileAdmin" id="aUS-jl-yja" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Yp6-bf-7Ve"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5PN-YT-6eK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1043" y="-146"/>
         </scene>
     </scenes>
 </document>

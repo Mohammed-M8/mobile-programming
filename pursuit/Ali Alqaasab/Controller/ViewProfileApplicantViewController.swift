@@ -62,6 +62,11 @@ class ViewProfileApplicantViewController: UIViewController {
         
     }
     
+    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "unwindToApplicantsPage", sender: self)
+    }
+
+    
     func selectButton(_ selectedButton: UIButton) {
         let customColor = UIColor(red: 24/255.0, green: 116/255.0, blue: 148/255.0, alpha: 1.0)
         // Reset styles for all buttons

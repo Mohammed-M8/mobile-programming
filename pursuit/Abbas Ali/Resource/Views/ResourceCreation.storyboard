@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Jobs-->
+        <!--Resources-->
         <scene sceneID="DIP-RJ-kQa">
             <objects>
                 <viewController id="PuW-db-ZlV" customClass="ResourceTableViewCell" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-y9-Xfj">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="710"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="724-hR-Z3u">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
@@ -134,7 +134,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7Y-Uz-M5M">
                                                         <rect key="frame" x="0.0" y="0.0" width="380" height="50"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8S-EF-OxU">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resources List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8S-EF-OxU">
                                                                 <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" id="miv-n7-96o">
@@ -188,10 +188,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ev8-lc-syy">
-                                        <rect key="frame" x="0.0" y="210" width="393" height="456"/>
+                                        <rect key="frame" x="0.0" y="210" width="393" height="500"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MO3-Q0-v4E">
-                                                <rect key="frame" x="0.0" y="-22" width="393" height="500"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="500"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TL2-xk-2TV">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="500"/>
@@ -254,7 +254,7 @@
                             <constraint firstItem="yfE-y9-Xfj" firstAttribute="trailing" secondItem="jSR-pl-WbD" secondAttribute="trailing" id="xmr-VF-xxl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Jobs" image="suitcase" catalog="system" id="1Jx-fD-vzk"/>
+                    <tabBarItem key="tabBarItem" title="Resources" image="text.book.closed" catalog="system" id="1Jx-fD-vzk"/>
                     <navigationItem key="navigationItem" id="w19-Jq-B1W"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -368,7 +368,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJs-lY-gYF">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="48"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfg-JT-bKt">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfg-JT-bKt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="48"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="165" id="C7w-eJ-WhF">
@@ -456,7 +456,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-q6-qB3">
                                                         <rect key="frame" x="0.0" y="98" width="330" height="50"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doq-qW-BoX">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doq-qW-BoX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="165" id="O8p-01-sNn">
@@ -589,7 +589,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="855-f2-Hka">
                                                 <rect key="frame" x="29" y="22" width="335" height="108"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requirements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMQ-Bd-YEq">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMQ-Bd-YEq">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="20.333333333333332"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="SrE-uA-WcT">
@@ -717,11 +717,11 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKa-5L-vXw">
                                                         <rect key="frame" x="0.0" y="0.0" width="380" height="35"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Titile:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti6-ws-9tH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="35"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resource Titile:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti6-ws-9tH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" id="ToZ-HQ-yiy">
-                                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                                        <variation key="heightClass=regular-widthClass=compact" constant="130"/>
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="110"/>
                                                                     </constraint>
                                                                 </constraints>
@@ -730,10 +730,10 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Dc-le-022">
-                                                                <rect key="frame" x="100" y="0.0" width="280" height="35"/>
+                                                                <rect key="frame" x="130" y="0.0" width="250" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" id="eNX-ec-aqS">
-                                                                        <variation key="heightClass=regular-widthClass=compact" constant="280"/>
+                                                                        <variation key="heightClass=regular-widthClass=compact" constant="250"/>
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="840"/>
                                                                     </constraint>
                                                                 </constraints>
@@ -946,7 +946,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abI-aN-cVk">
                                                         <rect key="frame" x="0.0" y="0.0" width="380" height="35"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzM-2c-dVJ">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzM-2c-dVJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" id="er2-BZ-hj1">
@@ -1032,7 +1032,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9k-jU-hX1">
                                                         <rect key="frame" x="0.0" y="115" width="380" height="35"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6a-HI-oYK">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6a-HI-oYK">
                                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" id="tqv-bI-a4g">
@@ -1155,7 +1155,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iXJ-R0-W7Z">
                                                 <rect key="frame" x="6.6666666666666572" y="4.6666666666666288" width="380" height="125"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requirements:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zi-md-Qek">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zi-md-Qek">
                                                         <rect key="frame" x="0.0" y="0.0" width="380" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="zuF-S3-J1N">
@@ -1262,7 +1262,7 @@
     <resources>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="suitcase" catalog="system" width="128" height="100"/>
+        <image name="text.book.closed" catalog="system" width="115" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

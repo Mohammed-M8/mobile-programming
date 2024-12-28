@@ -344,6 +344,15 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         }
     }
     
+    @IBAction func unwindToApplicantsPage2(_ segue: UIStoryboardSegue) {
+        // Optionally, handle any data passed from ViewProfileApplicantViewController
+        if let sourceVC = segue.source as? ViewProfileApplicantViewController {
+            print("Returning from ViewProfileApplicantViewController")
+            // Use sourceVC.applicantData if needed
+        }
+    }
+
+    
     func applyFilters(_ filterVC: FilterPageViewController) {
         let filteredResults = jobApplications.filter { application in
             let matchesJobRole = filterVC.selectedJobRole == nil || application.ApplicationJobSeeker.JobSeekerCv.JobEntryArray.contains { $0.JobTitle == filterVC.selectedJobRole }

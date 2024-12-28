@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aK7-c3-D1U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aK7-c3-D1U">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,14 +25,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d7L-ks-aeA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1859" y="-396"/>
+            <point key="canvasLocation" x="-1666" y="-395"/>
         </scene>
-        <!--HomeJobSeeker-->
+        <!--HomeJobS-->
         <scene sceneID="7jB-y4-q0u">
             <objects>
-                <viewControllerPlaceholder storyboardName="HomeJobSeeker" id="N6x-RT-0Iq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="HomeJobSeeker" referencedIdentifier="HomeJobS" id="N6x-RT-0Iq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="laY-HT-RuF"/>
-                    <navigationItem key="navigationItem" id="HUc-Sv-A2N"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62X-o2-qpw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

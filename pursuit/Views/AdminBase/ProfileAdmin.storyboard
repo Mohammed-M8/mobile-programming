@@ -32,8 +32,35 @@
                     <view key="view" contentMode="scaleToFill" id="ZLJ-eb-i0J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-7O-JU8">
+                                <rect key="frame" x="0.0" y="403" width="393" height="46.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="return" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="  Log out">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" metaFont="system" size="27"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="fgf-eX-O0L" kind="presentation" modalPresentationStyle="fullScreen" id="D7C-gL-n9y"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ndh-Fk-Kiy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rfb-7O-JU8" firstAttribute="trailing" secondItem="ndh-Fk-Kiy" secondAttribute="trailing" id="V2a-11-O6z"/>
+                            <constraint firstItem="rfb-7O-JU8" firstAttribute="centerY" secondItem="ZLJ-eb-i0J" secondAttribute="centerY" id="crk-3Z-pTZ"/>
+                            <constraint firstItem="rfb-7O-JU8" firstAttribute="leading" secondItem="ndh-Fk-Kiy" secondAttribute="leading" id="y3X-Gm-hmt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="Profile" image="person" catalog="system" id="TDK-Ng-py0"/>
                     <navigationItem key="navigationItem" id="S9k-yX-t6m"/>
@@ -43,11 +70,25 @@
             </objects>
             <point key="canvasLocation" x="141" y="3"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="r98-kM-bNo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="fgf-eX-O0L" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="x4Q-rM-3Re"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3s-pm-S4k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="-381"/>
+        </scene>
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="return" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

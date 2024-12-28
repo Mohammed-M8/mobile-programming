@@ -31,10 +31,10 @@ class LoginViewController: UIViewController {
                 }
                 
                 DispatchQueue.main.async {
-                    let storyboard = UIStoryboard(name: "ContentPersonalization", bundle: nil)
-                    if let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController {
-                        navigationController.modalPresentationStyle = .fullScreen
-                        self.present(navigationController, animated: true, completion: nil)
+                    let storyboard = UIStoryboard(name: "BaseJobSeeker", bundle: nil)
+                    if let tabBarController = storyboard.instantiateViewController(withIdentifier: "BaseJobSeeker") as? UITabBarController {
+                                tabBarController.modalPresentationStyle = .fullScreen
+                        self.present(tabBarController, animated: true, completion: nil)
                     }
                 }
 
