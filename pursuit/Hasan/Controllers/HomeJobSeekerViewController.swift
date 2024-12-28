@@ -1,17 +1,16 @@
 //
-//  CVCreationViewController.swift
+//  HomeJobSeekerViewController.swift
 //  pursuit
 //
-//  Created by BP-36-201-09 on 10/12/2024.
+//  Created by BP-36-201-09 on 13/12/2024.
 //
 
 import UIKit
 
-class CVCreationViewController: UIViewController {
-    @IBOutlet weak var CVView: UIView!
+class HomeJobSeekerViewController: UIViewController {
+    @IBOutlet weak var homeIconImg: UIImageView!
     
-    @IBOutlet weak var modifyCV: UIButton!
-    @IBOutlet weak var createbtn: UIButton!
+    @IBOutlet weak var displayFirstNamelbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
