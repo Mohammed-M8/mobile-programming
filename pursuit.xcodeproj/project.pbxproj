@@ -25,6 +25,7 @@
 		57737FC02D1FEAFF002EB7D4 /* CvCreationJobseeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57737FBF2D1FEAFF002EB7D4 /* CvCreationJobseeker.storyboard */; };
 		57737FC42D1FEC41002EB7D4 /* CVDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57737FC12D1FEC41002EB7D4 /* CVDataManager.swift */; };
 		57737FC62D1FEC41002EB7D4 /* CVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57737FC22D1FEC41002EB7D4 /* CVModel.swift */; };
+		57737FC82D200085002EB7D4 /* ContentPersonalizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57737FC72D200085002EB7D4 /* ContentPersonalizationViewController.swift */; };
 		577B40CD2D1F212D001C6E3F /* FilterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577B40CC2D1F212D001C6E3F /* FilterPageViewController.swift */; };
 		57C71DF72D006FC300F317AA /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DF62D006FC300F317AA /* Base.storyboard */; };
 		57C71DFB2D00708F00F317AA /* JobsJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */; };
@@ -70,7 +71,6 @@
 		D08B15662D1F073B00108DD0 /* AdminHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08B154E2D1F073B00108DD0 /* AdminHomePage.storyboard */; };
 		D08B15682D1F073B00108DD0 /* HomeJobSeeker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08B15502D1F073B00108DD0 /* HomeJobSeeker.storyboard */; };
 		D08B156A2D1F073B00108DD0 /* HomeJobSeekerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B15532D1F073B00108DD0 /* HomeJobSeekerViewController.swift */; };
-		D08B156B2D1F073B00108DD0 /* ContentPrsnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B15542D1F073B00108DD0 /* ContentPrsnViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +109,7 @@
 		57737FBF2D1FEAFF002EB7D4 /* CvCreationJobseeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CvCreationJobseeker.storyboard; sourceTree = "<group>"; };
 		57737FC12D1FEC41002EB7D4 /* CVDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDataManager.swift; sourceTree = "<group>"; };
 		57737FC22D1FEC41002EB7D4 /* CVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVModel.swift; sourceTree = "<group>"; };
+		57737FC72D200085002EB7D4 /* ContentPersonalizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPersonalizationViewController.swift; sourceTree = "<group>"; };
 		577B40CC2D1F212D001C6E3F /* FilterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPageViewController.swift; sourceTree = "<group>"; };
 		57C71DF62D006FC300F317AA /* Base.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Base.storyboard; sourceTree = "<group>"; };
 		57C71DFA2D00708F00F317AA /* JobsJobSeeker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsJobSeeker.storyboard; sourceTree = "<group>"; };
@@ -158,7 +159,6 @@
 		D08B154E2D1F073B00108DD0 /* AdminHomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AdminHomePage.storyboard; sourceTree = "<group>"; };
 		D08B15502D1F073B00108DD0 /* HomeJobSeeker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeJobSeeker.storyboard; sourceTree = "<group>"; };
 		D08B15532D1F073B00108DD0 /* HomeJobSeekerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeJobSeekerViewController.swift; sourceTree = "<group>"; };
-		D08B15542D1F073B00108DD0 /* ContentPrsnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPrsnViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,7 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				D08B15532D1F073B00108DD0 /* HomeJobSeekerViewController.swift */,
-				D08B15542D1F073B00108DD0 /* ContentPrsnViewController.swift */,
+				57737FC72D200085002EB7D4 /* ContentPersonalizationViewController.swift */,
 				57737FB72D1FEAE4002EB7D4 /* CV Creation */,
 				D08B15552D1F073B00108DD0 /* models */,
 			);
@@ -584,7 +584,7 @@
 				C3E28B0C2D09D9DB00B15151 /* ResourcesCollectionViewCell.swift in Sources */,
 				D06390572CF85C350006CC8B /* LoginViewController.swift in Sources */,
 				C3DC0F1A2D0733F80071BCED /* JobDetailViewController.swift in Sources */,
-				D08B156B2D1F073B00108DD0 /* ContentPrsnViewController.swift in Sources */,
+				57737FC82D200085002EB7D4 /* ContentPersonalizationViewController.swift in Sources */,
 				57F930C82D1ADB71000820E4 /* ApplyJobViewController.swift in Sources */,
 				D01FF9A82CF85B2500F5DC5D /* SceneDelegate.swift in Sources */,
 				D08B15422D1F005000108DD0 /* HeaderTableViewCell.swift in Sources */,
