@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -24,9 +25,16 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
     var bgImage = "background1"
     var tableData = [Applications]()
     
+    var profile: EmployerProfile?
+    
+    // Firestore reference
+    let db = Firestore.firestore()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.fetchProfileData()
         
         tableData = [Applications(title: "Software Engineer", description: "Develop and maintain software applications, focusing on enhancing user experience and functionality.", date: "posted 12 hours ago", image: ""),
                      Applications(title: "Network Engineer", description: "Optimize network performance and troubleshoot connectivity issues to ensure seamless service delivery.", date: "posted 16 hours ago", image: ""),
@@ -37,6 +45,20 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
         PostApplicationTable.estimatedRowHeight = UITableView.automaticDimension
         PostApplicationTable.dataSource = self
         PostApplicationTable.delegate = self
+    }
+    
+    private func populateProfile() {
+        guard let profile = self.profile else { return }
+        self.profileImage = profile.profilePicture ?? ""
+        self.profileImg.image =  self.profileImage.isEmpty ? UIImage(systemName: "person.circle") : UIImage(named: self.profileImage)
+        self.bgImage = profile.bgPicture ?? ""
+        self.bgImg.image = self.bgImage.isEmpty ? UIImage(systemName: "person.and.background.striped.horizontal") : UIImage(named: self.bgImage)
+        self.firstNameLbl.text = profile.firstName ?? "----"
+        self.lastNameLbl.text = profile.lastName ?? "----"
+        self.profileDescriptionLbl.text = profile.profileDescription ?? "No Description"
+        self.emailLbl.text = profile.email ?? "----"
+        self.phoneNmberLbl.text = profile.phoneNumber ?? "----"
+        self.governateLbl.text = profile.governate ?? "----"
     }
     
     override func viewDidLayoutSubviews() {
@@ -52,18 +74,13 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
         editProfileEmployerTableViewController.profileDescription = profileDescriptionLbl.text ?? ""
         editProfileEmployerTableViewController.email = emailLbl.text ?? ""
         editProfileEmployerTableViewController.phoneNumber = phoneNmberLbl.text ?? ""
-        editProfileEmployerTableViewController.selectedGovernate = (governateLbl.text ?? "").components(separatedBy: ",").first ?? ""
-        editProfileEmployerTableViewController.callBack = { [weak self] (profilePicture, bgPicture, firstName, lastName, email, phoneNumber, selectedGovernate, profileDescription) in
-            self?.profileImage = profilePicture
-            self?.profileImg.image = UIImage(named: profilePicture)
-            self?.bgImage = bgPicture
-            self?.bgImg.image = UIImage(named: bgPicture)
-            self?.firstNameLbl.text = firstName
-            self?.lastNameLbl.text = lastName
-            self?.profileDescriptionLbl.text = profileDescription
-            self?.emailLbl.text = email
-            self?.phoneNmberLbl.text = phoneNumber
-            self?.governateLbl.text = "\(selectedGovernate), Bahrain"
+        editProfileEmployerTableViewController.selectedGovernate = (governateLbl.text?.allSatisfy({$0 == "-"}) ?? true) ? "" : (governateLbl.text ?? "").components(separatedBy: ",").first ?? ""
+        editProfileEmployerTableViewController.address = profile?.address ?? ""
+        editProfileEmployerTableViewController.companyName = profile?.companyName ?? ""
+        editProfileEmployerTableViewController.role = profile?.role ?? ""
+        editProfileEmployerTableViewController.callBack = { [weak self] (profile) in
+            self?.profile = profile
+            self?.populateProfile()
         }
     }
     
@@ -115,6 +132,24 @@ class ProfileEmployerViewController: UIViewController, UITableViewDelegate, UITa
             // Present the alert
             present(alertController, animated: true)
         
+    }
+    
+    func fetchProfileData() {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        db.collection("companies").document(userId).getDocument { (document, error) in
+            if let document = document, document.exists {
+                if let user = try? document.data(as: EmployerProfile.self) {
+                    self.profile = user
+                    self.populateProfile()
+                } else {
+                    let error = NSError(domain: "FirebaseServiceError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Profile not found."])
+                    print("Profile error :: ", error.localizedDescription)
+                }
+            } else {
+                let error = NSError(domain: "FirebaseServiceError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Profile not found."])
+                print("Profile error :: ", error.localizedDescription)
+            }
+        }
     }
     
 }

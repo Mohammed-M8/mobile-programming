@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController{
     
@@ -15,6 +16,9 @@ class RegisterViewController: UIViewController{
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    // Firestore reference
+    let db = Firestore.firestore()
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         
@@ -31,10 +35,22 @@ class RegisterViewController: UIViewController{
                         self.displayAlert(message: "Error: \(error.localizedDescription)")
                         return
                     }
+                    
+                    guard let userId = authResult?.user.uid else { return }
 
-                    // Registration successful
-                    self.displayAlert(message: "Registration Successful! You can now log in.") {
-                        self.dismiss(animated: true)
+                    // Save additional details in Firestore
+                    self.db.collection("jobSeeker").document(userId).setData([
+                        "email": email
+                    ]) { error in
+                        if let error = error {
+                            self.displayAlert(message: "Error saving job seeker details: \(error.localizedDescription)")
+                        } else {
+                            
+                            // Registration successful
+                            self.displayAlert(message: "Registration Successful! You can now log in.") {
+                                self.dismiss(animated: true)
+                            }
+                        }
                     }
                 }
             }

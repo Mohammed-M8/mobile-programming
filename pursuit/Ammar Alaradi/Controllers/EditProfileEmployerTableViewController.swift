@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class EditProfileEmployerTableViewController: UITableViewController {
 
@@ -17,9 +19,14 @@ class EditProfileEmployerTableViewController: UITableViewController {
     var phoneNumber: String = ""
     var selectedGovernate: String = ""
     var profileDescription: String = ""
+    var address: String = ""
+    var companyName: String = ""
+    var role: String = ""
     private var isComingForBG = false
     private var governate: [String] = ["The Capital", "Northern", "Southern", "Muharraq"]
-    var callBack: ((_ profilePicture: String, _ bgPicture: String, _ firstName: String, _ lastName: String, _ email: String, _ phoneNumber: String, _ selectedGovernate: String, _ profileDescription: String) -> Void)?
+    var callBack: ((_ EmployerProfile: EmployerProfile) -> Void)?
+    // Firestore reference
+    let db = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,7 +70,7 @@ class EditProfileEmployerTableViewController: UITableViewController {
     }
     
     @IBAction func saveBtnTapped(_ sender: Any) {
-        if firstName.isEmpty || lastName.isEmpty || email.isEmpty || phoneNumber.isEmpty || selectedGovernate.isEmpty || profileDescription.isEmpty {
+        if (firstName.isEmpty || firstName.allSatisfy({ $0 == "-" })) || (lastName.isEmpty || lastName.allSatisfy({ $0 == "-" })) || email.isEmpty || (phoneNumber.isEmpty || phoneNumber.allSatisfy({ $0 == "-" })) || selectedGovernate.isEmpty || profileDescription.isEmpty {
             let alert = UIAlertController(title: "Error", message: "Please enter full profile details.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             present(alert, animated: true)
@@ -74,9 +81,30 @@ class EditProfileEmployerTableViewController: UITableViewController {
             present(alert, animated: true)
             return
         }
-        if let callBack {
-            callBack(profilePicture, bgPicture, firstName, lastName, email, phoneNumber, selectedGovernate, profileDescription)
-            self.navigationController?.popViewController(animated: true)
+        self.setJobSeekerProfile()
+    }
+    
+    /// Add or Update user data to Firestore
+    func setJobSeekerProfile() {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        let selectedGovernate = "\(self.selectedGovernate), Bahrain"
+        let employerProfile: EmployerProfile = EmployerProfile(firstName: firstName, lastName: lastName, profilePicture: profilePicture, bgPicture: bgPicture, email: email, phoneNumber: phoneNumber, profileDescription: profileDescription, governate: selectedGovernate, address: address, companyName: companyName, role: role)
+        guard let encodedUser = try? Firestore.Encoder().encode(employerProfile) else { return }
+        db.collection("companies").document(userId).setData(encodedUser, merge: true) { error in
+            if let error = error {
+                let alert = UIAlertController(title: "Error", message: "Error saving profile data", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true)
+            } else {
+                let alert = UIAlertController(title: "Profile Updated Successfully", message: "Your profile has been updated and saved successfully!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { _ in
+                    if let callBack = self.callBack {
+                        callBack(employerProfile)
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }))
+                self.present(alert, animated: true)
+            }
         }
     }
     
@@ -93,8 +121,8 @@ class EditProfileEmployerTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell, indexPath.section == 0 && indexPath.row == 0 {
-            cell.bgImg.image = UIImage(named: self.bgPicture)
-            cell.profileImg.image = UIImage(named: self.profilePicture)
+            cell.bgImg.image = self.bgPicture.isEmpty ? UIImage(systemName: "person.and.background.striped.horizontal") : UIImage(named: self.bgPicture)
+            cell.profileImg.image = self.profilePicture.isEmpty ? UIImage(systemName: "person.circle") : UIImage(named: self.profilePicture)
             cell.bgImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlebgImgTap)))
             cell.profileImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleProfileImgTap)))
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
@@ -102,8 +130,12 @@ class EditProfileEmployerTableViewController: UITableViewController {
             })
             return cell
         } else if let cell = tableView.dequeueReusableCell(withIdentifier: "NameTableViewCell", for: indexPath) as? NameTableViewCell, indexPath.section == 0 && indexPath.row == 1 {
-            cell.firstNameField.text = firstName
-            cell.lastNameField.text = lastName
+            if !firstName.allSatisfy({ $0 == "-" }) {
+                cell.firstNameField.text = firstName
+            }
+            if !lastName.allSatisfy({ $0 == "-" }) {
+                cell.lastNameField.text = lastName
+            }
             cell.firstNameField.delegate = self
             cell.lastNameField.delegate = self
             return cell
@@ -112,7 +144,9 @@ class EditProfileEmployerTableViewController: UITableViewController {
             cell.emailField.delegate = self
             return cell
         } else if let cell = tableView.dequeueReusableCell(withIdentifier: "PhoneTableViewCell", for: indexPath) as? PhoneTableViewCell, indexPath.section == 0 && indexPath.row == 3 {
-            cell.phoneField.text = phoneNumber
+            if !phoneNumber.allSatisfy({ $0 == "-" }) {
+                cell.phoneField.text = phoneNumber
+            }
             cell.phoneField.delegate = self
             cell.phoneField.addDoneCancelToolbar()
             return cell
