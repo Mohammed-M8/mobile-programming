@@ -71,6 +71,7 @@ class EditProfileJobSeekerTableViewController: UITableViewController {
     }
     
     @IBAction func saveBtnTapped(_ sender: Any) {
+        
         let filteredSkills = skills.filter { !$0.title.isEmpty }
         if (firstName.isEmpty || firstName.allSatisfy({ $0 == "-" })) || (lastName.isEmpty || lastName.allSatisfy({ $0 == "-" })) || email.isEmpty || (phoneNumber.isEmpty || phoneNumber.allSatisfy({ $0 == "-" })) || selectedGovernate.isEmpty || profileDescription.isEmpty || filteredSkills.isEmpty {
             let alert = UIAlertController(title: "Error", message: "Please enter full profile details.", preferredStyle: .alert)
