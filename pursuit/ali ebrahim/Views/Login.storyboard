@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3vd-yD-gyA">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3vd-yD-gyA">
+    <device id="iPad13_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="3vd-yD-gyA" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vqR-es-dOR">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <rect key="frame" x="0.0" y="24" width="1032" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -30,28 +30,28 @@
             <objects>
                 <viewController id="ty2-Mk-G8T" customClass="AdminLoginViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wd0-Z7-KJG">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1032" height="1376"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="0TY-gC-ha7">
-                                <rect key="frame" x="50" y="331" width="330" height="32"/>
+                                <rect key="frame" x="50" y="302" width="932" height="32"/>
                                 <segments>
                                     <segment title="Register" enabled="NO"/>
                                     <segment title="Login"/>
                                 </segments>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Admin ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HG3-7K-xs7">
-                                <rect key="frame" x="50" y="396" width="330" height="34"/>
+                                <rect key="frame" x="50" y="367" width="932" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5E8-Zc-JyG">
-                                <rect key="frame" x="50" y="438" width="330" height="34"/>
+                                <rect key="frame" x="50" y="409" width="932" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mD-yW-dq6">
-                                <rect key="frame" x="50" y="500.99999999999994" width="330" height="42.333333333333314"/>
+                                <rect key="frame" x="50" y="472" width="932" height="38.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In">
                                     <color key="baseBackgroundColor" red="0.201282084" green="0.466334939" blue="0.70550304649999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NvG-76-XqT">
-                                <rect key="frame" x="76" y="163" width="278" height="128"/>
+                                <rect key="frame" x="377" y="134" width="278" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Ghp-04-HoE"/>
                                     <constraint firstAttribute="width" constant="278" id="UAE-YI-EOZ"/>
@@ -103,11 +103,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1032" height="1376"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zO-wK-FRB">
-                                <rect key="frame" x="20" y="103" width="67.333333333333329" height="32"/>
+                                <rect key="frame" x="20" y="74" width="67.5" height="32"/>
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Admin">
@@ -118,14 +118,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Afe-sr-bGu">
-                                <rect key="frame" x="76" y="195" width="278" height="128"/>
+                                <rect key="frame" x="377" y="166" width="278" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Kr8-2V-Sqv"/>
                                     <constraint firstAttribute="width" constant="278" id="q5u-dc-Iy7"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="DXS-dH-vvC">
-                                <rect key="frame" x="49" y="413" width="332" height="388.33333333333326"/>
+                                <rect key="frame" x="350" y="384" width="332.5" height="389"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue as" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ike-2p-uBG">
                                         <rect key="frame" x="0.0" y="0.0" width="139" height="30"/>
@@ -134,13 +134,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an option to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xak-Mv-Of1">
-                                        <rect key="frame" x="0.0" y="60" width="201.33333333333334" height="18"/>
+                                        <rect key="frame" x="0.0" y="60" width="201.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjq-xv-xzJ">
-                                        <rect key="frame" x="0.0" y="108" width="332" height="77.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="108" width="332.5" height="77.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="person" catalog="system"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePadding="20" titlePadding="10">
@@ -205,7 +205,7 @@ Cg
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WV5-97-MWi">
-                                        <rect key="frame" x="0.0" y="215.33333333333337" width="310" height="76"/>
+                                        <rect key="frame" x="0.0" y="215.5" width="310.5" height="76.5"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="person" catalog="system"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePadding="20" titlePadding="10">
@@ -238,7 +238,7 @@ faster here</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlu-za-xdA">
-                                        <rect key="frame" x="0.0" y="321.33333333333337" width="323" height="67"/>
+                                        <rect key="frame" x="0.0" y="322" width="323" height="67"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="person" catalog="system"/>
                                         <buttonConfiguration key="configuration" style="plain" imagePadding="30" titlePadding="10">
@@ -303,11 +303,11 @@ faster here</string>
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="klj-bE-1Dn" customClass="LoginViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sbe-Cy-B8F">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1032" height="1376"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5w-uV-Umc">
-                                <rect key="frame" x="50" y="412" width="330" height="184"/>
+                                <rect key="frame" x="50" y="383" width="932" height="184"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="184" id="ZuI-Y6-oOa"/>
                                     <constraint firstAttribute="width" constant="330" id="r4O-fm-7Qy"/>
@@ -317,7 +317,7 @@ faster here</string>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wff-Fw-bOG" userLabel="Register Segmented View">
-                                <rect key="frame" x="50" y="412" width="330" height="184"/>
+                                <rect key="frame" x="50" y="383" width="932" height="184"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="184" id="0il-U3-Xps"/>
                                     <constraint firstAttribute="width" constant="330" id="cF4-HP-xDs"/>
@@ -327,7 +327,7 @@ faster here</string>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kkm-ty-v04" userLabel="Segment Outlet">
-                                <rect key="frame" x="50" y="331" width="330" height="32"/>
+                                <rect key="frame" x="50" y="302" width="932" height="32"/>
                                 <segments>
                                     <segment title="Register"/>
                                     <segment title="Login"/>
@@ -337,7 +337,7 @@ faster here</string>
                                 </connections>
                             </segmentedControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="IMg-s9-8Ag">
-                                <rect key="frame" x="76" y="163" width="278" height="128"/>
+                                <rect key="frame" x="377" y="134" width="278" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Voo-ks-TuM"/>
                                     <constraint firstAttribute="width" constant="278" id="cU2-7E-Vb5"/>
@@ -378,16 +378,16 @@ faster here</string>
             <objects>
                 <viewController id="EtW-TR-SNS" customClass="LoginViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FV4-8b-DCB">
-                        <rect key="frame" x="0.0" y="0.0" width="330" height="184"/>
+                        <rect key="frame" x="0.0" y="0.0" width="293" height="184"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yg6-6I-luw">
-                                <rect key="frame" x="0.0" y="17" width="330" height="34"/>
+                                <rect key="frame" x="0.0" y="17" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASM-yk-KbM">
-                                <rect key="frame" x="0.0" y="143" width="330" height="42.333333333333343"/>
+                                <rect key="frame" x="0.0" y="143" width="293" height="38.5"/>
                                 <color key="tintColor" red="0.0" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In">
@@ -398,7 +398,7 @@ faster here</string>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0TD-qr-JaH">
-                                <rect key="frame" x="0.0" y="59" width="330" height="34"/>
+                                <rect key="frame" x="0.0" y="59" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -431,11 +431,11 @@ faster here</string>
             <objects>
                 <viewController id="LO8-8q-T66" customClass="RegisterViewController" customModule="pursuit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8CK-ER-Dq2">
-                        <rect key="frame" x="0.0" y="0.0" width="330" height="184"/>
+                        <rect key="frame" x="0.0" y="0.0" width="293" height="184"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUc-z0-RNX">
-                                <rect key="frame" x="0.0" y="17" width="330" height="34"/>
+                                <rect key="frame" x="0.0" y="17" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -443,12 +443,12 @@ faster here</string>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wsM-Bc-Frq">
-                                <rect key="frame" x="0.0" y="59" width="330" height="34"/>
+                                <rect key="frame" x="0.0" y="59" width="293" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlA-hm-TRy">
-                                <rect key="frame" x="0.0" y="143" width="330" height="42.333333333333343"/>
+                                <rect key="frame" x="0.0" y="143" width="293" height="38.5"/>
                                 <color key="tintColor" red="0.0" green="0.46666666670000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign up">

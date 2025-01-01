@@ -91,7 +91,7 @@ class EditProfileEmployerTableViewController: UITableViewController {
         let employerProfile: EmployerProfile = EmployerProfile(firstName: firstName, lastName: lastName, profilePicture: profilePicture, bgPicture: bgPicture, email: email, phoneNumber: phoneNumber, profileDescription: profileDescription, governate: selectedGovernate, address: address, companyName: companyName, role: role)
         guard let encodedUser = try? Firestore.Encoder().encode(employerProfile) else { return }
         db.collection("companies").document(userId).setData(encodedUser, merge: true) { error in
-            if let error = error {
+            if error != nil {
                 let alert = UIAlertController(title: "Error", message: "Error saving profile data", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alert, animated: true)

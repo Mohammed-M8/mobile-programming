@@ -332,14 +332,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57737FC92D200441002EB7D4 /* Ahmed Shehdad  */ = {
+		57737FC92D200441002EB7D4 /* Mohammed Shehdad  */ = {
 			isa = PBXGroup;
 			children = (
 				57737FCA2D200470002EB7D4 /* Assets.xcassets */,
 				57737FE02D200470002EB7D4 /* Controllers */,
 				57737FED2D200470002EB7D4 /* Views */,
 			);
-			path = "Ahmed Shehdad ";
+			path = "Mohammed Shehdad ";
 			sourceTree = "<group>";
 		};
 		57737FCD2D200470002EB7D4 /* Apply Form */ = {
@@ -471,13 +471,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		577380252D20137B002EB7D4 /* Hasan */ = {
+		577380252D20137B002EB7D4 /* Hasan Zaman */ = {
 			isa = PBXGroup;
 			children = (
 				5773801D2D20137B002EB7D4 /* Controllers */,
 				577380242D20137B002EB7D4 /* Views */,
 			);
-			path = Hasan;
+			path = "Hasan Zaman";
 			sourceTree = "<group>";
 		};
 		5B2600D12D1F61B700E0BD96 /* Ammar Alaradi */ = {
@@ -658,8 +658,8 @@
 		D01FF9A42CF85B2500F5DC5D /* pursuit */ = {
 			isa = PBXGroup;
 			children = (
-				577380252D20137B002EB7D4 /* Hasan */,
-				57737FC92D200441002EB7D4 /* Ahmed Shehdad  */,
+				577380252D20137B002EB7D4 /* Hasan Zaman */,
+				57737FC92D200441002EB7D4 /* Mohammed Shehdad  */,
 				5B2601B52D1F82CA00E0BD96 /* Ali Alqaasab */,
 				AC718EB22D1ED73B00F3CF09 /* ali ebrahim */,
 				5B2600D12D1F61B700E0BD96 /* Ammar Alaradi */,
