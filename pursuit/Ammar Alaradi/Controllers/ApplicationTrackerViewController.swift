@@ -6,7 +6,11 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
+
+// SORTING
 enum applicationSortType: CaseIterable {
     case oldest
     case newest
@@ -22,6 +26,7 @@ enum applicationSortType: CaseIterable {
         }
     }
 }
+// SORTING
 
 class ApplicationTrackerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -34,11 +39,7 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
     var firstName = ""
     var lastName = ""
     
-    var jobSeekerApplications: [JobSeekerApplication] = [JobSeekerApplication(companyName: "Batelco |", jobName: "Software Developer", date: "March 24, 2023", image: "betelco", status: .pending),
-                                                         JobSeekerApplication(companyName: "GBM |", jobName: "IT Support Specialist", date: "April 15,2024", image: "gbm", status: .rejected),
-                                                         JobSeekerApplication(companyName: "NBB |", jobName: "Data Analyst", date: "May 12, 2024", image: "nbb", status: .accepted),
-                                                         JobSeekerApplication(companyName: "STC |", jobName: "Network Engineer", date: "June 24, 2024", image: "stc", status: .pending),
-                                                         JobSeekerApplication(companyName: "KPMG |", jobName: "Cybersecurity Consultant", date: "July 26, 2024", image: "kpmg", status: .accepted)]
+    var jobSeekerApplications: [JobSeekerApplication] = []
     
     var filteredJobSeekerApplications: [JobSeekerApplication] = []
     
@@ -47,16 +48,22 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
     
     var isDeleting: Bool = false
     
+    var currentUserId: String = "LpmhIoQn5cQcDgBO5M8ODqwSIi23"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         filteredJobSeekerApplications = jobSeekerApplications
         self.profileImg.image = UIImage(named: profileImage)
         self.userNameLbl.text = "Hello,\n\(firstName) \(lastName)"
+        
         let nib = UINib(nibName: "ApplicationTableViewCell", bundle: nil)
         TableViewApplication.register(nib, forCellReuseIdentifier: "Application")
         TableViewApplication.dataSource = self
         TableViewApplication.delegate = self
+        
+        //fetch from firestore
+        fetchJobSeekerApplicationsFromFirestore()
     }
     
     override func viewDidLayoutSubviews() {
@@ -77,6 +84,64 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
     @IBAction func filterTapped(_ sender: Any) {
         self.showFilterSheet()
     }
+    
+    //FETCH FUNCTION
+    func fetchJobSeekerApplicationsFromFirestore() {
+            let db = Firestore.firestore()
+            
+            db.collection("jobSeeker").document(currentUserId)
+                .collection("jobSeekerApplications")
+                .getDocuments { snapshot, error in
+                    
+                    if let error = error {
+                        print("Error fetching job applications: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    guard let documents = snapshot?.documents else {
+                        print("No job applications found.")
+                        return
+                    }
+                    
+                    var tempApplications: [JobSeekerApplication] = []
+                    
+                    for doc in documents {
+                        let data = doc.data()
+                        
+                        // Map Firestore fields to model
+                        let companyName = data["companyName"] as? String ?? "Unknown Company"
+                        let jobName = data["jobName"] as? String ?? "Unknown Job"
+                        let date = data["date"] as? String ?? "January 1, 2025"
+                        let image = data["image"] as? String ?? "placeholder"
+                        
+                        // The status is stored as "pending", "accepted", "rejected"
+                        let statusString = data["status"] as? String ?? "pending"
+                        let status: ApplicationStatus
+                        switch statusString.lowercased() {
+                        case "accepted": status = .accepted
+                        case "rejected": status = .rejected
+                        default: status = .pending
+                        }
+                        
+                        // Create a JobSeekerApplication instance
+                        let application = JobSeekerApplication(
+                            companyName: companyName,
+                            jobName: jobName,
+                            date: date,
+                            image: image,
+                            status: status
+                        )
+                        tempApplications.append(application)
+                    }
+                    
+                    // Assign to array and reload
+                    self.jobSeekerApplications = tempApplications
+                    self.filteredJobSeekerApplications = tempApplications
+                    DispatchQueue.main.async {
+                        self.TableViewApplication.reloadData()
+                    }
+                }
+        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredJobSeekerApplications.count

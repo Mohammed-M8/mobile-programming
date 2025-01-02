@@ -332,6 +332,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57213D632D267ED800CF820D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B2601BB2D1F840300E0BD96 /* ApplicationPostPage.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		57737FC92D200441002EB7D4 /* Mohammed Shehdad  */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,8 +551,8 @@
 		5B2601B52D1F82CA00E0BD96 /* Ali Alqaasab */ = {
 			isa = PBXGroup;
 			children = (
+				57213D632D267ED800CF820D /* Views */,
 				5B2601CE2D1F841900E0BD96 /* Controller */,
-				5B2601BB2D1F840300E0BD96 /* ApplicationPostPage.storyboard */,
 				5B2601B62D1F82DD00E0BD96 /* Assets.xcassets */,
 			);
 			path = "Ali Alqaasab";
