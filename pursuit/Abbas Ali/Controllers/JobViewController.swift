@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView!
@@ -34,11 +35,41 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         if !UserDefaults().bool(forKey: "setup") {
             UserDefaults().set(true, forKey: "setup")
             UserDefaults().set(0, forKey: "count")
+            UserDefaults.standard.synchronize()
         }
         
         updateTasks()
-    
+        
+        fetchJobs()
     }
+    
+    func fetchJobs() {
+        let db = Firestore.firestore()
+        db.collection("jobs").getDocuments { (querySnapshot, error) in
+            if let e = error {
+                print("Error getting documents: \(e)")
+            } else {
+                self.jobs.removeAll()
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    let job = JobData(
+                        index: self.jobs.count + 1,
+                        title: data["jobTitle"] as? String ?? "",
+                        company: data["companyName"] as? String ?? "",
+                        location: data["location"] as? String ?? "",
+                        createdDate: Date(),
+                        id: document.documentID
+                    )
+                    self.jobs.append(job)
+                }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    
     func updateTasks() {
         jobs.removeAll()
         
@@ -50,21 +81,25 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             if let title = UserDefaults().string(forKey: "task_\(x+1)"),
                let company = UserDefaults().string(forKey: "company_\(x+1)"),
                let location = UserDefaults().string(forKey: "location_\(x+1)") {
-                            
+                
                 let createdDate = UserDefaults().object(forKey: "created_date_\(x+1)") as? Date ?? Date()
-                            
+                let id = UserDefaults().string(forKey: "id_\(x+1)") ?? UUID().uuidString
+                
                 let job = JobData(
                     index: x+1,
                     title: title,
                     company: company,
                     location: location,
-                    createdDate: createdDate
+                    createdDate: createdDate,
+                    id: id
                 )
-                    jobs.append(job)
-                }
+                jobs.append(job)
             }
+        }
         
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     @IBAction func didTapAdd() {
@@ -90,14 +125,9 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         guard let cell = tableView.dequeueReusableCell(withIdentifier: JobTableViewCell.identifier, for: indexPath) as? JobTableViewCell else {
             return UITableViewCell()
         }
-            
-        let job = jobs[indexPath.row]
         
-        cell.configure(with: job) { [weak self] in
-            self?.showModifyView(for: job)
-        }
-            
-        cell.selectionStyle = .none
+        let job = jobs[indexPath.row]
+        cell.configure(with: job)
         return cell
     }
     
@@ -240,7 +270,7 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 UserDefaults().removeObject(forKey: "created_date_\(count)")
                         
                 UserDefaults().set(count - 1, forKey: "count")
-                            
+                UserDefaults.standard.synchronize()
                 // Update the tasks array and table view
                 jobs.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)

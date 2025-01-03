@@ -13,6 +13,7 @@ struct JobData {
     let company: String
     let location: String
     let createdDate: Date
+    var id: String
     
     var timeAgo: String {
         // Calculate time difference

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AKk-zZ-kJE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AKk-zZ-kJE">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -197,7 +197,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="500"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <view key="tableFooterView" contentMode="scaleToFill" id="4xG-f5-SqR">
-                                                            <rect key="frame" x="0.0" y="122" width="393" height="50"/>
+                                                            <rect key="frame" x="0.0" y="126" width="393" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
@@ -209,10 +209,10 @@
                                                         </view>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JobViewController" id="6w1-Tz-g4s" customClass="JobViewController" customModule="pursuit" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="50" width="393" height="44"/>
+                                                                <rect key="frame" x="0.0" y="50" width="393" height="48"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6w1-Tz-g4s" id="mpw-zW-eu7">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>

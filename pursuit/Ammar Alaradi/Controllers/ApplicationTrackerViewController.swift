@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
 
 // SORTING
@@ -48,7 +49,9 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
     
     var isDeleting: Bool = false
     
-    var currentUserId: String = "LpmhIoQn5cQcDgBO5M8ODqwSIi23"
+    var currentUserId: String {
+        return Auth.auth().currentUser?.uid ?? "noUser"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

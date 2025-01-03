@@ -52,13 +52,15 @@ class ResourceTableViewCell: UIViewController, UITableViewDelegate, UITableViewD
                let location = UserDefaults().string(forKey: "location_\(x+1)") {
                             
                 let createdDate = UserDefaults().object(forKey: "created_date_\(x+1)") as? Date ?? Date()
+                let id = UserDefaults().string(forKey: "id_\(x+1)") ?? UUID().uuidString
                             
                 let job = JobData(
                     index: x+1,
                     title: title,
                     company: company,
                     location: location,
-                    createdDate: createdDate
+                    createdDate: createdDate,
+                    id: id
                 )
                     jobs.append(job)
                 }

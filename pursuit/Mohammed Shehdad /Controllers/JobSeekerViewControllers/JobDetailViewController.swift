@@ -22,15 +22,15 @@ class JobDetailViewController: UIViewController {
     @IBOutlet weak var lblLocation: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblSalary.text = String(Job!.Salary)
-        lblType.text = Job?.type
-        lblLocation.text = Job?.Location
-        lblTitle.text=Job?.jobTitle
-        txtShortDesc.text=Job?.extraComment
-        txtRequirements.text = Job?.Requirements
-        txtDetails.text = Job?.Details
-        imgJobCompany.image=Job?.imgJob
-        // Do any additional setup after loading the view.
+//        lblSalary.text = String(Job!.Salary)
+//        lblType.text = Job?.type
+//        lblLocation.text = Job?.Location
+//        lblTitle.text=Job?.jobTitle
+//        txtShortDesc.text=Job?.extraComment
+//        txtRequirements.text = Job?.Requirements
+//        txtDetails.text = Job?.Details
+//        imgJobCompany.image=Job?.imgJob
+//        // Do any additional setup after loading the view.
     }
     
     @IBAction func btnApply(_ sender: Any) {

@@ -8,8 +8,40 @@
 import UIKit
 import Photos
 import PhotosUI
+import Firebase
 
 class EntryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    private func saveJobApplicationToFirebase() {
+        // Reference to Firestore database
+        let db = Firestore.firestore()
+
+        // Data to save
+        let jobData: [String: Any] = [
+            "jobTitle": field.text ?? "",
+            "companyName": companyField.text ?? "",
+            "comment": extraCommentField.text ?? "",
+            "salary": salaryField.text ?? "",
+            "jobType": typeField.text ?? "",
+            "location": locationField.text ?? "",
+            "details": detailsField.text ?? "",
+            "requirements": requirementsField.text ?? "",
+            "timestamp": FieldValue.serverTimestamp() // To set the server timestamp
+        ]
+
+        // Adding document to a specific collection
+        db.collection("jobs").addDocument(data: jobData) { error in
+            if let error = error {
+                print("Error adding document: \(error)")
+                self.showAlert(title: "Error", message: "Failed to add job: \(error.localizedDescription)")
+            } else {
+                print("Job successfully added!")
+                self.showAlert(title: "Success", message: "Job Post Added!") {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
+    }
 
     @IBOutlet var field: UITextField!
     @IBOutlet var companyField: UITextField!
@@ -178,7 +210,11 @@ class EntryViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
     @objc func saveTask() {
         guard validateFields() else { return }
-        showSaveConfirmationAlert()
+
+        // Show a confirmation alert before saving
+        showSaveConfirmationAlert { [weak self] in
+            self?.saveJobApplicationToFirebase()
+        }
     }
     private func validateFields() -> Bool {
         guard let jobTitle = field.text, !jobTitle.isEmpty else {
@@ -191,10 +227,10 @@ class EntryViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 return false
             }
             
-            guard selectedImage != nil else {
-                showAlert(title: "Error", message: "Logo not selected!")
-                return false
-            }
+//            guard selectedImage != nil else {
+//                showAlert(title: "Error", message: "Logo not selected!")
+//                return false
+//            }
             
             guard let comment = extraCommentField.text, !comment.isEmpty else {
                 showAlert(title: "Error", message: "You must Include some Comment!")
@@ -228,22 +264,16 @@ class EntryViewController: UIViewController, UIImagePickerControllerDelegate, UI
         
         return true
     }
-    private func showSaveConfirmationAlert() {
-        let title = isModifying ? "Save Changes" : "Add Job"
-        let message = isModifying ? "Are you sure you want to save these changes?" : "Are you sure you want to add this job?"
-        
-        let alert = UIAlertController(title: title,
-                                    message: message,
-                                    preferredStyle: .alert)
-            
+    
+    
+    private func showSaveConfirmationAlert(completion: @escaping () -> Void) {
+        let alert = UIAlertController(title: "Confirm", message: "Are you sure you want to submit this job application?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        alert.addAction(UIAlertAction(title: isModifying ? "Save" : "Add", style: .default) { [weak self] _ in
-            self?.performSave()
-        })
-            
+        alert.addAction(UIAlertAction(title: "Submit", style: .default, handler: { _ in completion() }))
         present(alert, animated: true)
     }
-        
+    
+    
     private func performSave() {
         guard let jobTitle = field.text,
                 let companyName = companyField.text,
