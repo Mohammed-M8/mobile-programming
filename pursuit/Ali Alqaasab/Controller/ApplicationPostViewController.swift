@@ -22,6 +22,8 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
     
     //Employer Image profile
     @IBOutlet weak var imgProfile: UIImageView!
+    //Employer Company name
+    @IBOutlet weak var companyName: UILabel!
     
     //Table View Outlet
     @IBOutlet weak var ApplicantPostTableView: UITableView!
@@ -210,7 +212,7 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
 //        allJobApplications = [dummyJobApplication, dummyJobApplication2, dummyJobApplication3]
 //        jobApplications = allJobApplications
         
-        
+        fetchEmployerProfile()
         fetchJobApplications()
         
         btnReset.isHidden = true
@@ -220,6 +222,46 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        fetchJobApplications()
+    }
+    
+    private func fetchEmployerProfile() {
+        let db = Firestore.firestore()
+        
+
+        let employerRef = db.collection("companies").document(currentEmployerUID)
+        
+        employerRef.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching employer profile: \(error.localizedDescription)")
+                return
+            }
+            
+            guard
+                let document = document,
+                document.exists,
+                let employerData = document.data()
+            else {
+                print("Employer document not found.")
+                return
+            }
+
+            let compName = employerData["companyName"] as? String ?? "Unknown"
+            let profilePicName = employerData["profilePicture"] as? String ?? ""
+            
+            // Update the UI
+            DispatchQueue.main.async {
+
+                self.companyName.text = compName
+                
+                
+                if let image = UIImage(named: profilePicName), profilePicName != "" {
+                    self.imgProfile.image = image
+                } else {
+                    // if image not found in Assets
+                    self.imgProfile.image = UIImage(systemName: "building.2.crop.circle")
+                }
+            }
+        }
     }
     
     @objc func handleViewButtonTapped(_ notification: Notification) {
@@ -403,253 +445,262 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
     
 }
 
-
 extension ApplicationPostViewController {
     func fetchJobApplications() {
         let db = Firestore.firestore()
         
-        db.collection("JobApplications").getDocuments { (snapshot, error) in
-            if let error = error {
-                print("Error fetching JobApplications: \(error.localizedDescription)")
-                return
-            }
-            
-            guard let documents = snapshot?.documents, !documents.isEmpty else {
-                print("No JobApplications found.")
-                return
-            }
-            
-            var fetchedApplications: [JobApplication] = []
-            let parentGroup = DispatchGroup()
-            
-            for applicationDoc in documents {
-                parentGroup.enter()
+        // Build the reference for the current employer
+        let employerRef = db.collection("companies").document(currentEmployerUID)
+        
+        // Only get JobApplications that match employerRef in "employerID"
+        db.collection("JobApplications")
+            .whereField("employerID", isEqualTo: employerRef)
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    print("Error fetching JobApplications: \(error.localizedDescription)")
+                    return
+                }
                 
-                let applicationData = applicationDoc.data()
-                let documentID = applicationDoc.documentID
-                let statusString = applicationData["status"] as? String ?? "pending"
-                let status: ApplicationStatus = ApplicationStatus(rawValue: statusString.lowercased()) ?? .pending
+                guard let documents = snapshot?.documents, !documents.isEmpty else {
+                    print("No JobApplications found for this employer.")
+                    return
+                }
                 
-                let dateAppliedTimestamp = applicationData["date"] as? Timestamp
-                let dateApplied = dateAppliedTimestamp?.dateValue() ?? Date()
+                var fetchedApplications: [JobApplication] = []
+                let parentGroup = DispatchGroup()
                 
-                let jobName = applicationData["jobName"] as? String ?? "N/A"
-                
-                // Check if there are a valid AppJobSeeker reference
-                if let jobSeekerRef = applicationData["AppJobSeeker"] as? DocumentReference {
+                for applicationDoc in documents {
+                    parentGroup.enter()
                     
-                    // Fetch JobSeeker doc
-                    jobSeekerRef.getDocument { (jobSeekerSnap, err) in
-                        if let err = err {
-                            print("Error fetching JobSeeker doc: \(err.localizedDescription)")
-                            parentGroup.leave()
-                            return
-                        }
+                    let applicationData = applicationDoc.data()
+                    let documentID = applicationDoc.documentID
+                    let statusString = applicationData["status"] as? String ?? "pending"
+                    let status: ApplicationStatus =
+                        ApplicationStatus(rawValue: statusString.lowercased()) ?? .pending
+                    
+                    let dateAppliedTimestamp = applicationData["date"] as? Timestamp
+                    let dateApplied = dateAppliedTimestamp?.dateValue() ?? Date()
+                    
+                    let jobName = applicationData["jobName"] as? String ?? "N/A"
+                    
+                    // Check if there is a valid AppJobSeeker reference
+                    if let jobSeekerRef = applicationData["AppJobSeeker"] as? DocumentReference {
                         
-                        guard
-                            let jobSeekerSnap = jobSeekerSnap,
-                            jobSeekerSnap.exists,
-                            let jobSeekerData = jobSeekerSnap.data()
-                        else {
-                            print("JobSeeker doc missing or empty.")
-                            parentGroup.leave()
-                            return
-                        }
-                        
-                        // 2a) Parse basic jobSeeker fields
-                        let username = jobSeekerData["Username"] as? String ?? ""
-                        let email = jobSeekerData["email"] as? String ?? ""
-                        let password = jobSeekerData["password"] as? String ?? ""
-                        let phoneNumber = jobSeekerData["phoneNumber"] as? String ?? ""
-                        let governorate = jobSeekerData["governate"] as? String ?? ""
-                        let description = jobSeekerData["profileDescription"] as? String ?? ""
-                        let pfpName = jobSeekerData["profilePicture"] as? String ?? ""
-                        
-                        // 2b) Get CV collection
-                        let cvCollectionRef = jobSeekerRef.collection("CVs")
-                        cvCollectionRef.getDocuments { (cvSnapshot, cvError) in
-                            if let cvError = cvError {
-                                print("Error fetching CVs: \(cvError.localizedDescription)")
+                        // Fetch JobSeeker doc
+                        jobSeekerRef.getDocument { (jobSeekerSnap, err) in
+                            if let err = err {
+                                print("Error fetching JobSeeker doc: \(err.localizedDescription)")
                                 parentGroup.leave()
                                 return
                             }
                             
-                            guard let cvDocs = cvSnapshot?.documents, !cvDocs.isEmpty else {
-                                print("No CV docs found for this JobSeeker.")
+                            guard
+                                let jobSeekerSnap = jobSeekerSnap,
+                                jobSeekerSnap.exists,
+                                let jobSeekerData = jobSeekerSnap.data()
+                            else {
+                                print("JobSeeker doc missing or empty.")
                                 parentGroup.leave()
                                 return
                             }
                             
-                            // For simplicity, assume only one CV doc
-                            let cvDoc = cvDocs.first!
-                            let cvData = cvDoc.data()
+                            // Parse basic jobSeeker fields
+                            let username = jobSeekerData["Username"] as? String ?? ""
+                            let email = jobSeekerData["email"] as? String ?? ""
+                            let password = jobSeekerData["password"] as? String ?? ""
+                            let phoneNumber = jobSeekerData["phoneNumber"] as? String ?? ""
+                            let governorate = jobSeekerData["governate"] as? String ?? ""
+                            let description = jobSeekerData["profileDescription"] as? String ?? ""
+                            let pfpName = jobSeekerData["profilePicture"] as? String ?? ""
                             
-                            let firstName = cvData["firstName"] as? String ?? ""
-                            let lastName = cvData["lastName"] as? String ?? ""
-                            let cpr = cvData["CPR"] as? Int ?? 0
-                            let dob = cvData["DOB"] as? String ?? ""
-                            let location = cvData["Location"] as? String ?? ""
-                            let phoneNumberCV = cvData["phoneNumber"] as? String ?? ""
-                            let emailCV = cvData["Email"] as? String ?? ""
-                            let summary = cvData["summary"] as? String ?? ""
-                            
-                            // 2c) Fetch JobEntries + Degrees
-                            let jobEntriesRef = cvDoc.reference.collection("JobEntries")
-                            let degreesRef = cvDoc.reference.collection("Degrees")
-                            
-                            let cvDispatchGroup = DispatchGroup()
-                            
-                            var jobEntryArray: [JobEntry] = []
-                            var degreeArray: [Degree] = []
-                            
-                            // Fetch JobEntries
-                            cvDispatchGroup.enter()
-                            jobEntriesRef.getDocuments { (jobEntrySnap, jobEntryErr) in
-                                if let jobEntryErr = jobEntryErr {
-                                    print("Error fetching JobEntries: \(jobEntryErr.localizedDescription)")
-                                    cvDispatchGroup.leave()
+                            // Get CV collection
+                            let cvCollectionRef = jobSeekerRef.collection("CVs")
+                            cvCollectionRef.getDocuments { (cvSnapshot, cvError) in
+                                if let cvError = cvError {
+                                    print("Error fetching CVs: \(cvError.localizedDescription)")
+                                    parentGroup.leave()
                                     return
                                 }
                                 
-                                jobEntrySnap?.documents.forEach { jobEntryDoc in
-                                    let jeData = jobEntryDoc.data()
-                                    let jobTitle = jeData["JobTitle"] as? String ?? ""
-                                    let company = jeData["Company"] as? String ?? ""
-                                    let startDate = jeData["StartDate"] as? String ?? ""
-                                    let endDate = jeData["EndDate"] as? String ?? ""
-                                    let achievements = jeData["Achievements"] as? String ?? ""
-                                    
-                                    let jobEntry = JobEntry(
-                                        JobTitle: jobTitle,
-                                        Company: company,
-                                        StartDate: startDate,
-                                        EndDate: endDate,
-                                        Achievements: achievements
-                                    )
-                                    jobEntryArray.append(jobEntry)
-                                }
-                                cvDispatchGroup.leave()
-                            }
-                            
-                            // Fetch Degrees
-                            cvDispatchGroup.enter()
-                            degreesRef.getDocuments { (degreeSnap, degreeErr) in
-                                if let degreeErr = degreeErr {
-                                    print("Error fetching Degrees: \(degreeErr.localizedDescription)")
-                                    cvDispatchGroup.leave()
+                                guard let cvDocs = cvSnapshot?.documents, !cvDocs.isEmpty else {
+                                    print("No CV docs found for this JobSeeker.")
+                                    parentGroup.leave()
                                     return
                                 }
-                                degreeSnap?.documents.forEach { degDoc in
-                                    let degData = degDoc.data()
-                                    let degreeName = degData["DegreeName"] as? String ?? ""
-                                    let institution = degData["Institution"] as? String ?? ""
-                                    let yearOfGraduation = degData["YearOfGraduation"] as? Int ?? 0
-                                    let additionalNotes = degData["AdditionalNotes"] as? String ?? ""
-                                    
-                                    let degree = Degree(
-                                        DegreeName: degreeName,
-                                        Institution: institution,
-                                        YearOfGraduation: yearOfGraduation,
-                                        AdditionalNotes: additionalNotes
-                                    )
-                                    degreeArray.append(degree)
-                                }
-                                cvDispatchGroup.leave()
-                            }
-
-                            cvDispatchGroup.notify(queue: .main) {
-                                // Create the CV object
-                                let parsedCV = CV(
-                                    firstName: firstName,
-                                    lastName: lastName,
-                                    CPR: cpr,
-                                    DOB: dob,
-                                    Location: location,
-                                    phoneNumber: phoneNumberCV,
-                                    Email: emailCV,
-                                    summary: summary,
-                                    JobEntryArray: jobEntryArray,
-                                    DegreeArray: degreeArray
-                                )
-
-                                let jobSeeker = JobSeeker(
-                                    Username: username,
-                                    email: email,
-                                    password: password,
-                                    phoneNumber: phoneNumber,
-                                    governorate: governorate,
-                                    description: description,
-                                    JobSeekerCv: parsedCV,
-                                    pfpName: pfpName
-                                )
-
-                                let jobApplication = JobApplication(
-                                    AppJobSeeker: jobSeeker,
-                                    firstName: jobSeeker.JobSeekerCv.firstName,
-                                    lastName: jobSeeker.JobSeekerCv.lastName,
-                                    age: 0,
-                                    currentOccupation: jobName,   // from Firestore doc
-                                    previousExperience: "",
-                                    Qualifications: "",
-                                    coverLEtter: "",
-                                    dateApplied: dateApplied,
-                                    status: status,
-                                    documentId: documentID
-                                )
                                 
-                                fetchedApplications.append(jobApplication)
-                                parentGroup.leave()
+                                // For simplicity, assume only one CV doc
+                                let cvDoc = cvDocs.first!
+                                let cvData = cvDoc.data()
+                                
+                                let firstName = cvData["firstName"] as? String ?? ""
+                                let lastName = cvData["lastName"] as? String ?? ""
+                                let cpr = cvData["CPR"] as? Int ?? 0
+                                let dob = cvData["DOB"] as? String ?? ""
+                                let location = cvData["Location"] as? String ?? ""
+                                let phoneNumberCV = cvData["phoneNumber"] as? String ?? ""
+                                let emailCV = cvData["Email"] as? String ?? ""
+                                let summary = cvData["summary"] as? String ?? ""
+                                
+                                // Fetch JobEntries + Degrees
+                                let jobEntriesRef = cvDoc.reference.collection("JobEntries")
+                                let degreesRef = cvDoc.reference.collection("Degrees")
+                                
+                                let cvDispatchGroup = DispatchGroup()
+                                
+                                var jobEntryArray: [JobEntry] = []
+                                var degreeArray: [Degree] = []
+                                
+                                // Fetch JobEntries
+                                cvDispatchGroup.enter()
+                                jobEntriesRef.getDocuments { (jobEntrySnap, jobEntryErr) in
+                                    if let jobEntryErr = jobEntryErr {
+                                        print("Error fetching JobEntries: \(jobEntryErr.localizedDescription)")
+                                        cvDispatchGroup.leave()
+                                        return
+                                    }
+                                    
+                                    jobEntrySnap?.documents.forEach { jobEntryDoc in
+                                        let jeData = jobEntryDoc.data()
+                                        let jobTitle = jeData["JobTitle"] as? String ?? ""
+                                        let company = jeData["Company"] as? String ?? ""
+                                        let startDate = jeData["StartDate"] as? String ?? ""
+                                        let endDate = jeData["EndDate"] as? String ?? ""
+                                        let achievements = jeData["Achievements"] as? String ?? ""
+                                        
+                                        let jobEntry = JobEntry(
+                                            JobTitle: jobTitle,
+                                            Company: company,
+                                            StartDate: startDate,
+                                            EndDate: endDate,
+                                            Achievements: achievements
+                                        )
+                                        jobEntryArray.append(jobEntry)
+                                    }
+                                    cvDispatchGroup.leave()
+                                }
+                                
+                                // Fetch Degrees
+                                cvDispatchGroup.enter()
+                                degreesRef.getDocuments { (degreeSnap, degreeErr) in
+                                    if let degreeErr = degreeErr {
+                                        print("Error fetching Degrees: \(degreeErr.localizedDescription)")
+                                        cvDispatchGroup.leave()
+                                        return
+                                    }
+                                    degreeSnap?.documents.forEach { degDoc in
+                                        let degData = degDoc.data()
+                                        let degreeName = degData["DegreeName"] as? String ?? ""
+                                        let institution = degData["Institution"] as? String ?? ""
+                                        let yearOfGraduation = degData["YearOfGraduation"] as? Int ?? 0
+                                        let additionalNotes = degData["AdditionalNotes"] as? String ?? ""
+                                        
+                                        let degree = Degree(
+                                            DegreeName: degreeName,
+                                            Institution: institution,
+                                            YearOfGraduation: yearOfGraduation,
+                                            AdditionalNotes: additionalNotes
+                                        )
+                                        degreeArray.append(degree)
+                                    }
+                                    cvDispatchGroup.leave()
+                                }
+                                
+                                // Once JobEntries & Degrees are fetched
+                                cvDispatchGroup.notify(queue: .main) {
+                                    // Create the CV object
+                                    let parsedCV = CV(
+                                        firstName: firstName,
+                                        lastName: lastName,
+                                        CPR: cpr,
+                                        DOB: dob,
+                                        Location: location,
+                                        phoneNumber: phoneNumberCV,
+                                        Email: emailCV,
+                                        summary: summary,
+                                        JobEntryArray: jobEntryArray,
+                                        DegreeArray: degreeArray
+                                    )
+                                    
+                                    // Create the JobSeeker object
+                                    let jobSeeker = JobSeeker(
+                                        Username: username,
+                                        email: email,
+                                        password: password,
+                                        phoneNumber: phoneNumber,
+                                        governorate: governorate,
+                                        description: description,
+                                        JobSeekerCv: parsedCV,
+                                        pfpName: pfpName
+                                    )
+                                    
+                                    // Create the JobApplication
+                                    let jobApplication = JobApplication(
+                                        AppJobSeeker: jobSeeker,
+                                        firstName: jobSeeker.JobSeekerCv.firstName,
+                                        lastName: jobSeeker.JobSeekerCv.lastName,
+                                        age: 0,
+                                        currentOccupation: jobName,
+                                        previousExperience: "",
+                                        Qualifications: "",
+                                        coverLEtter: "",
+                                        dateApplied: dateApplied,
+                                        status: status,
+                                        documentId: documentID
+                                    )
+                                    
+                                    fetchedApplications.append(jobApplication)
+                                    parentGroup.leave()
+                                }
                             }
                         }
-                    }
-                } else {
-                    // No valid AppJobSeeker reference
-                    defer { parentGroup.leave() }
-                    
-                    let partialJobApplication = JobApplication(
-                        AppJobSeeker: JobSeeker(
-                            Username: "",
-                            email: "",
-                            password: "",
-                            phoneNumber: "",
-                            governorate: "",
-                            description: "",
-                            JobSeekerCv: CV(
-                                firstName: "",
-                                lastName: "",
-                                CPR: 0,
-                                DOB: "",
-                                Location: "",
+                    } else {
+                        // If no valid AppJobSeeker reference
+                        defer { parentGroup.leave() }
+                        
+                        let partialJobApplication = JobApplication(
+                            AppJobSeeker: JobSeeker(
+                                Username: "",
+                                email: "",
+                                password: "",
                                 phoneNumber: "",
-                                Email: "",
-                                summary: "",
-                                JobEntryArray: [],
-                                DegreeArray: []
+                                governorate: "",
+                                description: "",
+                                JobSeekerCv: CV(
+                                    firstName: "",
+                                    lastName: "",
+                                    CPR: 0,
+                                    DOB: "",
+                                    Location: "",
+                                    phoneNumber: "",
+                                    Email: "",
+                                    summary: "",
+                                    JobEntryArray: [],
+                                    DegreeArray: []
+                                ),
+                                pfpName: ""
                             ),
-                            pfpName: ""
-                        ),
-                        firstName: "",
-                        lastName: "",
-                        age: 0,
-                        currentOccupation: "N/A",
-                        previousExperience: "",
-                        Qualifications: "",
-                        coverLEtter: "",
-                        dateApplied: dateApplied,
-                        status: .pending,
-                        documentId: documentID
-                    )
-                    
-                    fetchedApplications.append(partialJobApplication)
+                            firstName: "",
+                            lastName: "",
+                            age: 0,
+                            currentOccupation: "N/A",
+                            previousExperience: "",
+                            Qualifications: "",
+                            coverLEtter: "",
+                            dateApplied: dateApplied,
+                            status: .pending,
+                            documentId: documentID
+                        )
+                        
+                        fetchedApplications.append(partialJobApplication)
+                    }
+                }
+                
+                // When all documents are processed...
+                parentGroup.notify(queue: .main) {
+                    self.allJobApplications = fetchedApplications
+                    self.jobApplications = fetchedApplications
+                    self.ApplicantPostTableView.reloadData()
                 }
             }
-            
-            // When all documents are processed...
-            parentGroup.notify(queue: .main) {
-                self.allJobApplications = fetchedApplications
-                self.jobApplications = fetchedApplications
-                self.ApplicantPostTableView.reloadData()
-            }
-        }
     }
 }

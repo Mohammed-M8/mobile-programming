@@ -444,6 +444,7 @@
                         <outlet property="btnFilter" destination="oDl-kC-0fx" id="DwZ-bG-lCV"/>
                         <outlet property="btnReset" destination="mSB-3L-aT7" id="5nn-XB-eFu"/>
                         <outlet property="btnSort" destination="4qz-VL-2nj" id="bpO-z9-MZ9"/>
+                        <outlet property="companyName" destination="GW1-JR-ISc" id="OBL-dC-nJZ"/>
                         <outlet property="imgProfile" destination="nzb-Rp-czt" id="KWg-1Q-h61"/>
                         <outlet property="sortMenuContainer" destination="kzV-oI-fnb" id="Gir-0c-Zmw"/>
                         <outletCollection property="sortButtons" destination="eBn-7C-O4t" collectionClass="NSMutableArray" id="WdY-0h-J4E"/>
