@@ -89,18 +89,19 @@ class ViewProfileApplicantViewController: UIViewController {
     }
     
     @IBAction func saveStatus(_ sender: UIButton) {
-        let docID = "dummyApplication"
-        
+        guard let data = applicantData else { return }
+        let docID = data.documentId
+
         let db = Firestore.firestore()
         db.collection("JobApplications")
-            .document(docID)
-            .updateData(["status": currentStatus.rawValue]) { error in
-                if let error = error {
-                    print("Error updating status: \(error.localizedDescription)")
-                } else {
-                    print("Status updated successfully in Firestore to \(self.currentStatus.rawValue)")
-                }
-            }
+          .document(docID)
+          .updateData(["status": currentStatus.rawValue]) { error in
+              if let error = error {
+                  print("Error updating status: \(error.localizedDescription)")
+              } else {
+                  print("Status updated successfully in Firestore to \(self.currentStatus.rawValue)")
+              }
+          }
     }
     
     

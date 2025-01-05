@@ -94,18 +94,10 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
     func fetchJobSeekerApplicationsFromFirestore() {
         let db = Firestore.firestore()
         
-        // If you want ALL job applications:
-        // let query = db.collection("JobApplications")
-        
-        // OR, if you only want the applications for the currently logged-in user,
-        // and you have stored a field referencing the jobSeeker doc or user ID,
-        // you might do something like:
-        // let query = db.collection("JobApplications").whereField("AppJobSeeker", isEqualTo: db.collection("jobSeeker").document(currentUserId))
-        // or if you store a userId field in "JobApplications", you can filter on it:
-        // let query = db.collection("JobApplications").whereField("userId", isEqualTo: currentUserId)
-        
-        // For now, let's assume we want them all:
+        let jobSeekerRef = db.collection("jobSeeker").document(currentUserId)
+
         let query = db.collection("JobApplications")
+            .whereField("AppJobSeeker", isEqualTo: jobSeekerRef)
         
         query.getDocuments { snapshot, error in
             if let error = error {
@@ -114,7 +106,7 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
             }
             
             guard let documents = snapshot?.documents, !documents.isEmpty else {
-                print("No job applications found in JobApplications collection.")
+                print("No job applications found for this user.")
                 return
             }
             
@@ -123,12 +115,12 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
             for doc in documents {
                 let data = doc.data()
                 
-                
+                // Read fields from Firestore
                 let companyName = data["companyName"] as? String ?? "Unknown Company"
                 let jobName = data["jobName"] as? String ?? "Unknown Job"
                 let image = data["image"] as? String ?? "placeholder"
                 
-                // Handle "status"
+                // Convert status to ApplicationStatus
                 let statusString = (data["status"] as? String ?? "pending").lowercased()
                 let status: ApplicationStatus
                 switch statusString {
@@ -140,19 +132,18 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
                     status = .pending
                 }
                 
-                // Convert Firestore Timestamp to a String date
+                // Convert Firestore Timestamp to a date string
                 let dateString: String
                 if let timestamp = data["date"] as? Timestamp {
                     let dateValue = timestamp.dateValue()
                     let formatter = DateFormatter()
-                    formatter.dateFormat = "MMMM dd, yyyy" // e.g. "January 4, 2025"
+                    formatter.dateFormat = "MMMM dd, yyyy"
                     dateString = formatter.string(from: dateValue)
                 } else {
-                    // Fallback if "date" is missing or not a Timestamp
                     dateString = "January 1, 2025"
                 }
                 
-                // Create a JobSeekerApplication instance
+                // Create your local model object
                 let application = JobSeekerApplication(
                     companyName: companyName,
                     jobName: jobName,
@@ -161,14 +152,12 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
                     status: status,
                     documentId: doc.documentID
                 )
-                
                 tempApplications.append(application)
             }
             
-            // Update local arrays and reload
+            // Assign to your arrays and refresh the table
             self.jobSeekerApplications = tempApplications
             self.filteredJobSeekerApplications = tempApplications
-            
             DispatchQueue.main.async {
                 self.TableViewApplication.reloadData()
             }

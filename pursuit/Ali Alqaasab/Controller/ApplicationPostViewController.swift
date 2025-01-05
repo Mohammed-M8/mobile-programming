@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
 class ApplicationPostViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //Filter Buttton outlet
@@ -36,6 +37,9 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
     
     var jobApplications: [JobApplication] = []
     
+    var currentEmployerUID: String {
+        return Auth.auth().currentUser?.uid ?? ""
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -215,7 +219,7 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchJobApplications()
+//        fetchJobApplications()
     }
     
     @objc func handleViewButtonTapped(_ notification: Notification) {
@@ -425,16 +429,16 @@ extension ApplicationPostViewController {
                 let documentID = applicationDoc.documentID
                 let statusString = applicationData["status"] as? String ?? "pending"
                 let status: ApplicationStatus = ApplicationStatus(rawValue: statusString.lowercased()) ?? .pending
+                
                 let dateAppliedTimestamp = applicationData["date"] as? Timestamp
                 let dateApplied = dateAppliedTimestamp?.dateValue() ?? Date()
-
                 
                 let jobName = applicationData["jobName"] as? String ?? "N/A"
-
                 
+                // Check if there are a valid AppJobSeeker reference
                 if let jobSeekerRef = applicationData["AppJobSeeker"] as? DocumentReference {
                     
-                    
+                    // Fetch JobSeeker doc
                     jobSeekerRef.getDocument { (jobSeekerSnap, err) in
                         if let err = err {
                             print("Error fetching JobSeeker doc: \(err.localizedDescription)")
@@ -451,8 +455,8 @@ extension ApplicationPostViewController {
                             parentGroup.leave()
                             return
                         }
-
-                        // Basic jobSeeker fields
+                        
+                        // 2a) Parse basic jobSeeker fields
                         let username = jobSeekerData["Username"] as? String ?? ""
                         let email = jobSeekerData["email"] as? String ?? ""
                         let password = jobSeekerData["password"] as? String ?? ""
@@ -460,28 +464,26 @@ extension ApplicationPostViewController {
                         let governorate = jobSeekerData["governate"] as? String ?? ""
                         let description = jobSeekerData["profileDescription"] as? String ?? ""
                         let pfpName = jobSeekerData["profilePicture"] as? String ?? ""
-
                         
+                        // 2b) Get CV collection
                         let cvCollectionRef = jobSeekerRef.collection("CVs")
-                        
-                        
                         cvCollectionRef.getDocuments { (cvSnapshot, cvError) in
                             if let cvError = cvError {
                                 print("Error fetching CVs: \(cvError.localizedDescription)")
                                 parentGroup.leave()
                                 return
                             }
-
+                            
                             guard let cvDocs = cvSnapshot?.documents, !cvDocs.isEmpty else {
                                 print("No CV docs found for this JobSeeker.")
                                 parentGroup.leave()
                                 return
                             }
-
                             
+                            // For simplicity, assume only one CV doc
                             let cvDoc = cvDocs.first!
                             let cvData = cvDoc.data()
-
+                            
                             let firstName = cvData["firstName"] as? String ?? ""
                             let lastName = cvData["lastName"] as? String ?? ""
                             let cpr = cvData["CPR"] as? Int ?? 0
@@ -490,18 +492,17 @@ extension ApplicationPostViewController {
                             let phoneNumberCV = cvData["phoneNumber"] as? String ?? ""
                             let emailCV = cvData["Email"] as? String ?? ""
                             let summary = cvData["summary"] as? String ?? ""
-
                             
+                            // 2c) Fetch JobEntries + Degrees
                             let jobEntriesRef = cvDoc.reference.collection("JobEntries")
                             let degreesRef = cvDoc.reference.collection("Degrees")
-
                             
                             let cvDispatchGroup = DispatchGroup()
-
+                            
                             var jobEntryArray: [JobEntry] = []
                             var degreeArray: [Degree] = []
-
                             
+                            // Fetch JobEntries
                             cvDispatchGroup.enter()
                             jobEntriesRef.getDocuments { (jobEntrySnap, jobEntryErr) in
                                 if let jobEntryErr = jobEntryErr {
@@ -509,7 +510,7 @@ extension ApplicationPostViewController {
                                     cvDispatchGroup.leave()
                                     return
                                 }
-
+                                
                                 jobEntrySnap?.documents.forEach { jobEntryDoc in
                                     let jeData = jobEntryDoc.data()
                                     let jobTitle = jeData["JobTitle"] as? String ?? ""
@@ -517,7 +518,7 @@ extension ApplicationPostViewController {
                                     let startDate = jeData["StartDate"] as? String ?? ""
                                     let endDate = jeData["EndDate"] as? String ?? ""
                                     let achievements = jeData["Achievements"] as? String ?? ""
-
+                                    
                                     let jobEntry = JobEntry(
                                         JobTitle: jobTitle,
                                         Company: company,
@@ -529,8 +530,8 @@ extension ApplicationPostViewController {
                                 }
                                 cvDispatchGroup.leave()
                             }
-
                             
+                            // Fetch Degrees
                             cvDispatchGroup.enter()
                             degreesRef.getDocuments { (degreeSnap, degreeErr) in
                                 if let degreeErr = degreeErr {
@@ -544,7 +545,7 @@ extension ApplicationPostViewController {
                                     let institution = degData["Institution"] as? String ?? ""
                                     let yearOfGraduation = degData["YearOfGraduation"] as? Int ?? 0
                                     let additionalNotes = degData["AdditionalNotes"] as? String ?? ""
-
+                                    
                                     let degree = Degree(
                                         DegreeName: degreeName,
                                         Institution: institution,
@@ -556,8 +557,8 @@ extension ApplicationPostViewController {
                                 cvDispatchGroup.leave()
                             }
 
-                            
                             cvDispatchGroup.notify(queue: .main) {
+                                // Create the CV object
                                 let parsedCV = CV(
                                     firstName: firstName,
                                     lastName: lastName,
@@ -571,7 +572,6 @@ extension ApplicationPostViewController {
                                     DegreeArray: degreeArray
                                 )
 
-                                // Create JobSeeker
                                 let jobSeeker = JobSeeker(
                                     Username: username,
                                     email: email,
@@ -583,13 +583,12 @@ extension ApplicationPostViewController {
                                     pfpName: pfpName
                                 )
 
-                                // build JobApplication
                                 let jobApplication = JobApplication(
                                     AppJobSeeker: jobSeeker,
-                                    firstName: firstName,
-                                    lastName: lastName,
+                                    firstName: jobSeeker.JobSeekerCv.firstName,
+                                    lastName: jobSeeker.JobSeekerCv.lastName,
                                     age: 0,
-                                    currentOccupation: jobName,
+                                    currentOccupation: jobName,   // from Firestore doc
                                     previousExperience: "",
                                     Qualifications: "",
                                     coverLEtter: "",
@@ -597,8 +596,7 @@ extension ApplicationPostViewController {
                                     status: status,
                                     documentId: documentID
                                 )
-
-                                // Add to fetched array
+                                
                                 fetchedApplications.append(jobApplication)
                                 parentGroup.leave()
                             }
@@ -646,6 +644,7 @@ extension ApplicationPostViewController {
                 }
             }
             
+            // When all documents are processed...
             parentGroup.notify(queue: .main) {
                 self.allJobApplications = fetchedApplications
                 self.jobApplications = fetchedApplications
