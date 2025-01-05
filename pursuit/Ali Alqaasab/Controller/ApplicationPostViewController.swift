@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class ApplicationPostViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //Filter Buttton outlet
@@ -42,169 +44,178 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleViewButtonTapped(_:)), name: Notification.Name("ViewButtonTapped"), object: nil)
         
-        // First Dummy Data
-        let dummyJobEntry = JobEntry(
-            JobTitle:       "Junior Developer",
-            Company:        "Batelco",
-            StartDate:      "01/01/2024",
-            EndDate:        "01/01/2025",
-            Achievements:   "Developed IOS Apps"
-        )
-
-        let dummyDegree = Degree(
-            DegreeName:         "Bacholar Degree",
-            Institution:        "Bahrain Polytechnic",
-            YearOfGraduation:   2023,
-            AdditionalNotes:     "Graduated with honors"
-        )
-
-        let dummyCV = CV(
-            firstName:       "James",
-            lastName:        "Carter",
-            CPR:             12345678,
-            DOB:             "26/05/2001",
-            Location:        "Muharraq",
-            phoneNumber:     "35006789",
-            Email:           "James@gmail.com",
-            summary:         "Passionate IOS developer with a strong foundation in Swift.",
-            JobEntryArray:   [dummyJobEntry],
-            DegreeArray:     [dummyDegree]
-        )
-
-        let dummyJobSeeker = JobSeeker(
-            Username:       "JamesCarter123",
-            email:          "James@gmail.com",
-            password:       "james123",
-            phoneNumber:    "35006789",
-            governorate:    "Muharraq",
-            description:    "Looking for IOS Development positions",
-            JobSeekerCv:    dummyCV,
-            pfpName: "dummyApplicantImage"
-        )
-
-        let dummyJobApplication = JobApplication(
-            AppJobSeeker:        dummyJobSeeker,
-            firstName:           "James",
-            lastName:            "Carter",
-            age:                 23,
-            currentOccupation:   "Junior IOS Developer",
-            previousExperience:  "1 year",
-            Qualifications:      "Swift, UIKit, MVVM",
-            coverLEtter:         "I am excited to apply for this position because I like programming",
-            dateApplied: Date()
-        )
-
-
-        // Second Dummy Data
-        let dummyJobEntry2 = JobEntry(
-            JobTitle:       "Senior iOS Developer",
-            Company:        "Zain",
-            StartDate:      "02/02/2023",
-            EndDate:        "02/02/2024",
-            Achievements:   "Led a team to build a finance app"
-        )
-
-        let dummyDegree2 = Degree(
-            DegreeName:         "Master Degree",
-            Institution:        "University of Bahrain",
-            YearOfGraduation:   2022,
-            AdditionalNotes:    "Specialized in Mobile App Development"
-        )
-
-        let dummyCV2 = CV(
-            firstName:       "Sarah",
-            lastName:        "Johnson",
-            CPR:             87654321,
-            DOB:             "15/07/1990",
-            Location:        "Manama",
-            phoneNumber:     "36123456",
-            Email:           "Sarah@example.com",
-            summary:         "Experienced iOS developer with leadership skills.",
-            JobEntryArray:   [dummyJobEntry2],
-            DegreeArray:     [dummyDegree2]
-        )
-
-        let dummyJobSeeker2 = JobSeeker(
-            Username:       "SarahJohnson890",
-            email:          "Sarah@example.com",
-            password:       "sarah123",
-            phoneNumber:    "36123456",
-            governorate:    "Manama",
-            description:    "Aiming for senior-level iOS roles",
-            JobSeekerCv:    dummyCV2,
-            pfpName: "sarah"
-        )
-
-        let dummyJobApplication2 = JobApplication(
-            AppJobSeeker:        dummyJobSeeker2,
-            firstName:           "Sarah",
-            lastName:            "Johnson",
-            age:                 33,
-            currentOccupation:   "Senior iOS Developer",
-            previousExperience:  "5 years",
-            Qualifications:      "Swift, UIKit, SwiftUI, Leadership",
-            coverLEtter:         "Looking forward to contributing my experience to your company.",
-            dateApplied: Date()
-        )
-
-
-        // Third Dummy Data
-        let dummyJobEntry3 = JobEntry(
-            JobTitle:       "Intern iOS Developer",
-            Company:        "STC",
-            StartDate:      "05/05/2022",
-            EndDate:        "05/05/2023",
-            Achievements:   "Contributed to UI improvements"
-        )
-
-        let dummyDegree3 = Degree(
-            DegreeName:         "Associate Degree",
-            Institution:        "Gulf College",
-            YearOfGraduation:   2021,
-            AdditionalNotes:    "Focused on app design"
-        )
-
-        let dummyCV3 = CV(
-            firstName:       "Ahmed",
-            lastName:        "Ali",
-            CPR:             44332211,
-            DOB:             "10/10/1995",
-            Location:        "Manama",
-            phoneNumber:     "39998877",
-            Email:           "Ahmed@example.com",
-            summary:         "Enthusiastic about kickstarting my iOS development career.",
-            JobEntryArray:   [dummyJobEntry3],
-            DegreeArray:     [dummyDegree3]
-        )
-
-        let dummyJobSeeker3 = JobSeeker(
-            Username:       "AhmedAli95",
-            email:          "Ahmed@example.com",
-            password:       "ahmed123",
-            phoneNumber:    "39998877",
-            governorate:    "Manama",
-            description:    "Eager to learn and grow in iOS dev",
-            JobSeekerCv:    dummyCV3,
-            pfpName: "Ahmed"
-        )
-
-        let dummyJobApplication3 = JobApplication(
-            AppJobSeeker:        dummyJobSeeker3,
-            firstName:           "Ahmed",
-            lastName:            "Ali",
-            age:                 28,
-            currentOccupation:   "Intern iOS Developer",
-            previousExperience:  "1 year internship",
-            Qualifications:      "Swift, UIKit",
-            coverLEtter:         "I am ready to apply what I’ve learned and improve further.",
-            dateApplied: Date()
-        )
-
-
-        allJobApplications = [dummyJobApplication, dummyJobApplication2, dummyJobApplication3]
-        jobApplications = allJobApplications
+//        // First Dummy Data
+//        let dummyJobEntry = JobEntry(
+//            JobTitle:       "Junior Developer",
+//            Company:        "Batelco",
+//            StartDate:      "01/01/2024",
+//            EndDate:        "01/01/2025",
+//            Achievements:   "Developed IOS Apps"
+//        )
+//
+//        let dummyDegree = Degree(
+//            DegreeName:         "Bacholar Degree",
+//            Institution:        "Bahrain Polytechnic",
+//            YearOfGraduation:   2023,
+//            AdditionalNotes:     "Graduated with honors"
+//        )
+//
+//        let dummyCV = CV(
+//            firstName:       "James",
+//            lastName:        "Carter",
+//            CPR:             12345678,
+//            DOB:             "26/05/2001",
+//            Location:        "Muharraq",
+//            phoneNumber:     "35006789",
+//            Email:           "James@gmail.com",
+//            summary:         "Passionate IOS developer with a strong foundation in Swift.",
+//            JobEntryArray:   [dummyJobEntry],
+//            DegreeArray:     [dummyDegree]
+//        )
+//
+//        let dummyJobSeeker = JobSeeker(
+//            Username:       "JamesCarter123",
+//            email:          "James@gmail.com",
+//            password:       "james123",
+//            phoneNumber:    "35006789",
+//            governorate:    "Muharraq",
+//            description:    "Looking for IOS Development positions",
+//            JobSeekerCv:    dummyCV,
+//            pfpName: "dummyApplicantImage"
+//        )
+//
+//        let dummyJobApplication = JobApplication(
+//            AppJobSeeker:        dummyJobSeeker,
+//            firstName:           "James",
+//            lastName:            "Carter",
+//            age:                 23,
+//            currentOccupation:   "Junior IOS Developer",
+//            previousExperience:  "1 year",
+//            Qualifications:      "Swift, UIKit, MVVM",
+//            coverLEtter:         "I am excited to apply for this position because I like programming",
+//            dateApplied: Date()
+//        )
+//
+//
+//        // Second Dummy Data
+//        let dummyJobEntry2 = JobEntry(
+//            JobTitle:       "Senior iOS Developer",
+//            Company:        "Zain",
+//            StartDate:      "02/02/2023",
+//            EndDate:        "02/02/2024",
+//            Achievements:   "Led a team to build a finance app"
+//        )
+//
+//        let dummyDegree2 = Degree(
+//            DegreeName:         "Master Degree",
+//            Institution:        "University of Bahrain",
+//            YearOfGraduation:   2022,
+//            AdditionalNotes:    "Specialized in Mobile App Development"
+//        )
+//
+//        let dummyCV2 = CV(
+//            firstName:       "Sarah",
+//            lastName:        "Johnson",
+//            CPR:             87654321,
+//            DOB:             "15/07/1990",
+//            Location:        "Manama",
+//            phoneNumber:     "36123456",
+//            Email:           "Sarah@example.com",
+//            summary:         "Experienced iOS developer with leadership skills.",
+//            JobEntryArray:   [dummyJobEntry2],
+//            DegreeArray:     [dummyDegree2]
+//        )
+//
+//        let dummyJobSeeker2 = JobSeeker(
+//            Username:       "SarahJohnson890",
+//            email:          "Sarah@example.com",
+//            password:       "sarah123",
+//            phoneNumber:    "36123456",
+//            governorate:    "Manama",
+//            description:    "Aiming for senior-level iOS roles",
+//            JobSeekerCv:    dummyCV2,
+//            pfpName: "sarah"
+//        )
+//
+//        let dummyJobApplication2 = JobApplication(
+//            AppJobSeeker:        dummyJobSeeker2,
+//            firstName:           "Sarah",
+//            lastName:            "Johnson",
+//            age:                 33,
+//            currentOccupation:   "Senior iOS Developer",
+//            previousExperience:  "5 years",
+//            Qualifications:      "Swift, UIKit, SwiftUI, Leadership",
+//            coverLEtter:         "Looking forward to contributing my experience to your company.",
+//            dateApplied: Date()
+//        )
+//
+//
+//        // Third Dummy Data
+//        let dummyJobEntry3 = JobEntry(
+//            JobTitle:       "Intern iOS Developer",
+//            Company:        "STC",
+//            StartDate:      "05/05/2022",
+//            EndDate:        "05/05/2023",
+//            Achievements:   "Contributed to UI improvements"
+//        )
+//
+//        let dummyDegree3 = Degree(
+//            DegreeName:         "Associate Degree",
+//            Institution:        "Gulf College",
+//            YearOfGraduation:   2021,
+//            AdditionalNotes:    "Focused on app design"
+//        )
+//
+//        let dummyCV3 = CV(
+//            firstName:       "Ahmed",
+//            lastName:        "Ali",
+//            CPR:             44332211,
+//            DOB:             "10/10/1995",
+//            Location:        "Manama",
+//            phoneNumber:     "39998877",
+//            Email:           "Ahmed@example.com",
+//            summary:         "Enthusiastic about kickstarting my iOS development career.",
+//            JobEntryArray:   [dummyJobEntry3],
+//            DegreeArray:     [dummyDegree3]
+//        )
+//
+//        let dummyJobSeeker3 = JobSeeker(
+//            Username:       "AhmedAli95",
+//            email:          "Ahmed@example.com",
+//            password:       "ahmed123",
+//            phoneNumber:    "39998877",
+//            governorate:    "Manama",
+//            description:    "Eager to learn and grow in iOS dev",
+//            JobSeekerCv:    dummyCV3,
+//            pfpName: "Ahmed"
+//        )
+//
+//        let dummyJobApplication3 = JobApplication(
+//            AppJobSeeker:        dummyJobSeeker3,
+//            firstName:           "Ahmed",
+//            lastName:            "Ali",
+//            age:                 28,
+//            currentOccupation:   "Intern iOS Developer",
+//            previousExperience:  "1 year internship",
+//            Qualifications:      "Swift, UIKit",
+//            coverLEtter:         "I am ready to apply what I’ve learned and improve further.",
+//            dateApplied: Date()
+//        )
+//
+//
+//        allJobApplications = [dummyJobApplication, dummyJobApplication2, dummyJobApplication3]
+//        jobApplications = allJobApplications
+        
+        
+        fetchJobApplications()
+        
         btnReset.isHidden = true
         ApplicantPostTableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchJobApplications()
     }
     
     @objc func handleViewButtonTapped(_ notification: Notification) {
@@ -345,7 +356,6 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
     }
     
     @IBAction func unwindToApplicantsPage2(_ segue: UIStoryboardSegue) {
-        // Optionally, handle any data passed from ViewProfileApplicantViewController
         if let sourceVC = segue.source as? ViewProfileApplicantViewController {
             print("Returning from ViewProfileApplicantViewController")
             // Use sourceVC.applicantData if needed
@@ -387,4 +397,260 @@ class ApplicationPostViewController: UIViewController, UITableViewDataSource, UI
             }
     }
     
+}
+
+
+extension ApplicationPostViewController {
+    func fetchJobApplications() {
+        let db = Firestore.firestore()
+        
+        db.collection("JobApplications").getDocuments { (snapshot, error) in
+            if let error = error {
+                print("Error fetching JobApplications: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let documents = snapshot?.documents, !documents.isEmpty else {
+                print("No JobApplications found.")
+                return
+            }
+            
+            var fetchedApplications: [JobApplication] = []
+            let parentGroup = DispatchGroup()
+            
+            for applicationDoc in documents {
+                parentGroup.enter()
+                
+                let applicationData = applicationDoc.data()
+                let documentID = applicationDoc.documentID
+                let statusString = applicationData["status"] as? String ?? "pending"
+                let status: ApplicationStatus = ApplicationStatus(rawValue: statusString.lowercased()) ?? .pending
+                let dateAppliedTimestamp = applicationData["date"] as? Timestamp
+                let dateApplied = dateAppliedTimestamp?.dateValue() ?? Date()
+
+                
+                let jobName = applicationData["jobName"] as? String ?? "N/A"
+
+                
+                if let jobSeekerRef = applicationData["AppJobSeeker"] as? DocumentReference {
+                    
+                    
+                    jobSeekerRef.getDocument { (jobSeekerSnap, err) in
+                        if let err = err {
+                            print("Error fetching JobSeeker doc: \(err.localizedDescription)")
+                            parentGroup.leave()
+                            return
+                        }
+                        
+                        guard
+                            let jobSeekerSnap = jobSeekerSnap,
+                            jobSeekerSnap.exists,
+                            let jobSeekerData = jobSeekerSnap.data()
+                        else {
+                            print("JobSeeker doc missing or empty.")
+                            parentGroup.leave()
+                            return
+                        }
+
+                        // Basic jobSeeker fields
+                        let username = jobSeekerData["Username"] as? String ?? ""
+                        let email = jobSeekerData["email"] as? String ?? ""
+                        let password = jobSeekerData["password"] as? String ?? ""
+                        let phoneNumber = jobSeekerData["phoneNumber"] as? String ?? ""
+                        let governorate = jobSeekerData["governate"] as? String ?? ""
+                        let description = jobSeekerData["profileDescription"] as? String ?? ""
+                        let pfpName = jobSeekerData["profilePicture"] as? String ?? ""
+
+                        
+                        let cvCollectionRef = jobSeekerRef.collection("CVs")
+                        
+                        
+                        cvCollectionRef.getDocuments { (cvSnapshot, cvError) in
+                            if let cvError = cvError {
+                                print("Error fetching CVs: \(cvError.localizedDescription)")
+                                parentGroup.leave()
+                                return
+                            }
+
+                            guard let cvDocs = cvSnapshot?.documents, !cvDocs.isEmpty else {
+                                print("No CV docs found for this JobSeeker.")
+                                parentGroup.leave()
+                                return
+                            }
+
+                            
+                            let cvDoc = cvDocs.first!
+                            let cvData = cvDoc.data()
+
+                            let firstName = cvData["firstName"] as? String ?? ""
+                            let lastName = cvData["lastName"] as? String ?? ""
+                            let cpr = cvData["CPR"] as? Int ?? 0
+                            let dob = cvData["DOB"] as? String ?? ""
+                            let location = cvData["Location"] as? String ?? ""
+                            let phoneNumberCV = cvData["phoneNumber"] as? String ?? ""
+                            let emailCV = cvData["Email"] as? String ?? ""
+                            let summary = cvData["summary"] as? String ?? ""
+
+                            
+                            let jobEntriesRef = cvDoc.reference.collection("JobEntries")
+                            let degreesRef = cvDoc.reference.collection("Degrees")
+
+                            
+                            let cvDispatchGroup = DispatchGroup()
+
+                            var jobEntryArray: [JobEntry] = []
+                            var degreeArray: [Degree] = []
+
+                            
+                            cvDispatchGroup.enter()
+                            jobEntriesRef.getDocuments { (jobEntrySnap, jobEntryErr) in
+                                if let jobEntryErr = jobEntryErr {
+                                    print("Error fetching JobEntries: \(jobEntryErr.localizedDescription)")
+                                    cvDispatchGroup.leave()
+                                    return
+                                }
+
+                                jobEntrySnap?.documents.forEach { jobEntryDoc in
+                                    let jeData = jobEntryDoc.data()
+                                    let jobTitle = jeData["JobTitle"] as? String ?? ""
+                                    let company = jeData["Company"] as? String ?? ""
+                                    let startDate = jeData["StartDate"] as? String ?? ""
+                                    let endDate = jeData["EndDate"] as? String ?? ""
+                                    let achievements = jeData["Achievements"] as? String ?? ""
+
+                                    let jobEntry = JobEntry(
+                                        JobTitle: jobTitle,
+                                        Company: company,
+                                        StartDate: startDate,
+                                        EndDate: endDate,
+                                        Achievements: achievements
+                                    )
+                                    jobEntryArray.append(jobEntry)
+                                }
+                                cvDispatchGroup.leave()
+                            }
+
+                            
+                            cvDispatchGroup.enter()
+                            degreesRef.getDocuments { (degreeSnap, degreeErr) in
+                                if let degreeErr = degreeErr {
+                                    print("Error fetching Degrees: \(degreeErr.localizedDescription)")
+                                    cvDispatchGroup.leave()
+                                    return
+                                }
+                                degreeSnap?.documents.forEach { degDoc in
+                                    let degData = degDoc.data()
+                                    let degreeName = degData["DegreeName"] as? String ?? ""
+                                    let institution = degData["Institution"] as? String ?? ""
+                                    let yearOfGraduation = degData["YearOfGraduation"] as? Int ?? 0
+                                    let additionalNotes = degData["AdditionalNotes"] as? String ?? ""
+
+                                    let degree = Degree(
+                                        DegreeName: degreeName,
+                                        Institution: institution,
+                                        YearOfGraduation: yearOfGraduation,
+                                        AdditionalNotes: additionalNotes
+                                    )
+                                    degreeArray.append(degree)
+                                }
+                                cvDispatchGroup.leave()
+                            }
+
+                            
+                            cvDispatchGroup.notify(queue: .main) {
+                                let parsedCV = CV(
+                                    firstName: firstName,
+                                    lastName: lastName,
+                                    CPR: cpr,
+                                    DOB: dob,
+                                    Location: location,
+                                    phoneNumber: phoneNumberCV,
+                                    Email: emailCV,
+                                    summary: summary,
+                                    JobEntryArray: jobEntryArray,
+                                    DegreeArray: degreeArray
+                                )
+
+                                // Create JobSeeker
+                                let jobSeeker = JobSeeker(
+                                    Username: username,
+                                    email: email,
+                                    password: password,
+                                    phoneNumber: phoneNumber,
+                                    governorate: governorate,
+                                    description: description,
+                                    JobSeekerCv: parsedCV,
+                                    pfpName: pfpName
+                                )
+
+                                // build JobApplication
+                                let jobApplication = JobApplication(
+                                    AppJobSeeker: jobSeeker,
+                                    firstName: firstName,
+                                    lastName: lastName,
+                                    age: 0,
+                                    currentOccupation: jobName,
+                                    previousExperience: "",
+                                    Qualifications: "",
+                                    coverLEtter: "",
+                                    dateApplied: dateApplied,
+                                    status: status,
+                                    documentId: documentID
+                                )
+
+                                // Add to fetched array
+                                fetchedApplications.append(jobApplication)
+                                parentGroup.leave()
+                            }
+                        }
+                    }
+                } else {
+                    // No valid AppJobSeeker reference
+                    defer { parentGroup.leave() }
+                    
+                    let partialJobApplication = JobApplication(
+                        AppJobSeeker: JobSeeker(
+                            Username: "",
+                            email: "",
+                            password: "",
+                            phoneNumber: "",
+                            governorate: "",
+                            description: "",
+                            JobSeekerCv: CV(
+                                firstName: "",
+                                lastName: "",
+                                CPR: 0,
+                                DOB: "",
+                                Location: "",
+                                phoneNumber: "",
+                                Email: "",
+                                summary: "",
+                                JobEntryArray: [],
+                                DegreeArray: []
+                            ),
+                            pfpName: ""
+                        ),
+                        firstName: "",
+                        lastName: "",
+                        age: 0,
+                        currentOccupation: "N/A",
+                        previousExperience: "",
+                        Qualifications: "",
+                        coverLEtter: "",
+                        dateApplied: dateApplied,
+                        status: .pending,
+                        documentId: documentID
+                    )
+                    
+                    fetchedApplications.append(partialJobApplication)
+                }
+            }
+            
+            parentGroup.notify(queue: .main) {
+                self.allJobApplications = fetchedApplications
+                self.jobApplications = fetchedApplications
+                self.ApplicantPostTableView.reloadData()
+            }
+        }
+    }
 }

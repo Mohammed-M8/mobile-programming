@@ -29,7 +29,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="100"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nzb-Rp-czt">
-                                                                <rect key="frame" x="8" y="31.666666666666668" width="66.333333333333329" height="61.666666666666657"/>
+                                                                <rect key="frame" x="8" y="31.666666666666671" width="66.333333333333329" height="61.666666666666657"/>
                                                                 <color key="tintColor" systemColor="separatorColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1449,7 +1449,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTk-0f-i1b">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="956"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-elina-araja-1743227-3377405" translatesAutoresizingMaskIntoConstraints="NO" id="DuK-Is-0IV">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DuK-Is-0IV">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="196.66666666666666"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DuK-Is-0IV" secondAttribute="height" multiplier="1:0.5" id="vQX-bg-pgG"/>
@@ -1793,7 +1793,30 @@
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6S-kV-qof">
                                                                         <rect key="frame" x="0.0" y="187" width="393" height="87"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nw-7f-S88">
+                                                                                <rect key="frame" x="100" y="20" width="193" height="47"/>
+                                                                                <color key="backgroundColor" red="0.20000001789999999" green="0.42745098469999998" blue="0.55294120309999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <state key="normal" title="Button"/>
+                                                                                <buttonConfiguration key="configuration" style="plain" title="Save Status"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                        <integer key="value" value="10"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="saveStatus:" destination="fEY-D3-BER" eventType="touchUpInside" id="ng6-9B-kln"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="0nw-7f-S88" firstAttribute="top" secondItem="i6S-kV-qof" secondAttribute="top" constant="20" id="Ifk-6p-EsK"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="0nw-7f-S88" secondAttribute="trailing" constant="100" id="ez4-98-yRK"/>
+                                                                            <constraint firstItem="0nw-7f-S88" firstAttribute="leading" secondItem="i6S-kV-qof" secondAttribute="leading" constant="100" id="jkz-td-xvc"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="0nw-7f-S88" secondAttribute="bottom" constant="20" id="lTY-a4-Kvi"/>
+                                                                        </constraints>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
@@ -1880,7 +1903,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ufR-7O-C3i">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="fEY-D3-BER" id="oMn-bk-qhb"/>
-                                <segue destination="hmh-JM-Qt4" kind="unwind" unwindAction="unwindToApplicantsPage2:" id="Q6B-hK-p3c"/>
+                                <segue destination="hmh-JM-Qt4" kind="unwind" unwindAction="unwindToApplicantsPage2:" id="aeq-V4-QDA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1925,32 +1948,31 @@
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
         <image name="person.text.rectangle" catalog="system" width="128" height="93"/>
-        <image name="pexels-elina-araja-1743227-3377405" width="3673" height="2066"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

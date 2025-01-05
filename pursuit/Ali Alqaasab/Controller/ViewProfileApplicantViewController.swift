@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import Firebase
 
 class ViewProfileApplicantViewController: UIViewController {
     var applicantData: JobApplication?
+    var currentStatus: ApplicationStatus = .pending
     
     @IBOutlet weak var bgImg: UIImageView!
     @IBOutlet weak var profileImg: UIImageView!
@@ -37,11 +40,19 @@ class ViewProfileApplicantViewController: UIViewController {
         
         let allButtons = [pending, Accepted, Rejected]
             allButtons.forEach { button in
-                button?.layer.cornerRadius = 10 // Adjust corner radius as needed
+                button?.layer.cornerRadius = 10
                 button?.layer.masksToBounds = true
             }
         
-        selectButton(pending)
+        guard let data = applicantData else { return }
+        switch data.status {
+        case .accepted:
+            selectButton(Accepted)
+        case .rejected:
+            selectButton(Rejected)
+        default:
+            selectButton(pending)
+        }
 
         // Do any additional setup after loading the view.
         
@@ -59,19 +70,44 @@ class ViewProfileApplicantViewController: UIViewController {
             profileImg.layer.cornerRadius = 69
             profileImg.layer.masksToBounds = true
             profileImg.clipsToBounds = true
-        
     }
     
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "unwindToApplicantsPage", sender: self)
+        let docID = "dummyApplication"
+        
+        let db = Firestore.firestore()
+        db.collection("JobApplications")
+            .document(docID)
+            .updateData(["status": currentStatus.rawValue]) { error in
+                if let error = error {
+                    print("Error updating status: \(error.localizedDescription)")
+                } else {
+                    print("Status updated successfully in Firestore to \(self.currentStatus.rawValue)")
+                    self.performSegue(withIdentifier: "unwindToApplicantsPage", sender: self)
+                }
+            }
     }
-
+    
+    @IBAction func saveStatus(_ sender: UIButton) {
+        let docID = "dummyApplication"
+        
+        let db = Firestore.firestore()
+        db.collection("JobApplications")
+            .document(docID)
+            .updateData(["status": currentStatus.rawValue]) { error in
+                if let error = error {
+                    print("Error updating status: \(error.localizedDescription)")
+                } else {
+                    print("Status updated successfully in Firestore to \(self.currentStatus.rawValue)")
+                }
+            }
+    }
+    
     
     func selectButton(_ selectedButton: UIButton) {
         let customColor = UIColor(red: 24/255.0, green: 116/255.0, blue: 148/255.0, alpha: 1.0)
         // Reset styles for all buttons
-        let allButtons = [pending, Accepted, Rejected]
-        allButtons.forEach { button in
+        [pending, Accepted, Rejected].forEach { button in
             button?.backgroundColor = .systemGray5
             button?.setTitleColor(.black, for: .normal)
             button?.isSelected = false
@@ -82,8 +118,36 @@ class ViewProfileApplicantViewController: UIViewController {
         selectedButton.setTitleColor(.white, for: .normal)
         selectedButton.isSelected = true
 
+        
+        // Update currentStatus & applicantData.status
+        switch selectedButton {
+        case Accepted:
+            currentStatus = .accepted
+            applicantData?.status = .accepted
+        case Rejected:
+            currentStatus = .rejected
+            applicantData?.status = .rejected
+        default:
+            currentStatus = .pending
+            applicantData?.status = .pending
+        }
+        
+        
+        saveBarButton.isEnabled = (currentStatus != .pending)
+        
+        // Update currentStatus based on the button tapped
+//        if let application = applicantData {
+//            if selectedButton == Accepted {
+//                application.status = .accepted
+//            } else if selectedButton == Rejected {
+//                application.status = .rejected
+//            } else {
+//                application.status = .pending
+//            }
+//        }
+        
         // Enable Save button only if the selected button is NOT Pending
-        saveBarButton.isEnabled = selectedButton != pending
+//        saveBarButton.isEnabled = selectedButton != pending
     }
     
     @IBAction func pendingButtonTapped(_ sender: UIButton) {

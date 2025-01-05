@@ -18,8 +18,10 @@ class JobApplication
     var Qualifications: String;
     var coverLetter: String;
     var dateApplied: Date
+    var status: ApplicationStatus
+    var documentId: String
     
-    init(AppJobSeeker: JobSeeker, firstName: String,lastName:String,age:Int, currentOccupation:String, previousExperience:String, Qualifications: String, coverLEtter: String, dateApplied: Date){
+    init(AppJobSeeker: JobSeeker, firstName: String,lastName:String,age:Int, currentOccupation:String, previousExperience:String, Qualifications: String, coverLEtter: String, dateApplied: Date, status: ApplicationStatus, documentId: String){
         self.ApplicationJobSeeker = AppJobSeeker;
         self.firstName=firstName;
         self.lastName=lastName;
@@ -29,5 +31,7 @@ class JobApplication
         self.Qualifications=Qualifications;
         self.coverLetter=coverLEtter;
         self.dateApplied = dateApplied
+        self.status = status
+        self.documentId = documentId
     }
 }

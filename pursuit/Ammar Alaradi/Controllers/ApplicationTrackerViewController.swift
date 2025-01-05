@@ -66,6 +66,7 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
         TableViewApplication.delegate = self
         
         //fetch from firestore
+//        fetchJobSeekerApplicationsFromFirestore()
         fetchJobSeekerApplicationsFromFirestore()
     }
     
@@ -88,63 +89,148 @@ class ApplicationTrackerViewController: UIViewController, UITableViewDataSource,
         self.showFilterSheet()
     }
     
-    //FETCH FUNCTION
+//    //FETCH FUNCTION
+    
     func fetchJobSeekerApplicationsFromFirestore() {
-            let db = Firestore.firestore()
+        let db = Firestore.firestore()
+        
+        // If you want ALL job applications:
+        // let query = db.collection("JobApplications")
+        
+        // OR, if you only want the applications for the currently logged-in user,
+        // and you have stored a field referencing the jobSeeker doc or user ID,
+        // you might do something like:
+        // let query = db.collection("JobApplications").whereField("AppJobSeeker", isEqualTo: db.collection("jobSeeker").document(currentUserId))
+        // or if you store a userId field in "JobApplications", you can filter on it:
+        // let query = db.collection("JobApplications").whereField("userId", isEqualTo: currentUserId)
+        
+        // For now, let's assume we want them all:
+        let query = db.collection("JobApplications")
+        
+        query.getDocuments { snapshot, error in
+            if let error = error {
+                print("Error fetching JobApplications: \(error.localizedDescription)")
+                return
+            }
             
-            db.collection("jobSeeker").document(currentUserId)
-                .collection("jobSeekerApplications")
-                .getDocuments { snapshot, error in
-                    
-                    if let error = error {
-                        print("Error fetching job applications: \(error.localizedDescription)")
-                        return
-                    }
-                    
-                    guard let documents = snapshot?.documents else {
-                        print("No job applications found.")
-                        return
-                    }
-                    
-                    var tempApplications: [JobSeekerApplication] = []
-                    
-                    for doc in documents {
-                        let data = doc.data()
-                        
-                        // Map Firestore fields to model
-                        let companyName = data["companyName"] as? String ?? "Unknown Company"
-                        let jobName = data["jobName"] as? String ?? "Unknown Job"
-                        let date = data["date"] as? String ?? "January 1, 2025"
-                        let image = data["image"] as? String ?? "placeholder"
-                        
-                        // The status is stored as "pending", "accepted", "rejected"
-                        let statusString = data["status"] as? String ?? "pending"
-                        let status: ApplicationStatus
-                        switch statusString.lowercased() {
-                        case "accepted": status = .accepted
-                        case "rejected": status = .rejected
-                        default: status = .pending
-                        }
-                        
-                        // Create a JobSeekerApplication instance
-                        let application = JobSeekerApplication(
-                            companyName: companyName,
-                            jobName: jobName,
-                            date: date,
-                            image: image,
-                            status: status
-                        )
-                        tempApplications.append(application)
-                    }
-                    
-                    // Assign to array and reload
-                    self.jobSeekerApplications = tempApplications
-                    self.filteredJobSeekerApplications = tempApplications
-                    DispatchQueue.main.async {
-                        self.TableViewApplication.reloadData()
-                    }
+            guard let documents = snapshot?.documents, !documents.isEmpty else {
+                print("No job applications found in JobApplications collection.")
+                return
+            }
+            
+            var tempApplications: [JobSeekerApplication] = []
+            
+            for doc in documents {
+                let data = doc.data()
+                
+                
+                let companyName = data["companyName"] as? String ?? "Unknown Company"
+                let jobName = data["jobName"] as? String ?? "Unknown Job"
+                let image = data["image"] as? String ?? "placeholder"
+                
+                // Handle "status"
+                let statusString = (data["status"] as? String ?? "pending").lowercased()
+                let status: ApplicationStatus
+                switch statusString {
+                case "accepted":
+                    status = .accepted
+                case "rejected":
+                    status = .rejected
+                default:
+                    status = .pending
                 }
+                
+                // Convert Firestore Timestamp to a String date
+                let dateString: String
+                if let timestamp = data["date"] as? Timestamp {
+                    let dateValue = timestamp.dateValue()
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "MMMM dd, yyyy" // e.g. "January 4, 2025"
+                    dateString = formatter.string(from: dateValue)
+                } else {
+                    // Fallback if "date" is missing or not a Timestamp
+                    dateString = "January 1, 2025"
+                }
+                
+                // Create a JobSeekerApplication instance
+                let application = JobSeekerApplication(
+                    companyName: companyName,
+                    jobName: jobName,
+                    date: dateString,
+                    image: image,
+                    status: status,
+                    documentId: doc.documentID
+                )
+                
+                tempApplications.append(application)
+            }
+            
+            // Update local arrays and reload
+            self.jobSeekerApplications = tempApplications
+            self.filteredJobSeekerApplications = tempApplications
+            
+            DispatchQueue.main.async {
+                self.TableViewApplication.reloadData()
+            }
         }
+    }
+    
+//    func fetchJobSeekerApplicationsFromFirestore() {
+//            let db = Firestore.firestore()
+//            
+//            db.collection("jobSeeker").document(currentUserId)
+//                .collection("jobSeekerApplications")
+//                .getDocuments { snapshot, error in
+//                    
+//                    if let error = error {
+//                        print("Error fetching job applications: \(error.localizedDescription)")
+//                        return
+//                    }
+//                    
+//                    guard let documents = snapshot?.documents else {
+//                        print("No job applications found.")
+//                        return
+//                    }
+//                    
+//                    var tempApplications: [JobSeekerApplication] = []
+//                    
+//                    for doc in documents {
+//                        let data = doc.data()
+//                        
+//                        // Map Firestore fields to model
+//                        let companyName = data["companyName"] as? String ?? "Unknown Company"
+//                        let jobName = data["jobName"] as? String ?? "Unknown Job"
+//                        let date = data["date"] as? String ?? "January 1, 2025"
+//                        let image = data["image"] as? String ?? "placeholder"
+//                        
+//                        // The status is stored as "pending", "accepted", "rejected"
+//                        let statusString = data["status"] as? String ?? "pending"
+//                        let status: ApplicationStatus
+//                        switch statusString.lowercased() {
+//                        case "accepted": status = .accepted
+//                        case "rejected": status = .rejected
+//                        default: status = .pending
+//                        }
+//                        
+//                        // Create a JobSeekerApplication instance
+//                        let application = JobSeekerApplication(
+//                            companyName: companyName,
+//                            jobName: jobName,
+//                            date: date,
+//                            image: image,
+//                            status: status
+//                        )
+//                        tempApplications.append(application)
+//                    }
+//                    
+//                    // Assign to array and reload
+//                    self.jobSeekerApplications = tempApplications
+//                    self.filteredJobSeekerApplications = tempApplications
+//                    DispatchQueue.main.async {
+//                        self.TableViewApplication.reloadData()
+//                    }
+//                }
+//        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredJobSeekerApplications.count
