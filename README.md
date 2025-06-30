@@ -14,12 +14,12 @@ https://github.com/Mohammed-M8/mobile-programming.git
 
 ## Team Members Name & ID
 
-Ammar Alaradi      | 202200613 
-Ali Ebrahim        | 201902541 
-Abbas Ali          | 202202470 
-Hasan Zaman        | 202102742 
-Mohammed Shahdad   | 202200692 
-Ali Alqassab       | 201900568 
+Ammar Alaradi       
+Ali Ebrahim         
+Abbas Ali           
+Hasan Zaman         
+Mohammed Shahdad    
+Ali Alqassab       
 
 ## Tutor Name
 
